@@ -43,6 +43,8 @@
 			"className": ".sf-imageView .flUserHeaderBar-img .flUserHeaderBar-flNotification-img1",
 			"id": "8af6-7010-63dc-c298",
 			"props": {
+				"autoHeight": 20.689655172413794,
+				"autoWidth": 24.13793103448276,
 				"children": [],
 				"name": "img1",
 				"parent": "e438-7a3e-d51b-66ee"
@@ -51,12 +53,17 @@
 				"page": "__library__"
 			},
 			"type": "ImageView",
-			"userProps": {}
+			"userProps": {
+				"autoHeight": 20.689655172413794,
+				"autoWidth": 24.13793103448276
+			}
 		},
 		{
 			"className": ".sf-imageView .flUserHeaderBar-img .flUserHeaderBar-flNotification-img2",
 			"id": "6387-4cf9-9731-3bba",
 			"props": {
+				"autoHeight": 17.24137931034483,
+				"autoWidth": 17.24137931034483,
 				"children": [],
 				"name": "img2",
 				"parent": "e438-7a3e-d51b-66ee"
@@ -65,7 +72,10 @@
 				"page": "__library__"
 			},
 			"type": "ImageView",
-			"userProps": {}
+			"userProps": {
+				"autoHeight": 17.24137931034483,
+				"autoWidth": 17.24137931034483
+			}
 		},
 		{
 			"className": ".sf-imageView .flUserHeaderBar-img .flUserHeaderBar-imgUser",
