@@ -1,10 +1,9 @@
 {
 	"config": {
 		"theme": {
-			"currentTheme": "baseTheme",
+			"currentTheme": "turkcellTheme",
 			"baseTheme": "baseTheme",
 			"themes": [
-				"baseTheme",
 				"defaultTheme"
 			]
 		},

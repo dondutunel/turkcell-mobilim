@@ -41,7 +41,11 @@ Application.theme(
     'btbExample'
 );
 
-const starImage = Image.createFromFile("images://star_icon.png");
+const ik_icon = Image.createFromFile("images://ik_icon.png");
+const sirketim_icon = Image.createFromFile("images://sirketim_icon.png");
+const home_icon = Image.createFromFile("images://home_icon.png");
+const categories_icon = Image.createFromFile("images://categories_icon.png");
+const dashboard_icon = Image.createFromFile("images://dashboard_icon.png");
 const bottomTabBarRouter = BottomTabBarRouter.of({
     path: "/",
     to: "/btb/tab1",
@@ -53,11 +57,11 @@ const bottomTabBarRouter = BottomTabBarRouter.of({
         }
     }),
     items: () => [
-        { title: "page1", icon: starImage },
-        { title: "page2", icon: starImage },
-        { title: "page3", icon: starImage },
-        { title: "page4", icon: starImage },
-        { title: "page5", icon: starImage }
+        { title: "Ana Sayfa", icon: home_icon },
+        { title: "Islemlerim", icon: categories_icon },
+        { title: "IK", icon: ik_icon },
+        { title: "Sirketim", icon: sirketim_icon },
+        { title: "Dashboard", icon: dashboard_icon }
     ],
     routes: [
         // tab1
@@ -77,7 +81,7 @@ const bottomTabBarRouter = BottomTabBarRouter.of({
             to: "/btb/tab2/page2",
             routes: [
                 Route.of({
-                    path: "/btb/tab2/page2",
+                    path: "/btb/tab2/pgIslemlerim",
                     build: buildExtender({ pageName: "page2", singleton: true, pageProps: { shouldExit: true } })
                 }),
             ]
