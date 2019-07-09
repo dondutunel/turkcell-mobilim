@@ -68,18 +68,21 @@
 			"userProps": {}
 		},
 		{
-			"className": ".sf-imageView .flUserHeaderBar-img",
+			"className": ".sf-imageView .flUserHeaderBar-img .flUserHeaderBar-imgUser",
 			"id": "4fbf-282e-3f6b-df52",
 			"props": {
 				"children": [],
 				"name": "imgUser",
-				"parent": "b5bd-3047-bc5f-d354"
+				"parent": "b5bd-3047-bc5f-d354",
+				"usePageVariable": true
 			},
 			"source": {
 				"page": "__library__"
 			},
 			"type": "ImageView",
-			"userProps": {}
+			"userProps": {
+				"usePageVariable": true
+			}
 		}
 	]
 }

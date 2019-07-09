@@ -1,14 +1,21 @@
 {
-    ".sf-headerBar": {
-        "visible": true,
+	".sf-headerBar": {
+		"visible": true,
 		"backgroundColor": "rgb(47, 171, 235)",
 		"titleColor": "rgba( 255, 255, 255, 1 )",
 		"itemColor": "rgba( 255, 255, 255, 1 )"
-    },
-    ".headerBar": {
-        "visible": true,
+	},
+	".headerBar": {
+		"visible": true,
 		"backgroundColor": "rgb(47, 171, 235)",
 		"titleColor": "rgba( 255, 255, 255, 1 )",
 		"itemColor": "rgba( 255, 255, 255, 1 )"
-    }
+	},
+	".sf": {
+		"&-imageView": {
+			"flexProps": {
+				"positionType": "RELATIVE"
+			}
+		}
+	}
 }
