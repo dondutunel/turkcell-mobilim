@@ -86,7 +86,7 @@
 			"props": {
 				"autoHeight": 32.14285714285714,
 				"children": [],
-				"name": "label1",
+				"name": "lblTitle",
 				"parent": "7761adc8",
 				"text": "Islemlerim"
 			},
