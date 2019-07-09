@@ -7,7 +7,8 @@
 			"props": {
 				"children": [
 					"a829471c",
-					"35f1c1a1"
+					"35f1c1a1",
+					"2acb-a157-0a70-0e0d"
 				],
 				"isRemovable": true,
 				"name": "pgIslemlerim",
@@ -17,9 +18,6 @@
 			},
 			"type": "Page",
 			"userProps": {
-				"flexProps": {
-					"justifyContent": "CENTER"
-				},
 				"orientation": "PORTRAIT",
 				"paddingBottom": 20,
 				"safeAreaEnabled": true
@@ -55,6 +53,28 @@
 			"userProps": {
 				"title": "Page Title",
 				"visible": false
+			}
+		},
+		{
+			"className": ".sf-flexLayout .flUserHeaderBar",
+			"hiddenComponent": false,
+			"id": "2acb-a157-0a70-0e0d",
+			"initialized": true,
+			"props": {
+				"children": [],
+				"name": "flUserHeaderBar",
+				"parent": "7761adc8"
+			},
+			"source": {
+				"page": "__library__",
+				"type": "flUserHeaderBar",
+				"id": "b5bd-3047-bc5f-d354"
+			},
+			"type": "FlexLayout",
+			"userProps": {
+				"flex": {
+					"positionType": 0
+				}
 			}
 		}
 	]

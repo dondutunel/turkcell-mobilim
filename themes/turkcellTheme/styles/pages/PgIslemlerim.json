@@ -1,9 +1,13 @@
 {
-  "#pgIslemlerim": {
-    "backgroundColor": {
-      "startColor": "rgba(56,191,242,1)",
-      "endColor": "rgba(41,152,227,1)",
-      "direction": "VERTICAL"
-    }
-  }
+	"#pgIslemlerim": {
+		"backgroundColor": {
+			"startColor": "rgba(56,191,242,1)",
+			"endColor": "rgba(41,152,227,1)",
+			"direction": "VERTICAL"
+		},
+		"flexProps": {
+			"alignItems": "STRETCH"
+		},
+		"paddingTop": 8
+	}
 }

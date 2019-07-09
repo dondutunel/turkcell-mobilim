@@ -5,21 +5,31 @@
 			"alignItems": "STRETCH"
 		},
 		"&-img": {
-			"width": 28
+			"width": 28,
+			"imageFillType": "ASPECTFIT",
+			"height": 28
 		},
 		"height": 28,
 		"&-flNotification": {
 			"flexProps": {
 				"flexGrow": 1,
-				"flexDirection": "ROW"
+				"flexDirection": "ROW",
+				"alignItems": "CENTER"
 			},
 			"&-img": {
 				"marginRight": 14
 			},
-			"&-img1": {},
+			"&-img1": {
+				"image": "message_icon.png",
+				"height": 21
+			},
 			"&-img2": {
-				"marginLeft": null
-			}
+				"marginLeft": 14,
+				"image": "notification_icon.png",
+				"height": 18
+			},
+			"height": null,
+			"marginLeft": 15
 		}
 	}
 }

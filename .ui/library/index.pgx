@@ -14,7 +14,9 @@
 				"parent": null
 			},
 			"type": "Page",
-			"userProps": {},
+			"userProps": {
+				"backgroundColor": "rgba( 80, 227, 194, 1 )"
+			},
 			"version": "6.15.1"
 		},
 		{
