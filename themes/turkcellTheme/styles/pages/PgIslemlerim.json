@@ -8,6 +8,19 @@
 		"flexProps": {
 			"alignItems": "STRETCH"
 		},
-		"paddingTop": 8
+		"paddingTop": 8,
+		"&-title": {
+			"font": {
+				"size": 28,
+				"family": "SFProText",
+				"style": "Semibold",
+				"bold": true,
+				"italic": false
+			},
+			"height": 41,
+			"textColor": "rgba(255,255,255,1)",
+			"marginTop": 8,
+			"marginLeft": 15
+		}
 	}
 }

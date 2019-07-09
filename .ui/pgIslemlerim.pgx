@@ -8,7 +8,8 @@
 				"children": [
 					"a829471c",
 					"35f1c1a1",
-					"2acb-a157-0a70-0e0d"
+					"2acb-a157-0a70-0e0d",
+					"1344-8331-01e5-9fea"
 				],
 				"isRemovable": true,
 				"name": "pgIslemlerim",
@@ -77,6 +78,22 @@
 					"positionType": 0
 				},
 				"usePageVariable": true
+			}
+		},
+		{
+			"className": ".sf-label #pgIslemlerim-title",
+			"id": "1344-8331-01e5-9fea",
+			"props": {
+				"autoHeight": 32.14285714285714,
+				"children": [],
+				"name": "label1",
+				"parent": "7761adc8",
+				"text": "Islemlerim"
+			},
+			"type": "Label",
+			"userProps": {
+				"autoHeight": 32.14285714285714,
+				"text": "Islemlerim"
 			}
 		}
 	]
