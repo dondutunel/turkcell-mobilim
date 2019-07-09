@@ -63,7 +63,8 @@
 			"props": {
 				"children": [],
 				"name": "flUserHeaderBar",
-				"parent": "7761adc8"
+				"parent": "7761adc8",
+				"usePageVariable": true
 			},
 			"source": {
 				"page": "__library__",
@@ -74,7 +75,8 @@
 			"userProps": {
 				"flex": {
 					"positionType": 0
-				}
+				},
+				"usePageVariable": true
 			}
 		}
 	]
