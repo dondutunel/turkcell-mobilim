@@ -1,0 +1,44 @@
+{
+	".flUserHeaderBar": {
+		"flexProps": {
+			"flexDirection": "ROW",
+			"alignItems": "STRETCH"
+		},
+		"&-img": {
+			"width": 24,
+			"imageFillType": "ASPECTFIT",
+			"height": 24,
+			"flexProps": {
+				"alignSelf": "CENTER"
+			}
+		},
+		"height": 28,
+		"&-flNotification": {
+			"flexProps": {
+				"flexGrow": 1,
+				"flexDirection": "ROW",
+				"alignItems": "CENTER"
+			},
+			"&-img": {
+				"marginRight": 14
+			},
+			"&-img1": {
+				"image": "message_icon.png",
+				"height": 21
+			},
+			"&-img2": {
+				"marginLeft": 14,
+				"image": "notification_icon.png",
+				"height": 18
+			},
+			"height": null
+		},
+		"&-imgUser": {
+			"borderWidth": 2,
+			"borderRadius": 12,
+			"borderColor": "rgba( 254, 198, 44, 1 )"
+		},
+		"paddingRight": 15,
+		"paddingLeft": 15
+	}
+}
