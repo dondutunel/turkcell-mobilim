@@ -4,7 +4,9 @@
 			"currentTheme": "turkcellTheme",
 			"baseTheme": "baseTheme",
 			"themes": [
-				"defaultTheme"
+				"baseTheme",
+				"defaultTheme",
+				"turkcellTheme"
 			]
 		},
 		"paths": {

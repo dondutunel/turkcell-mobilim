@@ -1,5 +1,5 @@
 const extend = require("js-base/core/extend");
-const Page2Design = require('ui/ui_page2');
+const Page2Design = require('ui/ui_pgIslemlerim');
 
 const Page2 = extend(Page2Design)(
     // Constructor
@@ -20,7 +20,7 @@ const Page2 = extend(Page2Design)(
  */
 function onShow(superOnShow) {
     superOnShow();
-    console.log("page2");
+    console.log("pgIslemlerim");
 }
 
 /**

@@ -1,1 +1,25 @@
-{}
+{
+	".flUserHeaderBar": {
+		"flexProps": {
+			"flexDirection": "ROW",
+			"alignItems": "STRETCH"
+		},
+		"&-img": {
+			"width": 28
+		},
+		"height": 28,
+		"&-flNotification": {
+			"flexProps": {
+				"flexGrow": 1,
+				"flexDirection": "ROW"
+			},
+			"&-img": {
+				"marginRight": 14
+			},
+			"&-img1": {},
+			"&-img2": {
+				"marginLeft": null
+			}
+		}
+	}
+}

@@ -1,0 +1,85 @@
+{
+	"components": [
+		{
+			"className": ".sf-flexLayout .flUserHeaderBar",
+			"id": "b5bd-3047-bc5f-d354",
+			"initialized": true,
+			"props": {
+				"children": [
+					"e438-7a3e-d51b-66ee",
+					"4fbf-282e-3f6b-df52"
+				],
+				"name": "flUserHeaderBar",
+				"parent": "57f4-201f-4bfc-5fc6"
+			},
+			"source": {
+				"page": "__library__"
+			},
+			"type": "FlexLayout",
+			"userProps": {
+				"flexProps": {},
+				"left": 9.435896995740059,
+				"top": 450.7051272270007
+			}
+		},
+		{
+			"className": ".sf-flexLayout .flUserHeaderBar-flNotification",
+			"id": "e438-7a3e-d51b-66ee",
+			"props": {
+				"children": [
+					"8af6-7010-63dc-c298",
+					"6387-4cf9-9731-3bba"
+				],
+				"name": "flNotfication",
+				"parent": "b5bd-3047-bc5f-d354"
+			},
+			"source": {
+				"page": "__library__"
+			},
+			"type": "FlexLayout",
+			"userProps": {}
+		},
+		{
+			"className": ".sf-imageView .flUserHeaderBar-img .flUserHeaderBar-flNotification-img1",
+			"id": "8af6-7010-63dc-c298",
+			"props": {
+				"children": [],
+				"name": "img1",
+				"parent": "e438-7a3e-d51b-66ee"
+			},
+			"source": {
+				"page": "__library__"
+			},
+			"type": "ImageView",
+			"userProps": {}
+		},
+		{
+			"className": ".sf-imageView .flUserHeaderBar-img .flUserHeaderBar-flNotification-img2",
+			"id": "6387-4cf9-9731-3bba",
+			"props": {
+				"children": [],
+				"name": "img2",
+				"parent": "e438-7a3e-d51b-66ee"
+			},
+			"source": {
+				"page": "__library__"
+			},
+			"type": "ImageView",
+			"userProps": {}
+		},
+		{
+			"className": ".sf-imageView .flUserHeaderBar-img",
+			"id": "4fbf-282e-3f6b-df52",
+			"props": {
+				"children": [],
+				"name": "imgUser",
+				"parent": "b5bd-3047-bc5f-d354"
+			},
+			"source": {
+				"page": "__library__"
+			},
+			"type": "ImageView",
+			"userProps": {}
+		}
+	]
+}

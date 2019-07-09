@@ -78,11 +78,11 @@ const bottomTabBarRouter = BottomTabBarRouter.of({
         // tab2
         StackRouter.of({
             path: "/btb/tab2",
-            to: "/btb/tab2/page2",
+            to: "/btb/tab2/pgIslemlerim",
             routes: [
                 Route.of({
                     path: "/btb/tab2/pgIslemlerim",
-                    build: buildExtender({ pageName: "page2", singleton: true, pageProps: { shouldExit: true } })
+                    build: buildExtender({ pageName: "pgIslemlerim", singleton: true, pageProps: { shouldExit: true } })
                 }),
             ]
         }),
