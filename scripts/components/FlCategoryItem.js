@@ -11,9 +11,16 @@ const FlCategoryItem = extend(FlCategoryItemDesign)(
 		this.setData = (data) => {
 			this.imgIcon.dispatch({
 				type: "updateUserStyle",
-				userStyle: { image: data.icon }
+				userStyle: { image: data.icon, visible: true }
 			});
 			this.tvTitle.text = data.text;
+		};
+		this.clearData = () => {
+			this.imgIcon.dispatch({
+				type: "updateUserStyle",
+				userStyle: { visible: false }
+			});
+			this.tvTitle.text = "";
 		};
 	}
 );

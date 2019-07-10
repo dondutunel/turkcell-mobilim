@@ -3,18 +3,84 @@ const FlexLayout = require("sf-core/ui/flexlayout");
 const Screen = require("sf-core/device/screen");
 const extend = require("js-base/core/extend");
 const touch = require("sf-extension-utils/lib/touch");
-const PgIslemlerimDesign = require('ui/ui_pgIslemlerim');
+const Page2Design = require('ui/ui_pgIslemlerim');
 const FlCategoryItem = require("../components/FlCategoryItem");
+const FlSwitchButton = require("../components/FlSwitchButton");
 
 const profileGravatar = "https://www.gravatar.com/avatar/205e460b479e2e5b48aec07710c08d50?r=pg";
 const PROFILE_RADIUS = 14;
 const MAIN_ITEM_CLASS_NAME = ".flCategoryItem.main";
 const SUB_ITEM_TEXT_CLASS_NAME = ".flCategoryItem-title.submenu";
-const SWITCH_INVISIBLE_CLASS_NAME = "#pgIslemlerim-subMenu-switch.invisible";
 const ITEM_MARGIN = 15;
 const ITEM_RATIO = 110 / 105;
 
-const PgIslemlerim = extend(PgIslemlerimDesign)(
+const MAIN_ITEMS_DATA = [{
+		icon: "masrafim_icon.png",
+		text: "MASRAFIM"
+	},
+	{
+		icon: "toplanti_icon.png",
+		text: "TOPLANTI\nODASI"
+	},
+	{
+		icon: "masrafim_icon.png",
+		text: "EGITIMLERIM"
+	}
+];
+
+const SWITCH_DATA = [{
+		text: "Talep Islemlerim",
+		isActive: true
+	},
+	{
+		text: "Is Guvenligi",
+		isActive: false
+	}
+];
+
+
+const SUBMENU_DATA = {
+	"Talep Islemlerim": [{
+			icon: "seyahat_icon.png",
+			text: "Seyahat\nTalebi"
+		},
+		{
+			icon: "ofis_icon.png",
+			text: "Ofis\nDisindayim"
+		},
+		{
+			icon: "mobil_icon.png",
+			text: "Mobil\nCalisimci"
+		},
+		{
+			icon: "vekalet_icon.png",
+			text: "Vekalet"
+		},
+		{
+			icon: "izin_icon.png",
+			text: "Izin"
+		},
+		{
+			icon: "cym_icon.png",
+			text: "CYM"
+		}
+	],
+	"Is Guvenligi": [{
+			icon: "mobil_icon.png",
+			text: "Mobil\nCalisimci"
+		},
+		{
+			icon: "vekalet_icon.png",
+			text: "Vekalet"
+		},
+		{
+			icon: "izin_icon.png",
+			text: "Izin"
+		}
+	]
+};
+
+const Page2 = extend(Page2Design)(
 	// Constructor
 	function(_super, routeData, router) {
 		// Initalizes super class for this page scope
@@ -22,7 +88,6 @@ const PgIslemlerim = extend(PgIslemlerimDesign)(
 		// Overrides super.onShow method
 		this.onShow = onShow.bind(this, this.onShow.bind(this));
 		// Overrides super.onLoad method
-		this._data = routeData.data;
 		this.onLoad = onLoad.bind(this, this.onLoad.bind(this));
 	});
 
@@ -45,30 +110,18 @@ function onShow(superOnShow) {
 function onLoad(superOnLoad) {
 	superOnLoad();
 	this.headerBar.leftItemEnabled = false;
-	this.lblTitle.text = this._data.title;
 	this.flUserHeaderBar.imgUser.loadFromUrl({
 		url: profileGravatar,
 		onSuccess: () => {
 			this.flUserHeaderBar.imgUser.image = this.flUserHeaderBar.imgUser.image.android.round(PROFILE_RADIUS);
 		}
 	});
-	createMainItems(this, 3, ITEM_MARGIN, ITEM_RATIO, this._data.mainItems);
-	if (this._data.switchButtons && this._data.switchButtons.length > 0) {
-		this.flSwitchButton.setData(this._data.switchButtons);
-	}
-	else {
-		this.flSwitchButton.dispatch({
-			type: "pushClassNames",
-			classNames: [SWITCH_INVISIBLE_CLASS_NAME]
-		});
-	}
+	createMainItems(this, 3, ITEM_MARGIN, ITEM_RATIO, MAIN_ITEMS_DATA);
+	const flSwitchButton = new FlSwitchButton();
+	this.flSubMenu.addChild(flSwitchButton, "flSwitchButton");
+	flSwitchButton.setData(SWITCH_DATA);
 	createSubMenuItems(this, 2, 3, ITEM_MARGIN * 2, ITEM_RATIO);
-	setSubMenuItemsData(this.flMain, this._data.subMenuItems[this.flSwitchButton.currentIndex + ``]);
-	this.flSwitchButton.onIndexChange = index => {
-		console.log("index: ", index);
-		setSubMenuItemsData(this.flMain, this._data.subMenuItems[this.flSwitchButton.currentIndex + ``]);
-	};
-	this.layout.applyLayout();
+	setSubMenuItemsData(this.flSubMenu, SUBMENU_DATA["Talep Islemlerim"]);
 }
 
 function createMainItems(page, itemCount, itemMargin, itemRatio, itemsData) {
@@ -105,11 +158,17 @@ function createMainItems(page, itemCount, itemMargin, itemRatio, itemsData) {
 }
 
 function createSubMenuItems(page, rowCount, columnCount, parentPadding, itemRatio) {
-	const { flMain } = page;
+	const { flSubMenu } = page;
 	const itemWidth = (Screen.width - ((columnCount - 1) * 1) - parentPadding) / columnCount;
 	const itemHeight = itemWidth * itemRatio;
-	let flRow, item;
-	flMain.items = [];
+	let flRow, item, flMain;
+	flSubMenu.items = [];
+	flMain = new FlexLayout({
+		flexGrow: 1,
+		alignItems: FlexLayout.AlignItems.STRETCH,
+		marginTop: 27
+	});
+	flSubMenu.addChild(flMain, "flMain");
 	for (let i = 0; i < rowCount; ++i) {
 		flRow = new FlexLayout({
 			height: itemHeight,
@@ -131,7 +190,7 @@ function createSubMenuItems(page, rowCount, columnCount, parentPadding, itemRati
 				type: "pushClassNames",
 				classNames: [SUB_ITEM_TEXT_CLASS_NAME]
 			});
-			flMain.items.push(item);
+			flSubMenu.items.push(item);
 			item.applyLayout();
 			if (j + 1 !== columnCount) {
 				flRow.addChild(new FlexLayout(), "line" + j, ".flLine.vertical");
@@ -141,16 +200,17 @@ function createSubMenuItems(page, rowCount, columnCount, parentPadding, itemRati
 			flMain.addChild(new FlexLayout(), "line" + i, ".flLine.horizontal");
 		}
 	}
+	flSubMenu.applyLayout();
 }
 
 function setSubMenuItemsData(menu, data) {
 	const { items } = menu;
 	items.forEach((item, index) => {
-		data[index] ? item.setData(data[index]) : item.clearData();
+		item.setData(data[index]);
 		touch.addPressEvent(item, () => {
 
 		});
 	});
 }
 
-module.exports = PgIslemlerim;
+module.exports = Page2;

@@ -17,15 +17,18 @@ const FlSwitchButton = extend(FlSwitchButtonDesign)(
 			childList.forEach((child, index) => {
 				touch.addPressEvent(child, () => {
 					if (!this._data[index].isActive) {
-						this.onIndexChange && this.onIndexChange(index);
 						this._data[index].isActive = true;
 						this._data[this._currentActiveIndex].isActive = false;
 						updateItems(this);
+						this.onIndexChange && this.onIndexChange(index);
 					}
 				});
 			});
 			updateItems(this);
 		};
+		Object.defineProperty(this, "currentIndex", {
+			get: () => this._currentActiveIndex
+		});
 
 	}
 );

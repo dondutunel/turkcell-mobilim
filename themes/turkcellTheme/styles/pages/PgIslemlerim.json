@@ -36,12 +36,36 @@
 			"height": null,
 			"backgroundColor": "rgba(255,255,255,1)",
 			"borderRadius": 20,
-			"marginBottom": -20,
 			"marginTop": 10,
 			"paddingLeft": 15,
 			"paddingRight": 15,
-			"paddingTop": 22
+			"paddingTop": 22,
+			"&-switch": {
+				".invisible": {
+					"maxHeight": 0,
+					"marginBottom": 0
+				}
+			},
+			"&-flMain": {
+				"flexProps": {
+					"alignItems": "CENTER",
+					"flexDirection": "COLUMN",
+					"flexGrow": 1,
+					"justifyContent": "CENTER"
+				},
+				"height": null
+			}
 		},
-		"paddingBottom": 0
+		"paddingBottom": 0,
+		"&-fakeLayout": {
+			"bottom": 0,
+			"left": 0,
+			"right": 0,
+			"backgroundColor": "rgba( 255, 255, 255, 1 )",
+			"height": 50,
+			"flexProps": {
+				"positionType": "ABSOLUTE"
+			}
+		}
 	}
 }

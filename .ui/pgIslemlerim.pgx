@@ -11,6 +11,7 @@
 					"2acb-a157-0a70-0e0d",
 					"1344-8331-01e5-9fea",
 					"cb90-93fa-62b6-cfa2",
+					"479d-3366-7e26-fc08",
 					"b991-c072-d5eb-dc59"
 				],
 				"isRemovable": true,
@@ -89,12 +90,14 @@
 				"children": [],
 				"name": "lblTitle",
 				"parent": "7761adc8",
-				"text": "Islemlerim"
+				"text": "Islemlerim",
+				"usePageVariable": true
 			},
 			"type": "Label",
 			"userProps": {
 				"autoHeight": 32.14285714285714,
-				"text": "Islemlerim"
+				"text": "Islemlerim",
+				"usePageVariable": true
 			}
 		},
 		{
@@ -112,12 +115,61 @@
 			}
 		},
 		{
+			"className": ".sf-flexLayout #pgIslemlerim-fakeLayout",
+			"id": "479d-3366-7e26-fc08",
+			"props": {
+				"children": [],
+				"name": "flFakeLayout",
+				"parent": "7761adc8"
+			},
+			"type": "FlexLayout",
+			"userProps": {}
+		},
+		{
 			"className": ".sf-flexLayout #pgIslemlerim-subMenu",
 			"id": "b991-c072-d5eb-dc59",
 			"props": {
-				"children": [],
+				"children": [
+					"5939-5c5b-5201-9256",
+					"90ae-3ebb-4784-30ba"
+				],
 				"name": "flSubMenu",
 				"parent": "7761adc8",
+				"usePageVariable": true
+			},
+			"type": "FlexLayout",
+			"userProps": {
+				"usePageVariable": true
+			}
+		},
+		{
+			"className": ".sf-flexLayout .flSwitchButton #pgIslemlerim-subMenu-switch",
+			"hiddenComponent": false,
+			"id": "5939-5c5b-5201-9256",
+			"initialized": true,
+			"props": {
+				"children": [],
+				"name": "flSwitchButton",
+				"parent": "b991-c072-d5eb-dc59",
+				"usePageVariable": true
+			},
+			"source": {
+				"page": "__library__",
+				"type": "flSwitchButton",
+				"id": "48d7-6d35-d5d9-85d4"
+			},
+			"type": "FlexLayout",
+			"userProps": {
+				"usePageVariable": true
+			}
+		},
+		{
+			"className": ".sf-flexLayout #pgIslemlerim-subMenu-flMain",
+			"id": "90ae-3ebb-4784-30ba",
+			"props": {
+				"children": [],
+				"name": "flMain",
+				"parent": "b991-c072-d5eb-dc59",
 				"usePageVariable": true
 			},
 			"type": "FlexLayout",

@@ -11,7 +11,7 @@ const {
 } = require("@smartface/router");
 const buildExtender = require("sf-extension-utils/lib/router/buildExtender");
 require("sf-extension-utils/lib/router/goBack"); // Implements onBackButtonPressed
-
+const pagesData = require("../pagesData");
 class StylingComponent {
     subscribeContext({
         type, // context type
@@ -82,18 +82,18 @@ const bottomTabBarRouter = BottomTabBarRouter.of({
             routes: [
                 Route.of({
                     path: "/btb/tab2/pgIslemlerim",
-                    build: buildExtender({ pageName: "pgIslemlerim", singleton: true, pageProps: { shouldExit: true } })
+                    build: buildExtender({ pageName: "pgIslemlerim", singleton: true, pageProps: { shouldExit: true, data: pagesData.pgIslemlerim } })
                 }),
             ]
         }),
         // tab3
         StackRouter.of({
             path: "/btb/tab3",
-            to: "/btb/tab3/page3",
+            to: "/btb/tab3/hr",
             routes: [
                 Route.of({
-                    path: "/btb/tab3/page3",
-                    build: buildExtender({ pageName: "page3", singleton: true, pageProps: { shouldExit: true } })
+                    path: "/btb/tab3/hr",
+                    build: buildExtender({ pageName: "pgIslemlerim", singleton: true, pageProps: { shouldExit: true,data: pagesData.pgHr } })
                 }),
             ]
         }),
