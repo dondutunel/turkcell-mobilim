@@ -1,11 +1,11 @@
 {
     "info": {
-        "name": "Smartface Empty Workspace",
-        "company": "Smartface User",
+        "name": "Turkcell Mobilim",
+        "company": "Turkcell",
         "webSite": "https://www.smartface.io",
         "version": "1.0.0",
         "runtimeVersion": "1100",
-        "description": "This is Smartface's default empty project. You can click to Run on Device button to see it on your device."
+        "description": "Turkcell Mobilim PoC projesi"
     },
     "config": {
         "cache": {

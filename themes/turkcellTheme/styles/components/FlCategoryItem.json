@@ -23,9 +23,8 @@
 		"&-icon": {
 			"height": null,
 			"flexProps": {
-				"flexGrow": 1
-			},
-			"marginBottom": 5
+				"flexGrow": 1.4
+			}
 		},
 		"borderRadius": 8,
 		".main": {

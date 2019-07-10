@@ -30,13 +30,16 @@
 			"props": {
 				"children": [],
 				"name": "imgIcon",
-				"parent": "9ad2-2d08-7e4f-c18c"
+				"parent": "9ad2-2d08-7e4f-c18c",
+				"usePageVariable": true
 			},
 			"source": {
 				"page": "__library__"
 			},
 			"type": "ImageView",
-			"userProps": {}
+			"userProps": {
+				"usePageVariable": true
+			}
 		},
 		{
 			"className": ".sf-textview .flCategoryItem-title",
@@ -46,7 +49,8 @@
 				"children": [],
 				"name": "tvTitle",
 				"parent": "9ad2-2d08-7e4f-c18c",
-				"text": "  label1"
+				"text": "  label1",
+				"usePageVariable": true
 			},
 			"source": {
 				"page": "__library__"
@@ -54,7 +58,8 @@
 			"type": "TextView",
 			"userProps": {
 				"autoHeight": 16.363636363636363,
-				"text": "  label1"
+				"text": "  label1",
+				"usePageVariable": true
 			}
 		}
 	]

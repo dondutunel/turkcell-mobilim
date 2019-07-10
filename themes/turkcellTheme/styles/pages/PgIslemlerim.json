@@ -23,7 +23,11 @@
 			"marginLeft": 15
 		},
 		"&-mainItems": {
-			"height": 130
+			"height": 130,
+			"flexProps": {
+				"flexDirection": "ROW",
+				"alignItems": "CENTER"
+			}
 		},
 		"&-subMenu": {
 			"flexProps": {
