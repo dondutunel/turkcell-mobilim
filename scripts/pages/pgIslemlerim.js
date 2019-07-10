@@ -10,6 +10,7 @@ const FlSwitchButton = require("../components/FlSwitchButton");
 const profileGravatar = "https://www.gravatar.com/avatar/205e460b479e2e5b48aec07710c08d50?r=pg";
 const PROFILE_RADIUS = 14;
 const MAIN_ITEM_CLASS_NAME = ".flCategoryItem.main";
+const SUB_ITEM_TEXT_CLASS_NAME = ".flCategoryItem-title.submenu";
 const ITEM_MARGIN = 15;
 const ITEM_RATIO = 110 / 105;
 
@@ -119,7 +120,7 @@ function onLoad(superOnLoad) {
 	const flSwitchButton = new FlSwitchButton();
 	this.flSubMenu.addChild(flSwitchButton, "flSwitchButton");
 	flSwitchButton.setData(SWITCH_DATA);
-	createSubMenuItems(this, 2, 3, ITEM_RATIO);
+	createSubMenuItems(this, 2, 3, ITEM_MARGIN * 2, ITEM_RATIO);
 	setSubMenuItemsData(this.flSubMenu, SUBMENU_DATA["Talep Islemlerim"]);
 }
 
@@ -156,13 +157,17 @@ function createMainItems(page, itemCount, itemMargin, itemRatio, itemsData) {
 	flMainItems.applyLayout();
 }
 
-function createSubMenuItems(page, rowCount, columnCount, itemRatio) {
+function createSubMenuItems(page, rowCount, columnCount, parentPadding, itemRatio) {
 	const { flSubMenu } = page;
-	const itemWidth = (Screen.width - ((columnCount - 1) * 1)) / columnCount;
+	const itemWidth = (Screen.width - ((columnCount - 1) * 1) - parentPadding) / columnCount;
 	const itemHeight = itemWidth * itemRatio;
 	let flRow, item, flMain;
-	flSubMenu.items = []
-	flMain = new FlexLayout({ flexGrow: 1, alignItems: FlexLayout.AlignItems.STRETCH });
+	flSubMenu.items = [];
+	flMain = new FlexLayout({
+		flexGrow: 1,
+		alignItems: FlexLayout.AlignItems.STRETCH,
+		marginTop: 27
+	});
 	flSubMenu.addChild(flMain, "flMain");
 	for (let i = 0; i < rowCount; ++i) {
 		flRow = new FlexLayout({
@@ -181,6 +186,10 @@ function createSubMenuItems(page, rowCount, columnCount, itemRatio) {
 					height: itemHeight
 				}
 			});
+			item.tvTitle.dispatch({
+				type: "pushClassNames",
+				classNames: [SUB_ITEM_TEXT_CLASS_NAME]
+			});
 			flSubMenu.items.push(item);
 			item.applyLayout();
 			if (j + 1 !== columnCount) {
@@ -196,7 +205,12 @@ function createSubMenuItems(page, rowCount, columnCount, itemRatio) {
 
 function setSubMenuItemsData(menu, data) {
 	const { items } = menu;
-	items.forEach((item, index) => item.setData(data[index]));
+	items.forEach((item, index) => {
+		item.setData(data[index]);
+		touch.addPressEvent(item, () => {
+
+		});
+	});
 }
 
 module.exports = Page2;

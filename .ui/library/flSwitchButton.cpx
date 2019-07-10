@@ -26,7 +26,7 @@
 			"className": ".sf-label .flSwitchButton-button .flSwitchButton-button.active",
 			"id": "5912-112d-ca9a-5914",
 			"props": {
-				"autoWidth": 45.078125,
+				"autoWidth": 45.90909090909091,
 				"children": [],
 				"name": "lblButton2",
 				"parent": "48d7-6d35-d5d9-85d4",
@@ -38,7 +38,7 @@
 			},
 			"type": "Label",
 			"userProps": {
-				"autoWidth": 45.078125,
+				"autoWidth": 45.90909090909091,
 				"text": "  label1",
 				"usePageVariable": true
 			}
@@ -47,7 +47,7 @@
 			"className": ".sf-label .flSwitchButton-button",
 			"id": "db94-b27a-9f5e-af0b",
 			"props": {
-				"autoWidth": 45.078125,
+				"autoWidth": 45.90909090909091,
 				"children": [],
 				"name": "lblButton1",
 				"parent": "48d7-6d35-d5d9-85d4",
@@ -59,7 +59,7 @@
 			},
 			"type": "Label",
 			"userProps": {
-				"autoWidth": 45.078125,
+				"autoWidth": 45.90909090909091,
 				"text": "  label1",
 				"usePageVariable": true
 			}

@@ -18,7 +18,10 @@
 				"bold": true,
 				"italic": false
 			},
-			"textColor": "rgba(255,255,255,1)"
+			"textColor": "rgba(255,255,255,1)",
+			".submenu": {
+				"textColor": "rgba(160,160,165,1)"
+			}
 		},
 		"&-icon": {
 			"height": null,
@@ -26,9 +29,11 @@
 				"flexGrow": 1.4
 			}
 		},
-		"borderRadius": 8,
+		"borderRadius": 0,
 		".main": {
-			"backgroundColor": "rgba( 254, 198, 44, 1 )"
-		}
+			"backgroundColor": "rgba( 254, 198, 44, 1 )",
+			"borderRadius": 8
+		},
+		"backgroundColor": "rgba(255,255,255,1)"
 	}
 }

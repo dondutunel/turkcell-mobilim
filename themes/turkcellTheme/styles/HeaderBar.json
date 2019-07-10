@@ -31,6 +31,10 @@
 				"family": "SFProText",
 				"style": "Semibold"
 			}
+		},
+		"&-flexLayout": {
+			"marginTop": null,
+			"marginBottom": null
 		}
 	}
 }
