@@ -33,7 +33,7 @@ function onShow(superOnShow) {
  */
 function onLoad(superOnLoad) {
 	superOnLoad();
-	
+	this.lblTitle.text = "Mobil uygulamamıza hoş geldiniz,\nlütfen giriş yapınız.";
 }
 
 module.exports = PgLogin;

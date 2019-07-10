@@ -30,7 +30,8 @@
 				"italic": false,
 				"family": "SFProText",
 				"style": "Semibold"
-			}
+			},
+			"textColor": "rgba( 255, 255, 255, 1 )"
 		},
 		"&-flexLayout": {
 			"marginTop": null,
@@ -41,6 +42,19 @@
 			"paddingRight": 0,
 			"paddingLeft": 0,
 			"paddingBottom": 0
+		},
+		"&-button": {
+			"&-white": {
+				"backgroundColor": "rgba(255,255,255,1)",
+				"textColor": "rgba( 41, 177, 235, 1 )"
+			},
+			"font": {
+				"size": 17,
+				"bold": true,
+				"italic": false,
+				"family": "SFProText",
+				"style": "Semibold"
+			}
 		}
 	}
 }

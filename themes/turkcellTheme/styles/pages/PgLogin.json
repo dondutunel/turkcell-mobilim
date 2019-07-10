@@ -8,7 +8,7 @@
 			"layout": {
 				"flexProps": {
 					"justifyContent": "CENTER",
-					"alignItems": "CENTER"
+					"alignItems": "STRETCH"
 				}
 			}
 		},
@@ -16,7 +16,21 @@
 			"height": 112,
 			"width": 110,
 			"image": "logo.png",
-			"imageFillType": "ASPECTFIT"
-		}
+			"imageFillType": "ASPECTFIT",
+			"flexProps": {
+				"alignSelf": "CENTER"
+			}
+		},
+		"&-mtEmail": {},
+		"&-title": {
+			"maxLines": 2,
+			"font": {
+				"size": 17
+			},
+			"textAlignment": "MIDCENTER",
+			"marginTop": 33
+		},
+		"paddingLeft": 15,
+		"paddingRight": 15
 	}
 }

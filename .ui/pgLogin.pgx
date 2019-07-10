@@ -1,7 +1,7 @@
 {
 	"components": [
 		{
-			"className": ".sf-page .gradientBackground",
+			"className": ".sf-page .gradientBackground #pgLogin",
 			"id": "127d-2122-01ae-f800",
 			"initialized": true,
 			"props": {
@@ -52,7 +52,11 @@
 			"props": {
 				"autoSizeEnabled": true,
 				"children": [
-					"237c-a710-e787-e54d"
+					"237c-a710-e787-e54d",
+					"bbae-4d21-98e5-4a21",
+					"8be7-f535-b9ad-5513",
+					"be48-0c0c-3e00-c959",
+					"fb2d-0029-cd1b-1c1a"
 				],
 				"name": "svMain",
 				"parent": "127d-2122-01ae-f800",
@@ -69,11 +73,85 @@
 			"id": "237c-a710-e787-e54d",
 			"props": {
 				"children": [],
-				"name": "imageView1",
+				"name": "imgLogo",
 				"parent": "6748-f5e7-57f2-69d4"
 			},
 			"type": "ImageView",
 			"userProps": {}
+		},
+		{
+			"className": ".sf-label #pgLogin-title",
+			"id": "bbae-4d21-98e5-4a21",
+			"props": {
+				"autoHeight": 39.53488372093023,
+				"children": [],
+				"name": "lblTitle",
+				"parent": "6748-f5e7-57f2-69d4",
+				"text": "Mobil uygulamamıza hoş geldiniz, \tlütfen giriş yapınız.",
+				"usePageVariable": true
+			},
+			"type": "Label",
+			"userProps": {
+				"autoHeight": 39.53488372093023,
+				"text": "Mobil uygulamamıza hoş geldiniz, \tlütfen giriş yapınız.",
+				"usePageVariable": true
+			}
+		},
+		{
+			"className": ".materialTextBox-wrapper #pgLogin-mtEmail",
+			"hiddenComponent": false,
+			"id": "8be7-f535-b9ad-5513",
+			"initialized": false,
+			"props": {
+				"children": [],
+				"name": "mtEmail",
+				"parent": "6748-f5e7-57f2-69d4"
+			},
+			"source": {
+				"page": "__modules__",
+				"moduleName": "Materialtextbox",
+				"modulePath": "materialtextbox",
+				"type": "Materialtextbox",
+				"id": "8fb2-10a8-12e4-9b45"
+			},
+			"type": "FlexLayout",
+			"userProps": {}
+		},
+		{
+			"className": ".materialTextBox-wrapper",
+			"hiddenComponent": false,
+			"id": "be48-0c0c-3e00-c959",
+			"initialized": false,
+			"props": {
+				"children": [],
+				"name": "mtPassword",
+				"parent": "6748-f5e7-57f2-69d4"
+			},
+			"source": {
+				"page": "__modules__",
+				"moduleName": "Materialtextbox",
+				"modulePath": "materialtextbox",
+				"type": "Materialtextbox",
+				"id": "8fb2-10a8-12e4-9b45"
+			},
+			"type": "FlexLayout",
+			"userProps": {}
+		},
+		{
+			"className": ".sf-button .sf-button-white",
+			"id": "fb2d-0029-cd1b-1c1a",
+			"props": {
+				"autoHeight": 23.25581395348837,
+				"children": [],
+				"name": "button1",
+				"parent": "6748-f5e7-57f2-69d4",
+				"text": "Giriş Yap"
+			},
+			"type": "Button",
+			"userProps": {
+				"autoHeight": 23.25581395348837,
+				"text": "Giriş Yap"
+			}
 		}
 	]
 }
