@@ -22,7 +22,6 @@
 			"type": "Page",
 			"userProps": {
 				"orientation": "PORTRAIT",
-				"paddingBottom": 20,
 				"safeAreaEnabled": true
 			},
 			"version": "6.15.1"

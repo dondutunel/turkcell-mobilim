@@ -33,7 +33,12 @@
 			"flexProps": {
 				"flexGrow": 1
 			},
-			"height": null
-		}
+			"height": null,
+			"backgroundColor": "rgba(255,255,255,1)",
+			"borderRadius": 20,
+			"marginBottom": -20,
+			"marginTop": 10
+		},
+		"paddingBottom": 0
 	}
 }
