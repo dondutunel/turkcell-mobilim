@@ -26,7 +26,8 @@ module.exports = {
         subMenuItems: {
             "0": [{
                     icon: "seyahat_icon.png",
-                    text: "Seyahat\nTalebi"
+                    text: "Seyahat\nTalebi",
+                    routePath: "/btb/tab2/pgSeyahatTalebi"
                 },
                 {
                     icon: "ofis_icon.png",

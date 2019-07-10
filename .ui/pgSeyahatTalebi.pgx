@@ -1,0 +1,48 @@
+{
+	"components": [
+		{
+			"className": ".page",
+			"id": "8852-2412-32cb-cfaa",
+			"initialized": true,
+			"props": {
+				"children": [
+					"2617-4599-5935-2e41",
+					"a742-5dd8-3b39-0306"
+				],
+				"name": "pgSeyahatTalebi",
+				"orientation": "PORTRAIT",
+				"parent": null
+			},
+			"type": "Page",
+			"userProps": {},
+			"version": "6.15.1"
+		},
+		{
+			"className": ".statusBar",
+			"id": "2617-4599-5935-2e41",
+			"props": {
+				"children": [],
+				"isRemovable": false,
+				"name": "statusBar",
+				"parent": "8852-2412-32cb-cfaa"
+			},
+			"type": "StatusBar",
+			"userProps": {}
+		},
+		{
+			"className": ".headerBar",
+			"id": "a742-5dd8-3b39-0306",
+			"props": {
+				"children": [],
+				"isRemovable": false,
+				"name": "headerBar",
+				"parent": "8852-2412-32cb-cfaa",
+				"title": "Seyahat Talebi"
+			},
+			"type": "HeaderBar",
+			"userProps": {
+				"title": "Seyahat Talebi"
+			}
+		}
+	]
+}

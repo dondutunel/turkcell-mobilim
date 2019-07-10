@@ -49,12 +49,10 @@
 				"children": [],
 				"isRemovable": false,
 				"name": "headerBar",
-				"parent": "7761adc8",
-				"title": "Page Title"
+				"parent": "7761adc8"
 			},
 			"type": "HeaderBar",
 			"userProps": {
-				"title": "Page Title",
 				"visible": false
 			}
 		},

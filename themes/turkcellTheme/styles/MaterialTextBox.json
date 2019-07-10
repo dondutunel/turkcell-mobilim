@@ -2,7 +2,7 @@
     ".materialTextBox": {
         "ellipsizeMode": "END",
         "textAlignment": "MIDLEFT",
-        "textColor": "rgba( 0,0,0,1 )",
+        "textColor": "rgba( 255,255,255,1 )",
         "errorColor": "rgba( 255,0,0,1 )",
         "hintTextColor": "rgba( 255,255,255,0.7 )",
         "cursorColor": "rgba( 255,203,8,1 )",

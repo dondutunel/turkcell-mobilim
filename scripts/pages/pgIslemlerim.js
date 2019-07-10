@@ -63,10 +63,10 @@ function onLoad(superOnLoad) {
 		});
 	}
 	createSubMenuItems(this, 2, 3, ITEM_MARGIN * 2, ITEM_RATIO);
-	setSubMenuItemsData(this.flMain, this._data.subMenuItems[this.flSwitchButton.currentIndex + ``]);
+	setSubMenuItemsData(this, this._data.subMenuItems[this.flSwitchButton.currentIndex + ``]);
 	this.flSwitchButton.onIndexChange = index => {
 		console.log("index: ", index);
-		setSubMenuItemsData(this.flMain, this._data.subMenuItems[this.flSwitchButton.currentIndex + ``]);
+		setSubMenuItemsData(this, this._data.subMenuItems[this.flSwitchButton.currentIndex + ``]);
 	};
 	this.layout.applyLayout();
 }
@@ -143,12 +143,13 @@ function createSubMenuItems(page, rowCount, columnCount, parentPadding, itemRati
 	}
 }
 
-function setSubMenuItemsData(menu, data) {
-	const { items } = menu;
-	items.forEach((item, index) => {
-		data[index] ? item.setData(data[index]) : item.clearData();
+function setSubMenuItemsData(page, data) {
+	const { flMain, router } = page;
+	flMain.items.forEach((item, index) => {
+		const itemData = data[index];
+		itemData ? item.setData(itemData) : item.clearData();
 		touch.addPressEvent(item, () => {
-
+			itemData && itemData.routePath && (router.push(itemData.routePath));
 		});
 	});
 }

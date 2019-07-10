@@ -82,8 +82,17 @@ const bottomTabBarRouter = BottomTabBarRouter.of({
             routes: [
                 Route.of({
                     path: "/btb/tab2/pgIslemlerim",
-                    build: buildExtender({ pageName: "pgIslemlerim", singleton: true, pageProps: { shouldExit: true, data: pagesData.pgIslemlerim } })
+                    build: buildExtender({
+                        pageName: "pgIslemlerim",
+                        headerBarStyle: { visible: false },
+                        singleton: true,
+                        pageProps: { shouldExit: true, data: pagesData.pgIslemlerim }
+                    })
                 }),
+                Route.of({
+                    path: "/btb/tab2/pgSeyahatTalebi",
+                    build: buildExtender({ pageName: "pgSeyahatTalebi", singleton: false, pageProps: { shouldExit: true } })
+                })
             ]
         }),
         // tab3
