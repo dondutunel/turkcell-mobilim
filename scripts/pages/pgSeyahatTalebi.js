@@ -1,11 +1,10 @@
-const Screen = require("sf-core/device/screen");
 const Color = require("sf-core/ui/color");
 const HeaderBarItem = require("sf-core/ui/headerbaritem");
 const Image = require("sf-core/ui/image");
 const System = require("sf-core/device/system");
-/* 
-		You can modify its contents.
-*/
+const touch = require("sf-extension-utils/lib/touch");
+const propagateTouchEvents = require("lib/propagateTouchEvents");
+
 const extend = require('js-base/core/extend');
 const PgSeyahatTalebiDesign = require('ui/ui_pgSeyahatTalebi');
 
@@ -54,6 +53,12 @@ function onLoad(superOnLoad) {
 	headerBar.itemColor = Color.WHITE;
 	//this.svMain.layout.minHeight = Screen.height;
 	initMaterials(this);
+	touch.addPressEvent(this.btnContinue, () => {
+
+	});
+	propagateTouchEvents(this.svMain);
+	this.flCheckFlight.setData({ text: "Ucus" });
+	this.flCheckAccommodation.setData({ text: "Konaklama" });
 }
 
 function initMaterials(page) {

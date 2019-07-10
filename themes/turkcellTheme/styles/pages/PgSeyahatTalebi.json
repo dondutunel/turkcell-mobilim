@@ -1,13 +1,13 @@
 {
 	"#pgSeyahatTalebi": {
-		"paddingRight": 15,
-		"paddingLeft": 15,
 		"&-svMain": {
 			"flexProps": {
 				"flexGrow": 1
 			},
 			"layout": {
-				"paddingTop": 15
+				"paddingTop": 15,
+				"paddingLeft": 15,
+				"paddingRight": 15
 			}
 		},
 		"&-fromTo": {
@@ -51,6 +51,11 @@
 				"flexDirection": "ROW",
 				"alignItems": "STRETCH"
 			}
+		},
+		"&-btn": {
+			"marginTop": 30,
+			"backgroundColor": "rgba( 254, 198, 44, 1 )",
+			"marginBottom": 23
 		}
 	}
 }

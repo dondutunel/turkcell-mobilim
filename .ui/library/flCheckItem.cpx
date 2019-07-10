@@ -30,7 +30,8 @@
 				"children": [],
 				"name": "lblIcon",
 				"parent": "b35d-e347-8f7b-1d0c",
-				"text": " "
+				"text": " ",
+				"usePageVariable": true
 			},
 			"source": {
 				"page": "__library__"
@@ -38,7 +39,8 @@
 			"type": "Label",
 			"userProps": {
 				"autoWidth": 27.578125,
-				"text": " "
+				"text": " ",
+				"usePageVariable": true
 			}
 		},
 		{
@@ -49,7 +51,8 @@
 				"children": [],
 				"name": "lblText",
 				"parent": "b35d-e347-8f7b-1d0c",
-				"text": "label1"
+				"text": "label1",
+				"usePageVariable": true
 			},
 			"source": {
 				"page": "__library__"
@@ -57,7 +60,8 @@
 			"type": "Label",
 			"userProps": {
 				"autoWidth": 47.03125,
-				"text": "label1"
+				"text": "label1",
+				"usePageVariable": true
 			}
 		}
 	]
