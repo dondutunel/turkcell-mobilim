@@ -1,0 +1,17 @@
+{
+    ".flLine": {
+        "backgroundColor": "rgb(237, 237, 237)",
+        "flexProps": {
+            "flexGrow": 1
+        },
+        "&.vertical": {
+            "width": 1,
+            "maxWidth": 1
+        },
+        "&.horizontal": {
+            "height": 1,
+            "maxHeight": 1
+        }
+    }
+
+}

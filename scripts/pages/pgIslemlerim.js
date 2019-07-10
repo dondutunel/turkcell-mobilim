@@ -1,3 +1,5 @@
+const Color = require("sf-core/ui/color");
+const FlexLayout = require("sf-core/ui/flexlayout");
 const Screen = require("sf-core/device/screen");
 const extend = require("js-base/core/extend");
 const touch = require("sf-extension-utils/lib/touch");
@@ -25,8 +27,7 @@ const MAIN_ITEMS_DATA = [{
 	}
 ];
 
-const SWITCH_DATA = [
-	{
+const SWITCH_DATA = [{
 		text: "Talep Islemlerim",
 		isActive: true
 	},
@@ -35,6 +36,48 @@ const SWITCH_DATA = [
 		isActive: false
 	}
 ];
+
+
+const SUBMENU_DATA = {
+	"Talep Islemlerim": [{
+			icon: "seyahat_icon.png",
+			text: "Seyahat\nTalebi"
+		},
+		{
+			icon: "ofis_icon.png",
+			text: "Ofis\nDisindayim"
+		},
+		{
+			icon: "mobil_icon.png",
+			text: "Mobil\nCalisimci"
+		},
+		{
+			icon: "vekalet_icon.png",
+			text: "Vekalet"
+		},
+		{
+			icon: "izin_icon.png",
+			text: "Izin"
+		},
+		{
+			icon: "cym_icon.png",
+			text: "CYM"
+		}
+	],
+	"Is Guvenligi": [{
+			icon: "mobil_icon.png",
+			text: "Mobil\nCalisimci"
+		},
+		{
+			icon: "vekalet_icon.png",
+			text: "Vekalet"
+		},
+		{
+			icon: "izin_icon.png",
+			text: "Izin"
+		}
+	]
+};
 
 const Page2 = extend(Page2Design)(
 	// Constructor
@@ -73,9 +116,11 @@ function onLoad(superOnLoad) {
 		}
 	});
 	createMainItems(this, 3, ITEM_MARGIN, ITEM_RATIO, MAIN_ITEMS_DATA);
-	const flSwitchButton =  new FlSwitchButton();
+	const flSwitchButton = new FlSwitchButton();
 	this.flSubMenu.addChild(flSwitchButton, "flSwitchButton");
 	flSwitchButton.setData(SWITCH_DATA);
+	createSubMenuItems(this, 2, 3, ITEM_RATIO);
+	setSubMenuItemsData(this.flSubMenu, SUBMENU_DATA["Talep Islemlerim"]);
 }
 
 function createMainItems(page, itemCount, itemMargin, itemRatio, itemsData) {
@@ -109,6 +154,49 @@ function createMainItems(page, itemCount, itemMargin, itemRatio, itemsData) {
 		userStyle: { height: itemHeight + (2 * itemMargin) }
 	});
 	flMainItems.applyLayout();
+}
+
+function createSubMenuItems(page, rowCount, columnCount, itemRatio) {
+	const { flSubMenu } = page;
+	const itemWidth = (Screen.width - ((columnCount - 1) * 1)) / columnCount;
+	const itemHeight = itemWidth * itemRatio;
+	let flRow, item, flMain;
+	flSubMenu.items = []
+	flMain = new FlexLayout({ flexGrow: 1, alignItems: FlexLayout.AlignItems.STRETCH });
+	flSubMenu.addChild(flMain, "flMain");
+	for (let i = 0; i < rowCount; ++i) {
+		flRow = new FlexLayout({
+			height: itemHeight,
+			flexDirection: FlexLayout.FlexDirection.ROW,
+			alignItems: FlexLayout.AlignItems.STRETCH
+		});
+		flMain.addChild(flRow, "flRow" + i);
+		for (let j = 0; j < columnCount; ++j) {
+			item = new FlCategoryItem();
+			flRow.addChild(item, "item" + j);
+			item.dispatch({
+				type: "updateUserStyle",
+				userStyle: {
+					width: itemWidth,
+					height: itemHeight
+				}
+			});
+			flSubMenu.items.push(item);
+			item.applyLayout();
+			if (j + 1 !== columnCount) {
+				flRow.addChild(new FlexLayout(), "line" + j, ".flLine.vertical");
+			}
+		}
+		if (i + 1 !== rowCount) {
+			flMain.addChild(new FlexLayout(), "line" + i, ".flLine.horizontal");
+		}
+	}
+	flSubMenu.applyLayout();
+}
+
+function setSubMenuItemsData(menu, data) {
+	const { items } = menu;
+	items.forEach((item, index) => item.setData(data[index]));
 }
 
 module.exports = Page2;
