@@ -1,0 +1,68 @@
+{
+	"components": [
+		{
+			"className": ".sf-flexLayout .flSwitchButton",
+			"id": "48d7-6d35-d5d9-85d4",
+			"initialized": true,
+			"props": {
+				"children": [
+					"5912-112d-ca9a-5914",
+					"db94-b27a-9f5e-af0b"
+				],
+				"name": "flSwitchButton",
+				"parent": "57f4-201f-4bfc-5fc6"
+			},
+			"source": {
+				"page": "__library__"
+			},
+			"type": "FlexLayout",
+			"userProps": {
+				"flexProps": {},
+				"left": 12.800000190734863,
+				"top": 271.9090881347656
+			}
+		},
+		{
+			"className": ".sf-label .flSwitchButton-button .flSwitchButton-button.active",
+			"id": "5912-112d-ca9a-5914",
+			"props": {
+				"autoWidth": 45.078125,
+				"children": [],
+				"name": "lblButton2",
+				"parent": "48d7-6d35-d5d9-85d4",
+				"text": "  label1",
+				"usePageVariable": true
+			},
+			"source": {
+				"page": "__library__"
+			},
+			"type": "Label",
+			"userProps": {
+				"autoWidth": 45.078125,
+				"text": "  label1",
+				"usePageVariable": true
+			}
+		},
+		{
+			"className": ".sf-label .flSwitchButton-button",
+			"id": "db94-b27a-9f5e-af0b",
+			"props": {
+				"autoWidth": 45.078125,
+				"children": [],
+				"name": "lblButton1",
+				"parent": "48d7-6d35-d5d9-85d4",
+				"text": "  label1",
+				"usePageVariable": true
+			},
+			"source": {
+				"page": "__library__"
+			},
+			"type": "Label",
+			"userProps": {
+				"autoWidth": 45.078125,
+				"text": "  label1",
+				"usePageVariable": true
+			}
+		}
+	]
+}

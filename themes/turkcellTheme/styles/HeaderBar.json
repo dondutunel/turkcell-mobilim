@@ -22,6 +22,15 @@
 				"positionType": "RELATIVE"
 			},
 			"backgroundColor": "rgba( 255, 255, 255, 0 )"
+		},
+		"&-label": {
+			"font": {
+				"size": 13,
+				"bold": true,
+				"italic": false,
+				"family": "SFProText",
+				"style": "Semibold"
+			}
 		}
 	}
 }

@@ -37,7 +37,10 @@
 			"backgroundColor": "rgba(255,255,255,1)",
 			"borderRadius": 20,
 			"marginBottom": -20,
-			"marginTop": 10
+			"marginTop": 10,
+			"paddingLeft": 15,
+			"paddingRight": 15,
+			"paddingTop": 22
 		},
 		"paddingBottom": 0
 	}

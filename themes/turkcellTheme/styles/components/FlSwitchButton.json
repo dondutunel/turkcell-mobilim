@@ -1,0 +1,24 @@
+{
+	".flSwitchButton": {
+		"height": 32,
+		"flexProps": {
+			"flexDirection": "ROW",
+			"alignItems": "STRETCH"
+		},
+		"&-button": {
+			"flexProps": {
+				"flexGrow": 1
+			},
+			"textColor": "rgba( 216, 216, 216, 1 )",
+			"height": null,
+			"textAlignment": "MIDCENTER",
+			".active": {
+				"textColor": "rgba(255,255,255,1)",
+				"backgroundColor": "rgba( 47, 171, 235, 1 )",
+				"borderWidth": 0
+			},
+			"borderWidth": 1,
+			"borderColor": "rgba( 216, 216, 216, 1 )"
+		}
+	}
+}

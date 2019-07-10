@@ -3,11 +3,14 @@ const extend = require("js-base/core/extend");
 const touch = require("sf-extension-utils/lib/touch");
 const Page2Design = require('ui/ui_pgIslemlerim');
 const FlCategoryItem = require("../components/FlCategoryItem");
+const FlSwitchButton = require("../components/FlSwitchButton");
 
 const profileGravatar = "https://www.gravatar.com/avatar/205e460b479e2e5b48aec07710c08d50?r=pg";
+const PROFILE_RADIUS = 14;
 const MAIN_ITEM_CLASS_NAME = ".flCategoryItem.main";
 const ITEM_MARGIN = 15;
 const ITEM_RATIO = 110 / 105;
+
 const MAIN_ITEMS_DATA = [{
 		icon: "masrafim_icon.png",
 		text: "MASRAFIM"
@@ -19,6 +22,17 @@ const MAIN_ITEMS_DATA = [{
 	{
 		icon: "masrafim_icon.png",
 		text: "EGITIMLERIM"
+	}
+];
+
+const SWITCH_DATA = [
+	{
+		text: "Talep Islemlerim",
+		isActive: true
+	},
+	{
+		text: "Is Guvenligi",
+		isActive: false
 	}
 ];
 
@@ -55,13 +69,16 @@ function onLoad(superOnLoad) {
 	this.flUserHeaderBar.imgUser.loadFromUrl({
 		url: profileGravatar,
 		onSuccess: () => {
-			this.flUserHeaderBar.imgUser.image = this.flUserHeaderBar.imgUser.image.android.round(14);
+			this.flUserHeaderBar.imgUser.image = this.flUserHeaderBar.imgUser.image.android.round(PROFILE_RADIUS);
 		}
 	});
-	createMainItems(this, 3, ITEM_MARGIN, ITEM_RATIO);
+	createMainItems(this, 3, ITEM_MARGIN, ITEM_RATIO, MAIN_ITEMS_DATA);
+	const flSwitchButton =  new FlSwitchButton();
+	this.flSubMenu.addChild(flSwitchButton, "flSwitchButton");
+	flSwitchButton.setData(SWITCH_DATA);
 }
 
-function createMainItems(page, itemCount, itemMargin, itemRatio) {
+function createMainItems(page, itemCount, itemMargin, itemRatio, itemsData) {
 	const { flMainItems } = page;
 
 	const itemWidth = (Screen.width - ((itemCount + 1) * itemMargin)) / itemCount;
@@ -75,7 +92,7 @@ function createMainItems(page, itemCount, itemMargin, itemRatio) {
 			type: "pushClassNames",
 			classNames: [MAIN_ITEM_CLASS_NAME]
 		});
-		item.setData(MAIN_ITEMS_DATA[i]);
+		item.setData(itemsData[i]);
 		item.dispatch({
 			type: "updateUserStyle",
 			userStyle: {
@@ -89,7 +106,7 @@ function createMainItems(page, itemCount, itemMargin, itemRatio) {
 	}
 	flMainItems.dispatch({
 		type: "updateUserStyle",
-		userStyle: { height: itemHeight + (2 * ITEM_MARGIN) }
+		userStyle: { height: itemHeight + (2 * itemMargin) }
 	});
 	flMainItems.applyLayout();
 }
