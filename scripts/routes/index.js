@@ -93,7 +93,7 @@ const bottomTabBarRouter = BottomTabBarRouter.of({
             routes: [
                 Route.of({
                     path: "/btb/tab3/hr",
-                    build: buildExtender({ pageName: "pgIslemlerim", singleton: true, pageProps: { shouldExit: true,data: pagesData.pgHr } })
+                    build: buildExtender({ pageName: "pgIslemlerim", singleton: true, pageProps: { shouldExit: true, data: pagesData.pgHr } })
                 }),
             ]
         }),
@@ -124,10 +124,14 @@ const bottomTabBarRouter = BottomTabBarRouter.of({
 
 const router = Router.of({
     path: "/",
-    to: "/btb/tab1/page1",
+    to: "/login",
     isRoot: true,
     headerBarParams: () => { ios: { translucent: false } },
     routes: [
+        Route.of({
+            path: "/login",
+            build: buildExtender({ pageName: "pgLogin", singleton: true, pageProps: { shouldExit: true } })
+        }),
         bottomTabBarRouter
     ]
 });

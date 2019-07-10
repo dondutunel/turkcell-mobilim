@@ -1,0 +1,79 @@
+{
+	"components": [
+		{
+			"className": ".sf-page .gradientBackground",
+			"id": "127d-2122-01ae-f800",
+			"initialized": true,
+			"props": {
+				"children": [
+					"ec8a-d140-9a0f-f70d",
+					"6a48-4fe2-19e6-fe72",
+					"6748-f5e7-57f2-69d4"
+				],
+				"name": "pgLogin",
+				"orientation": "PORTRAIT",
+				"parent": null
+			},
+			"type": "Page",
+			"userProps": {},
+			"version": "6.15.1"
+		},
+		{
+			"className": ".sf-statusBar",
+			"id": "ec8a-d140-9a0f-f70d",
+			"props": {
+				"children": [],
+				"isRemovable": false,
+				"name": "statusBar",
+				"parent": "127d-2122-01ae-f800"
+			},
+			"type": "StatusBar",
+			"userProps": {}
+		},
+		{
+			"className": ".sf-headerBar",
+			"id": "6a48-4fe2-19e6-fe72",
+			"props": {
+				"children": [],
+				"isRemovable": false,
+				"name": "headerBar",
+				"parent": "127d-2122-01ae-f800",
+				"title": "newPage001"
+			},
+			"type": "HeaderBar",
+			"userProps": {
+				"title": "newPage001",
+				"visible": false
+			}
+		},
+		{
+			"className": ".sf-scrollView #pgLogin-svMain",
+			"id": "6748-f5e7-57f2-69d4",
+			"props": {
+				"autoSizeEnabled": true,
+				"children": [
+					"237c-a710-e787-e54d"
+				],
+				"name": "svMain",
+				"parent": "127d-2122-01ae-f800",
+				"usePageVariable": true
+			},
+			"type": "ScrollView",
+			"userProps": {
+				"autoSizeEnabled": true,
+				"usePageVariable": true
+			}
+		},
+		{
+			"className": ".sf-imageView #pgLogin-logo",
+			"id": "237c-a710-e787-e54d",
+			"props": {
+				"children": [],
+				"name": "imageView1",
+				"parent": "6748-f5e7-57f2-69d4"
+			},
+			"type": "ImageView",
+			"userProps": {}
+		}
+	]
+}

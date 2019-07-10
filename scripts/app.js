@@ -16,4 +16,4 @@ Application.onUnhandledError = function(e) {
 require("sf-extension-utils");
 require("./theme");
 const router = require("./routes");
-router.push("/btb/tab1/page1");
+router.push("/login");
