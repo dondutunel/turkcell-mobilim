@@ -1,0 +1,125 @@
+{
+	"components": [
+		{
+			"className": ".sf-flexLayout .flKonaklamaItem",
+			"id": "1f77-52b5-384e-d015",
+			"initialized": true,
+			"props": {
+				"children": [
+					"b254-2b80-aa0e-c5c7",
+					"b359-2356-df12-5eea"
+				],
+				"name": "flKonaklamaItem",
+				"parent": "57f4-201f-4bfc-5fc6"
+			},
+			"source": {
+				"page": "__library__"
+			},
+			"type": "FlexLayout",
+			"userProps": {
+				"flexProps": {},
+				"left": 20,
+				"top": 142.4
+			}
+		},
+		{
+			"className": ".sf-flexLayout .flKonaklamaItem-icon .gradientBackground",
+			"id": "b254-2b80-aa0e-c5c7",
+			"props": {
+				"children": [],
+				"name": "flexLayout1",
+				"parent": "1f77-52b5-384e-d015"
+			},
+			"source": {
+				"page": "__library__"
+			},
+			"type": "FlexLayout",
+			"userProps": {}
+		},
+		{
+			"className": ".sf-flexLayout",
+			"id": "b359-2356-df12-5eea",
+			"props": {
+				"children": [
+					"6012-8463-f08f-6597",
+					"caab-a8d2-bdd3-f5fa"
+				],
+				"name": "flexLayout2",
+				"parent": "1f77-52b5-384e-d015"
+			},
+			"source": {
+				"page": "__library__"
+			},
+			"type": "FlexLayout",
+			"userProps": {
+				"flexProps": {
+					"flexGrow": 1
+				},
+				"height": null,
+				"marginLeft": 10,
+				"paddingBottom": 4,
+				"paddingTop": 4
+			}
+		},
+		{
+			"className": ".sf-label .flexLayout-grow",
+			"id": "6012-8463-f08f-6597",
+			"props": {
+				"autoHeight": 20.5,
+				"children": [],
+				"name": "lblKonaklama",
+				"parent": "b359-2356-df12-5eea",
+				"text": "Konaklama 1",
+				"usePageVariable": true
+			},
+			"source": {
+				"page": "__library__"
+			},
+			"type": "Label",
+			"userProps": {
+				"autoHeight": 20.5,
+				"font": {
+					"size": 17,
+					"bold": true,
+					"italic": false,
+					"family": "SFProText",
+					"style": "Semibold"
+				},
+				"height": null,
+				"text": "Konaklama 1",
+				"textColor": "rgba( 45, 60, 73, 1 )",
+				"usePageVariable": true
+			}
+		},
+		{
+			"className": ".sf-label .flexLayout-grow",
+			"id": "caab-a8d2-bdd3-f5fa",
+			"props": {
+				"autoHeight": 20.5,
+				"children": [],
+				"name": "lblSehir",
+				"parent": "b359-2356-df12-5eea",
+				"text": "Ankara",
+				"usePageVariable": true
+			},
+			"source": {
+				"page": "__library__"
+			},
+			"type": "Label",
+			"userProps": {
+				"autoHeight": 20.5,
+				"font": {
+					"size": 15,
+					"bold": true,
+					"italic": false,
+					"family": "SFProText",
+					"style": "Semibold"
+				},
+				"height": null,
+				"text": "Ankara",
+				"textColor": "rgba( 160, 160, 165, 1 )",
+				"usePageVariable": true
+			}
+		}
+	]
+}

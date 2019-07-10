@@ -1,0 +1,80 @@
+{
+	"components": [
+		{
+			"className": ".sf-page",
+			"id": "38ef-6b2c-8ddf-479f",
+			"initialized": true,
+			"props": {
+				"children": [
+					"e758-8a30-af8a-f426",
+					"9571-8530-43d9-17e4",
+					"d3d6-ab4c-a537-a948"
+				],
+				"name": "pgKonaklama",
+				"orientation": "PORTRAIT",
+				"parent": null
+			},
+			"type": "Page",
+			"userProps": {
+				"paddingLeft": 15,
+				"paddingRight": 15,
+				"paddingTop": 15
+			},
+			"version": "6.15.1"
+		},
+		{
+			"className": ".sf-statusBar",
+			"id": "e758-8a30-af8a-f426",
+			"props": {
+				"children": [],
+				"isRemovable": false,
+				"name": "statusBar",
+				"parent": "38ef-6b2c-8ddf-479f"
+			},
+			"type": "StatusBar",
+			"userProps": {}
+		},
+		{
+			"className": ".sf-headerBar",
+			"id": "9571-8530-43d9-17e4",
+			"props": {
+				"children": [],
+				"isRemovable": false,
+				"name": "headerBar",
+				"parent": "38ef-6b2c-8ddf-479f",
+				"title": "Konaklama Bilgileri"
+			},
+			"type": "HeaderBar",
+			"userProps": {
+				"title": "Konaklama Bilgileri"
+			}
+		},
+		{
+			"className": ".sf-flexLayout .flKonaklamaItem",
+			"hiddenComponent": false,
+			"id": "d3d6-ab4c-a537-a948",
+			"initialized": true,
+			"props": {
+				"children": [],
+				"name": "flKonaklamaItem",
+				"parent": "38ef-6b2c-8ddf-479f"
+			},
+			"source": {
+				"page": "__library__",
+				"type": "flKonaklamaItem",
+				"id": "1f77-52b5-384e-d015"
+			},
+			"type": "FlexLayout",
+			"userProps": {
+				"flex": {
+					"positionType": 0
+				},
+				"flexProps": {
+					"positionType": "RELATIVE"
+				},
+				"left": 0,
+				"top": 0
+			}
+		}
+	]
+}
