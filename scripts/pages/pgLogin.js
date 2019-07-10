@@ -1,11 +1,8 @@
 const Screen = require("sf-core/device/screen");
 const touch = require("sf-extension-utils/lib/touch");
-
-/* 
-		You can modify its contents.
-*/
 const extend = require('js-base/core/extend');
 const PgLoginDesign = require('ui/ui_pgLogin');
+const propagateTouchEvents = require("lib/propagateTouchEvents");
 
 const LOGIN_ITEMS = {
 	"email": {
@@ -49,17 +46,18 @@ function onLoad(superOnLoad) {
 	this.svMain.layout.minHeight = Screen.height;
 	this.mtEmail.options = LOGIN_ITEMS.email;
 	this.mtEmail.materialTextBox.dispatch({
-        type: "pushClassNames",
-        classNames: ["#pgLogin-materialTextBox"]
-    });
+		type: "pushClassNames",
+		classNames: ["#pgLogin-materialTextBox"]
+	});
 	this.mtPassword.options = LOGIN_ITEMS.password;
 	this.mtPassword.materialTextBox.dispatch({
-        type: "pushClassNames",
-        classNames: ["#pgLogin-materialTextBox"]
-    });
+		type: "pushClassNames",
+		classNames: ["#pgLogin-materialTextBox"]
+	});
 	touch.addPressEvent(this.btnLogin, () => {
 		this.router.push("/btb/tab2/pgIslemlerim");
 	});
+	propagateTouchEvents(this.svMain);
 }
 
 module.exports = PgLogin;

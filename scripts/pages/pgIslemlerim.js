@@ -64,6 +64,7 @@ function onLoad(superOnLoad) {
 		this.layout.removeChild(this.flSwitchButton);
 	}
 	createSubMenuItems(this, 2, 3, ITEM_MARGIN * 2, ITEM_RATIO);
+	setSubMenuItemsData(this, this._data.subMenuItems[this.flSwitchButton.currentIndex + ``]);
 	this.layout.applyLayout();
 }
 
