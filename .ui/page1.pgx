@@ -7,8 +7,7 @@
 			"props": {
 				"children": [
 					"42b807d1",
-					"b7d28cff",
-					"980522a9"
+					"b7d28cff"
 				],
 				"isRemovable": true,
 				"name": "page1",
@@ -51,49 +50,13 @@
 				"isRemovable": false,
 				"name": "headerBar",
 				"parent": "e891b86d",
-				"title": "Page Title"
+				"title": "Ana Sayfa"
 			},
 			"type": "HeaderBar",
 			"userProps": {
-				"title": "Page Title",
+				"title": "Ana Sayfa",
 				"titleColor": "rgba( 255, 255, 255, 1 )",
 				"visible": true
-			}
-		},
-		{
-			"className": ".label",
-			"id": "980522a9",
-			"props": {
-				"autoHeight": 39.705882352941174,
-				"children": [],
-				"name": "lbl",
-				"parent": "e891b86d",
-				"text": "Page1\n",
-				"usePageVariable": true
-			},
-			"type": "Label",
-			"userProps": {
-				"autoHeight": 39.705882352941174,
-				"backgroundColor": "rgba( 255, 255, 255, 0 )",
-				"flexProps": {
-					"marginLeft": 20,
-					"marginRight": 20,
-					"alignSelf": "STRETCH"
-				},
-				"font": {
-					"size": 32,
-					"bold": false,
-					"italic": false,
-					"family": "SFProText",
-					"style": "Regular"
-				},
-				"height": 90,
-				"multiline": true,
-				"text": "Page1\n",
-				"textAlignment": "MIDCENTER",
-				"textColor": "rgba( 210, 210, 210, 1 )",
-				"usePageVariable": true,
-				"width": null
 			}
 		}
 	]

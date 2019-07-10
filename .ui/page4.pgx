@@ -7,8 +7,7 @@
 			"props": {
 				"children": [
 					"d842-4b69-27e0-9654",
-					"e4be-287c-cdfe-4ac1",
-					"f4fe-1f65-19d2-1f62"
+					"e4be-287c-cdfe-4ac1"
 				],
 				"isRemovable": true,
 				"name": "page4",
@@ -51,49 +50,13 @@
 				"isRemovable": false,
 				"name": "headerBar",
 				"parent": "8368-7ffa-7f89-5f1e",
-				"title": "Page Title"
+				"title": "Şirketim"
 			},
 			"type": "HeaderBar",
 			"userProps": {
-				"title": "Page Title",
+				"title": "Şirketim",
 				"titleColor": "rgba( 255, 255, 255, 1 )",
 				"visible": true
-			}
-		},
-		{
-			"className": ".label",
-			"id": "f4fe-1f65-19d2-1f62",
-			"props": {
-				"autoHeight": 39.325842696629216,
-				"children": [],
-				"name": "lbl",
-				"parent": "8368-7ffa-7f89-5f1e",
-				"text": "Page4\n",
-				"usePageVariable": true
-			},
-			"type": "Label",
-			"userProps": {
-				"autoHeight": 39.325842696629216,
-				"backgroundColor": "rgba( 255, 255, 255, 0 )",
-				"flexProps": {
-					"marginLeft": 20,
-					"marginRight": 20,
-					"alignSelf": "STRETCH"
-				},
-				"font": {
-					"size": 32,
-					"bold": false,
-					"italic": false,
-					"family": "SFProText",
-					"style": "Regular"
-				},
-				"height": 90,
-				"multiline": true,
-				"text": "Page4\n",
-				"textAlignment": "MIDCENTER",
-				"textColor": "rgba( 210, 210, 210, 1 )",
-				"usePageVariable": true,
-				"width": null
 			}
 		}
 	]

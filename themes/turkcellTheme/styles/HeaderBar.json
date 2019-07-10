@@ -31,7 +31,9 @@
 				"family": "SFProText",
 				"style": "Semibold"
 			},
-			"textColor": "rgba( 255, 255, 255, 1 )"
+			"textColor": "rgba( 255, 255, 255, 1 )",
+			"marginBottom": null,
+			"marginTop": null
 		},
 		"&-flexLayout": {
 			"marginTop": null,

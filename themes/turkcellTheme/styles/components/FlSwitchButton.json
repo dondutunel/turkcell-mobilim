@@ -1,6 +1,6 @@
 {
 	".flSwitchButton": {
-		"height": 32,
+		"height": 40,
 		"flexProps": {
 			"flexDirection": "ROW",
 			"alignItems": "STRETCH"
@@ -17,9 +17,10 @@
 				"backgroundColor": "rgba( 47, 171, 235, 1 )",
 				"borderWidth": 0
 			},
-			"borderWidth": 1,
-			"borderColor": "rgba( 216, 216, 216, 1 )",
 			"backgroundColor": "rgba( 255, 255, 255, 0 )"
-		}
+		},
+		"borderRadius": 20,
+		"borderColor": "rgba( 47, 171, 235, 1 )",
+		"borderWidth": 1
 	}
 }
