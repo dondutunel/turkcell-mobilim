@@ -1,0 +1,34 @@
+{
+	".flCheckItem": {
+		"flexProps": {
+			"flexDirection": "ROW",
+			"flexGrow": 1
+		},
+		"&-icon": {
+			"font": {
+				"family": "FontAwesome5FreeRegular",
+				"style": null,
+				"bold": false,
+				"italic": false,
+				"size": 21
+			},
+			"width": 30,
+			"textAlignment": "MIDLEFT",
+			"height": null,
+			"textColor": "rgba( 0, 161, 241, 1 )"
+		},
+		"&-text": {
+			"font": {
+				"style": "Regular",
+				"size": 17
+			},
+			"textColor": "rgba( 53, 53, 53, 1 )",
+			"flexProps": {
+				"flexGrow": 1
+			},
+			"marginLeft": 12,
+			"height": null
+		},
+		"height": 30
+	}
+}

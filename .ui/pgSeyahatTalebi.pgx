@@ -57,7 +57,9 @@
 					"eb85-1a18-c0f8-c97c",
 					"6ad2-f64e-17c7-986a",
 					"8b21-615f-0f8f-fc62",
-					"f8f9-e850-3539-5412"
+					"f8f9-e850-3539-5412",
+					"7771-52a1-ef6d-118a",
+					"a2bb-e228-5ca1-2b9e"
 				],
 				"name": "svMain",
 				"parent": "8852-2412-32cb-cfaa",
@@ -377,6 +379,78 @@
 				},
 				"left": 0,
 				"top": 0,
+				"usePageVariable": true
+			}
+		},
+		{
+			"className": ".sf-label #pgSeyahatTalebi-lblSelectRezervTitle",
+			"id": "7771-52a1-ef6d-118a",
+			"props": {
+				"autoHeight": 21,
+				"children": [],
+				"name": "label1",
+				"parent": "560f-f79b-00bf-fcd7",
+				"text": "Rezervasyon Sec"
+			},
+			"type": "Label",
+			"userProps": {
+				"autoHeight": 21,
+				"text": "Rezervasyon Sec"
+			}
+		},
+		{
+			"className": ".sf-flexLayout #pgSeyahatTalebi-flCheckItems",
+			"id": "a2bb-e228-5ca1-2b9e",
+			"props": {
+				"children": [
+					"4767-36a9-c856-6d70",
+					"357e-ab37-d91d-d790"
+				],
+				"name": "flCheckItems",
+				"parent": "560f-f79b-00bf-fcd7"
+			},
+			"type": "FlexLayout",
+			"userProps": {}
+		},
+		{
+			"className": ".sf-flexLayout .flCheckItem",
+			"hiddenComponent": false,
+			"id": "4767-36a9-c856-6d70",
+			"initialized": false,
+			"props": {
+				"children": [],
+				"name": "flSelectFlight",
+				"parent": "a2bb-e228-5ca1-2b9e",
+				"usePageVariable": true
+			},
+			"source": {
+				"page": "__library__",
+				"type": "flCheckItem",
+				"id": "b35d-e347-8f7b-1d0c"
+			},
+			"type": "FlexLayout",
+			"userProps": {
+				"usePageVariable": true
+			}
+		},
+		{
+			"className": ".sf-flexLayout .flCheckItem",
+			"hiddenComponent": false,
+			"id": "357e-ab37-d91d-d790",
+			"initialized": false,
+			"props": {
+				"children": [],
+				"name": "flSelectAccommodation",
+				"parent": "a2bb-e228-5ca1-2b9e",
+				"usePageVariable": true
+			},
+			"source": {
+				"page": "__library__",
+				"type": "flCheckItem",
+				"id": "b35d-e347-8f7b-1d0c"
+			},
+			"type": "FlexLayout",
+			"userProps": {
 				"usePageVariable": true
 			}
 		}

@@ -1,0 +1,64 @@
+{
+	"components": [
+		{
+			"className": ".sf-flexLayout .flCheckItem",
+			"id": "b35d-e347-8f7b-1d0c",
+			"initialized": true,
+			"props": {
+				"children": [
+					"8e8e-e2c7-a005-e188",
+					"d70c-97f4-3ca6-a773"
+				],
+				"name": "flCheckItem",
+				"parent": "57f4-201f-4bfc-5fc6"
+			},
+			"source": {
+				"page": "__library__"
+			},
+			"type": "FlexLayout",
+			"userProps": {
+				"flexProps": {},
+				"left": 5.767272472381592,
+				"top": 213.63636779785156
+			}
+		},
+		{
+			"className": ".sf-label .flCheckItem-icon",
+			"id": "8e8e-e2c7-a005-e188",
+			"props": {
+				"autoWidth": 27.578125,
+				"children": [],
+				"name": "lblIcon",
+				"parent": "b35d-e347-8f7b-1d0c",
+				"text": " "
+			},
+			"source": {
+				"page": "__library__"
+			},
+			"type": "Label",
+			"userProps": {
+				"autoWidth": 27.578125,
+				"text": " "
+			}
+		},
+		{
+			"className": ".sf-label .flCheckItem-text",
+			"id": "d70c-97f4-3ca6-a773",
+			"props": {
+				"autoWidth": 47.03125,
+				"children": [],
+				"name": "lblText",
+				"parent": "b35d-e347-8f7b-1d0c",
+				"text": "label1"
+			},
+			"source": {
+				"page": "__library__"
+			},
+			"type": "Label",
+			"userProps": {
+				"autoWidth": 47.03125,
+				"text": "label1"
+			}
+		}
+	]
+}

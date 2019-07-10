@@ -36,6 +36,21 @@
 			},
 			"marginTop": 17,
 			"marginBottom": 17
+		},
+		"&-lblSelectRezervTitle": {
+			"textColor": "rgba( 45, 60, 73, 1 )",
+			"font": {
+				"size": 17,
+				"style": "Medium"
+			},
+			"height": 45
+		},
+		"&-flCheckItems": {
+			"height": 30,
+			"flexProps": {
+				"flexDirection": "ROW",
+				"alignItems": "STRETCH"
+			}
 		}
 	}
 }
