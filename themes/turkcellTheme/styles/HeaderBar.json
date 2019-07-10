@@ -16,6 +16,11 @@
 			"flexProps": {
 				"positionType": "RELATIVE"
 			}
+		},
+		"&-textview": {
+			"flexProps": {
+				"positionType": "RELATIVE"
+			}
 		}
 	}
 }

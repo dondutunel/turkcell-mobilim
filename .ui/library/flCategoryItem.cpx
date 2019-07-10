@@ -1,0 +1,61 @@
+{
+	"components": [
+		{
+			"className": ".sf-flexLayout .flCategoryItem",
+			"id": "9ad2-2d08-7e4f-c18c",
+			"initialized": true,
+			"props": {
+				"children": [
+					"edb3-98dc-fbf0-9673",
+					"921a-8b13-aaa6-8604"
+				],
+				"name": "flCategoryItem",
+				"parent": "57f4-201f-4bfc-5fc6"
+			},
+			"source": {
+				"page": "__library__"
+			},
+			"type": "FlexLayout",
+			"userProps": {
+				"flexProps": {},
+				"height": 232,
+				"left": 61.080703735351555,
+				"top": 366.96660822088063,
+				"width": 218.5
+			}
+		},
+		{
+			"className": ".sf-imageView .flCategoryItem-icon",
+			"id": "edb3-98dc-fbf0-9673",
+			"props": {
+				"children": [],
+				"name": "imgIcon",
+				"parent": "9ad2-2d08-7e4f-c18c"
+			},
+			"source": {
+				"page": "__library__"
+			},
+			"type": "ImageView",
+			"userProps": {}
+		},
+		{
+			"className": ".sf-textview .flCategoryItem-title",
+			"id": "921a-8b13-aaa6-8604",
+			"props": {
+				"autoHeight": 16.363636363636363,
+				"children": [],
+				"name": "tvTitle",
+				"parent": "9ad2-2d08-7e4f-c18c",
+				"text": "  label1"
+			},
+			"source": {
+				"page": "__library__"
+			},
+			"type": "TextView",
+			"userProps": {
+				"autoHeight": 16.363636363636363,
+				"text": "  label1"
+			}
+		}
+	]
+}

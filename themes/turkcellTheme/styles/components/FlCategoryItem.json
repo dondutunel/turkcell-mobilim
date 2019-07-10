@@ -1,0 +1,32 @@
+{
+	".flCategoryItem": {
+		"flexProps": {
+			"flexDirection": "COLUMN",
+			"alignItems": "STRETCH"
+		},
+		"&-title": {
+			"flexProps": {
+				"flexGrow": 1,
+				"alignSelf": "STRETCH"
+			},
+			"textAlignment": "TOPCENTER",
+			"width": null,
+			"font": {
+				"family": "SFProText",
+				"size": 13,
+				"style": "Semibold",
+				"bold": true,
+				"italic": false
+			},
+			"textColor": "rgba(255,255,255,1)"
+		},
+		"&-icon": {
+			"height": null,
+			"flexProps": {
+				"flexGrow": 1
+			},
+			"marginBottom": 5
+		},
+		"borderRadius": 8
+	}
+}
