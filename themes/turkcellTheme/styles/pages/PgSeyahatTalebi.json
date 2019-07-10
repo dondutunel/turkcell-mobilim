@@ -1,0 +1,14 @@
+{
+	"#pgSeyahatTalebi": {
+		"paddingRight": 15,
+		"paddingLeft": 15,
+		"&-svMain": {
+			"flexProps": {
+				"flexGrow": 1
+			},
+			"layout": {
+				"paddingTop": 15
+			}
+		}
+	}
+}

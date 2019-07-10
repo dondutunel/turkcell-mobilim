@@ -39,6 +39,18 @@
 		},
 		"&-mtPassword": {
 			"marginTop": 10
+		},
+		"&-materialTextBox": {
+			"textAlignment": "MIDLEFT",
+			"textColor": "rgba( 255,255,255,1 )",
+			"errorColor": "rgba( 255,0,0,1 )",
+			"hintTextColor": "rgba( 255,255,255,0.7 )",
+			"cursorColor": "rgba( 255,203,8,1 )",
+			"selectedHintTextColor": "rgba( 255,203,8,1 )",
+			"lineColor": {
+				"normal": "rgba( 255,255,255,1 )",
+				"selected": "rgba( 255,203,8,1 )"
+			}
 		}
 	}
 }

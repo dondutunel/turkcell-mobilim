@@ -2,14 +2,14 @@
     ".materialTextBox": {
         "ellipsizeMode": "END",
         "textAlignment": "MIDLEFT",
-        "textColor": "rgba( 255,255,255,1 )",
+        "textColor": "rgba( 45,60,73,1 )",
         "errorColor": "rgba( 255,0,0,1 )",
-        "hintTextColor": "rgba( 255,255,255,0.7 )",
-        "cursorColor": "rgba( 255,203,8,1 )",
-        "selectedHintTextColor": "rgba( 255,203,8,1 )",
+        "hintTextColor": "rgba( 160,160,165,0.7 )",
+        "cursorColor": "rgba( 47,171,235,1 )",
+        "selectedHintTextColor": "rgba( 47,171,235,1 )",
         "lineColor": {
-            "normal": "rgba( 255,255,255,1 )",
-            "selected": "rgba( 255,203,8,1 )"
+            "normal": "rgba( 160,160,165,0.7 )",
+            "selected": "rgba( 45,60,73,1 )"
         },
         "font": {
             "size": 17,
@@ -70,7 +70,7 @@
                 "right": 2,
                 "height": 30,
                 "width": 30,
-                "top": 20,
+                "top": 10,
                 "image": "arrowbottom.png",
                 ".hidden": {
                     "visible": false

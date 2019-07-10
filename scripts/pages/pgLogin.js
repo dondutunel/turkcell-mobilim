@@ -48,7 +48,15 @@ function onLoad(superOnLoad) {
 	this.lblTitle.text = "Mobil uygulamamıza hoş geldiniz,\nlütfen giriş yapınız.";
 	this.svMain.layout.minHeight = Screen.height;
 	this.mtEmail.options = LOGIN_ITEMS.email;
+	this.mtEmail.materialTextBox.dispatch({
+        type: "pushClassNames",
+        classNames: ["#pgLogin-materialTextBox"]
+    });
 	this.mtPassword.options = LOGIN_ITEMS.password;
+	this.mtPassword.materialTextBox.dispatch({
+        type: "pushClassNames",
+        classNames: ["#pgLogin-materialTextBox"]
+    });
 	touch.addPressEvent(this.btnLogin, () => {
 		this.router.push("/btb/tab2/pgIslemlerim");
 	});

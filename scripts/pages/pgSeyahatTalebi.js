@@ -1,3 +1,4 @@
+const Screen = require("sf-core/device/screen");
 const Color = require("sf-core/ui/color");
 const HeaderBarItem = require("sf-core/ui/headerbaritem");
 const Image = require("sf-core/ui/image");
@@ -38,19 +39,28 @@ function onShow(superOnShow) {
 function onLoad(superOnLoad) {
 	superOnLoad();
 	let headerBar;
-    if (System.OS === "Android") {
-        headerBar = this.headerBar;
-        headerBar.setLeftItem(new HeaderBarItem({
-            onPress: () => {
-                this.router.goBack();
-            },
-            image: Image.createFromFile("images://arrow_back.png")
-        }));
-    }
-    else {
-        headerBar = this.parentController.headerBar;
-    }
-    headerBar.itemColor = Color.WHITE;
+	if (System.OS === "Android") {
+		headerBar = this.headerBar;
+		headerBar.setLeftItem(new HeaderBarItem({
+			onPress: () => {
+				this.router.goBack();
+			},
+			image: Image.createFromFile("images://arrow_back.png")
+		}));
+	}
+	else {
+		headerBar = this.parentController.headerBar;
+	}
+	headerBar.itemColor = Color.WHITE;
+	this.svMain.layout.minHeight = Screen.height;
+	this.mtRegion.options = {
+		hint: "Yurt ici - Yurt Disi"
+	};
+	this.mtRegion.enableDropDown = true;
+	this.mtPurpose.options = {
+		hint: "Temsil"
+	};
+	this.mtPurpose.enableDropDown = true;
 }
 
 module.exports = PgSeyahatTalebi;

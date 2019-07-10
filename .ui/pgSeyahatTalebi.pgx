@@ -1,13 +1,14 @@
 {
 	"components": [
 		{
-			"className": ".page",
+			"className": ".page #pgSeyahatTalebi",
 			"id": "8852-2412-32cb-cfaa",
 			"initialized": true,
 			"props": {
 				"children": [
 					"2617-4599-5935-2e41",
-					"a742-5dd8-3b39-0306"
+					"a742-5dd8-3b39-0306",
+					"560f-f79b-00bf-fcd7"
 				],
 				"name": "pgSeyahatTalebi",
 				"orientation": "PORTRAIT",
@@ -42,6 +43,85 @@
 			"type": "HeaderBar",
 			"userProps": {
 				"title": "Seyahat Talebi"
+			}
+		},
+		{
+			"className": ".sf-scrollView #pgSeyahatTalebi-svMain",
+			"id": "560f-f79b-00bf-fcd7",
+			"props": {
+				"children": [
+					"c2df-fc18-c6f7-de45",
+					"7392-8b8c-4ded-bd1b"
+				],
+				"name": "svMain",
+				"parent": "8852-2412-32cb-cfaa",
+				"usePageVariable": true
+			},
+			"type": "ScrollView",
+			"userProps": {
+				"usePageVariable": true
+			}
+		},
+		{
+			"className": ".materialTextBox-wrapper",
+			"hiddenComponent": false,
+			"id": "c2df-fc18-c6f7-de45",
+			"initialized": false,
+			"props": {
+				"children": [],
+				"name": "mtRegion",
+				"parent": "560f-f79b-00bf-fcd7",
+				"usePageVariable": true
+			},
+			"source": {
+				"page": "__modules__",
+				"moduleName": "Materialtextbox",
+				"modulePath": "materialtextbox",
+				"type": "Materialtextbox",
+				"id": "8fb2-10a8-12e4-9b45"
+			},
+			"type": "FlexLayout",
+			"userProps": {
+				"flex": {
+					"positionType": 0
+				},
+				"flexProps": {
+					"positionType": "RELATIVE"
+				},
+				"left": 0,
+				"top": 0,
+				"usePageVariable": true
+			}
+		},
+		{
+			"className": ".materialTextBox-wrapper",
+			"hiddenComponent": false,
+			"id": "7392-8b8c-4ded-bd1b",
+			"initialized": false,
+			"props": {
+				"children": [],
+				"name": "mtPurpose",
+				"parent": "560f-f79b-00bf-fcd7",
+				"usePageVariable": true
+			},
+			"source": {
+				"page": "__modules__",
+				"moduleName": "Materialtextbox",
+				"modulePath": "materialtextbox",
+				"type": "Materialtextbox",
+				"id": "8fb2-10a8-12e4-9b45"
+			},
+			"type": "FlexLayout",
+			"userProps": {
+				"flex": {
+					"positionType": 0
+				},
+				"flexProps": {
+					"positionType": "RELATIVE"
+				},
+				"left": 0,
+				"top": 0,
+				"usePageVariable": true
 			}
 		}
 	]
