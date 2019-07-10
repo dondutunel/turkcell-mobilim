@@ -9,6 +9,24 @@
 			"layout": {
 				"paddingTop": 15
 			}
+		},
+		"&-fromTo": {
+			"height": 48,
+			"flexProps": {
+				"flexDirection": "ROW",
+				"alignItems": "STRETCH"
+			},
+			"&-mt": {
+				"flexProps": {
+					"flexGrow": 1
+				},
+				".from": {
+					"marginRight": 5
+				},
+				".to": {
+					"marginLeft": 5
+				}
+			}
 		}
 	}
 }

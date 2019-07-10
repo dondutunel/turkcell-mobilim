@@ -52,15 +52,31 @@ function onLoad(superOnLoad) {
 		headerBar = this.parentController.headerBar;
 	}
 	headerBar.itemColor = Color.WHITE;
-	this.svMain.layout.minHeight = Screen.height;
-	this.mtRegion.options = {
+	//this.svMain.layout.minHeight = Screen.height;
+	initMaterials(this);
+}
+
+function initMaterials(page) {
+	page.mtRegion.options = {
 		hint: "Yurt ici - Yurt Disi"
 	};
-	this.mtRegion.enableDropDown = true;
-	this.mtPurpose.options = {
+	page.mtRegion.enableDropDown = true;
+	page.mtPurpose.options = {
 		hint: "Temsil"
 	};
-	this.mtPurpose.enableDropDown = true;
+	page.mtPurpose.enableDropDown = true;
+	page.mtDescription.options = {
+		hint: "Seyahat Aciklamasi"
+	};
+	page.mtFrom.options = {
+		hint: "Nereden"
+	};
+	page.mtFrom.enableDropDown = true;
+	page.mtTo.options = {
+		hint: "Nereye"
+	};
+	page.mtTo.enableDropDown = true;
+
 }
 
 module.exports = PgSeyahatTalebi;
