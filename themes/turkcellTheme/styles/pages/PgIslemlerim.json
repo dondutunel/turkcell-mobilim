@@ -39,12 +39,12 @@
 			"marginTop": 10,
 			"paddingLeft": 15,
 			"paddingRight": 15,
-			"paddingTop": 22,
 			"&-switch": {
 				".invisible": {
 					"maxHeight": 0,
 					"marginBottom": 0
-				}
+				},
+				"marginTop": 22
 			},
 			"&-flMain": {
 				"flexProps": {
