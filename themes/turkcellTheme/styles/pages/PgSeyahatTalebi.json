@@ -27,6 +27,15 @@
 					"marginLeft": 5
 				}
 			}
+		},
+		"&-date": {
+			"height": 48,
+			"flexProps": {
+				"alignItems": "STRETCH",
+				"flexDirection": "ROW"
+			},
+			"marginTop": 17,
+			"marginBottom": 17
 		}
 	}
 }

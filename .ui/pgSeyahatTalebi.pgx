@@ -53,7 +53,11 @@
 					"c2df-fc18-c6f7-de45",
 					"7392-8b8c-4ded-bd1b",
 					"d1ad-8af2-9492-12df",
-					"e2f3-034d-13af-fb6a"
+					"e2f3-034d-13af-fb6a",
+					"eb85-1a18-c0f8-c97c",
+					"6ad2-f64e-17c7-986a",
+					"8b21-615f-0f8f-fc62",
+					"f8f9-e850-3539-5412"
 				],
 				"name": "svMain",
 				"parent": "8852-2412-32cb-cfaa",
@@ -166,10 +170,13 @@
 					"9d4f-e87c-3096-dd44"
 				],
 				"name": "flFromTo",
-				"parent": "560f-f79b-00bf-fcd7"
+				"parent": "560f-f79b-00bf-fcd7",
+				"usePageVariable": true
 			},
 			"type": "FlexLayout",
-			"userProps": {}
+			"userProps": {
+				"usePageVariable": true
+			}
 		},
 		{
 			"className": ".materialTextBox-wrapper #pgSeyahatTalebi-fromTo-mt.from",
@@ -214,6 +221,162 @@
 			},
 			"type": "FlexLayout",
 			"userProps": {
+				"usePageVariable": true
+			}
+		},
+		{
+			"className": ".sf-flexLayout #pgSeyahatTalebi-date",
+			"id": "eb85-1a18-c0f8-c97c",
+			"props": {
+				"children": [
+					"9955-f6c0-a4b1-f5bc",
+					"7695-fb8a-7faf-257c"
+				],
+				"name": "flDate",
+				"parent": "560f-f79b-00bf-fcd7",
+				"usePageVariable": true
+			},
+			"type": "FlexLayout",
+			"userProps": {
+				"usePageVariable": true
+			}
+		},
+		{
+			"className": ".materialTextBox-wrapper #pgSeyahatTalebi-fromTo-mt.from",
+			"hiddenComponent": false,
+			"id": "9955-f6c0-a4b1-f5bc",
+			"initialized": false,
+			"props": {
+				"children": [],
+				"name": "mtDepartureDate",
+				"parent": "eb85-1a18-c0f8-c97c",
+				"usePageVariable": true
+			},
+			"source": {
+				"page": "__modules__",
+				"moduleName": "Materialtextbox",
+				"modulePath": "materialtextbox",
+				"type": "Materialtextbox",
+				"id": "8fb2-10a8-12e4-9b45"
+			},
+			"type": "FlexLayout",
+			"userProps": {
+				"usePageVariable": true
+			}
+		},
+		{
+			"className": ".materialTextBox-wrapper #pgSeyahatTalebi-fromTo-mt.to",
+			"hiddenComponent": false,
+			"id": "7695-fb8a-7faf-257c",
+			"initialized": false,
+			"props": {
+				"children": [],
+				"name": "mtReturnDate",
+				"parent": "eb85-1a18-c0f8-c97c",
+				"usePageVariable": true
+			},
+			"source": {
+				"page": "__modules__",
+				"moduleName": "Materialtextbox",
+				"modulePath": "materialtextbox",
+				"type": "Materialtextbox",
+				"id": "8fb2-10a8-12e4-9b45"
+			},
+			"type": "FlexLayout",
+			"userProps": {
+				"usePageVariable": true
+			}
+		},
+		{
+			"className": ".materialTextBox-wrapper",
+			"hiddenComponent": false,
+			"id": "6ad2-f64e-17c7-986a",
+			"initialized": false,
+			"props": {
+				"children": [],
+				"name": "mtAcente",
+				"parent": "560f-f79b-00bf-fcd7",
+				"usePageVariable": true
+			},
+			"source": {
+				"page": "__modules__",
+				"moduleName": "Materialtextbox",
+				"modulePath": "materialtextbox",
+				"type": "Materialtextbox",
+				"id": "8fb2-10a8-12e4-9b45"
+			},
+			"type": "FlexLayout",
+			"userProps": {
+				"flex": {
+					"positionType": 0
+				},
+				"flexProps": {
+					"positionType": "RELATIVE"
+				},
+				"left": 0,
+				"top": 0,
+				"usePageVariable": true
+			}
+		},
+		{
+			"className": ".materialTextBox-wrapper",
+			"hiddenComponent": false,
+			"id": "8b21-615f-0f8f-fc62",
+			"initialized": false,
+			"props": {
+				"children": [],
+				"name": "mtBirthDate",
+				"parent": "560f-f79b-00bf-fcd7",
+				"usePageVariable": true
+			},
+			"source": {
+				"page": "__modules__",
+				"moduleName": "Materialtextbox",
+				"modulePath": "materialtextbox",
+				"type": "Materialtextbox",
+				"id": "8fb2-10a8-12e4-9b45"
+			},
+			"type": "FlexLayout",
+			"userProps": {
+				"flex": {
+					"positionType": 0
+				},
+				"flexProps": {
+					"positionType": "RELATIVE"
+				},
+				"left": 0,
+				"top": 0,
+				"usePageVariable": true
+			}
+		},
+		{
+			"className": ".materialTextBox-wrapper",
+			"hiddenComponent": false,
+			"id": "f8f9-e850-3539-5412",
+			"initialized": false,
+			"props": {
+				"children": [],
+				"name": "mtID",
+				"parent": "560f-f79b-00bf-fcd7",
+				"usePageVariable": true
+			},
+			"source": {
+				"page": "__modules__",
+				"moduleName": "Materialtextbox",
+				"modulePath": "materialtextbox",
+				"type": "Materialtextbox",
+				"id": "8fb2-10a8-12e4-9b45"
+			},
+			"type": "FlexLayout",
+			"userProps": {
+				"flex": {
+					"positionType": 0
+				},
+				"flexProps": {
+					"positionType": "RELATIVE"
+				},
+				"left": 0,
+				"top": 0,
 				"usePageVariable": true
 			}
 		}

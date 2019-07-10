@@ -76,6 +76,25 @@ function initMaterials(page) {
 		hint: "Nereye"
 	};
 	page.mtTo.enableDropDown = true;
+	page.mtDepartureDate.options = {
+		hint: "Departure Date"
+	};
+	page.mtDepartureDate.enableDropDown = true;
+	page.mtReturnDate.options = {
+		hint: "Return Date"
+	};
+	page.mtReturnDate.enableDropDown = true;
+	page.mtAcente.options = {
+		hint: "Acente..."
+	};
+	page.mtAcente.enableDropDown = true;
+	page.mtBirthDate.options = {
+		hint: "Dogum Tarihi"
+	};
+	page.mtBirthDate.enableDropDown = true;
+	page.mtID.options = {
+		hint: "TC Kimlik No "
+	};
 
 }
 
