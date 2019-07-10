@@ -27,6 +27,9 @@
 			},
 			"marginBottom": 5
 		},
-		"borderRadius": 8
+		"borderRadius": 8,
+		".main": {
+			"backgroundColor": "rgba( 254, 198, 44, 1 )"
+		}
 	}
 }
