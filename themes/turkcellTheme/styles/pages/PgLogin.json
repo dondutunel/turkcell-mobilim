@@ -21,7 +21,9 @@
 				"alignSelf": "CENTER"
 			}
 		},
-		"&-mtEmail": {},
+		"&-mtEmail": {
+			"marginTop": 57
+		},
 		"&-title": {
 			"maxLines": 2,
 			"font": {
@@ -31,6 +33,12 @@
 			"marginTop": 33
 		},
 		"paddingLeft": 15,
-		"paddingRight": 15
+		"paddingRight": 15,
+		"&-btnLogin": {
+			"marginTop": 40
+		},
+		"&-mtPassword": {
+			"marginTop": 10
+		}
 	}
 }

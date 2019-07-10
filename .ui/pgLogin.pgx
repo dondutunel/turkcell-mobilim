@@ -105,7 +105,8 @@
 			"props": {
 				"children": [],
 				"name": "mtEmail",
-				"parent": "6748-f5e7-57f2-69d4"
+				"parent": "6748-f5e7-57f2-69d4",
+				"usePageVariable": true
 			},
 			"source": {
 				"page": "__modules__",
@@ -115,17 +116,20 @@
 				"id": "8fb2-10a8-12e4-9b45"
 			},
 			"type": "FlexLayout",
-			"userProps": {}
+			"userProps": {
+				"usePageVariable": true
+			}
 		},
 		{
-			"className": ".materialTextBox-wrapper",
+			"className": ".materialTextBox-wrapper #pgLogin-mtPassword",
 			"hiddenComponent": false,
 			"id": "be48-0c0c-3e00-c959",
 			"initialized": false,
 			"props": {
 				"children": [],
 				"name": "mtPassword",
-				"parent": "6748-f5e7-57f2-69d4"
+				"parent": "6748-f5e7-57f2-69d4",
+				"usePageVariable": true
 			},
 			"source": {
 				"page": "__modules__",
@@ -135,22 +139,26 @@
 				"id": "8fb2-10a8-12e4-9b45"
 			},
 			"type": "FlexLayout",
-			"userProps": {}
+			"userProps": {
+				"usePageVariable": true
+			}
 		},
 		{
-			"className": ".sf-button .sf-button-white",
+			"className": ".sf-button .sf-button-white #pgLogin-btnLogin",
 			"id": "fb2d-0029-cd1b-1c1a",
 			"props": {
-				"autoHeight": 23.25581395348837,
+				"autoHeight": 20,
 				"children": [],
-				"name": "button1",
+				"name": "btnLogin",
 				"parent": "6748-f5e7-57f2-69d4",
-				"text": "Giriş Yap"
+				"text": "Giriş Yap",
+				"usePageVariable": true
 			},
 			"type": "Button",
 			"userProps": {
-				"autoHeight": 23.25581395348837,
-				"text": "Giriş Yap"
+				"autoHeight": 20,
+				"text": "Giriş Yap",
+				"usePageVariable": true
 			}
 		}
 	]

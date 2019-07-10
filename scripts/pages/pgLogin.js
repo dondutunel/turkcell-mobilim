@@ -1,8 +1,20 @@
+const Screen = require("sf-core/device/screen");
+const touch = require("sf-extension-utils/lib/touch");
+
 /* 
 		You can modify its contents.
 */
 const extend = require('js-base/core/extend');
 const PgLoginDesign = require('ui/ui_pgLogin');
+
+const LOGIN_ITEMS = {
+	"email": {
+		hint: "E-POSTA VEYA CEP TELEFONU NUMARANIZ"
+	},
+	"password": {
+		hint: "ŞİFRE"
+	}
+};
 
 const PgLogin = extend(PgLoginDesign)(
 	// Constructor
@@ -34,6 +46,12 @@ function onShow(superOnShow) {
 function onLoad(superOnLoad) {
 	superOnLoad();
 	this.lblTitle.text = "Mobil uygulamamıza hoş geldiniz,\nlütfen giriş yapınız.";
+	this.svMain.layout.minHeight = Screen.height;
+	this.mtEmail.options = LOGIN_ITEMS.email;
+	this.mtPassword.options = LOGIN_ITEMS.password;
+	touch.addPressEvent(this.btnLogin, () => {
+		this.router.push("/btb/tab2/pgIslemlerim");
+	});
 }
 
 module.exports = PgLogin;

@@ -8,8 +8,8 @@
         "cursorColor": "rgba( 255,203,8,1 )",
         "selectedHintTextColor": "rgba( 255,203,8,1 )",
         "lineColor": {
-            "normal": "rgba( 0,0,0,1 )",
-            "selected": "rgba( 0,0,0,1 )"
+            "normal": "rgba( 255,255,255,1 )",
+            "selected": "rgba( 255,203,8,1 )"
         },
         "font": {
             "size": 17,
