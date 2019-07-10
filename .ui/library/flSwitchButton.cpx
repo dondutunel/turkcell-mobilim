@@ -2,6 +2,7 @@
 	"components": [
 		{
 			"className": ".sf-flexLayout .flSwitchButton",
+			"hiddenComponent": true,
 			"id": "48d7-6d35-d5d9-85d4",
 			"initialized": true,
 			"props": {

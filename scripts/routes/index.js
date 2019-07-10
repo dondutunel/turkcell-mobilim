@@ -124,7 +124,7 @@ const bottomTabBarRouter = BottomTabBarRouter.of({
             routes: [
                 Route.of({
                     path: "/btb/tab5/page5",
-                    build: buildExtender({ pageName: "page5", singleton: true, pageProps: { shouldExit: true } })
+                    build: buildExtender({ pageName: "pgKonaklama", singleton: true, pageProps: { shouldExit: true } })
                 }),
             ]
         })

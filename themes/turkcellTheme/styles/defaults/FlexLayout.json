@@ -1,0 +1,11 @@
+{
+	".flexLayout": {
+		"&-grow": {
+			"width": null,
+			"height": null,
+			"flexProps": {
+				"flexGrow": 1
+			}
+		}
+	}
+}
