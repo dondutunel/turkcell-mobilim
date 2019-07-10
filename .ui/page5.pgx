@@ -7,8 +7,7 @@
 			"props": {
 				"children": [
 					"c5bd-e50a-76a8-d20b",
-					"7dc2-301e-4ef8-9457",
-					"51a4-2dab-09de-767a"
+					"7dc2-301e-4ef8-9457"
 				],
 				"isRemovable": true,
 				"name": "page5",
@@ -51,49 +50,13 @@
 				"isRemovable": false,
 				"name": "headerBar",
 				"parent": "97c3-7262-4fcd-8982",
-				"title": "Page Title"
+				"title": "Dashboard"
 			},
 			"type": "HeaderBar",
 			"userProps": {
-				"title": "Page Title",
+				"title": "Dashboard",
 				"titleColor": "rgba( 255, 255, 255, 1 )",
 				"visible": true
-			}
-		},
-		{
-			"className": ".label",
-			"id": "51a4-2dab-09de-767a",
-			"props": {
-				"autoHeight": 39.325842696629216,
-				"children": [],
-				"name": "lbl",
-				"parent": "97c3-7262-4fcd-8982",
-				"text": "Page5\n",
-				"usePageVariable": true
-			},
-			"type": "Label",
-			"userProps": {
-				"autoHeight": 39.325842696629216,
-				"backgroundColor": "rgba( 255, 255, 255, 0 )",
-				"flexProps": {
-					"marginLeft": 20,
-					"marginRight": 20,
-					"alignSelf": "STRETCH"
-				},
-				"font": {
-					"size": 32,
-					"bold": false,
-					"italic": false,
-					"family": "SFProText",
-					"style": "Regular"
-				},
-				"height": 90,
-				"multiline": true,
-				"text": "Page5\n",
-				"textAlignment": "MIDCENTER",
-				"textColor": "rgba( 210, 210, 210, 1 )",
-				"usePageVariable": true,
-				"width": null
 			}
 		}
 	]

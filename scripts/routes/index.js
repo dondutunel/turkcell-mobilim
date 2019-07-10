@@ -58,9 +58,9 @@ const bottomTabBarRouter = BottomTabBarRouter.of({
     }),
     items: () => [
         { title: "Ana Sayfa", icon: home_icon },
-        { title: "Islemlerim", icon: categories_icon },
+        { title: "İşlemlerim", icon: categories_icon },
         { title: "IK", icon: ik_icon },
-        { title: "Sirketim", icon: sirketim_icon },
+        { title: "Şirketim", icon: sirketim_icon },
         { title: "Dashboard", icon: dashboard_icon }
     ],
     routes: [

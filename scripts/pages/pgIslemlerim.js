@@ -55,19 +55,16 @@ function onLoad(superOnLoad) {
 	createMainItems(this, 3, ITEM_MARGIN, ITEM_RATIO, this._data.mainItems);
 	if (this._data.switchButtons && this._data.switchButtons.length > 0) {
 		this.flSwitchButton.setData(this._data.switchButtons);
+		this.flSwitchButton.onIndexChange = index => {
+			console.log("index: ", index);
+			setSubMenuItemsData(this, this._data.subMenuItems[this.flSwitchButton.currentIndex + ``]);
+		};
 	}
 	else {
-		this.flSwitchButton.dispatch({
-			type: "pushClassNames",
-			classNames: [SWITCH_INVISIBLE_CLASS_NAME]
-		});
+		this.layout.removeChild(this.flSwitchButton);
 	}
 	createSubMenuItems(this, 2, 3, ITEM_MARGIN * 2, ITEM_RATIO);
 	setSubMenuItemsData(this, this._data.subMenuItems[this.flSwitchButton.currentIndex + ``]);
-	this.flSwitchButton.onIndexChange = index => {
-		console.log("index: ", index);
-		setSubMenuItemsData(this, this._data.subMenuItems[this.flSwitchButton.currentIndex + ``]);
-	};
 	this.layout.applyLayout();
 }
 
