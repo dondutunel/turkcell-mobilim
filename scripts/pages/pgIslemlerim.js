@@ -57,7 +57,7 @@ function onLoad(superOnLoad) {
 		this.flSwitchButton.setData(this._data.switchButtons);
 		this.flSwitchButton.onIndexChange = index => {
 			console.log("index: ", index);
-			setSubMenuItemsData(this.flMain, this._data.subMenuItems[this.flSwitchButton.currentIndex + ``]);
+			setSubMenuItemsData(this, this._data.subMenuItems[this.flSwitchButton.currentIndex + ``]);
 		};
 	}
 	else {
