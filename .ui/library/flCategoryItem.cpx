@@ -1,7 +1,7 @@
 {
 	"components": [
 		{
-			"className": ".sf-flexLayout .flCategoryItem .flCategoryItem.main",
+			"className": ".sf-flexLayout .flCategoryItem",
 			"id": "9ad2-2d08-7e4f-c18c",
 			"initialized": true,
 			"props": {

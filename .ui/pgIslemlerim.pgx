@@ -9,7 +9,9 @@
 					"a829471c",
 					"35f1c1a1",
 					"2acb-a157-0a70-0e0d",
-					"1344-8331-01e5-9fea"
+					"1344-8331-01e5-9fea",
+					"cb90-93fa-62b6-cfa2",
+					"b991-c072-d5eb-dc59"
 				],
 				"isRemovable": true,
 				"name": "pgIslemlerim",
@@ -94,6 +96,34 @@
 			"userProps": {
 				"autoHeight": 32.14285714285714,
 				"text": "Islemlerim"
+			}
+		},
+		{
+			"className": ".sf-flexLayout #pgIslemlerim-mainItems",
+			"id": "cb90-93fa-62b6-cfa2",
+			"props": {
+				"children": [],
+				"name": "flMainItems",
+				"parent": "7761adc8",
+				"usePageVariable": true
+			},
+			"type": "FlexLayout",
+			"userProps": {
+				"usePageVariable": true
+			}
+		},
+		{
+			"className": ".sf-flexLayout #pgIslemlerim-subMenu",
+			"id": "b991-c072-d5eb-dc59",
+			"props": {
+				"children": [],
+				"name": "flSubMenu",
+				"parent": "7761adc8",
+				"usePageVariable": true
+			},
+			"type": "FlexLayout",
+			"userProps": {
+				"usePageVariable": true
 			}
 		}
 	]
