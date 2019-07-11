@@ -4,7 +4,9 @@ const propagateTouchEvents = require("lib/propagateTouchEvents");
 const Picker = require("sf-core/ui/picker");
 const extend = require('js-base/core/extend');
 const PgSeyahatTalebiDesign = require('ui/ui_pgSeyahatTalebi');
-
+const { wait } = require("lib/dialog");
+const { getTripOptions, getAutocompleteCity } = require("../services/seyahatService");
+const debounce = require("../utils/debounce");
 const HIDE_MT_CLASS_NAME = ".materialTextBox-wrapper.hide";
 
 const PgSeyahatTalebi = extend(PgSeyahatTalebiDesign)(
@@ -16,6 +18,9 @@ const PgSeyahatTalebi = extend(PgSeyahatTalebiDesign)(
         this.onShow = onShow.bind(this, this.onShow.bind(this));
         // Overrides super.onLoad method
         this.onLoad = onLoad.bind(this, this.onLoad.bind(this));
+        this.itemsData = {};
+        this.showPicker = showPicker.bind(this);
+        this.showListview = debounce(showListview, 300);
     }
 );
 
@@ -58,10 +63,11 @@ function onLoad(superOnLoad) {
         else
             this.layout.applyLayout();
     };
-    var picker = new Picker({
-        items: ["fake1", "fake2"],
-        currentIndex: 0
-    });
+    const waitDialog = wait();
+    getTripOptions().then(res => {
+        this.itemsData["mtRegion"] = res.types;
+        this.itemsData["mtPurpose"] = res.purposes;
+    }).finally(() => waitDialog.hide());
 }
 
 function initMaterials(page) {
@@ -69,19 +75,24 @@ function initMaterials(page) {
         hint: "Yurt ici - Yurt Disi",
         touchEnabled: false
     };
-    page.mtRegion.onDropDownClick = () => {
-        console.info("mtRegion, click");
-    };
+    page.mtRegion.onDropDownClick = () => page.showPicker("mtRegion", data => data.Description);
     page.mtRegion.enableDropDown = true;
     page.mtPurpose.options = {
-        hint: "Temsil"
+        hint: "Temsil",
+        touchEnabled: false
     };
+    page.mtPurpose.onDropDownClick = () => page.showPicker("mtPurpose", data => data.Description);
     page.mtPurpose.enableDropDown = true;
     page.mtDescription.options = {
         hint: "Seyahat Aciklamasi"
     };
     page.mtFrom.options = {
-        hint: "Nereden"
+        hint: "Nereden",
+        onTextChanged: () => {
+            if (page.mtFrom.materialTextBox.text && page.mtFrom.materialTextBox.text.length >= 3) {
+                page.showListview(page.mtFrom, getAutocompleteCity, page.mtFrom.materialTextBox.text);
+            }
+        }
     };
     page.mtFrom.enableDropDown = true;
     page.mtTo.options = {
@@ -123,5 +134,26 @@ function showHideMaterialTextBox(mt, show) {
         });
     }
 }
+
+function showPicker(mt, itemMapFn, nextMt) {
+    const page = this;
+    const picker = new Picker({
+        items: page.itemsData[mt].map(itemMapFn)
+    });
+    picker.show(({ index }) => {
+        page[mt].materialTextBox.text = itemMapFn(page.itemsData[mt][index]);
+    }, () => {});
+}
+
+function showListview(view, listServiceFn, cb) {
+    const location = view.getScreenLocation();
+
+
+}
+
+function createListView() {
+
+}
+
 
 module.exports = PgSeyahatTalebi;

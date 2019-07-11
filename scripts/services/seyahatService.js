@@ -63,7 +63,7 @@ module.exports = {
             }]
         }), 300);
     }),
-    getAutocompleteCity: () => new Promise((resolve, reject) => {
+    getAutocompleteCity: (searchText) => new Promise((resolve, reject) => {
         setTimeout(() => resolve(
             [{
                 "AirPortName_Turkish": "",
