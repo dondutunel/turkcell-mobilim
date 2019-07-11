@@ -1,1 +1,38 @@
-{"ace":{"search":{"@backwards":"false","@highlightmatches":"true","@matchcase":"false","@preservecase":"false","@regex":"false","@wholeword":"false","@wraparound":"true"}},"breakpoints":{"json()":[]},"console":{"@expanded":true,"@height":261,"@maximized":false,"json()":{"meta":{"accessList":["tab1","tab0","searchResults"]},"name":"pane1","nodes":[{"type":"tab","name":"tab0","path":"","className":["tab0"],"document":{"changed":false,"meta":{"timestamp":1562307091403},"filter":true,"title":"bash - \"e585f083a116\"","tooltip":"bash - \"e585f083a116\"","terminal":{"id":"devel_878","cwd":"","width":0,"height":0}},"editorType":"terminal","active":false},{"type":"tab","name":"tab1","path":"","className":["tab1","focus"],"document":{"changed":false,"meta":{"timestamp":1562307091403},"filter":true,"title":"Immediate (Debugger)","tooltip":"Immediate (Debugger)","immediate":{}},"editorType":"immediate","active":true},{"type":"tab","name":"searchResults","path":"/.c9/searchresults","className":["searchResults","changed","locked"],"document":{"changed":true,"filter":true,"title":"searchresults","tooltip":"/.c9/searchresults","ace":{"folds":[],"customSyntax":"c9search","scrolltop":1530.5,"scrollleft":0,"selection":{"start":{"row":118,"column":0},"end":{"row":118,"column":0},"isBackwards":false},"options":{"tabSize":4,"useSoftTabs":true,"guessTabSize":false,"useWrapMode":false,"wrapToView":true},"firstLineState":{"row":94,"state":["start",{}],"mode":"ace/mode/c9search"}},"meta":{"searchResults":true,"ignoreSave":true,"newfile":true,"timestamp":1562667548137}},"editorType":"ace","active":false}],"skin":"editor_tab","skinset":"default","type":"pane"}},"experiments":{"@@enabled":true,"@flat-dark":0,"@git":1,"@plugin-manager":null,"@test":0},"ext":{"counters":{"@Smartface WYSIWYG Editor":1,"@ace":2,"@acestatus":1,"@datagrid":1,"@dialog":1,"@divider":4,"@document":12,"@form":8,"@imgeditor":1,"@immediate":1,"@menu":6,"@menuitem":14,"@pane":3,"@preferences":1,"@session":11,"@tab":6,"@undoManager":12}},"findinfiles":{"@console":"true","@matchcase":"false","@regex":"false","@scope":"selection","@wholeword":"false"},"menus":{"@minimized":"false"},"nak":{"@installed":true},"panecycle":{"json()":["tab1","tab2"]},"panels":{"@active-left":"tree","@active-right":"none","@width-left":235,"collab":{"@enabled":"true","@name":"collab"},"commands.panel":{"@enabled":"true","@name":"commands.panel"},"debugger":{"@enabled":"true","@name":"debugger"},"navigate":{"@enabled":"true","@name":"navigate"},"outline":{"@enabled":"true","@name":"outline"},"scm":{"@enabled":"true","@name":"scm"},"smartface.ui-editor.marketplace":{"@enabled":"true","@name":"smartface.ui-editor.marketplace"},"smartface.ui-editor.properties":{"@enabled":"true","@name":"smartface.ui-editor.properties"},"smartface.ui-editor.themes":{"@enabled":"true","@name":"smartface.ui-editor.themes"},"smartface.ui-editor.ui-editor-panel":{"@enabled":"true","@name":"smartface.ui-editor.ui-editor-panel"},"tree":{"@enabled":"true","@name":"tree"}},"projecttree":{"@scrollpos":1523,"@showfs":true,"expanded":{"json()":["/","/scripts/node_modules/@smartface/contx/lib","/scripts/node_modules/@smartface/contx/lib/styling","/scripts/sf_modules/materialtextbox/node_modules","/scripts/sf_modules/materialtextbox/node_modules/library","/scripts/sf_modules/materialtextbox/components","/images/automated","/scripts/node_modules/sf-extension-utils/lib","/themes/hm/styles","/themes/hm/styles/pages","/themes/hm","/.ui/library","/sf-extension-utils/lib","/scripts/duck/reducers","/images/Android","/images/Android/drawable-xhdpi","/output/Android/20190710-105554","/scripts","/scripts/router","/scripts/constants","/scripts/pages","/themes","/output/Android/20190710-133411","/output","/output/Android","/output/Android/20190711-083634"]}},"recentfiles":{"json()":[]},"search-history":{"search":{"json()":["waitDialog","setKeyboardLayouts","DELIVERY_HEIGHT","store","refreshData","flRadioButton-flInner-enabled-greyed","checkIfAbleToPay","deleteProduct","FACEID_ENABLED","faceIDEnabled","deleteProductFromBag","updateBag","faceIdEnab","store/find","300","store/f","singleton","loadStoresByLocation","updateStoreList","flStoreSearch","text","waitDialog","updateStoreList","search","rightLayout","updateStoreList","pgFind"]},"searchfiles":{"json()":["cache","routeData","isArray","onPromotionClick","promo","departments","lozenge","store","store.user","stores/","stores/user","store/user","search","itemCount","FlRadioButton","showSeparator","disabled","tabs","bottomtabbar_icon_1"]}},"tabs":{"json()":{"focus":"/scripts/router/deeplinkRouter.js","meta":{"accessList":["tab2","tab8","tab26","tab27","tab3","tab9","tab10"]},"name":"pane0","nodes":[{"type":"tab","name":"tab8","path":"/scripts/deeplink.js","className":["tab8"],"document":{"changed":false,"meta":{"timestamp":1562841375778},"filter":true,"title":"deeplink.js","tooltip":"/scripts/deeplink.js","ace":{}},"editorType":"ace","active":false},{"type":"tab","name":"tab26","path":"/scripts/router/index.js","className":["tab26"],"document":{"changed":false,"meta":{"timestamp":1562764263021},"filter":true,"title":"index.js","tooltip":"/scripts/router/index.js","ace":{}},"editorType":"ace","active":false},{"type":"tab","name":"tab27","path":"/scripts/pages/pgWebView.js","className":["tab27"],"document":{"changed":false,"meta":{"timestamp":1562763851337},"filter":true,"title":"pgWebView.js","tooltip":"/scripts/pages/pgWebView.js","ace":{}},"editorType":"ace","active":false},{"type":"tab","name":"tab2","path":"/scripts/router/deeplinkRouter.js","className":["tab2","focus"],"document":{"changed":false,"meta":{"timestamp":1562840718913},"filter":true,"title":"deeplinkRouter.js","tooltip":"/scripts/router/deeplinkRouter.js","ace":{}},"editorType":"ace","active":true},{"type":"tab","name":"tab9","path":"/themes/hm/styles/pages/PgAddressBook.json","className":["tab9"],"document":{"filter":true,"title":"PgAddressBook.json","tooltip":"/themes/hm/styles/pages/PgAddressBook.json","ace":{"folds":[],"scrolltop":0,"scrollleft":0,"selection":{"start":{"row":18,"column":18},"end":{"row":18,"column":18},"isBackwards":false},"options":{"guessTabSize":true,"useWrapMode":false,"wrapToView":true},"firstLineState":{"row":17,"state":"start","mode":"ace/mode/json"}},"hash":"21b4ff4755fcdcb347d765d40dc9e963b09d1a05","meta":{"timestamp":1562761998349},"changed":false},"editorType":"ace","active":false},{"type":"tab","name":"tab10","path":"/scripts/constants/index.js","className":["tab10"],"document":{"filter":true,"title":"index.js","tooltip":"/scripts/constants/index.js","ace":{"folds":[],"scrolltop":0,"scrollleft":0,"selection":{"start":{"row":20,"column":33},"end":{"row":20,"column":33},"isBackwards":false},"options":{"guessTabSize":true,"useWrapMode":false,"wrapToView":true},"firstLineState":0},"hash":"df57ef9809943ce1a8ca8017bce2321fef62878d","meta":{"timestamp":1562760729536},"changed":false},"editorType":"ace","active":false}],"skin":"editor_tab","skinset":"default","type":"pane"}},"tree_selection":{"json()":["/scripts/router/deeplinkRouter.js"]}}
+{
+    ".sf-videoView": {
+		"height": 343,
+		"width": null,
+        "marginTop": 1,
+        "marginBottom": 1,
+        "flexProps": {
+            "alignSelf": "AUTO",
+            "positionType": "RELATIVE"
+        },
+        "&-small": {
+            "width": 100
+        },
+        "&-medium": {
+            "width": 250
+        },
+        "&-large": {
+            "width": 350
+        }
+    },
+    ".videoView": {
+		"height": 343,
+		"width": null,
+        "flexProps": {
+            "alignSelf": "AUTO",
+            "positionType": "RELATIVE"
+        },
+        "&-small": {
+            "width": 100
+        },
+        "&-medium": {
+            "width": 250
+        },
+        "&-large": {
+            "width": 350
+        }
+    }
+}
