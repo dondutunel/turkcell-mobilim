@@ -24,7 +24,7 @@
 			}
 		},
 		{
-			"className": ".sf-flexLayout",
+			"className": ".sf-flexLayout .flKonaklamaItem-header",
 			"id": "33d4-1534-dd08-3e3e",
 			"props": {
 				"children": [
@@ -38,16 +38,7 @@
 				"page": "__library__"
 			},
 			"type": "FlexLayout",
-			"userProps": {
-				"flexProps": {
-					"flexDirection": "ROW"
-				},
-				"height": 50,
-				"marginBottom": 10,
-				"marginLeft": 10,
-				"marginRight": 10,
-				"marginTop": 10
-			}
+			"userProps": {}
 		},
 		{
 			"className": ".sf-flexLayout .flKonaklamaItem-icon .gradientBackground",
@@ -410,9 +401,10 @@
 			"props": {
 				"autoHeight": 20.666666666666668,
 				"children": [],
-				"name": "button1",
+				"name": "btnRemove",
 				"parent": "1f77-52b5-384e-d015",
-				"text": "Bu Uçuşu Sil"
+				"text": "Bu Uçuşu Sil",
+				"usePageVariable": true
 			},
 			"source": {
 				"page": "__library__"
@@ -432,7 +424,8 @@
 				"marginBottom": null,
 				"marginTop": null,
 				"text": "Bu Uçuşu Sil",
-				"textColor": "rgba( 235, 47, 47, 1 )"
+				"textColor": "rgba( 235, 47, 47, 1 )",
+				"usePageVariable": true
 			}
 		}
 	]

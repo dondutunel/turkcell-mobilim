@@ -1,8 +1,7 @@
+const FlKonaklamaItem = require("components/FlKonaklamaItem");
 const Image = require("sf-core/ui/image");
 const HeaderBarItem = require("sf-core/ui/headerbaritem");
-/* 
-		You can modify its contents.
-*/
+const propagateTouchEvents = require("lib/propagateTouchEvents");
 const extend = require('js-base/core/extend');
 const PgKonaklamaDesign = require('ui/ui_pgKonaklama');
 
@@ -26,7 +25,7 @@ const PgKonaklama = extend(PgKonaklamaDesign)(
  */
 function onShow(superOnShow) {
 	superOnShow();
-	this.flKonaklamaItem1.init();
+	const page = this;
 }
 
 /**
@@ -36,14 +35,27 @@ function onShow(superOnShow) {
  */
 function onLoad(superOnLoad) {
 	superOnLoad();
+	let itemIndex = 0;
 	const page = this;
 	const addAccomodationButton = new HeaderBarItem({
 		image: Image.createFromFile("images://plus.png"),
 		onPress: () => {
-			alert("Add");
+			let konaklamaItem = new FlKonaklamaItem();
+			page.svMain.layout.addChild(konaklamaItem, `konaklamaItem${itemIndex++}`);
+			konaklamaItem.init();
+			konaklamaItem.onDelete = () => {
+				page.svMain.layout.removeChild(konaklamaItem);
+				konaklamaItem.onChange();
+			};
+			konaklamaItem.onChange = () => {
+				page.svMain.layout.applyLayout();
+				page.layout.applyLayout();
+			};
+			konaklamaItem.onChange();
 		}
 	});
 	page.headerBar.setItems([addAccomodationButton]);
+	propagateTouchEvents(page.svMain);
 }
 
 module.exports = PgKonaklama;

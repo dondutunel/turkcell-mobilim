@@ -42,11 +42,12 @@ function onShow(superOnShow) {
  */
 function onLoad(superOnLoad) {
     superOnLoad();
+    const page = this;
     //this.svMain.layout.minHeight = Screen.height;
     initMaterials(this);
-    touch.addPressEvent(this.btnContinue, () => {
-
-    });
+    this.btnContinue.onPress = () => {
+        page.router.push("/btb/tab2/pgKonaklama");
+    };
     propagateTouchEvents(this.svMain);
     this.flCheckFlight.setData({ text: "Ucus" });
     this.flCheckAccommodation.setData({ text: "Konaklama" });

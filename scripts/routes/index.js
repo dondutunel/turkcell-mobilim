@@ -84,7 +84,7 @@ const bottomTabBarRouter = BottomTabBarRouter.of({
             routes: [
                 Route.of({
                     path: "/btb/tab1/page1",
-                    build: buildExtender({ pageName: "page1", singleton: true, pageProps: { } })
+                    build: buildExtender({ pageName: "page1", singleton: true, pageProps: {} })
                 }),
             ]
         }),
@@ -104,7 +104,11 @@ const bottomTabBarRouter = BottomTabBarRouter.of({
                 }),
                 Route.of({
                     path: "/btb/tab2/pgSeyahatTalebi",
-                    build: buildExtender({ pageName: "pgSeyahatTalebi", singleton: false, pageProps: { } })
+                    build: buildExtender({ pageName: "pgSeyahatTalebi", singleton: false, pageProps: {} })
+                }),
+                Route.of({
+                    path: "/btb/tab2/pgKonaklama",
+                    build: buildExtender({ pageName: "pgKonaklama", singleton: false, pageProps: {} })
                 })
             ]
         }),
@@ -115,7 +119,7 @@ const bottomTabBarRouter = BottomTabBarRouter.of({
             routes: [
                 Route.of({
                     path: "/btb/tab3/hr",
-                    build: buildExtender({ pageName: "pgIslemlerim", singleton: true, pageProps: {  data: pagesData.pgHr } })
+                    build: buildExtender({ pageName: "pgIslemlerim", singleton: true, pageProps: { data: pagesData.pgHr } })
                 }),
             ]
         }),
@@ -126,7 +130,7 @@ const bottomTabBarRouter = BottomTabBarRouter.of({
             routes: [
                 Route.of({
                     path: "/btb/tab4/page4",
-                    build: buildExtender({ pageName: "page4", singleton: true, pageProps: {  } })
+                    build: buildExtender({ pageName: "page4", singleton: true, pageProps: {} })
                 }),
             ]
         }),
@@ -137,7 +141,7 @@ const bottomTabBarRouter = BottomTabBarRouter.of({
             routes: [
                 Route.of({
                     path: "/btb/tab5/page5",
-                    build: buildExtender({ pageName: "pgKonaklama", singleton: true, pageProps: { } })
+                    build: buildExtender({ pageName: "page5", singleton: true, pageProps: {} })
                 }),
             ]
         })
@@ -152,7 +156,7 @@ const router = Router.of({
     routes: [
         Route.of({
             path: "/login",
-            build: buildExtender({ pageName: "pgLogin", singleton: true, pageProps: {shouldExit: true } })
+            build: buildExtender({ pageName: "pgLogin", singleton: true, pageProps: { shouldExit: true } })
         }),
         bottomTabBarRouter
     ]
