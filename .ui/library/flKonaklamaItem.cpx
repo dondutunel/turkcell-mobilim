@@ -6,8 +6,8 @@
 			"initialized": true,
 			"props": {
 				"children": [
-					"b254-2b80-aa0e-c5c7",
-					"b359-2356-df12-5eea"
+					"33d4-1534-dd08-3e3e",
+					"0ff9-f9ed-ae08-3ea0"
 				],
 				"name": "flKonaklamaItem",
 				"parent": "57f4-201f-4bfc-5fc6"
@@ -17,34 +17,22 @@
 			},
 			"type": "FlexLayout",
 			"userProps": {
-				"flexProps": {},
+				"flexProps": {
+					"flexDirection": "COLUMN"
+				},
 				"left": 20,
 				"top": 142.4
 			}
 		},
 		{
-			"className": ".sf-flexLayout .flKonaklamaItem-icon .gradientBackground",
-			"id": "b254-2b80-aa0e-c5c7",
-			"props": {
-				"children": [],
-				"name": "flexLayout1",
-				"parent": "1f77-52b5-384e-d015"
-			},
-			"source": {
-				"page": "__library__"
-			},
-			"type": "FlexLayout",
-			"userProps": {}
-		},
-		{
 			"className": ".sf-flexLayout",
-			"id": "b359-2356-df12-5eea",
+			"id": "33d4-1534-dd08-3e3e",
 			"props": {
 				"children": [
-					"6012-8463-f08f-6597",
-					"caab-a8d2-bdd3-f5fa"
+					"9efa-ba23-89aa-c914",
+					"bae3-da66-39fd-c2e3"
 				],
-				"name": "flexLayout2",
+				"name": "flexLayout3",
 				"parent": "1f77-52b5-384e-d015"
 			},
 			"source": {
@@ -53,9 +41,42 @@
 			"type": "FlexLayout",
 			"userProps": {
 				"flexProps": {
-					"flexGrow": 1
+					"flexDirection": "ROW"
 				},
-				"height": null,
+				"height": 50,
+				"marginBottom": 10
+			}
+		},
+		{
+			"className": ".sf-flexLayout .flKonaklamaItem-icon .gradientBackground",
+			"id": "9efa-ba23-89aa-c914",
+			"props": {
+				"children": [],
+				"name": "flexLayout1",
+				"parent": "33d4-1534-dd08-3e3e"
+			},
+			"source": {
+				"page": "__library__"
+			},
+			"type": "FlexLayout",
+			"userProps": {}
+		},
+		{
+			"className": ".sf-flexLayout .flexLayout-grow",
+			"id": "bae3-da66-39fd-c2e3",
+			"props": {
+				"children": [
+					"0b4b-5b37-8ac9-b0ca",
+					"47f4-9937-ccd6-ad06"
+				],
+				"name": "flexLayout2",
+				"parent": "33d4-1534-dd08-3e3e"
+			},
+			"source": {
+				"page": "__library__"
+			},
+			"type": "FlexLayout",
+			"userProps": {
 				"marginLeft": 10,
 				"paddingBottom": 4,
 				"paddingTop": 4
@@ -63,12 +84,12 @@
 		},
 		{
 			"className": ".sf-label .flexLayout-grow",
-			"id": "6012-8463-f08f-6597",
+			"id": "0b4b-5b37-8ac9-b0ca",
 			"props": {
 				"autoHeight": 20.5,
 				"children": [],
 				"name": "lblKonaklama",
-				"parent": "b359-2356-df12-5eea",
+				"parent": "bae3-da66-39fd-c2e3",
 				"text": "Konaklama 1",
 				"usePageVariable": true
 			},
@@ -93,12 +114,12 @@
 		},
 		{
 			"className": ".sf-label .flexLayout-grow",
-			"id": "caab-a8d2-bdd3-f5fa",
+			"id": "47f4-9937-ccd6-ad06",
 			"props": {
 				"autoHeight": 20.5,
 				"children": [],
 				"name": "lblSehir",
-				"parent": "b359-2356-df12-5eea",
+				"parent": "bae3-da66-39fd-c2e3",
 				"text": "Ankara",
 				"usePageVariable": true
 			},
@@ -118,6 +139,204 @@
 				"height": null,
 				"text": "Ankara",
 				"textColor": "rgba( 160, 160, 165, 1 )",
+				"usePageVariable": true
+			}
+		},
+		{
+			"className": ".sf-flexLayout .flexLayout-grow",
+			"id": "0ff9-f9ed-ae08-3ea0",
+			"props": {
+				"children": [
+					"2e97-c467-cf83-f0f8",
+					"f638-42a8-7d8e-113f",
+					"e9fe-1264-096e-8b12",
+					"6f0f-d2de-80d5-3928"
+				],
+				"name": "flexLayout4",
+				"parent": "1f77-52b5-384e-d015"
+			},
+			"source": {
+				"page": "__library__"
+			},
+			"type": "FlexLayout",
+			"userProps": {
+				"marginTop": 17
+			}
+		},
+		{
+			"className": ".sf-label",
+			"id": "2e97-c467-cf83-f0f8",
+			"props": {
+				"autoHeight": 16.8,
+				"children": [],
+				"name": "label1",
+				"parent": "0ff9-f9ed-ae08-3ea0",
+				"text": "GİDİŞ BİLGİLERİ"
+			},
+			"source": {
+				"page": "__library__"
+			},
+			"type": "Label",
+			"userProps": {
+				"autoHeight": 16.8,
+				"flexProps": {},
+				"height": 22,
+				"text": "GİDİŞ BİLGİLERİ",
+				"textColor": "rgba( 160, 160, 165, 1 )",
+				"width": null
+			}
+		},
+		{
+			"className": ".sf-flexLayout #pgSeyahatTalebi-fromTo",
+			"id": "f638-42a8-7d8e-113f",
+			"props": {
+				"children": [
+					"45e8-95a2-3c9f-b635",
+					"de2a-5b13-ac8b-fdfe"
+				],
+				"name": "flLocation",
+				"parent": "0ff9-f9ed-ae08-3ea0",
+				"usePageVariable": true
+			},
+			"type": "FlexLayout",
+			"userProps": {
+				"marginTop": 5,
+				"usePageVariable": true
+			}
+		},
+		{
+			"className": ".materialTextBox-wrapper #pgSeyahatTalebi-fromTo-mt.from",
+			"hiddenComponent": false,
+			"id": "45e8-95a2-3c9f-b635",
+			"initialized": false,
+			"props": {
+				"children": [],
+				"name": "mtLocationFrom",
+				"parent": "f638-42a8-7d8e-113f",
+				"usePageVariable": true
+			},
+			"source": {
+				"page": "__modules__",
+				"moduleName": "Materialtextbox",
+				"modulePath": "materialtextbox",
+				"type": "Materialtextbox",
+				"id": "8fb2-10a8-12e4-9b45"
+			},
+			"type": "FlexLayout",
+			"userProps": {
+				"usePageVariable": true
+			}
+		},
+		{
+			"className": ".materialTextBox-wrapper #pgSeyahatTalebi-fromTo-mt.to",
+			"hiddenComponent": false,
+			"id": "de2a-5b13-ac8b-fdfe",
+			"initialized": false,
+			"props": {
+				"children": [],
+				"name": "mtLocationTo",
+				"parent": "f638-42a8-7d8e-113f",
+				"usePageVariable": true
+			},
+			"source": {
+				"page": "__modules__",
+				"moduleName": "Materialtextbox",
+				"modulePath": "materialtextbox",
+				"type": "Materialtextbox",
+				"id": "8fb2-10a8-12e4-9b45"
+			},
+			"type": "FlexLayout",
+			"userProps": {
+				"usePageVariable": true
+			}
+		},
+		{
+			"className": ".sf-flexLayout #pgSeyahatTalebi-fromTo",
+			"id": "e9fe-1264-096e-8b12",
+			"props": {
+				"children": [
+					"61ef-a2c4-5abb-cea6",
+					"d152-af89-e8ec-0847"
+				],
+				"name": "flFromTime",
+				"parent": "0ff9-f9ed-ae08-3ea0",
+				"usePageVariable": true
+			},
+			"type": "FlexLayout",
+			"userProps": {
+				"marginTop": 5,
+				"usePageVariable": true
+			}
+		},
+		{
+			"className": ".materialTextBox-wrapper #pgSeyahatTalebi-fromTo-mt.from",
+			"hiddenComponent": false,
+			"id": "61ef-a2c4-5abb-cea6",
+			"initialized": false,
+			"props": {
+				"children": [],
+				"name": "mtDateFrom",
+				"parent": "e9fe-1264-096e-8b12",
+				"usePageVariable": true
+			},
+			"source": {
+				"page": "__modules__",
+				"moduleName": "Materialtextbox",
+				"modulePath": "materialtextbox",
+				"type": "Materialtextbox",
+				"id": "8fb2-10a8-12e4-9b45"
+			},
+			"type": "FlexLayout",
+			"userProps": {
+				"usePageVariable": true
+			}
+		},
+		{
+			"className": ".materialTextBox-wrapper #pgSeyahatTalebi-fromTo-mt.to",
+			"hiddenComponent": false,
+			"id": "d152-af89-e8ec-0847",
+			"initialized": false,
+			"props": {
+				"children": [],
+				"name": "mtTimeFrom",
+				"parent": "e9fe-1264-096e-8b12",
+				"usePageVariable": true
+			},
+			"source": {
+				"page": "__modules__",
+				"moduleName": "Materialtextbox",
+				"modulePath": "materialtextbox",
+				"type": "Materialtextbox",
+				"id": "8fb2-10a8-12e4-9b45"
+			},
+			"type": "FlexLayout",
+			"userProps": {
+				"usePageVariable": true
+			}
+		},
+		{
+			"className": ".sf-flexLayout .flCheckItem",
+			"hiddenComponent": false,
+			"id": "6f0f-d2de-80d5-3928",
+			"initialized": false,
+			"props": {
+				"children": [],
+				"name": "flDonusTarihi",
+				"parent": "0ff9-f9ed-ae08-3ea0",
+				"usePageVariable": true
+			},
+			"source": {
+				"page": "__library__",
+				"type": "flCheckItem",
+				"id": "b35d-e347-8f7b-1d0c"
+			},
+			"type": "FlexLayout",
+			"userProps": {
+				"bottom": 50,
+				"flex": {
+					"positionType": 0
+				},
+				"height": 30,
 				"usePageVariable": true
 			}
 		}

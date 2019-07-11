@@ -24,6 +24,7 @@ const PgKonaklama = extend(PgKonaklamaDesign)(
  */
 function onShow(superOnShow) {
 	superOnShow();
+	this.flKonaklamaItem1.init();
 }
 
 /**
