@@ -1,8 +1,11 @@
+const ActionKeyType = require("sf-core/ui/actionkeytype");
+const KeyboardType = require("sf-core/ui/keyboardtype");
 const LvPickerList = require("components/LvPickerList");
 const System = require("sf-core/device/system");
 const touch = require("sf-extension-utils/lib/touch");
 const propagateTouchEvents = require("lib/propagateTouchEvents");
 const Picker = require("sf-core/ui/picker");
+const DatePicker = require('sf-core/ui/datepicker');
 const extend = require('js-base/core/extend');
 const PgSeyahatTalebiDesign = require('ui/ui_pgSeyahatTalebi');
 const { wait } = require("lib/dialog");
@@ -21,6 +24,7 @@ const PgSeyahatTalebi = extend(PgSeyahatTalebiDesign)(
         this.onLoad = onLoad.bind(this, this.onLoad.bind(this));
         this.itemsData = {};
         this.showPicker = showPicker.bind(this);
+        this.showDatePicker = showDatePicker.bind(this);
         this.showListview = debounce(showListview, 300);
     }
 );
@@ -125,23 +129,31 @@ function initMaterials(page) {
     };
     page.mtTo.enableDropDown = true;
     page.mtDepartureDate.options = {
-        hint: "Departure Date"
+        hint: "Departure Date",
+        touchEnabled: false
     };
+    page.mtDepartureDate.onDropDownClick = () => page.showDatePicker("mtDepartureDate");
     page.mtDepartureDate.enableDropDown = true;
     page.mtReturnDate.options = {
-        hint: "Return Date"
+        hint: "Return Date",
+        touchEnabled: false
     };
+    page.mtReturnDate.onDropDownClick = () => page.showDatePicker("mtReturnDate");
     page.mtReturnDate.enableDropDown = true;
     page.mtAcente.options = {
         hint: "Acente"
     };
     page.mtAcente.enableDropDown = true;
     page.mtBirthDate.options = {
-        hint: "Dogum Tarihi"
+        hint: "Dogum Tarihi",
+        touchEnabled: false
     };
+    page.mtBirthDate.onDropDownClick = () => page.showDatePicker("mtReturnDate");
     page.mtBirthDate.enableDropDown = true;
     page.mtID.options = {
-        hint: "TC Kimlik No "
+        hint: "TC Kimlik No ",
+        keyboardType: KeyboardType.NUMBER,
+        actionKeyType: ActionKeyType.DEFAULT
     };
 }
 
@@ -170,11 +182,21 @@ function showPicker(mt, itemMapFn, nextMt) {
     }, () => {});
 }
 
+function showDatePicker(mt) {
+    const page = this;
+    const myDatePicker = new DatePicker();
+    myDatePicker.onDateSelected = (date) => {
+        console.info("date: ", date);
+        page[mt].materialTextBox.text = `${date.getDate()}.${date.getMonth()}.${date.getFullYear()}`;
+    };
+    myDatePicker.show();
+}
+
 function showListview(page, view, listServiceFn, text, dataMapperFn, cb) {
     const location = view.getScreenLocation();
     listServiceFn(text).then(res => {
         console.warn("show listview: ", text);
-        page.lvPickerList.setOptions(location,
+        res.length && page.lvPickerList.setOptions(location,
             res.map(dataMapperFn),
             (index) => cb(res[index]));
         page.svMain.layout.applyLayout();

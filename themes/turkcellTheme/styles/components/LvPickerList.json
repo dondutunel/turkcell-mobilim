@@ -1,0 +1,28 @@
+{
+	".lvListItem": {
+		"flexProps": {},
+		"&-text": {
+			"flexProps": {
+				"flexGrow": 1
+			},
+			"height": null,
+			"textAlignment": "MIDCENTER",
+			"textColor": "rgba( 53, 53, 53, 1 )"
+		},
+		"width": null,
+		"height": null,
+		"textColor": "rgba( 53, 53, 53, 1 )",
+		"textAlignment": "MIDCENTER"
+	},
+	".lvPickerList": {
+		"flexProps": {
+			"positionType": "ABSOLUTE"
+		},
+		"width": 200,
+		"&-hide": {
+			"visible": false
+		},
+		"visible": "true",
+		"backgroundColor": "rgba(255,255,255,1)"
+	}
+}
