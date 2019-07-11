@@ -1,3 +1,4 @@
+const System = require("sf-core/device/system");
 const createPageContext = require("@smartface/contx/lib/smartface/pageContext");
 const Image = require("sf-core/ui/image");
 const Color = require("sf-core/ui/color");
@@ -10,6 +11,7 @@ const {
     Route
 } = require("@smartface/router");
 const buildExtender = require("sf-extension-utils/lib/router/buildExtender");
+const backClose = require("sf-extension-utils/lib/router/back-close");
 require("sf-extension-utils/lib/router/goBack"); // Implements onBackButtonPressed
 const pagesData = require("../pagesData");
 class StylingComponent {
@@ -46,6 +48,17 @@ const sirketim_icon = Image.createFromFile("images://sirketim_icon.png");
 const home_icon = Image.createFromFile("images://home_icon.png");
 const categories_icon = Image.createFromFile("images://categories_icon.png");
 const dashboard_icon = Image.createFromFile("images://dashboard_icon.png");
+const backArrowImage = Image.createFromFile("images://arrow_back.png");
+
+backClose.setDefaultBackStyle({ image: backArrowImage, hideTitle: true });
+backClose.dissmissBuilder = (match, routeData, router, pageInstance, pageProps, route) => {
+    return {
+        text: global.lang.cancel,
+        image: System.OS === "Android" && backArrowImage,
+        position: "left"
+    };
+};
+
 const bottomTabBarRouter = BottomTabBarRouter.of({
     path: "/",
     to: "/btb/tab1",
