@@ -8,18 +8,14 @@
 				"children": [
 					"e758-8a30-af8a-f426",
 					"9571-8530-43d9-17e4",
-					"7793-2b77-621e-613d"
+					"1551-ab4f-8577-9615"
 				],
 				"name": "pgKonaklama",
 				"orientation": "PORTRAIT",
 				"parent": null
 			},
 			"type": "Page",
-			"userProps": {
-				"paddingLeft": 15,
-				"paddingRight": 15,
-				"paddingTop": 15
-			},
+			"userProps": {},
 			"version": "6.15.1"
 		},
 		{
@@ -50,33 +46,20 @@
 			}
 		},
 		{
-			"className": ".sf-flexLayout .flKonaklamaItem",
-			"hiddenComponent": false,
-			"id": "7793-2b77-621e-613d",
-			"initialized": false,
+			"className": ".sf-scrollView .flexLayout-grow",
+			"id": "1551-ab4f-8577-9615",
 			"props": {
+				"autoSizeEnabled": true,
 				"children": [],
-				"name": "flKonaklamaItem1",
+				"name": "svMain",
 				"parent": "38ef-6b2c-8ddf-479f",
 				"usePageVariable": true
 			},
-			"source": {
-				"page": "__library__",
-				"type": "flKonaklamaItem",
-				"id": "1f77-52b5-384e-d015"
-			},
-			"type": "FlexLayout",
+			"type": "ScrollView",
 			"userProps": {
-				"flex": {
-					"flexDirection": 0,
-					"positionType": 0
-				},
-				"flexProps": {
-					"flexDirection": "COLUMN",
-					"positionType": "RELATIVE"
-				},
-				"left": 0,
-				"top": 0,
+				"autoSizeEnabled": true,
+				"marginBottom": null,
+				"marginTop": null,
 				"usePageVariable": true
 			}
 		}
