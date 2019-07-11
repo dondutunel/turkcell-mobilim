@@ -8,7 +8,8 @@
 			"props": {
 				"children": [
 					"33d4-1534-dd08-3e3e",
-					"0ff9-f9ed-ae08-3ea0"
+					"0ff9-f9ed-ae08-3ea0",
+					"00e0-73bc-630f-f74a"
 				],
 				"name": "flKonaklamaItem",
 				"parent": "57f4-201f-4bfc-5fc6"
@@ -18,9 +19,6 @@
 			},
 			"type": "FlexLayout",
 			"userProps": {
-				"flexProps": {
-					"flexDirection": "COLUMN"
-				},
 				"left": 20,
 				"top": 142.4
 			}
@@ -45,7 +43,10 @@
 					"flexDirection": "ROW"
 				},
 				"height": 50,
-				"marginBottom": 10
+				"marginBottom": 10,
+				"marginLeft": 10,
+				"marginRight": 10,
+				"marginTop": 10
 			}
 		},
 		{
@@ -152,8 +153,7 @@
 					"f638-42a8-7d8e-113f",
 					"e9fe-1264-096e-8b12",
 					"6f0f-d2de-80d5-3928",
-					"ccd1-a95a-7992-a441",
-					"bd16-23b9-959d-a6be"
+					"ccd1-a95a-7992-a441"
 				],
 				"name": "flexLayout4",
 				"parent": "1f77-52b5-384e-d015"
@@ -163,6 +163,8 @@
 			},
 			"type": "FlexLayout",
 			"userProps": {
+				"marginLeft": 10,
+				"marginRight": 10,
 				"marginTop": 17
 			}
 		},
@@ -170,7 +172,7 @@
 			"className": ".sf-label",
 			"id": "2e97-c467-cf83-f0f8",
 			"props": {
-				"autoHeight": 21,
+				"autoHeight": 16.8,
 				"children": [],
 				"name": "label1",
 				"parent": "0ff9-f9ed-ae08-3ea0",
@@ -181,7 +183,7 @@
 			},
 			"type": "Label",
 			"userProps": {
-				"autoHeight": 21,
+				"autoHeight": 16.8,
 				"flexProps": {},
 				"height": 22,
 				"text": "GİDİŞ BİLGİLERİ",
@@ -404,28 +406,33 @@
 		},
 		{
 			"className": ".sf-button",
-			"id": "bd16-23b9-959d-a6be",
+			"id": "00e0-73bc-630f-f74a",
 			"props": {
-				"autoHeight": 21.42857142857143,
+				"autoHeight": 20.666666666666668,
 				"children": [],
 				"name": "button1",
-				"parent": "0ff9-f9ed-ae08-3ea0",
-				"text": "button1"
+				"parent": "1f77-52b5-384e-d015",
+				"text": "Bu Uçuşu Sil"
 			},
 			"source": {
 				"page": "__library__"
 			},
 			"type": "Button",
 			"userProps": {
-				"autoHeight": 21.42857142857143,
-				"bottom": 0,
-				"flexProps": {
-					"positionType": "ABSOLUTE"
+				"autoHeight": 20.666666666666668,
+				"backgroundColor": "rgba( 235, 47, 47, 0.14 )",
+				"borderRadius": null,
+				"font": {
+					"size": 17,
+					"bold": false,
+					"italic": false,
+					"family": "SFProText",
+					"style": "Medium"
 				},
-				"height": 39,
-				"left": 0,
-				"right": 0,
-				"text": "button1"
+				"marginBottom": null,
+				"marginTop": null,
+				"text": "Bu Uçuşu Sil",
+				"textColor": "rgba( 235, 47, 47, 1 )"
 			}
 		}
 	]

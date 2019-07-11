@@ -1,3 +1,5 @@
+const Image = require("sf-core/ui/image");
+const HeaderBarItem = require("sf-core/ui/headerbaritem");
 /* 
 		You can modify its contents.
 */
@@ -34,6 +36,14 @@ function onShow(superOnShow) {
  */
 function onLoad(superOnLoad) {
 	superOnLoad();
+	const page = this;
+	const addAccomodationButton = new HeaderBarItem({
+		image: Image.createFromFile("images://plus.png"),
+		onPress: () => {
+			alert("Add");
+		}
+	});
+	page.headerBar.setItems([addAccomodationButton]);
 }
 
 module.exports = PgKonaklama;
