@@ -8,7 +8,7 @@
 				"children": [
 					"e758-8a30-af8a-f426",
 					"9571-8530-43d9-17e4",
-					"d3d6-ab4c-a537-a948"
+					"7793-2b77-621e-613d"
 				],
 				"name": "pgKonaklama",
 				"orientation": "PORTRAIT",
@@ -52,12 +52,13 @@
 		{
 			"className": ".sf-flexLayout .flKonaklamaItem",
 			"hiddenComponent": false,
-			"id": "d3d6-ab4c-a537-a948",
-			"initialized": true,
+			"id": "7793-2b77-621e-613d",
+			"initialized": false,
 			"props": {
 				"children": [],
-				"name": "flKonaklamaItem",
-				"parent": "38ef-6b2c-8ddf-479f"
+				"name": "flKonaklamaItem1",
+				"parent": "38ef-6b2c-8ddf-479f",
+				"usePageVariable": true
 			},
 			"source": {
 				"page": "__library__",
@@ -67,13 +68,16 @@
 			"type": "FlexLayout",
 			"userProps": {
 				"flex": {
+					"flexDirection": 0,
 					"positionType": 0
 				},
 				"flexProps": {
+					"flexDirection": "COLUMN",
 					"positionType": "RELATIVE"
 				},
 				"left": 0,
-				"top": 0
+				"top": 0,
+				"usePageVariable": true
 			}
 		}
 	]

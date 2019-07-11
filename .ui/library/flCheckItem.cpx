@@ -2,6 +2,7 @@
 	"components": [
 		{
 			"className": ".sf-flexLayout .flCheckItem",
+			"hiddenComponent": true,
 			"id": "b35d-e347-8f7b-1d0c",
 			"initialized": true,
 			"props": {
@@ -26,7 +27,7 @@
 			"className": ".sf-label .flCheckItem-icon",
 			"id": "8e8e-e2c7-a005-e188",
 			"props": {
-				"autoWidth": 27.578125,
+				"autoHeight": 17.1875,
 				"children": [],
 				"name": "lblIcon",
 				"parent": "b35d-e347-8f7b-1d0c",
@@ -38,7 +39,7 @@
 			},
 			"type": "Label",
 			"userProps": {
-				"autoWidth": 27.578125,
+				"autoHeight": 17.1875,
 				"text": " ",
 				"usePageVariable": true
 			}
@@ -47,7 +48,7 @@
 			"className": ".sf-label .flCheckItem-text",
 			"id": "d70c-97f4-3ca6-a773",
 			"props": {
-				"autoWidth": 47.03125,
+				"autoHeight": 17.1875,
 				"children": [],
 				"name": "lblText",
 				"parent": "b35d-e347-8f7b-1d0c",
@@ -59,7 +60,7 @@
 			},
 			"type": "Label",
 			"userProps": {
-				"autoWidth": 47.03125,
+				"autoHeight": 17.1875,
 				"text": "label1",
 				"usePageVariable": true
 			}
