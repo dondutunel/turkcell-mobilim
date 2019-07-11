@@ -13,11 +13,11 @@ const FlCheckItem = extend(FlCheckItemDesign)(
 		_super(this, props);
 		this.pageName = pageName;
 		this._isSelected = false;
-		touch.addPressEvent(this.lblIcon, () => {
+		this.onTouchEnded = () => {
 			this._isSelected = !this._isSelected;
 			this.lblIcon.text = this._isSelected ? STATUS_TEXT.selected : STATUS_TEXT.normal;
 			this.onCheckedChange && this.onCheckedChange(this._isSelected);
-		});
+		};
 		this.setData = (data) => {
 			this._isSelected = !!data.isSelected;
 			this.lblText.text = data.text;

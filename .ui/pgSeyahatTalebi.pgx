@@ -291,7 +291,7 @@
 			}
 		},
 		{
-			"className": ".materialTextBox-wrapper",
+			"className": ".materialTextBox-wrapper .materialTextBox-wrapper.hide",
 			"hiddenComponent": false,
 			"id": "6ad2-f64e-17c7-986a",
 			"initialized": false,
@@ -310,19 +310,11 @@
 			},
 			"type": "FlexLayout",
 			"userProps": {
-				"flex": {
-					"positionType": 0
-				},
-				"flexProps": {
-					"positionType": "RELATIVE"
-				},
-				"left": 0,
-				"top": 0,
 				"usePageVariable": true
 			}
 		},
 		{
-			"className": ".materialTextBox-wrapper",
+			"className": ".materialTextBox-wrapper .materialTextBox-wrapper.hide",
 			"hiddenComponent": false,
 			"id": "8b21-615f-0f8f-fc62",
 			"initialized": false,
@@ -341,19 +333,11 @@
 			},
 			"type": "FlexLayout",
 			"userProps": {
-				"flex": {
-					"positionType": 0
-				},
-				"flexProps": {
-					"positionType": "RELATIVE"
-				},
-				"left": 0,
-				"top": 0,
 				"usePageVariable": true
 			}
 		},
 		{
-			"className": ".materialTextBox-wrapper",
+			"className": ".materialTextBox-wrapper .materialTextBox-wrapper.hide",
 			"hiddenComponent": false,
 			"id": "f8f9-e850-3539-5412",
 			"initialized": false,
@@ -372,14 +356,6 @@
 			},
 			"type": "FlexLayout",
 			"userProps": {
-				"flex": {
-					"positionType": 0
-				},
-				"flexProps": {
-					"positionType": "RELATIVE"
-				},
-				"left": 0,
-				"top": 0,
 				"usePageVariable": true
 			}
 		},

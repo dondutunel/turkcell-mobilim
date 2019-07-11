@@ -1,12 +1,11 @@
-const Color = require("sf-core/ui/color");
-const HeaderBarItem = require("sf-core/ui/headerbaritem");
-const Image = require("sf-core/ui/image");
 const System = require("sf-core/device/system");
 const touch = require("sf-extension-utils/lib/touch");
 const propagateTouchEvents = require("lib/propagateTouchEvents");
 
 const extend = require('js-base/core/extend');
 const PgSeyahatTalebiDesign = require('ui/ui_pgSeyahatTalebi');
+
+const HIDE_MT_CLASS_NAME = ".materialTextBox-wrapper.hide";
 
 const PgSeyahatTalebi = extend(PgSeyahatTalebiDesign)(
 	// Constructor
@@ -37,20 +36,6 @@ function onShow(superOnShow) {
  */
 function onLoad(superOnLoad) {
 	superOnLoad();
-	let headerBar;
-	if (System.OS === "Android") {
-		headerBar = this.headerBar;
-		headerBar.setLeftItem(new HeaderBarItem({
-			onPress: () => {
-				this.router.goBack();
-			},
-			image: Image.createFromFile("images://arrow_back.png")
-		}));
-	}
-	else {
-		headerBar = this.parentController.headerBar;
-	}
-	headerBar.itemColor = Color.WHITE;
 	//this.svMain.layout.minHeight = Screen.height;
 	initMaterials(this);
 	touch.addPressEvent(this.btnContinue, () => {
@@ -59,6 +44,14 @@ function onLoad(superOnLoad) {
 	propagateTouchEvents(this.svMain);
 	this.flCheckFlight.setData({ text: "Ucus" });
 	this.flCheckAccommodation.setData({ text: "Konaklama" });
+	this.flCheckFlight.onCheckedChange = isChecked => {
+		showHideMaterialTextBox(this.mtAcente, isChecked);
+		showHideMaterialTextBox(this.mtBirthDate, isChecked);
+		showHideMaterialTextBox(this.mtID, isChecked);
+		if (System.OS !== "iOS")
+			this.svMain.layout.applyLayout();
+		this.layout.applyLayout();
+	};
 }
 
 function initMaterials(page) {
@@ -101,6 +94,21 @@ function initMaterials(page) {
 		hint: "TC Kimlik No "
 	};
 
+}
+
+function showHideMaterialTextBox(mt, show) {
+	if (show) {
+		mt.dispatch({
+			type: "removeClassName",
+			className: [HIDE_MT_CLASS_NAME]
+		});
+	}
+	else {
+		mt.dispatch({
+			type: "pushClassNames",
+			classNames: [HIDE_MT_CLASS_NAME]
+		});
+	}
 }
 
 module.exports = PgSeyahatTalebi;

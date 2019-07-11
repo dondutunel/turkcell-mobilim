@@ -78,7 +78,12 @@
 			},
 			"flexProps": {
 				"positionType": "RELATIVE"
-			}
+			},
+			".hide": {
+				"height": 0,
+				"visible": false
+			},
+			"visible": "true"
 		}
 	}
 }
