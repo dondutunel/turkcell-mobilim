@@ -170,7 +170,7 @@
 			"className": ".sf-label",
 			"id": "2e97-c467-cf83-f0f8",
 			"props": {
-				"autoHeight": 17.142857142857142,
+				"autoHeight": 21,
 				"children": [],
 				"name": "label1",
 				"parent": "0ff9-f9ed-ae08-3ea0",
@@ -181,7 +181,7 @@
 			},
 			"type": "Label",
 			"userProps": {
-				"autoHeight": 17.142857142857142,
+				"autoHeight": 21,
 				"flexProps": {},
 				"height": 22,
 				"text": "GİDİŞ BİLGİLERİ",
