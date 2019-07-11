@@ -11,6 +11,12 @@
 			"normal": "rgba( 160,160,165,0.7 )",
 			"selected": "rgba( 45,60,73,1 )"
 		},
+		"&-icon": {
+			"tintColor": "rgb( 160,160,165 )",
+			".active": {
+				"tintColor": "rgba( 45,60,73,1 )"
+			}
+		},
 		"font": {
 			"size": 17,
 			"family": "SFProText",

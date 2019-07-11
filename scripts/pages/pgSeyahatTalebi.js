@@ -1,6 +1,4 @@
-const ActionKeyType = require("sf-core/ui/actionkeytype");
 const KeyboardType = require("sf-core/ui/keyboardtype");
-const LvPickerList = require("components/LvPickerList");
 const System = require("sf-core/device/system");
 const touch = require("sf-extension-utils/lib/touch");
 const propagateTouchEvents = require("lib/propagateTouchEvents");
@@ -12,6 +10,40 @@ const { wait } = require("lib/dialog");
 const { getTripOptions, getAutocompleteCity, getAgentList } = require("../services/seyahatService");
 const debounce = require("../utils/debounce");
 const HIDE_MT_CLASS_NAME = ".materialTextBox-wrapper.hide";
+const MT_ICON_NORMAL_CLASS_NAME = ".materialTextBox-icon";
+const MT_ICON_ACTIVE_CLASS_NAME = ".materialTextBox-icon.active";
+const MATERIAL_OPTIONS = [{
+        name: "mtRegion",
+        icon: "arrowbottom.png"
+    },
+    {
+        name: "mtPurpose",
+        icon: "arrowbottom.png"
+    }, {
+        name: "mtFrom",
+        icon: "search_icon.png"
+    },
+    {
+        name: "mtTo",
+        icon: "search_icon.png"
+    },
+    {
+        name: "mtDepartureDate",
+        icon: "date_icon.png"
+    },
+    {
+        name: "mtReturnDate",
+        icon: "date_icon.png"
+    },
+    {
+        name: "mtAcente",
+        icon: "arrowbottom.png"
+    },
+    {
+        name: "mtBirthDate",
+        icon: "date_icon.png"
+    }
+];
 
 const PgSeyahatTalebi = extend(PgSeyahatTalebiDesign)(
     // Constructor
@@ -157,6 +189,7 @@ function initMaterials(page) {
         hint: "TC Kimlik No ",
         keyboardType: KeyboardType.NUMBER
     };
+    populateMaterialTextBoxs(page, MATERIAL_OPTIONS);
 }
 
 function showHideMaterialTextBox(mt, show) {
@@ -181,6 +214,8 @@ function showPicker(mt, itemMapFn, nextMt) {
     });
     picker.show(({ index }) => {
         page[mt].materialTextBox.text = itemMapFn(page.itemsData[mt][index]);
+        page[mt].materialTextBox.onEditEnds && page[mt].materialTextBox.onEditEnds();
+
     }, () => {});
 }
 
@@ -190,6 +225,7 @@ function showDatePicker(mt) {
     myDatePicker.onDateSelected = (date) => {
         console.info("date: ", date);
         page[mt].materialTextBox.text = `${date.getDate()}.${date.getMonth()}.${date.getFullYear()}`;
+        page[mt].materialTextBox.onEditEnds && page[mt].materialTextBox.onEditEnds();
     };
     myDatePicker.show();
 }
@@ -202,6 +238,42 @@ function showListview(page, view, listServiceFn, text, dataMapperFn, cb) {
             res.map(dataMapperFn),
             (index) => cb(res[index]));
         page.svMain.layout.applyLayout();
+    });
+}
+
+function populateMaterialTextBoxs(page, mtOptions) {
+    mtOptions.forEach(mtOption => {
+        const materialTextBox = page[mtOption.name].materialTextBox;
+        const imgDropDown = page[mtOption.name].imgDropDown;
+        imgDropDown.dispatch({
+            type: "pushClassNames",
+            classNames: [MT_ICON_NORMAL_CLASS_NAME]
+        });
+        imgDropDown.dispatch({
+            type: "updateUserStyle",
+            userStyle: { image: mtOption.icon }
+        });
+        imgDropDown.isActive = false;
+        const originalOnTextChanged = materialTextBox.onTextChanged;
+        const originalOnEditEnds = materialTextBox.onEditEnds;
+        materialTextBox.onTextChanged = materialTextBox.onEditEnds = (e) => {
+            originalOnTextChanged && originalOnTextChanged(e);
+            originalOnEditEnds && originalOnEditEnds(e);
+            if (materialTextBox.text && !imgDropDown.isActive) {
+                imgDropDown.dispatch({
+                    type: "pushClassNames",
+                    classNames: [MT_ICON_ACTIVE_CLASS_NAME]
+                });
+                imgDropDown.isActive = true;
+            }
+            else if (!materialTextBox.text && imgDropDown.isActive) {
+                imgDropDown.dispatch({
+                    type: "removeClassName",
+                    className: [MT_ICON_ACTIVE_CLASS_NAME]
+                });
+                imgDropDown.isActive = false;
+            }
+        };
     });
 }
 
