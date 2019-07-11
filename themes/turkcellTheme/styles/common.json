@@ -1,26 +1,3 @@
 {
-	".flKonaklamaItem": {
-		"height": 400,
-		"width": null,
-		"paddingBottom": null,
-		"flexProps": {
-			"flexDirection": "COLUMN"
-		},
-		"&-icon": {
-			"width": 50,
-			"height": 50,
-			"borderRadius": 5
-		},
-		"borderRadius": 5,
-		"backgroundColor": "rgba( 249, 250, 252, 1 )"
-	},
-	".flCheckItem": {
-		"&-seyahat": {
-			"height": 30,
-			"flexProps": {
-				"flexGrow": null
-			},
-			"marginTop": 30
-		}
-	}
+	
 }

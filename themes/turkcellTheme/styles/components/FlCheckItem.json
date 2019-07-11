@@ -29,6 +29,13 @@
 			"marginLeft": 5,
 			"height": null
 		},
-		"height": 30
+		"height": 30,
+		"&-seyahat": {
+			"height": 30,
+			"flexProps": {
+				"flexGrow": null
+			},
+			"marginTop": 30
+		}
 	}
 }

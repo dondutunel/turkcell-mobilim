@@ -2,7 +2,7 @@
 	"components": [
 		{
 			"className": ".sf-flexLayout .flKonaklamaItem",
-			"hiddenComponent": false,
+			"hiddenComponent": true,
 			"id": "1f77-52b5-384e-d015",
 			"initialized": true,
 			"props": {
