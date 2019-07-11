@@ -9,7 +9,7 @@ const DatePicker = require('sf-core/ui/datepicker');
 const extend = require('js-base/core/extend');
 const PgSeyahatTalebiDesign = require('ui/ui_pgSeyahatTalebi');
 const { wait } = require("lib/dialog");
-const { getTripOptions, getAutocompleteCity } = require("../services/seyahatService");
+const { getTripOptions, getAutocompleteCity, getAgentList } = require("../services/seyahatService");
 const debounce = require("../utils/debounce");
 const HIDE_MT_CLASS_NAME = ".materialTextBox-wrapper.hide";
 
@@ -70,9 +70,10 @@ function onLoad(superOnLoad) {
             this.layout.applyLayout();
     };
     const waitDialog = wait();
-    getTripOptions().then(res => {
-        this.itemsData["mtRegion"] = res.types;
-        this.itemsData["mtPurpose"] = res.purposes;
+    Promise.all([getTripOptions(), getAgentList()]).then(res => {
+        this.itemsData["mtRegion"] = res[0].types;
+        this.itemsData["mtPurpose"] = res[0].purposes;
+        this.itemsData["mtAcente"] = res[1];
     }).finally(() => waitDialog.hide());
 }
 
@@ -141,19 +142,20 @@ function initMaterials(page) {
     page.mtReturnDate.onDropDownClick = () => page.showDatePicker("mtReturnDate");
     page.mtReturnDate.enableDropDown = true;
     page.mtAcente.options = {
-        hint: "Acente"
+        hint: "Acente",
+        touchEnabled: false
     };
     page.mtAcente.enableDropDown = true;
+    page.mtAcente.onDropDownClick = () => page.showPicker("mtAcente", data => data.AgentName);
     page.mtBirthDate.options = {
         hint: "Dogum Tarihi",
         touchEnabled: false
     };
-    page.mtBirthDate.onDropDownClick = () => page.showDatePicker("mtReturnDate");
+    page.mtBirthDate.onDropDownClick = () => page.showDatePicker("mtBirthDate");
     page.mtBirthDate.enableDropDown = true;
     page.mtID.options = {
         hint: "TC Kimlik No ",
-        keyboardType: KeyboardType.NUMBER,
-        actionKeyType: ActionKeyType.DEFAULT
+        keyboardType: KeyboardType.NUMBER
     };
 }
 
