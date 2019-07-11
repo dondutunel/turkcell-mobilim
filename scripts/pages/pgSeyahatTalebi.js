@@ -1,3 +1,4 @@
+const LvPickerList = require("components/LvPickerList");
 const System = require("sf-core/device/system");
 const touch = require("sf-extension-utils/lib/touch");
 const propagateTouchEvents = require("lib/propagateTouchEvents");
@@ -90,13 +91,36 @@ function initMaterials(page) {
         hint: "Nereden",
         onTextChanged: () => {
             if (page.mtFrom.materialTextBox.text && page.mtFrom.materialTextBox.text.length >= 3) {
-                page.showListview(page.mtFrom, getAutocompleteCity, page.mtFrom.materialTextBox.text);
+                page.showListview(
+                    page,
+                    page.mtFrom,
+                    getAutocompleteCity,
+                    page.mtFrom.materialTextBox.text,
+                    data => data.City,
+                    (data) => {
+                        page.mtFrom.materialTextBox.text = data.City;
+                    }
+                );
             }
         }
     };
     page.mtFrom.enableDropDown = true;
     page.mtTo.options = {
-        hint: "Nereye"
+        hint: "Nereye",
+        onTextChanged: () => {
+            if (page.mtTo.materialTextBox.text && page.mtTo.materialTextBox.text.length >= 3) {
+                page.showListview(
+                    page,
+                    page.mtTo,
+                    getAutocompleteCity,
+                    page.mtTo.materialTextBox.text,
+                    data => data.City,
+                    (data) => {
+                        page.mtTo.materialTextBox.text = data.City;
+                    }
+                );
+            }
+        }
     };
     page.mtTo.enableDropDown = true;
     page.mtDepartureDate.options = {
@@ -145,15 +169,15 @@ function showPicker(mt, itemMapFn, nextMt) {
     }, () => {});
 }
 
-function showListview(view, listServiceFn, cb) {
+function showListview(page, view, listServiceFn, text, dataMapperFn, cb) {
     const location = view.getScreenLocation();
-
-
+    listServiceFn(text).then(res => {
+        console.warn("show listview: ", text);
+        page.lvPickerList.setOptions(location,
+            res.map(dataMapperFn),
+            (index) => cb(res[index]));
+        page.svMain.layout.applyLayout();
+    });
 }
-
-function createListView() {
-
-}
-
 
 module.exports = PgSeyahatTalebi;

@@ -57,6 +57,9 @@
 				"family": "SFProText",
 				"style": "Semibold"
 			}
+		},
+		"&-listView": {
+			"marginBottom": null
 		}
 	}
 }
