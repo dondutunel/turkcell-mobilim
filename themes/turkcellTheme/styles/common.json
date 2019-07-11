@@ -5,7 +5,7 @@
 		"paddingLeft": 10,
 		"paddingRight": 10,
 		"paddingTop": 10,
-		"paddingBottom": 10,
+		"paddingBottom": null,
 		"flexProps": {
 			"flexDirection": "ROW"
 		},
@@ -16,5 +16,14 @@
 		},
 		"borderRadius": 5,
 		"backgroundColor": "rgba( 249, 250, 252, 1 )"
+	},
+	".flCheckItem": {
+		"&-seyahat": {
+			"height": 30,
+			"flexProps": {
+				"flexGrow": null
+			},
+			"marginTop": 30
+		}
 	}
 }

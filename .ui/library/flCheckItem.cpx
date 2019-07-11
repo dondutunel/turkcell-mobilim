@@ -27,7 +27,7 @@
 			"className": ".sf-label .flCheckItem-icon",
 			"id": "8e8e-e2c7-a005-e188",
 			"props": {
-				"autoHeight": 17.1875,
+				"autoWidth": 28.013392857142858,
 				"children": [],
 				"name": "lblIcon",
 				"parent": "b35d-e347-8f7b-1d0c",
@@ -39,7 +39,7 @@
 			},
 			"type": "Label",
 			"userProps": {
-				"autoHeight": 17.1875,
+				"autoWidth": 28.013392857142858,
 				"text": " ",
 				"usePageVariable": true
 			}
@@ -48,7 +48,7 @@
 			"className": ".sf-label .flCheckItem-text",
 			"id": "d70c-97f4-3ca6-a773",
 			"props": {
-				"autoHeight": 17.1875,
+				"autoWidth": 47.47767857142858,
 				"children": [],
 				"name": "lblText",
 				"parent": "b35d-e347-8f7b-1d0c",
@@ -60,7 +60,7 @@
 			},
 			"type": "Label",
 			"userProps": {
-				"autoHeight": 17.1875,
+				"autoWidth": 47.47767857142858,
 				"text": "label1",
 				"usePageVariable": true
 			}
