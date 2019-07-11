@@ -8,15 +8,15 @@ const PgSeyahatTalebiDesign = require('ui/ui_pgSeyahatTalebi');
 const HIDE_MT_CLASS_NAME = ".materialTextBox-wrapper.hide";
 
 const PgSeyahatTalebi = extend(PgSeyahatTalebiDesign)(
-	// Constructor
-	function(_super) {
-		// Initalizes super class for this page scope
-		_super(this);
-		// Overrides super.onShow method
-		this.onShow = onShow.bind(this, this.onShow.bind(this));
-		// Overrides super.onLoad method
-		this.onLoad = onLoad.bind(this, this.onLoad.bind(this));
-	}
+    // Constructor
+    function(_super) {
+        // Initalizes super class for this page scope
+        _super(this);
+        // Overrides super.onShow method
+        this.onShow = onShow.bind(this, this.onShow.bind(this));
+        // Overrides super.onLoad method
+        this.onLoad = onLoad.bind(this, this.onLoad.bind(this));
+    }
 );
 
 /**
@@ -26,7 +26,7 @@ const PgSeyahatTalebi = extend(PgSeyahatTalebiDesign)(
  * @param {Object} parameters passed from Router.go function
  */
 function onShow(superOnShow) {
-	superOnShow();
+    superOnShow();
 }
 
 /**
@@ -35,80 +35,85 @@ function onShow(superOnShow) {
  * @param {function} superOnLoad super onLoad function
  */
 function onLoad(superOnLoad) {
-	superOnLoad();
-	//this.svMain.layout.minHeight = Screen.height;
-	initMaterials(this);
-	touch.addPressEvent(this.btnContinue, () => {
+    superOnLoad();
+    //this.svMain.layout.minHeight = Screen.height;
+    initMaterials(this);
+    touch.addPressEvent(this.btnContinue, () => {
 
-	});
-	propagateTouchEvents(this.svMain);
-	this.flCheckFlight.setData({ text: "Ucus" });
-	this.flCheckAccommodation.setData({ text: "Konaklama" });
-	this.flCheckFlight.onCheckedChange = isChecked => {
-		showHideMaterialTextBox(this.mtAcente, isChecked);
-		showHideMaterialTextBox(this.mtBirthDate, isChecked);
-		showHideMaterialTextBox(this.mtID, isChecked);
-		if (System.OS !== "iOS")
-			this.svMain.layout.applyLayout();
-		this.layout.applyLayout();
-	};
+    });
+    propagateTouchEvents(this.svMain);
+    this.flCheckFlight.setData({ text: "Ucus" });
+    this.flCheckAccommodation.setData({ text: "Konaklama" });
+    this.flCheckFlight.onCheckedChange = isChecked => {
+        showHideMaterialTextBox(this.mtAcente, isChecked);
+        showHideMaterialTextBox(this.mtBirthDate, isChecked);
+        showHideMaterialTextBox(this.mtID, isChecked);
+        if (System.OS !== "iOS") {
+            this.mtAcente.applyLayout();
+            this.mtBirthDate.applyLayout();
+            this.mtID.applyLayout();
+            this.svMain.autoSizeEnabled = true;
+        }
+        else
+            this.layout.applyLayout();
+    };
 }
 
 function initMaterials(page) {
-	page.mtRegion.options = {
-		hint: "Yurt ici - Yurt Disi"
-	};
-	page.mtRegion.enableDropDown = true;
-	page.mtPurpose.options = {
-		hint: "Temsil"
-	};
-	page.mtPurpose.enableDropDown = true;
-	page.mtDescription.options = {
-		hint: "Seyahat Aciklamasi"
-	};
-	page.mtFrom.options = {
-		hint: "Nereden"
-	};
-	page.mtFrom.enableDropDown = true;
-	page.mtTo.options = {
-		hint: "Nereye"
-	};
-	page.mtTo.enableDropDown = true;
-	page.mtDepartureDate.options = {
-		hint: "Departure Date"
-	};
-	page.mtDepartureDate.enableDropDown = true;
-	page.mtReturnDate.options = {
-		hint: "Return Date"
-	};
-	page.mtReturnDate.enableDropDown = true;
-	page.mtAcente.options = {
-		hint: "Acente..."
-	};
-	page.mtAcente.enableDropDown = true;
-	page.mtBirthDate.options = {
-		hint: "Dogum Tarihi"
-	};
-	page.mtBirthDate.enableDropDown = true;
-	page.mtID.options = {
-		hint: "TC Kimlik No "
-	};
+    page.mtRegion.options = {
+        hint: "Yurt ici - Yurt Disi"
+    };
+    page.mtRegion.enableDropDown = true;
+    page.mtPurpose.options = {
+        hint: "Temsil"
+    };
+    page.mtPurpose.enableDropDown = true;
+    page.mtDescription.options = {
+        hint: "Seyahat Aciklamasi"
+    };
+    page.mtFrom.options = {
+        hint: "Nereden"
+    };
+    page.mtFrom.enableDropDown = true;
+    page.mtTo.options = {
+        hint: "Nereye"
+    };
+    page.mtTo.enableDropDown = true;
+    page.mtDepartureDate.options = {
+        hint: "Departure Date"
+    };
+    page.mtDepartureDate.enableDropDown = true;
+    page.mtReturnDate.options = {
+        hint: "Return Date"
+    };
+    page.mtReturnDate.enableDropDown = true;
+    page.mtAcente.options = {
+        hint: "Acente..."
+    };
+    page.mtAcente.enableDropDown = true;
+    page.mtBirthDate.options = {
+        hint: "Dogum Tarihi"
+    };
+    page.mtBirthDate.enableDropDown = true;
+    page.mtID.options = {
+        hint: "TC Kimlik No "
+    };
 
 }
 
 function showHideMaterialTextBox(mt, show) {
-	if (show) {
-		mt.dispatch({
-			type: "removeClassName",
-			className: [HIDE_MT_CLASS_NAME]
-		});
-	}
-	else {
-		mt.dispatch({
-			type: "pushClassNames",
-			classNames: [HIDE_MT_CLASS_NAME]
-		});
-	}
+    if (show) {
+        mt.dispatch({
+            type: "removeClassName",
+            className: [HIDE_MT_CLASS_NAME]
+        });
+    }
+    else {
+        mt.dispatch({
+            type: "pushClassNames",
+            classNames: [HIDE_MT_CLASS_NAME]
+        });
+    }
 }
 
 module.exports = PgSeyahatTalebi;

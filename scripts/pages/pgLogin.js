@@ -43,7 +43,7 @@ function onShow(superOnShow) {
 function onLoad(superOnLoad) {
 	superOnLoad();
 	this.lblTitle.text = "Mobil uygulamamıza hoş geldiniz,\nlütfen giriş yapınız.";
-	this.svMain.layout.minHeight = Screen.height;
+	this.svMain.layout.minHeight = Screen.height - 30;
 	this.mtEmail.options = LOGIN_ITEMS.email;
 	this.mtEmail.materialTextBox.dispatch({
 		type: "pushClassNames",
