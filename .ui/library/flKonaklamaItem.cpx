@@ -2,6 +2,7 @@
 	"components": [
 		{
 			"className": ".sf-flexLayout .flKonaklamaItem",
+			"hiddenComponent": false,
 			"id": "1f77-52b5-384e-d015",
 			"initialized": true,
 			"props": {
@@ -150,7 +151,9 @@
 					"2e97-c467-cf83-f0f8",
 					"f638-42a8-7d8e-113f",
 					"e9fe-1264-096e-8b12",
-					"6f0f-d2de-80d5-3928"
+					"6f0f-d2de-80d5-3928",
+					"ccd1-a95a-7992-a441",
+					"bd16-23b9-959d-a6be"
 				],
 				"name": "flexLayout4",
 				"parent": "1f77-52b5-384e-d015"
@@ -167,7 +170,7 @@
 			"className": ".sf-label",
 			"id": "2e97-c467-cf83-f0f8",
 			"props": {
-				"autoHeight": 16.8,
+				"autoHeight": 17.142857142857142,
 				"children": [],
 				"name": "label1",
 				"parent": "0ff9-f9ed-ae08-3ea0",
@@ -178,7 +181,7 @@
 			},
 			"type": "Label",
 			"userProps": {
-				"autoHeight": 16.8,
+				"autoHeight": 17.142857142857142,
 				"flexProps": {},
 				"height": 22,
 				"text": "GİDİŞ BİLGİLERİ",
@@ -315,13 +318,13 @@
 			}
 		},
 		{
-			"className": ".sf-flexLayout .flCheckItem",
+			"className": ".sf-flexLayout .flCheckItem .flCheckItem-seyahat",
 			"hiddenComponent": false,
 			"id": "6f0f-d2de-80d5-3928",
 			"initialized": false,
 			"props": {
 				"children": [],
-				"name": "flDonusTarihi",
+				"name": "flCheckbox",
 				"parent": "0ff9-f9ed-ae08-3ea0",
 				"usePageVariable": true
 			},
@@ -332,12 +335,97 @@
 			},
 			"type": "FlexLayout",
 			"userProps": {
-				"bottom": 50,
-				"flex": {
-					"positionType": 0
-				},
-				"height": 30,
 				"usePageVariable": true
+			}
+		},
+		{
+			"className": ".sf-flexLayout #pgSeyahatTalebi-fromTo",
+			"id": "ccd1-a95a-7992-a441",
+			"props": {
+				"children": [
+					"26e8-bb9e-6087-6b83",
+					"c3f7-8854-506a-2c98"
+				],
+				"name": "flDonusTarihi",
+				"parent": "0ff9-f9ed-ae08-3ea0",
+				"usePageVariable": true
+			},
+			"type": "FlexLayout",
+			"userProps": {
+				"marginTop": 5,
+				"usePageVariable": true
+			}
+		},
+		{
+			"className": ".materialTextBox-wrapper #pgSeyahatTalebi-fromTo-mt.from",
+			"hiddenComponent": false,
+			"id": "26e8-bb9e-6087-6b83",
+			"initialized": false,
+			"props": {
+				"children": [],
+				"name": "mtDonusDate",
+				"parent": "ccd1-a95a-7992-a441",
+				"usePageVariable": true
+			},
+			"source": {
+				"page": "__modules__",
+				"moduleName": "Materialtextbox",
+				"modulePath": "materialtextbox",
+				"type": "Materialtextbox",
+				"id": "8fb2-10a8-12e4-9b45"
+			},
+			"type": "FlexLayout",
+			"userProps": {
+				"usePageVariable": true
+			}
+		},
+		{
+			"className": ".materialTextBox-wrapper #pgSeyahatTalebi-fromTo-mt.to",
+			"hiddenComponent": false,
+			"id": "c3f7-8854-506a-2c98",
+			"initialized": false,
+			"props": {
+				"children": [],
+				"name": "mtDonusTime",
+				"parent": "ccd1-a95a-7992-a441",
+				"usePageVariable": true
+			},
+			"source": {
+				"page": "__modules__",
+				"moduleName": "Materialtextbox",
+				"modulePath": "materialtextbox",
+				"type": "Materialtextbox",
+				"id": "8fb2-10a8-12e4-9b45"
+			},
+			"type": "FlexLayout",
+			"userProps": {
+				"usePageVariable": true
+			}
+		},
+		{
+			"className": ".sf-button",
+			"id": "bd16-23b9-959d-a6be",
+			"props": {
+				"autoHeight": 21.42857142857143,
+				"children": [],
+				"name": "button1",
+				"parent": "0ff9-f9ed-ae08-3ea0",
+				"text": "button1"
+			},
+			"source": {
+				"page": "__library__"
+			},
+			"type": "Button",
+			"userProps": {
+				"autoHeight": 21.42857142857143,
+				"bottom": 0,
+				"flexProps": {
+					"positionType": "ABSOLUTE"
+				},
+				"height": 39,
+				"left": 0,
+				"right": 0,
+				"text": "button1"
 			}
 		}
 	]
