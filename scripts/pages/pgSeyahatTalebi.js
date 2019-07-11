@@ -1,7 +1,7 @@
 const System = require("sf-core/device/system");
 const touch = require("sf-extension-utils/lib/touch");
 const propagateTouchEvents = require("lib/propagateTouchEvents");
-
+const Picker = require("sf-core/ui/picker");
 const extend = require('js-base/core/extend');
 const PgSeyahatTalebiDesign = require('ui/ui_pgSeyahatTalebi');
 
@@ -58,6 +58,10 @@ function onLoad(superOnLoad) {
         else
             this.layout.applyLayout();
     };
+    var picker = new Picker({
+        items: ["fake1", "fake2"],
+        currentIndex: 0
+    });
 }
 
 function initMaterials(page) {

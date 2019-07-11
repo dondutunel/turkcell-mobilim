@@ -1,0 +1,27 @@
+{
+    ".wait": {
+        "&-main": {
+            "backgroundColor": "rgba( 0, 0, 0, 0.6 )",
+            "width": null,
+            "height": null,
+            "left": 0,
+            "right": 0,
+            "bottom": 0,
+            "top": 0,
+            "flexProps": {
+                "alignItems": "CENTER",
+                "justifyContent": "CENTER",
+                "positionType": "ABSOLUTE"
+            }
+        },
+        "&-content": {
+            "width": 100,
+            "height": 100,
+            "borderRadius": 10,
+            "flexProps": {
+                "alignItems": "CENTER",
+                "justifyContent": "CENTER"
+            }
+        }
+    }
+}

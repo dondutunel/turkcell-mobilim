@@ -1,0 +1,20 @@
+{
+	"components": [
+		{
+			"className": ".sf-flexLayout .wait-main",
+			"hiddenComponent": true,
+			"id": "5115-8183-47ca-610d",
+			"initialized": true,
+			"props": {
+				"children": [],
+				"name": "flWaitMain",
+				"parent": "57f4-201f-4bfc-5fc6"
+			},
+			"source": {
+				"page": "__library__"
+			},
+			"type": "FlexLayout",
+			"userProps": {}
+		}
+	]
+}
