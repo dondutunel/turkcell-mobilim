@@ -52,6 +52,7 @@ function onLoad(superOnLoad) {
             this.mtAcente.applyLayout();
             this.mtBirthDate.applyLayout();
             this.mtID.applyLayout();
+            this.svMain.autoSizeEnabled = false;
             this.svMain.autoSizeEnabled = true;
         }
         else
@@ -61,7 +62,11 @@ function onLoad(superOnLoad) {
 
 function initMaterials(page) {
     page.mtRegion.options = {
-        hint: "Yurt ici - Yurt Disi"
+        hint: "Yurt ici - Yurt Disi",
+        touchEnabled: false
+    };
+    page.mtRegion.onDropDownClick = () => {
+        console.info("mtRegion, click");
     };
     page.mtRegion.enableDropDown = true;
     page.mtPurpose.options = {
@@ -88,7 +93,7 @@ function initMaterials(page) {
     };
     page.mtReturnDate.enableDropDown = true;
     page.mtAcente.options = {
-        hint: "Acente..."
+        hint: "Acente"
     };
     page.mtAcente.enableDropDown = true;
     page.mtBirthDate.options = {
@@ -98,7 +103,6 @@ function initMaterials(page) {
     page.mtID.options = {
         hint: "TC Kimlik No "
     };
-
 }
 
 function showHideMaterialTextBox(mt, show) {
