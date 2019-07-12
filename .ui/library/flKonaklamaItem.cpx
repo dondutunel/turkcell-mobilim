@@ -45,7 +45,9 @@
 			"className": ".sf-flexLayout .flUcusItem-icon .gradientBackground",
 			"id": "948e-2b0a-1867-d56c",
 			"props": {
-				"children": [],
+				"children": [
+					"e475-a5f2-e870-3200"
+				],
 				"name": "flexLayout1",
 				"parent": "1fcc-6e84-c44b-5525"
 			},
@@ -54,6 +56,23 @@
 			},
 			"type": "FlexLayout",
 			"userProps": {}
+		},
+		{
+			"className": ".sf-imageView .flUcusItem-header-icon",
+			"id": "e475-a5f2-e870-3200",
+			"props": {
+				"autoHeight": 24,
+				"children": [],
+				"name": "imageView1",
+				"parent": "948e-2b0a-1867-d56c"
+			},
+			"source": {
+				"page": "__library__"
+			},
+			"type": "ImageView",
+			"userProps": {
+				"autoHeight": 24
+			}
 		},
 		{
 			"className": ".sf-flexLayout .flexLayout-grow",

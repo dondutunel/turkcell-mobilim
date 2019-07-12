@@ -44,7 +44,9 @@
 			"className": ".sf-flexLayout .flUcusItem-icon .gradientBackground",
 			"id": "9efa-ba23-89aa-c914",
 			"props": {
-				"children": [],
+				"children": [
+					"0ea7-14fb-55b9-1f08"
+				],
 				"name": "flexLayout1",
 				"parent": "33d4-1534-dd08-3e3e"
 			},
@@ -53,6 +55,23 @@
 			},
 			"type": "FlexLayout",
 			"userProps": {}
+		},
+		{
+			"className": ".sf-imageView .flUcusItem-header-icon",
+			"id": "0ea7-14fb-55b9-1f08",
+			"props": {
+				"autoHeight": 24,
+				"children": [],
+				"name": "imageView1",
+				"parent": "9efa-ba23-89aa-c914"
+			},
+			"source": {
+				"page": "__library__"
+			},
+			"type": "ImageView",
+			"userProps": {
+				"autoHeight": 24
+			}
 		},
 		{
 			"className": ".sf-flexLayout .flexLayout-grow",
@@ -399,7 +418,7 @@
 			"className": ".sf-button",
 			"id": "00e0-73bc-630f-f74a",
 			"props": {
-				"autoHeight": 24.390243902439025,
+				"autoHeight": 21,
 				"children": [],
 				"name": "btnRemove",
 				"parent": "1f77-52b5-384e-d015",
@@ -411,7 +430,7 @@
 			},
 			"type": "Button",
 			"userProps": {
-				"autoHeight": 24.390243902439025,
+				"autoHeight": 21,
 				"backgroundColor": "rgba( 235, 47, 47, 0.14 )",
 				"borderRadius": null,
 				"font": {
