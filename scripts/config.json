@@ -1,4 +1,10 @@
 {
-    "key1": "value1",
-    "key2": "value2"
+	"env": {
+		"development": {
+			"baseUrl": "localhost:80",
+			"logEnabled": true
+		},
+		"current": "development"
+	},
+	"isActiveService": true
 }
