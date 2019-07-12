@@ -3,6 +3,7 @@ const MT_ICON_ACTIVE_CLASS_NAME = ".materialTextBox-icon.active";
 
 module.exports = function populateMaterialTextBoxs(page, mtOptions) {
     mtOptions.forEach(mtOption => {
+        page[mtOption.name].enableDropDown = true;
         const materialTextBox = page[mtOption.name].materialTextBox;
         const imgDropDown = page[mtOption.name].imgDropDown;
         imgDropDown.dispatch({

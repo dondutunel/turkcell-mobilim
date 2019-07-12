@@ -6,26 +6,28 @@ const envConfig = config.env[config.env.current];
 const isActiveService = config.isActiveService;
 
 const sharedHeaders = {
-	"Accept": "application/json",
-	"Content-Type": "application/json"
+    "Accept": "application/json",
+    "Content-Type": "application/json"
 };
 const serviceCall = new ServiceCall({
-	baseUrl: envConfig.baseUrl,
-	headers: Object.assign({}, sharedHeaders, {}),
-	logEnabled: envConfig.logEnabled
+    baseUrl: envConfig.baseUrl,
+    headers: Object.assign({}, sharedHeaders, {}),
+    logEnabled: envConfig.logEnabled
 });
 
 module.exports = {
-	request: (endpoint, param, options) => new Promise((resolve, reject) => {
-		console.log("Request: ", { endpoint, param, options })
-		isActiveService ?
-			serviceCall.request(endpoint + param, options)
-			.then(resolve)
-			.catch((e) => {
-				console.log("Request: Err",e, { endpoint, param, options })
-				alert(e && e.body && e.body && e.body.errorMessage || e);
-				reject(e);
-			}) :
-			setTimeout(() => resolve(sampleResponse[endpoint]), 300);
-	})
+    request: (endpoint, param, options) => new Promise((resolve, reject) => {
+        isActiveService ?
+            serviceCall.request(endpoint + param, options)
+            .then(res => {
+                resolve(res);
+                console.log("Request: res", res, { endpoint, param, options });
+            })
+            .catch((e) => {
+                console.log("Request: Err", e, { endpoint, param, options });
+                alert(JSON.stringify(e, null, "\t"));
+                reject(e);
+            }) :
+            setTimeout(() => resolve(sampleResponse[endpoint]), 300);
+    })
 };

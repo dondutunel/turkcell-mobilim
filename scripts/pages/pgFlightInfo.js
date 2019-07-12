@@ -7,7 +7,7 @@ const PgKonaklamaDesign = require('ui/ui_pgFlightInfo');
 
 const PgKonaklama = extend(PgKonaklamaDesign)(
     // Constructor
-    function(_super) {
+    function(_super, props, match, routeData) {
         // Initalizes super class for this page scope
         _super(this);
         // Overrides super.onShow method
@@ -15,7 +15,8 @@ const PgKonaklama = extend(PgKonaklamaDesign)(
         // Overrides super.onLoad method
         this.onLoad = onLoad.bind(this, this.onLoad.bind(this));
         this.btnContinue.onPress = () => {
-            this.router.push("/btb/tab2/pgKonaklamaInfo");
+            routeData.isAccommodationInfo &&
+                this.router.push("/btb/tab2/pgKonaklamaInfo");
         };
     }
 );

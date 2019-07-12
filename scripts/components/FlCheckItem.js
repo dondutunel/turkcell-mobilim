@@ -23,6 +23,7 @@ const FlCheckItem = extend(FlCheckItemDesign)(
 			this.lblText.text = data.text;
 			this.lblIcon.text = this._isSelected ? STATUS_TEXT.selected : STATUS_TEXT.normal;
 		};
+		this.getCheckedStatus = () => this._isSelected;
 	}
 );
 

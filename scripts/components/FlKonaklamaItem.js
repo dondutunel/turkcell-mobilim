@@ -43,6 +43,10 @@ const FlKonaklamaItem = extend(FlKonaklamaItemDesign)(
                 this[componentName].options = options[componentName];
             });
         };
+        // Init delete button
+        this.btnRemove.onPress = () => {
+            this.onDelete && this.onDelete(); // Exposed
+        };
     }
 );
 

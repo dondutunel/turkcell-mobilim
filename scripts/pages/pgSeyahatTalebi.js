@@ -56,6 +56,11 @@ const PgSeyahatTalebi = extend(PgSeyahatTalebiDesign)(
         this.showPicker = showPicker.bind(this);
         this.showDatePicker = showDatePicker.bind(this);
         this.showListview = debounce(showListview, 300);
+        this.routerData = {
+            isFlightInfo: false,
+            isAccommodationInfo: false
+        };
+        this.btnContinue.enabled = false;
     }
 );
 
@@ -80,24 +85,30 @@ function onLoad(superOnLoad) {
     //this.svMain.layout.minHeight = Screen.height;
     initMaterials(this);
     this.btnContinue.onPress = () => {
-        page.router.push("/btb/tab2/pgFlightInfo");
+        if (this.routerData.isFlightInfo) {
+            page.router.push("/btb/tab2/pgFlightInfo", this.routerData);
+        }
+        else if (this.routerData.isAccommodationInfo) {
+            page.router.push("/btb/tab2/pgKonaklamaInfo", this.routerData);
+        }
     };
     propagateTouchEvents(this.svMain);
     this.flCheckFlight.setData({ text: "Ucus" });
     this.flCheckAccommodation.setData({ text: "Konaklama" });
+    this.flCheckAccommodation.onCheckedChange = isChecked => {
+        this.routerData.isAccommodationInfo = isChecked;
+        updateContinueButtonState(this);
+    };
     this.flCheckFlight.onCheckedChange = isChecked => {
+        this.routerData.isFlightInfo = isChecked;
+        updateContinueButtonState(this);
         showHideMaterialTextBox(this.mtAcente, isChecked);
         showHideMaterialTextBox(this.mtBirthDate, isChecked);
         showHideMaterialTextBox(this.mtID, isChecked);
         if (System.OS !== "iOS") {
-            this.mtAcente.applyLayout();
-            this.mtBirthDate.applyLayout();
-            this.mtID.applyLayout();
-            this.svMain.autoSizeEnabled = false;
-            this.svMain.autoSizeEnabled = true;
+            this.svMain.layout.applyLayout();
         }
-        else
-            this.layout.applyLayout();
+        this.layout.applyLayout();
     };
     const waitDialog = wait();
     Promise.all([getTripOptions(), getAgentList()]).then(res => {
@@ -113,25 +124,24 @@ function initMaterials(page) {
         touchEnabled: false
     };
     page.mtRegion.onDropDownClick = () => page.showPicker("mtRegion", data => data.Description);
-    page.mtRegion.enableDropDown = true;
     page.mtPurpose.options = {
         hint: "Temsil",
         touchEnabled: false
     };
     page.mtPurpose.onDropDownClick = () => page.showPicker("mtPurpose", data => data.Description);
-    page.mtPurpose.enableDropDown = true;
     page.mtDescription.options = {
         hint: "Seyahat Aciklamasi"
     };
     page.mtFrom.options = {
         hint: "Nereden",
-        onTextChanged: () => {
-            if (page.mtFrom.materialTextBox.text && page.mtFrom.materialTextBox.text.length >= 3) {
+        onTextChanged: (e) => {
+            const text = page.mtFrom.materialTextBox.text;
+            if (e && text && text.length >= 3) {
                 page.showListview(
                     page,
                     page.mtFrom,
                     getAutocompleteCity,
-                    page.mtFrom.materialTextBox.text,
+                    text,
                     data => data.City,
                     (data) => {
                         page.mtFrom.materialTextBox.text = data.City;
@@ -140,16 +150,16 @@ function initMaterials(page) {
             }
         }
     };
-    page.mtFrom.enableDropDown = true;
     page.mtTo.options = {
         hint: "Nereye",
-        onTextChanged: () => {
-            if (page.mtTo.materialTextBox.text && page.mtTo.materialTextBox.text.length >= 3) {
+        onTextChanged: (e) => {
+            const text = page.mtTo.materialTextBox.text;
+            if (e && text && text.length >= 3) {
                 page.showListview(
                     page,
                     page.mtTo,
                     getAutocompleteCity,
-                    page.mtTo.materialTextBox.text,
+                    text,
                     data => data.City,
                     (data) => {
                         page.mtTo.materialTextBox.text = data.City;
@@ -158,31 +168,26 @@ function initMaterials(page) {
             }
         }
     };
-    page.mtTo.enableDropDown = true;
     page.mtDepartureDate.options = {
         hint: "Departure Date",
         touchEnabled: false
     };
     page.mtDepartureDate.onDropDownClick = () => page.showDatePicker("mtDepartureDate");
-    page.mtDepartureDate.enableDropDown = true;
     page.mtReturnDate.options = {
         hint: "Return Date",
         touchEnabled: false
     };
     page.mtReturnDate.onDropDownClick = () => page.showDatePicker("mtReturnDate");
-    page.mtReturnDate.enableDropDown = true;
     page.mtAcente.options = {
         hint: "Acente",
         touchEnabled: false
     };
-    page.mtAcente.enableDropDown = true;
     page.mtAcente.onDropDownClick = () => page.showPicker("mtAcente", data => data.AgentName);
     page.mtBirthDate.options = {
         hint: "Dogum Tarihi",
         touchEnabled: false
     };
     page.mtBirthDate.onDropDownClick = () => page.showDatePicker("mtBirthDate");
-    page.mtBirthDate.enableDropDown = true;
     page.mtID.options = {
         hint: "TC Kimlik No ",
         keyboardType: KeyboardType.NUMBER
@@ -203,6 +208,7 @@ function showHideMaterialTextBox(mt, show) {
             classNames: [HIDE_MT_CLASS_NAME]
         });
     }
+    mt.applyLayout();
 }
 
 function showPicker(mt, itemMapFn, nextMt) {
@@ -239,5 +245,8 @@ function showListview(page, view, listServiceFn, text, dataMapperFn, cb) {
     });
 }
 
+function updateContinueButtonState(page) {
+    page.btnContinue.enabled = (page.routerData.isAccommodationInfo || page.routerData.isFlightInfo);
+}
 
 module.exports = PgSeyahatTalebi;
