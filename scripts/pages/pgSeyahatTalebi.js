@@ -1,5 +1,7 @@
+const Label = require("sf-core/ui/label");
 const KeyboardType = require("sf-core/ui/keyboardtype");
 const System = require("sf-core/device/system");
+const { getCombinedStyle } = require("sf-extension-utils/lib/getCombinedStyle");
 const propagateTouchEvents = require("lib/propagateTouchEvents");
 const Picker = require("sf-core/ui/picker");
 const DatePicker = require('sf-core/ui/datepicker');
@@ -42,6 +44,8 @@ const MATERIAL_OPTIONS = [{
         icon: "date_icon.png"
     }
 ];
+const MAX_DESC_LENGTH = 150;
+const materialColor = getCombinedStyle(".materialTextBox");
 
 const PgSeyahatTalebi = extend(PgSeyahatTalebiDesign)(
     // Constructor
@@ -129,9 +133,21 @@ function initMaterials(page) {
         touchEnabled: false
     };
     page.mtPurpose.onDropDownClick = () => page.showPicker("mtPurpose", data => data.Description);
+    const lblRemainLength = new Label({ text: `${MAX_DESC_LENGTH}`, textColor: materialColor.lineColor.normal });
     page.mtDescription.options = {
-        hint: "Seyahat Aciklamasi"
+        hint: "Seyahat Aciklamasi",
+        onTextChanged: (e) => {
+            const text = page.mtDescription.materialTextBox.text || "";
+            const subText = text.substr(0, MAX_DESC_LENGTH);
+            if (subText !== text) {
+                page.mtDescription.materialTextBox.text = subText;
+            }
+            lblRemainLength.text = "" + (MAX_DESC_LENGTH - subText.length);
+            lblRemainLength.textColor = materialColor.lineColor[text ? "selected" : "normal"];
+
+        }
     };
+    page.mtDescription.materialTextBox.rightLayout = { view: lblRemainLength, width: 30 };
     page.mtFrom.options = {
         hint: "Nereden",
         onTextChanged: (e) => {
