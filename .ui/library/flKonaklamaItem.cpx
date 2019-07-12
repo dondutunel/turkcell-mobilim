@@ -2,16 +2,16 @@
 	"components": [
 		{
 			"className": ".sf-flexLayout .flUcusItem",
-			"hiddenComponent": true,
-			"id": "1f77-52b5-384e-d015",
+			"hiddenComponent": false,
+			"id": "0db8-2055-ba88-dd58",
 			"initialized": true,
 			"props": {
 				"children": [
-					"33d4-1534-dd08-3e3e",
-					"0ff9-f9ed-ae08-3ea0",
-					"00e0-73bc-630f-f74a"
+					"1fcc-6e84-c44b-5525",
+					"1f3f-5c7c-aa4a-5523",
+					"5e60-9051-20d1-c3ec"
 				],
-				"name": "flUcusItem",
+				"name": "flKonaklamaItem",
 				"parent": "57f4-201f-4bfc-5fc6"
 			},
 			"source": {
@@ -19,20 +19,21 @@
 			},
 			"type": "FlexLayout",
 			"userProps": {
-				"left": 20,
-				"top": 142.4
+				"flexProps": {},
+				"left": 30,
+				"top": 137.39999389648438
 			}
 		},
 		{
 			"className": ".sf-flexLayout .flUcusItem-header",
-			"id": "33d4-1534-dd08-3e3e",
+			"id": "1fcc-6e84-c44b-5525",
 			"props": {
 				"children": [
-					"9efa-ba23-89aa-c914",
-					"bae3-da66-39fd-c2e3"
+					"948e-2b0a-1867-d56c",
+					"be32-f469-6ded-83b6"
 				],
 				"name": "flexLayout3",
-				"parent": "1f77-52b5-384e-d015"
+				"parent": "0db8-2055-ba88-dd58"
 			},
 			"source": {
 				"page": "__library__"
@@ -42,11 +43,11 @@
 		},
 		{
 			"className": ".sf-flexLayout .flUcusItem-icon .gradientBackground",
-			"id": "9efa-ba23-89aa-c914",
+			"id": "948e-2b0a-1867-d56c",
 			"props": {
 				"children": [],
 				"name": "flexLayout1",
-				"parent": "33d4-1534-dd08-3e3e"
+				"parent": "1fcc-6e84-c44b-5525"
 			},
 			"source": {
 				"page": "__library__"
@@ -56,14 +57,14 @@
 		},
 		{
 			"className": ".sf-flexLayout .flexLayout-grow",
-			"id": "bae3-da66-39fd-c2e3",
+			"id": "be32-f469-6ded-83b6",
 			"props": {
 				"children": [
-					"0b4b-5b37-8ac9-b0ca",
-					"47f4-9937-ccd6-ad06"
+					"3469-6803-2aca-5312",
+					"2ef1-6ee2-1b61-ee9e"
 				],
 				"name": "flexLayout2",
-				"parent": "33d4-1534-dd08-3e3e"
+				"parent": "1fcc-6e84-c44b-5525"
 			},
 			"source": {
 				"page": "__library__"
@@ -77,13 +78,13 @@
 		},
 		{
 			"className": ".sf-label .flexLayout-grow",
-			"id": "0b4b-5b37-8ac9-b0ca",
+			"id": "3469-6803-2aca-5312",
 			"props": {
 				"autoHeight": 20.5,
 				"children": [],
 				"name": "lblKonaklama",
-				"parent": "bae3-da66-39fd-c2e3",
-				"text": "Ucus 1",
+				"parent": "be32-f469-6ded-83b6",
+				"text": "Konaklama 1",
 				"usePageVariable": true
 			},
 			"source": {
@@ -100,20 +101,20 @@
 					"style": "Semibold"
 				},
 				"height": null,
-				"text": "Ucus 1",
+				"text": "Konaklama 1",
 				"textColor": "rgba( 45, 60, 73, 1 )",
 				"usePageVariable": true
 			}
 		},
 		{
 			"className": ".sf-label .flexLayout-grow",
-			"id": "47f4-9937-ccd6-ad06",
+			"id": "2ef1-6ee2-1b61-ee9e",
 			"props": {
 				"autoHeight": 20.5,
 				"children": [],
 				"name": "lblSehir",
-				"parent": "bae3-da66-39fd-c2e3",
-				"text": "Istanbul - Ankara",
+				"parent": "be32-f469-6ded-83b6",
+				"text": "Turkiye / Ankara",
 				"usePageVariable": true
 			},
 			"source": {
@@ -130,24 +131,23 @@
 					"style": "Semibold"
 				},
 				"height": null,
-				"text": "Istanbul - Ankara",
+				"text": "Turkiye / Ankara",
 				"textColor": "rgba( 160, 160, 165, 1 )",
 				"usePageVariable": true
 			}
 		},
 		{
 			"className": ".sf-flexLayout .flexLayout-grow",
-			"id": "0ff9-f9ed-ae08-3ea0",
+			"id": "1f3f-5c7c-aa4a-5523",
 			"props": {
 				"children": [
-					"2e97-c467-cf83-f0f8",
-					"f638-42a8-7d8e-113f",
-					"e9fe-1264-096e-8b12",
-					"6f0f-d2de-80d5-3928",
-					"ccd1-a95a-7992-a441"
+					"989f-a832-5669-fe24",
+					"97cc-2019-8a17-a24d",
+					"fd12-01a0-f446-786c",
+					"1d96-9ec3-c077-b5eb"
 				],
 				"name": "flexLayout4",
-				"parent": "1f77-52b5-384e-d015"
+				"parent": "0db8-2055-ba88-dd58"
 			},
 			"source": {
 				"page": "__library__"
@@ -160,38 +160,38 @@
 			}
 		},
 		{
-			"className": ".sf-label",
-			"id": "2e97-c467-cf83-f0f8",
+			"className": ".materialTextBox-wrapper",
+			"hiddenComponent": false,
+			"id": "989f-a832-5669-fe24",
+			"initialized": false,
 			"props": {
-				"autoHeight": 16.8,
 				"children": [],
-				"name": "label1",
-				"parent": "0ff9-f9ed-ae08-3ea0",
-				"text": "GİDİŞ BİLGİLERİ"
+				"name": "mtRegion",
+				"parent": "1f3f-5c7c-aa4a-5523",
+				"usePageVariable": true
 			},
 			"source": {
-				"page": "__library__"
+				"page": "__modules__",
+				"moduleName": "Materialtextbox",
+				"modulePath": "materialtextbox",
+				"type": "Materialtextbox",
+				"id": "8fb2-10a8-12e4-9b45"
 			},
-			"type": "Label",
+			"type": "FlexLayout",
 			"userProps": {
-				"autoHeight": 16.8,
-				"flexProps": {},
-				"height": 22,
-				"text": "GİDİŞ BİLGİLERİ",
-				"textColor": "rgba( 160, 160, 165, 1 )",
-				"width": null
+				"usePageVariable": true
 			}
 		},
 		{
 			"className": ".sf-flexLayout #pgSeyahatTalebi-fromTo",
-			"id": "f638-42a8-7d8e-113f",
+			"id": "97cc-2019-8a17-a24d",
 			"props": {
 				"children": [
-					"45e8-95a2-3c9f-b635",
-					"de2a-5b13-ac8b-fdfe"
+					"ced6-b955-1b17-2987",
+					"8959-e8ed-f79c-6295"
 				],
-				"name": "flLocation",
-				"parent": "0ff9-f9ed-ae08-3ea0",
+				"name": "flWhen",
+				"parent": "1f3f-5c7c-aa4a-5523",
 				"usePageVariable": true
 			},
 			"type": "FlexLayout",
@@ -203,12 +203,12 @@
 		{
 			"className": ".materialTextBox-wrapper #pgSeyahatTalebi-fromTo-mt.from",
 			"hiddenComponent": false,
-			"id": "45e8-95a2-3c9f-b635",
+			"id": "ced6-b955-1b17-2987",
 			"initialized": false,
 			"props": {
 				"children": [],
-				"name": "mtLocationFrom",
-				"parent": "f638-42a8-7d8e-113f",
+				"name": "mtWhenDate",
+				"parent": "97cc-2019-8a17-a24d",
 				"usePageVariable": true
 			},
 			"source": {
@@ -226,12 +226,12 @@
 		{
 			"className": ".materialTextBox-wrapper #pgSeyahatTalebi-fromTo-mt.to",
 			"hiddenComponent": false,
-			"id": "de2a-5b13-ac8b-fdfe",
+			"id": "8959-e8ed-f79c-6295",
 			"initialized": false,
 			"props": {
 				"children": [],
-				"name": "mtLocationTo",
-				"parent": "f638-42a8-7d8e-113f",
+				"name": "mtWhenTime",
+				"parent": "97cc-2019-8a17-a24d",
 				"usePageVariable": true
 			},
 			"source": {
@@ -248,14 +248,14 @@
 		},
 		{
 			"className": ".sf-flexLayout #pgSeyahatTalebi-fromTo",
-			"id": "e9fe-1264-096e-8b12",
+			"id": "fd12-01a0-f446-786c",
 			"props": {
 				"children": [
-					"61ef-a2c4-5abb-cea6",
-					"d152-af89-e8ec-0847"
+					"a8f7-047c-3ec9-2d8a",
+					"d4e6-86c9-3cb4-48b4"
 				],
-				"name": "flFromTime",
-				"parent": "0ff9-f9ed-ae08-3ea0",
+				"name": "flWhere",
+				"parent": "1f3f-5c7c-aa4a-5523",
 				"usePageVariable": true
 			},
 			"type": "FlexLayout",
@@ -267,12 +267,12 @@
 		{
 			"className": ".materialTextBox-wrapper #pgSeyahatTalebi-fromTo-mt.from",
 			"hiddenComponent": false,
-			"id": "61ef-a2c4-5abb-cea6",
+			"id": "a8f7-047c-3ec9-2d8a",
 			"initialized": false,
 			"props": {
 				"children": [],
-				"name": "mtDateFrom",
-				"parent": "e9fe-1264-096e-8b12",
+				"name": "mtHotel",
+				"parent": "fd12-01a0-f446-786c",
 				"usePageVariable": true
 			},
 			"source": {
@@ -290,12 +290,12 @@
 		{
 			"className": ".materialTextBox-wrapper #pgSeyahatTalebi-fromTo-mt.to",
 			"hiddenComponent": false,
-			"id": "d152-af89-e8ec-0847",
+			"id": "d4e6-86c9-3cb4-48b4",
 			"initialized": false,
 			"props": {
 				"children": [],
-				"name": "mtTimeFrom",
-				"parent": "e9fe-1264-096e-8b12",
+				"name": "mtCity",
+				"parent": "fd12-01a0-f446-786c",
 				"usePageVariable": true
 			},
 			"source": {
@@ -311,36 +311,15 @@
 			}
 		},
 		{
-			"className": ".sf-flexLayout .flCheckItem .flCheckItem-seyahat",
-			"hiddenComponent": false,
-			"id": "6f0f-d2de-80d5-3928",
-			"initialized": false,
-			"props": {
-				"children": [],
-				"name": "flCheckbox",
-				"parent": "0ff9-f9ed-ae08-3ea0",
-				"usePageVariable": true
-			},
-			"source": {
-				"page": "__library__",
-				"type": "flCheckItem",
-				"id": "b35d-e347-8f7b-1d0c"
-			},
-			"type": "FlexLayout",
-			"userProps": {
-				"usePageVariable": true
-			}
-		},
-		{
 			"className": ".sf-flexLayout #pgSeyahatTalebi-fromTo",
-			"id": "ccd1-a95a-7992-a441",
+			"id": "1d96-9ec3-c077-b5eb",
 			"props": {
 				"children": [
-					"26e8-bb9e-6087-6b83",
-					"c3f7-8854-506a-2c98"
+					"e4ca-5f72-70a3-fc61",
+					"8bc1-b505-d0a8-d8a9"
 				],
-				"name": "flDonusTarihi",
-				"parent": "0ff9-f9ed-ae08-3ea0",
+				"name": "flHow",
+				"parent": "1f3f-5c7c-aa4a-5523",
 				"usePageVariable": true
 			},
 			"type": "FlexLayout",
@@ -352,12 +331,12 @@
 		{
 			"className": ".materialTextBox-wrapper #pgSeyahatTalebi-fromTo-mt.from",
 			"hiddenComponent": false,
-			"id": "26e8-bb9e-6087-6b83",
+			"id": "e4ca-5f72-70a3-fc61",
 			"initialized": false,
 			"props": {
 				"children": [],
-				"name": "mtDonusDate",
-				"parent": "ccd1-a95a-7992-a441",
+				"name": "mtNeed",
+				"parent": "1d96-9ec3-c077-b5eb",
 				"usePageVariable": true
 			},
 			"source": {
@@ -375,12 +354,12 @@
 		{
 			"className": ".materialTextBox-wrapper #pgSeyahatTalebi-fromTo-mt.to",
 			"hiddenComponent": false,
-			"id": "c3f7-8854-506a-2c98",
+			"id": "8bc1-b505-d0a8-d8a9",
 			"initialized": false,
 			"props": {
 				"children": [],
-				"name": "mtDonusTime",
-				"parent": "ccd1-a95a-7992-a441",
+				"name": "mtWith",
+				"parent": "1d96-9ec3-c077-b5eb",
 				"usePageVariable": true
 			},
 			"source": {
@@ -397,13 +376,13 @@
 		},
 		{
 			"className": ".sf-button",
-			"id": "00e0-73bc-630f-f74a",
+			"id": "5e60-9051-20d1-c3ec",
 			"props": {
-				"autoHeight": 24.390243902439025,
+				"autoHeight": 21,
 				"children": [],
 				"name": "btnRemove",
-				"parent": "1f77-52b5-384e-d015",
-				"text": "Bu Uçuşu Sil",
+				"parent": "0db8-2055-ba88-dd58",
+				"text": "Bu Konaklamayı Sil",
 				"usePageVariable": true
 			},
 			"source": {
@@ -411,7 +390,7 @@
 			},
 			"type": "Button",
 			"userProps": {
-				"autoHeight": 24.390243902439025,
+				"autoHeight": 21,
 				"backgroundColor": "rgba( 235, 47, 47, 0.14 )",
 				"borderRadius": null,
 				"font": {
@@ -423,7 +402,7 @@
 				},
 				"marginBottom": null,
 				"marginTop": null,
-				"text": "Bu Uçuşu Sil",
+				"text": "Bu Konaklamayı Sil",
 				"textColor": "rgba( 235, 47, 47, 1 )",
 				"usePageVariable": true
 			}

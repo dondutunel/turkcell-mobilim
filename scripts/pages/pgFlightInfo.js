@@ -14,6 +14,9 @@ const PgKonaklama = extend(PgKonaklamaDesign)(
         this.onShow = onShow.bind(this, this.onShow.bind(this));
         // Overrides super.onLoad method
         this.onLoad = onLoad.bind(this, this.onLoad.bind(this));
+        this.btnContinue.onPress = () => {
+            this.router.push("/btb/tab2/pgKonaklamaInfo");
+        };
     }
 );
 
@@ -40,20 +43,20 @@ function onLoad(superOnLoad) {
     const addAccomodationButton = new HeaderBarItem({
         image: Image.createFromFile("images://plus.png"),
         onPress: () => {
-            let konaklamaItem = new FlUcusItem();
+            let ucusItem = new FlUcusItem();
             page.svMain.layout.removeChild(page.btnContinue);
-            page.svMain.layout.addChild(konaklamaItem, `konaklamaItem${itemIndex++}`);
+            page.svMain.layout.addChild(ucusItem, `konaklamaItem${itemIndex++}`);
             page.svMain.layout.addChild(page.btnContinue);
-            konaklamaItem.init();
-            konaklamaItem.onDelete = () => {
-                page.svMain.layout.removeChild(konaklamaItem);
-                konaklamaItem.onChange();
+            ucusItem.init();
+            ucusItem.onDelete = () => {
+                page.svMain.layout.removeChild(ucusItem);
+                ucusItem.onChange();
             };
-            konaklamaItem.onChange = () => {
+            ucusItem.onChange = () => {
                 page.svMain.layout.applyLayout();
                 page.layout.applyLayout();
             };
-            konaklamaItem.onChange();
+            ucusItem.onChange();
         }
     });
     page.headerBar.setItems([addAccomodationButton]);
