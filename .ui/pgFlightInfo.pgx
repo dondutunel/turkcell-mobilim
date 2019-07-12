@@ -1,0 +1,67 @@
+{
+	"components": [
+		{
+			"className": ".sf-page",
+			"id": "c212-d545-d119-61a5",
+			"initialized": false,
+			"props": {
+				"children": [
+					"267b-0225-4601-b262",
+					"6526-e041-ac1a-f7a5",
+					"0069-3ce3-a8e8-32a3"
+				],
+				"name": "pgFlightInfo",
+				"orientation": "PORTRAIT",
+				"parent": null
+			},
+			"type": "Page",
+			"userProps": {},
+			"version": "6.15.1"
+		},
+		{
+			"className": ".sf-statusBar",
+			"id": "267b-0225-4601-b262",
+			"props": {
+				"children": [],
+				"isRemovable": false,
+				"name": "statusBar",
+				"parent": "c212-d545-d119-61a5"
+			},
+			"type": "StatusBar",
+			"userProps": {}
+		},
+		{
+			"className": ".sf-headerBar",
+			"id": "6526-e041-ac1a-f7a5",
+			"props": {
+				"children": [],
+				"isRemovable": false,
+				"name": "headerBar",
+				"parent": "c212-d545-d119-61a5",
+				"title": "Konaklama Bilgileri"
+			},
+			"type": "HeaderBar",
+			"userProps": {
+				"title": "Konaklama Bilgileri"
+			}
+		},
+		{
+			"className": ".sf-scrollView .flexLayout-grow",
+			"id": "0069-3ce3-a8e8-32a3",
+			"props": {
+				"autoSizeEnabled": true,
+				"children": [],
+				"name": "svMain",
+				"parent": "c212-d545-d119-61a5",
+				"usePageVariable": true
+			},
+			"type": "ScrollView",
+			"userProps": {
+				"autoSizeEnabled": true,
+				"marginBottom": null,
+				"marginTop": null,
+				"usePageVariable": true
+			}
+		}
+	]
+}

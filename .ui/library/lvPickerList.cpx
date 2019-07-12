@@ -2,6 +2,7 @@
 	"components": [
 		{
 			"className": ".sf-listView .lvPickerList",
+			"hiddenComponent": true,
 			"id": "2997-44bb-e4fa-089d",
 			"initialized": true,
 			"props": {

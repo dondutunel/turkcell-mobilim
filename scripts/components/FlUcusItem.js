@@ -1,5 +1,5 @@
 const extend = require('js-base/core/extend');
-const FlKonaklamaItemDesign = require('library/FlKonaklamaItem');
+const FlKonaklamaItemDesign = require('library/FlUcusItem');
 const { getCombinedStyle } = require("sf-extension-utils/lib/getCombinedStyle");
 const options = {
     "mtLocationFrom": {

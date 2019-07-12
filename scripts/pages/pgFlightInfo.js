@@ -1,9 +1,9 @@
-const FlKonaklamaItem = require("components/FlKonaklamaItem");
+const FlUcusItem = require("components/FlUcusItem");
 const Image = require("sf-core/ui/image");
 const HeaderBarItem = require("sf-core/ui/headerbaritem");
 const propagateTouchEvents = require("lib/propagateTouchEvents");
 const extend = require('js-base/core/extend');
-const PgKonaklamaDesign = require('ui/ui_pgKonaklama');
+const PgKonaklamaDesign = require('ui/ui_pgFlightInfo');
 
 const PgKonaklama = extend(PgKonaklamaDesign)(
 	// Constructor
@@ -40,7 +40,7 @@ function onLoad(superOnLoad) {
 	const addAccomodationButton = new HeaderBarItem({
 		image: Image.createFromFile("images://plus.png"),
 		onPress: () => {
-			let konaklamaItem = new FlKonaklamaItem();
+			let konaklamaItem = new FlUcusItem();
 			page.svMain.layout.addChild(konaklamaItem, `konaklamaItem${itemIndex++}`);
 			konaklamaItem.init();
 			konaklamaItem.onDelete = () => {

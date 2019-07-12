@@ -82,7 +82,7 @@ function onLoad(superOnLoad) {
     //this.svMain.layout.minHeight = Screen.height;
     initMaterials(this);
     this.btnContinue.onPress = () => {
-        page.router.push("/btb/tab2/pgKonaklama");
+        page.router.push("/btb/tab2/pgFlightInfo");
     };
     propagateTouchEvents(this.svMain);
     this.flCheckFlight.setData({ text: "Ucus" });

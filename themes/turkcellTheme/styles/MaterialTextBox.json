@@ -60,6 +60,7 @@
 		"&-wrapper": {
 			"height": 48,
 			"width": null,
+			"visible": true,
 			"marginLeft": -1,
 			"marginRight": -1,
 			"marginBottom": 16,

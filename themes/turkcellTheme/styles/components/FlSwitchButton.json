@@ -1,6 +1,9 @@
 {
 	".flSwitchButton": {
 		"height": 40,
+		"android": {
+			"zIndex": 1
+		},
 		"flexProps": {
 			"flexDirection": "ROW",
 			"alignItems": "STRETCH"
@@ -12,6 +15,10 @@
 			"textColor": "rgba( 216, 216, 216, 1 )",
 			"height": null,
 			"textAlignment": "MIDCENTER",
+			"android": {
+				"zIndex": 0
+				
+			},
 			".active": {
 				"textColor": "rgba(255,255,255,1)",
 				"backgroundColor": "rgba( 47, 171, 235, 1 )",

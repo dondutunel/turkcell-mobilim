@@ -1,8 +1,8 @@
 {
 	"components": [
 		{
-			"className": ".sf-flexLayout .flKonaklamaItem",
-			"hiddenComponent": true,
+			"className": ".sf-flexLayout .flUcusItem",
+			"hiddenComponent": false,
 			"id": "1f77-52b5-384e-d015",
 			"initialized": true,
 			"props": {
@@ -11,7 +11,7 @@
 					"0ff9-f9ed-ae08-3ea0",
 					"00e0-73bc-630f-f74a"
 				],
-				"name": "flKonaklamaItem",
+				"name": "flUcusItem",
 				"parent": "57f4-201f-4bfc-5fc6"
 			},
 			"source": {
@@ -24,7 +24,7 @@
 			}
 		},
 		{
-			"className": ".sf-flexLayout .flKonaklamaItem-header",
+			"className": ".sf-flexLayout .flUcusItem-header",
 			"id": "33d4-1534-dd08-3e3e",
 			"props": {
 				"children": [
@@ -41,7 +41,7 @@
 			"userProps": {}
 		},
 		{
-			"className": ".sf-flexLayout .flKonaklamaItem-icon .gradientBackground",
+			"className": ".sf-flexLayout .flUcusItem-icon .gradientBackground",
 			"id": "9efa-ba23-89aa-c914",
 			"props": {
 				"children": [],
@@ -83,7 +83,7 @@
 				"children": [],
 				"name": "lblKonaklama",
 				"parent": "bae3-da66-39fd-c2e3",
-				"text": "Konaklama 1",
+				"text": "Ucus 1",
 				"usePageVariable": true
 			},
 			"source": {
@@ -100,7 +100,7 @@
 					"style": "Semibold"
 				},
 				"height": null,
-				"text": "Konaklama 1",
+				"text": "Ucus 1",
 				"textColor": "rgba( 45, 60, 73, 1 )",
 				"usePageVariable": true
 			}
@@ -113,7 +113,7 @@
 				"children": [],
 				"name": "lblSehir",
 				"parent": "bae3-da66-39fd-c2e3",
-				"text": "Ankara",
+				"text": "Istanbul - Ankara",
 				"usePageVariable": true
 			},
 			"source": {
@@ -130,7 +130,7 @@
 					"style": "Semibold"
 				},
 				"height": null,
-				"text": "Ankara",
+				"text": "Istanbul - Ankara",
 				"textColor": "rgba( 160, 160, 165, 1 )",
 				"usePageVariable": true
 			}
