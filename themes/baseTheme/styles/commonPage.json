@@ -1,22 +1,10 @@
 {
-	"config": {
-		"theme": {
-			"currentTheme": "turkcellTheme",
-			"baseTheme": "baseTheme",
-			"themes": [
-				"baseTheme",
-				"defaultTheme"
-			]
-		},
-		"paths": {
-			"pgxFolder": ".ui",
-			"uiFolder": "scripts/ui",
-			"pagesFolder": "scripts/pages",
-			"libraryUiFolder": "scripts/node_modules/library",
-			"libraryUserFolder": "scripts/components",
-			"themesFolder": "themes",
-			"themesDistFolder": "scripts/themes"
-		},
-		"version": "6.15.1"
-	}
+    ".gradientBackground": {
+        "backgroundColor": {
+            "startColor": "rgba(56,191,242,1)",
+            "endColor": "rgba(41,152,227,1)",
+            "direction": "VERTICAL"
+        }
+    }
+
 }
