@@ -50,7 +50,9 @@
 			"id": "1551-ab4f-8577-9615",
 			"props": {
 				"autoSizeEnabled": true,
-				"children": [],
+				"children": [
+					"6d39-4748-8b28-a828"
+				],
 				"name": "svMain",
 				"parent": "38ef-6b2c-8ddf-479f",
 				"usePageVariable": true
@@ -60,6 +62,26 @@
 				"autoSizeEnabled": true,
 				"marginBottom": null,
 				"marginTop": null,
+				"usePageVariable": true
+			}
+		},
+		{
+			"className": ".sf-button #pgSeyahatTalebi-btn",
+			"id": "6d39-4748-8b28-a828",
+			"props": {
+				"autoHeight": 24.390243902439025,
+				"children": [],
+				"name": "btnContinue",
+				"parent": "1551-ab4f-8577-9615",
+				"text": "Devam",
+				"usePageVariable": true
+			},
+			"type": "Button",
+			"userProps": {
+				"autoHeight": 24.390243902439025,
+				"left": 0,
+				"text": "Devam",
+				"top": 0,
 				"usePageVariable": true
 			}
 		}

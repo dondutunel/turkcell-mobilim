@@ -3,7 +3,7 @@
 		{
 			"className": ".sf-page",
 			"id": "c212-d545-d119-61a5",
-			"initialized": false,
+			"initialized": true,
 			"props": {
 				"children": [
 					"267b-0225-4601-b262",
@@ -38,11 +38,11 @@
 				"isRemovable": false,
 				"name": "headerBar",
 				"parent": "c212-d545-d119-61a5",
-				"title": "Konaklama Bilgileri"
+				"title": "Uçuş Bilgileri"
 			},
 			"type": "HeaderBar",
 			"userProps": {
-				"title": "Konaklama Bilgileri"
+				"title": "Uçuş Bilgileri"
 			}
 		},
 		{
@@ -50,7 +50,9 @@
 			"id": "0069-3ce3-a8e8-32a3",
 			"props": {
 				"autoSizeEnabled": true,
-				"children": [],
+				"children": [
+					"3573-4bb4-5c8a-5395"
+				],
 				"name": "svMain",
 				"parent": "c212-d545-d119-61a5",
 				"usePageVariable": true
@@ -60,6 +62,26 @@
 				"autoSizeEnabled": true,
 				"marginBottom": null,
 				"marginTop": null,
+				"usePageVariable": true
+			}
+		},
+		{
+			"className": ".sf-button #pgSeyahatTalebi-btn",
+			"id": "3573-4bb4-5c8a-5395",
+			"props": {
+				"autoHeight": 24.390243902439025,
+				"children": [],
+				"name": "btnContinue",
+				"parent": "0069-3ce3-a8e8-32a3",
+				"text": "Devam",
+				"usePageVariable": true
+			},
+			"type": "Button",
+			"userProps": {
+				"autoHeight": 24.390243902439025,
+				"left": 0,
+				"text": "Devam",
+				"top": 0,
 				"usePageVariable": true
 			}
 		}
