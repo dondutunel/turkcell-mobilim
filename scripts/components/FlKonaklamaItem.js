@@ -1,5 +1,6 @@
 const extend = require('js-base/core/extend');
 const FlKonaklamaItemDesign = require('library/FlKonaklamaItem');
+const populateMaterialTextbox = require("../utils/populateMaterialTextbox");
 
 const options = {
     "mtRegion": {
@@ -30,6 +31,23 @@ const options = {
         enableDropDown: true
     },
 };
+const MATERIAL_OPTIONS = [{
+        name: "mtRegion",
+        icon: "search_icon.png"
+
+    }, {
+        name: "mtWhenDate",
+        icon: "date_icon.png"
+    },
+    {
+        name: "mtNeed",
+        icon: "arrowbottom.png"
+    },
+    {
+        name: "mtWith",
+        icon: "arrowbottom.png"
+    }
+];
 
 const FlKonaklamaItem = extend(FlKonaklamaItemDesign)(
     // Constructor
@@ -42,6 +60,7 @@ const FlKonaklamaItem = extend(FlKonaklamaItemDesign)(
             Object.keys(options).forEach(componentName => {
                 this[componentName].options = options[componentName];
             });
+            populateMaterialTextbox(this, MATERIAL_OPTIONS);
         };
         // Init delete button
         this.btnRemove.onPress = () => {
