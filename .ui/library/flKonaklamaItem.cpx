@@ -1,7 +1,7 @@
 {
 	"components": [
 		{
-			"className": ".sf-flexLayout .flUcusItem",
+			"className": ".sf-flexLayout .flKonaklamaItem",
 			"hiddenComponent": false,
 			"id": "0db8-2055-ba88-dd58",
 			"initialized": true,
@@ -144,7 +144,8 @@
 					"989f-a832-5669-fe24",
 					"97cc-2019-8a17-a24d",
 					"fd12-01a0-f446-786c",
-					"1d96-9ec3-c077-b5eb"
+					"1d96-9ec3-c077-b5eb",
+					"b685-76d1-92a7-f732"
 				],
 				"name": "flexLayout4",
 				"parent": "0db8-2055-ba88-dd58"
@@ -372,6 +373,25 @@
 			"type": "FlexLayout",
 			"userProps": {
 				"usePageVariable": true
+			}
+		},
+		{
+			"className": ".sf-label .flKonaklamaItem-total",
+			"id": "b685-76d1-92a7-f732",
+			"props": {
+				"autoHeight": 24,
+				"children": [],
+				"name": "lblTotal",
+				"parent": "1f3f-5c7c-aa4a-5523",
+				"text": "Tutar: 246.06 TL"
+			},
+			"source": {
+				"page": "__library__"
+			},
+			"type": "Label",
+			"userProps": {
+				"autoHeight": 24,
+				"text": "Tutar: 246.06 TL"
 			}
 		},
 		{

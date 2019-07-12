@@ -7,7 +7,8 @@ const options = {
     },
     "mtWhenDate": {
         hint: "Tarih",
-        touchEnabled: false
+        touchEnabled: false,
+        enableDropDown: true
     },
     "mtWhenTime": {
         hint: "Saat"
@@ -20,11 +21,13 @@ const options = {
     },
     "mtNeed": {
         hint: "İhtiyaç",
-        touchEnabled: false
+        touchEnabled: false,
+        enableDropDown: true
     },
     "mtWith": {
         hint: "Kişi",
-        touchEnabled: false
+        touchEnabled: false,
+        enableDropDown: true
     },
 };
 
