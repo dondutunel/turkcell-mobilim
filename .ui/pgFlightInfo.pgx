@@ -7,7 +7,8 @@
 			"props": {
 				"children": [
 					"c789-3396-a02e-0dc7",
-					"2f33-9d85-e170-24ae"
+					"2f33-9d85-e170-24ae",
+					"fea5-2b21-d280-7993"
 				],
 				"name": "pgFlightInfo",
 				"orientation": "PORTRAIT",
@@ -42,6 +43,48 @@
 			"type": "HeaderBar",
 			"userProps": {
 				"title": "pgFlightInfo"
+			}
+		},
+		{
+			"className": ".sf-scrollView .flexLayout-grow",
+			"id": "fea5-2b21-d280-7993",
+			"props": {
+				"autoSizeEnabled": true,
+				"children": [
+					"b27e-638d-27d0-0fe9"
+				],
+				"name": "svMain",
+				"parent": "f651-8546-c686-615c",
+				"usePageVariable": true
+			},
+			"type": "ScrollView",
+			"userProps": {
+				"autoSizeEnabled": true,
+				"left": 0,
+				"marginBottom": null,
+				"marginTop": null,
+				"top": 0,
+				"usePageVariable": true
+			}
+		},
+		{
+			"className": ".sf-button #pgSeyahatTalebi-btn",
+			"id": "b27e-638d-27d0-0fe9",
+			"props": {
+				"autoHeight": 24.390243902439025,
+				"children": [],
+				"name": "btnContinue",
+				"parent": "fea5-2b21-d280-7993",
+				"text": "Devam",
+				"usePageVariable": true
+			},
+			"type": "Button",
+			"userProps": {
+				"autoHeight": 24.390243902439025,
+				"left": 0,
+				"text": "Devam",
+				"top": 0,
+				"usePageVariable": true
 			}
 		}
 	]

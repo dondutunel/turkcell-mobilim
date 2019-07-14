@@ -19,12 +19,12 @@
 			"type": "FlexLayout",
 			"userProps": {
 				"flexProps": {},
-				"left": 20,
-				"top": 179
+				"left": 16,
+				"top": 601
 			}
 		},
 		{
-			"className": ".sf-flexLayout .flUcusItem-icon .gradientBackground-awardItem",
+			"className": ".sf-flexLayout .flAwardItem-icon .gradientBackground-awardItem",
 			"id": "15c7-1d13-6c67-53c8",
 			"props": {
 				"children": [

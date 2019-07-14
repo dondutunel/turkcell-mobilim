@@ -7,8 +7,8 @@
 			"alignSelf": "STRETCH"
 		},
 		"&-icon": {
-			"width": 50,
-			"height": 50,
+			"width": 70,
+			"height": 70,
 			"borderRadius": 5
 		},
 		"borderRadius": 5,
@@ -17,7 +17,7 @@
 		"marginLeft": 15,
 		"marginTop": 15,
 		"&-header": {
-			"height": 50,
+			"height": 70,
 			"marginBottom": 10,
 			"marginTop": 10,
 			"marginLeft": 10,

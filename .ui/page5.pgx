@@ -2,14 +2,14 @@
 	"components": [
 		{
 			"className": ".sf-page",
-			"id": "14cf-a775-d26c-59c1",
+			"id": "d8d9-34a9-4b1a-0bb7",
 			"initialized": true,
 			"props": {
 				"children": [
-					"70bf-b858-e5d2-ea94",
-					"e02f-7044-2e33-d9ec"
+					"15bd-0b9d-7949-bb79",
+					"26bb-7ffb-af1d-ef85"
 				],
-				"name": "page4",
+				"name": "page5",
 				"orientation": "PORTRAIT",
 				"parent": null
 			},
@@ -19,29 +19,29 @@
 		},
 		{
 			"className": ".sf-statusBar",
-			"id": "70bf-b858-e5d2-ea94",
+			"id": "15bd-0b9d-7949-bb79",
 			"props": {
 				"children": [],
 				"isRemovable": false,
 				"name": "statusBar",
-				"parent": "14cf-a775-d26c-59c1"
+				"parent": "d8d9-34a9-4b1a-0bb7"
 			},
 			"type": "StatusBar",
 			"userProps": {}
 		},
 		{
 			"className": ".sf-headerBar",
-			"id": "e02f-7044-2e33-d9ec",
+			"id": "26bb-7ffb-af1d-ef85",
 			"props": {
 				"children": [],
 				"isRemovable": false,
 				"name": "headerBar",
-				"parent": "14cf-a775-d26c-59c1",
-				"title": "Şirketim"
+				"parent": "d8d9-34a9-4b1a-0bb7",
+				"title": "Dashboard"
 			},
 			"type": "HeaderBar",
 			"userProps": {
-				"title": "Şirketim"
+				"title": "Dashboard"
 			}
 		}
 	]
