@@ -7,6 +7,10 @@ const FlAwardItem = extend(FlAwardItemDesign)(
 		// Initalizes super class for this scope
 		_super(this, props);
 		this.pageName = pageName;
+		this.setData = data => {
+			data.title && (this.lblTitle.text = data.title);
+			data.count && (this.lblCount.text = data.count);
+		};
 	}
 );
 

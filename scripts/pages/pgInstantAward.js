@@ -3,16 +3,23 @@
 */
 const extend = require('js-base/core/extend');
 const PgInstantAwardDesign = require('ui/ui_pgInstantAward');
+const touch = require("sf-extension-utils/lib/touch");
 
+const UI_ITEMS = [
+	"flInstantAward",
+	"flMyInstantAward",
+	"flSentMyInstantAward"
+];
 const PgInstantAward = extend(PgInstantAwardDesign)(
 	// Constructor
-	function(_super) {
+	function(_super, props) {
 		// Initalizes super class for this page scope
 		_super(this);
 		// Overrides super.onShow method
 		this.onShow = onShow.bind(this, this.onShow.bind(this));
 		// Overrides super.onLoad method
 		this.onLoad = onLoad.bind(this, this.onLoad.bind(this));
+		this.itemsData = props.data.items;
 	}
 );
 
@@ -33,6 +40,18 @@ function onShow(superOnShow) {
  */
 function onLoad(superOnLoad) {
 	superOnLoad();
+	initItems(this, this.itemsData);
+}
+
+function initItems(page, itemsData) {
+	itemsData.forEach((itemData, index) => {
+		const uiItem = page[UI_ITEMS[index]];
+		uiItem.setData(itemData);
+		touch.addPressEvent(uiItem, () => {
+			itemData.routePath && page.router.push(itemData.routePath);
+		});
+	});
+
 }
 
 module.exports = PgInstantAward;
