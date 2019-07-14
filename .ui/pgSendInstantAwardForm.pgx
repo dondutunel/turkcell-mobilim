@@ -1,0 +1,314 @@
+{
+	"components": [
+		{
+			"className": ".page #pgIslemlerim",
+			"id": "0114-9193-aa21-1799",
+			"initialized": true,
+			"props": {
+				"children": [
+					"d416-39e7-6a03-d264",
+					"f5c9-ed3e-d882-64ba",
+					"f1ec-64e3-b7d7-fa52",
+					"ad15-4918-c211-0ec7",
+					"4537-1b38-da95-beac"
+				],
+				"isRemovable": true,
+				"name": "pgSendInstantAwardForm",
+				"orientation": "PORTRAIT",
+				"parent": null,
+				"safeAreaEnabled": true
+			},
+			"type": "Page",
+			"userProps": {
+				"orientation": "PORTRAIT",
+				"safeAreaEnabled": true
+			},
+			"version": "6.15.1"
+		},
+		{
+			"className": ".statusBar",
+			"id": "d416-39e7-6a03-d264",
+			"props": {
+				"children": [],
+				"isRemovable": false,
+				"name": "statusBar",
+				"parent": "0114-9193-aa21-1799"
+			},
+			"type": "StatusBar",
+			"userProps": {
+				"style": "LIGHTCONTENT",
+				"visible": true
+			}
+		},
+		{
+			"className": ".headerBar",
+			"id": "f5c9-ed3e-d882-64ba",
+			"props": {
+				"children": [],
+				"isRemovable": false,
+				"name": "headerBar",
+				"parent": "0114-9193-aa21-1799"
+			},
+			"type": "HeaderBar",
+			"userProps": {
+				"visible": false
+			}
+		},
+		{
+			"className": ".sf-flexLayout #pgSendInstantAwardForm-part1",
+			"id": "f1ec-64e3-b7d7-fa52",
+			"props": {
+				"children": [
+					"8a84-cf41-53c7-753c",
+					"ba11-7219-e282-d7ab"
+				],
+				"name": "flexLayout1",
+				"parent": "0114-9193-aa21-1799"
+			},
+			"type": "FlexLayout",
+			"userProps": {}
+		},
+		{
+			"className": ".sf-flexLayout .flAwardDetailItem-icon .gradientBackground-awardItem #pgSendInstantAwardForm-part1-icon",
+			"id": "8a84-cf41-53c7-753c",
+			"props": {
+				"children": [
+					"4c30-fc7f-d6da-6b78"
+				],
+				"name": "flIcon",
+				"parent": "f1ec-64e3-b7d7-fa52"
+			},
+			"type": "FlexLayout",
+			"userProps": {}
+		},
+		{
+			"className": ".sf-imageView .flAwardDetailItem-header-icon",
+			"id": "4c30-fc7f-d6da-6b78",
+			"props": {
+				"autoHeight": 25.49019607843137,
+				"autoWidth": 25.49019607843137,
+				"children": [],
+				"name": "imgIcon",
+				"parent": "8a84-cf41-53c7-753c",
+				"usePageVariable": true
+			},
+			"type": "ImageView",
+			"userProps": {
+				"autoHeight": 25.49019607843137,
+				"autoWidth": 25.49019607843137,
+				"usePageVariable": true,
+				"visible": true
+			}
+		},
+		{
+			"className": ".sf-label #pgSendInstantAwardForm-part1-title",
+			"id": "ba11-7219-e282-d7ab",
+			"props": {
+				"autoHeight": 23.52941176470588,
+				"children": [],
+				"name": "lblTitle",
+				"parent": "f1ec-64e3-b7d7-fa52",
+				"text": "  label1",
+				"usePageVariable": true
+			},
+			"type": "Label",
+			"userProps": {
+				"autoHeight": 23.52941176470588,
+				"text": "  label1",
+				"usePageVariable": true
+			}
+		},
+		{
+			"className": ".sf-flexLayout #pgIslemlerim-fakeLayout",
+			"id": "ad15-4918-c211-0ec7",
+			"props": {
+				"children": [],
+				"name": "flFakeLayout",
+				"parent": "0114-9193-aa21-1799"
+			},
+			"type": "FlexLayout",
+			"userProps": {}
+		},
+		{
+			"className": ".sf-flexLayout #pgIslemlerim-subMenu #pgSendInstantAwardForm-part2",
+			"id": "4537-1b38-da95-beac",
+			"props": {
+				"children": [
+					"4a5f-64bf-f1a5-d194",
+					"7a22-1273-4fed-570c",
+					"aa83-f279-0930-59ce",
+					"97e2-1cda-3584-2dc3",
+					"19a3-b832-e7dd-84fe",
+					"1229-68d2-e9e8-9b67"
+				],
+				"name": "flSubMenu",
+				"parent": "0114-9193-aa21-1799",
+				"usePageVariable": true
+			},
+			"type": "FlexLayout",
+			"userProps": {
+				"usePageVariable": true
+			}
+		},
+		{
+			"className": ".sf-button #pgSeyahatTalebi-btn",
+			"id": "4a5f-64bf-f1a5-d194",
+			"props": {
+				"autoHeight": 21.56862745098039,
+				"children": [],
+				"name": "btnContinue",
+				"parent": "4537-1b38-da95-beac",
+				"text": "Hediye Gönder",
+				"usePageVariable": true
+			},
+			"type": "Button",
+			"userProps": {
+				"autoHeight": 21.56862745098039,
+				"bottom": 15,
+				"flexProps": {
+					"positionType": "ABSOLUTE"
+				},
+				"left": 15,
+				"marginBottom": null,
+				"marginTop": null,
+				"right": 15,
+				"text": "Hediye Gönder",
+				"usePageVariable": true
+			}
+		},
+		{
+			"className": ".sf-flexLayout #pgSendInstantAwardForm-part2-flUser",
+			"id": "7a22-1273-4fed-570c",
+			"props": {
+				"children": [
+					"6a29-a85e-0b66-e745",
+					"3f70-3c43-01a5-469f"
+				],
+				"name": "flUSer",
+				"parent": "4537-1b38-da95-beac"
+			},
+			"type": "FlexLayout",
+			"userProps": {}
+		},
+		{
+			"className": ".sf-imageView #pgSendInstantAwardForm-part2-flUser-icon",
+			"id": "6a29-a85e-0b66-e745",
+			"props": {
+				"children": [],
+				"name": "imgIcon",
+				"parent": "7a22-1273-4fed-570c"
+			},
+			"type": "ImageView",
+			"userProps": {}
+		},
+		{
+			"className": ".sf-textBox #pgSendInstantAwardForm-part2-flUser-input .color_dark",
+			"id": "3f70-3c43-01a5-469f",
+			"props": {
+				"autoWidth": 74.21875,
+				"children": [],
+				"name": "tbName",
+				"parent": "7a22-1273-4fed-570c",
+				"text": "",
+				"usePageVariable": true
+			},
+			"type": "TextBox",
+			"userProps": {
+				"autoWidth": 74.21875,
+				"text": "",
+				"usePageVariable": true
+			}
+		},
+		{
+			"className": ".sf-view .flLine.horizontal",
+			"id": "aa83-f279-0930-59ce",
+			"props": {
+				"children": [],
+				"name": "vline",
+				"parent": "4537-1b38-da95-beac"
+			},
+			"type": "View",
+			"userProps": {}
+		},
+		{
+			"className": ".sf-label #pgSendInstantAwardForm-part2-title",
+			"id": "97e2-1cda-3584-2dc3",
+			"props": {
+				"autoHeight": 21,
+				"children": [],
+				"name": "label1",
+				"parent": "4537-1b38-da95-beac",
+				"text": "Mesajınız"
+			},
+			"type": "Label",
+			"userProps": {
+				"autoHeight": 21,
+				"text": "Mesajınız"
+			}
+		},
+		{
+			"className": ".sf-flexLayout #pgSendInstantAwardForm-part2-flUser #pgSendInstantAwardForm-part2-flUser-flMesage",
+			"id": "19a3-b832-e7dd-84fe",
+			"props": {
+				"children": [
+					"d58a-70d8-85ae-6463",
+					"5778-83e2-149f-e60e"
+				],
+				"name": "flMessage",
+				"parent": "4537-1b38-da95-beac"
+			},
+			"type": "FlexLayout",
+			"userProps": {}
+		},
+		{
+			"className": ".sf-textArea #pgSendInstantAwardForm-part2-flUser-input .color_dark",
+			"id": "d58a-70d8-85ae-6463",
+			"props": {
+				"autoWidth": 338.21875,
+				"children": [],
+				"name": "taMessage",
+				"parent": "19a3-b832-e7dd-84fe",
+				"text": "  Lorem ipsum dolor sit amet, consectetur \n  adipiscing elit. Donec quis semper justo. In  \n  ultrices metus nec sodales consectetur. \n  Aliquam erat volutpat. Suspendisse potenti.",
+				"usePageVariable": true
+			},
+			"type": "TextArea",
+			"userProps": {
+				"autoWidth": 338.21875,
+				"text": "  Lorem ipsum dolor sit amet, consectetur \n  adipiscing elit. Donec quis semper justo. In  \n  ultrices metus nec sodales consectetur. \n  Aliquam erat volutpat. Suspendisse potenti.",
+				"usePageVariable": true
+			}
+		},
+		{
+			"className": ".sf-label #pgSendInstantAwardForm-part2-textInfo",
+			"id": "5778-83e2-149f-e60e",
+			"props": {
+				"autoWidth": 24.515625,
+				"children": [],
+				"name": "lblRemain",
+				"parent": "19a3-b832-e7dd-84fe",
+				"text": "150",
+				"usePageVariable": true
+			},
+			"type": "Label",
+			"userProps": {
+				"autoWidth": 24.515625,
+				"left": 0,
+				"text": "150",
+				"textAlignment": "MIDRIGHT",
+				"top": 0,
+				"usePageVariable": true
+			}
+		},
+		{
+			"className": ".sf-view .flLine.horizontal",
+			"id": "1229-68d2-e9e8-9b67",
+			"props": {
+				"children": [],
+				"name": "vline2",
+				"parent": "4537-1b38-da95-beac"
+			},
+			"type": "View",
+			"userProps": {}
+		}
+	]
+}

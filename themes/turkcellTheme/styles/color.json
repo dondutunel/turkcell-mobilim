@@ -1,0 +1,11 @@
+{
+
+	".color": {
+		"&_dark": {
+			"textColor": "rgb(45,60,73)"
+		},
+		"&_hint": {
+			"textColor": "rgb(160,160,165)"
+		}
+	}
+}

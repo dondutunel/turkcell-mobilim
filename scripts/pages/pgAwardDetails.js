@@ -62,6 +62,9 @@ function initListView(page, lv) {
 		const data = page.itemsData[index];
 		item.setData(data);
 	};
+	lv.onRowSelected = (item, index) => {
+		page.router.push("/btb/tab3/sendAward/pgSendInstantAwardForm", page.itemsData[index]);
+	}
 	lv.itemCount = page.itemsData.length;
 	lv.refreshData();
 }

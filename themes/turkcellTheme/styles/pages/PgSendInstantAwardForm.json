@@ -1,0 +1,76 @@
+{
+	"#pgSendInstantAwardForm": {
+		"&-part1": {
+			"height": null,
+			"flexProps": {
+				"flexGrow": 3,
+				"alignItems": "CENTER",
+				"justifyContent": "CENTER"
+			},
+			"&-icon": {
+				"height": 80,
+				"width": 80
+			},
+			"&-title": {
+				"font": {
+					"size": 20
+				},
+				"width": null,
+				"height": 46,
+				"maxLines": 2,
+				"marginTop": 15,
+				"flexProps": {
+					"alignSelf": "STRETCH"
+				},
+				"marginLeft": 15,
+				"marginRight": 15,
+				"textAlignment": "MIDCENTER"
+			}
+		},
+		"&-part2": {
+			"flexProps": {
+				"flexGrow": 4
+			},
+			"&-flUser": {
+				"height": 40,
+				"flexProps": {
+					"flexDirection": "ROW"
+				},
+				"&-icon": {
+					"height": 20,
+					"width": 20,
+					"flexProps": {
+						"alignSelf": "CENTER"
+					},
+					"marginLeft": null,
+					"image": "search_icon.png",
+					"marginRight": 15
+				},
+				"marginTop": 15,
+				"&-input": {
+					"flexProps": {
+						"flexGrow": 1
+					},
+					"height": null
+				},
+				"&-flMesage": {}
+			},
+			"&-title": {
+				"font": {
+					"size": 17
+				},
+				"height": 20,
+				"textColor": "rgba( 160, 160, 165, 1 )",
+				"marginTop": 30
+			},
+			"&-textInfo": {
+				"textColor": "rgba( 160, 160, 165, 1 )",
+				"font": {
+					"size": 13
+				},
+				"width": 30,
+				"height": null
+			}
+		}
+	}
+}
