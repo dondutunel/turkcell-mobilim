@@ -3,6 +3,10 @@
 */
 const extend = require('js-base/core/extend');
 const PgSendInstantAwardFormDesign = require('ui/ui_pgSendInstantAwardForm');
+const { getCombinedStyle } = require("sf-extension-utils/lib/getCombinedStyle");
+
+const MAX_DESC_LENGTH = 150;
+const materialColor = getCombinedStyle(".materialTextBox");
 
 const PgSendInstantAwardForm = extend(PgSendInstantAwardFormDesign)(
 	// Constructor
@@ -35,7 +39,16 @@ function onShow(superOnShow) {
 function onLoad(superOnLoad) {
 	superOnLoad();
 	this.tbName.hint = "Hediye Gönderilecek Kişi";
-	this.taMessage.text ="";
+	this.taMessage.text = "";
+	this.taMessage.onTextChanged = (e) => {
+		const text = this.taMessage.text || "";
+		const subText = text.substr(0, MAX_DESC_LENGTH);
+		if (subText !== text) {
+			this.taMessage.text = subText;
+		}
+		this.lblRemainLength.text = "" + (MAX_DESC_LENGTH - subText.length);
+		this.lblRemainLength.textColor = materialColor.lineColor[text ? "selected" : "normal"];
+	};
 	setData.call(this, this.routeData);
 }
 

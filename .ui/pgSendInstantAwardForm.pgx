@@ -284,7 +284,7 @@
 			"props": {
 				"autoWidth": 24.515625,
 				"children": [],
-				"name": "lblRemain",
+				"name": "lblRemainLength",
 				"parent": "19a3-b832-e7dd-84fe",
 				"text": "150",
 				"usePageVariable": true
