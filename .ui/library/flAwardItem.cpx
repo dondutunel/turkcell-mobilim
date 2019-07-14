@@ -57,7 +57,7 @@
 			}
 		},
 		{
-			"className": ".sf-flexLayout .flexLayout-grow",
+			"className": ".sf-flexLayout .flexLayout-grow .flAwardItem-flTexts",
 			"id": "fcd0-5a86-4014-b776",
 			"props": {
 				"children": [
@@ -78,7 +78,7 @@
 			}
 		},
 		{
-			"className": ".sf-label .flexLayout-grow",
+			"className": ".sf-label",
 			"id": "a5d1-9449-c9f3-5465",
 			"props": {
 				"autoHeight": 21,
@@ -108,7 +108,7 @@
 			}
 		},
 		{
-			"className": ".sf-label .flexLayout-grow",
+			"className": ".sf-label",
 			"id": "72c0-6e3e-d782-ef06",
 			"props": {
 				"autoHeight": 19,
@@ -131,7 +131,7 @@
 					"family": "SFProText",
 					"style": "Semibold"
 				},
-				"height": null,
+				"height": 25,
 				"text": "35",
 				"textColor": "rgba( 160, 160, 165, 1 )",
 				"usePageVariable": true

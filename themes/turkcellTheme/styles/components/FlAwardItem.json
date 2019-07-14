@@ -3,7 +3,8 @@
 		"height": 70,
 		"width": null,
 		"flexProps": {
-			"flexDirection": "ROW"
+			"flexDirection": "ROW",
+			"alignSelf": "STRETCH"
 		},
 		"&-icon": {
 			"width": 50,
@@ -37,6 +38,12 @@
 			"width": 20,
 			"image": "arrowright.png"
 		},
-		"marginBottom": null
+		"marginBottom": null,
+		"&-flTexts": {
+			"flexProps": {
+				"alignItems": "STRETCH",
+				"justifyContent": "CENTER"
+			}
+		}
 	}
 }

@@ -73,7 +73,8 @@ module.exports = {
         title: "Insan Kaynaklari",
         mainItems: [{
                 icon: "award_icon.png",
-                text: "ANLIK ODUL"
+                text: "ANLIK ODUL",
+                routePath: "/btb/tab3/pgInstantAward"
             },
             {
                 icon: "flex_icon.png",

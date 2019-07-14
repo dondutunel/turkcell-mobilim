@@ -92,7 +92,10 @@ function createMainItems(page, itemCount, itemMargin, itemRatio, itemsData) {
 			}
 		});
 		item.applyLayout();
-		touch.addPressEvent(item, () => {});
+		touch.addPressEvent(item, () => {
+			console.info("MAinITem: ", itemsData[i] );
+			itemsData[i].routePath && page.router.push(itemsData[i].routePath);
+		});
 	}
 	flMainItems.dispatch({
 		type: "updateUserStyle",

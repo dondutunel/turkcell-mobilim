@@ -125,6 +125,10 @@ const bottomTabBarRouter = BottomTabBarRouter.of({
                     path: "/btb/tab3/hr",
                     build: buildExtender({ pageName: "pgIslemlerim", singleton: true, pageProps: { data: pagesData.pgHr } })
                 }),
+                Route.of({
+                    path: "/btb/tab3/pgInstantAward",
+                    build: buildExtender({ pageName: "pgInstantAward", singleton: false, pageProps: {} })
+                })
             ]
         }),
         // tab4
