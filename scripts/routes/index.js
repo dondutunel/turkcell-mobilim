@@ -144,6 +144,10 @@ const bottomTabBarRouter = BottomTabBarRouter.of({
                 Route.of({
                     path: "/btb/tab3/myAwards/pgMyAwards",
                     build: buildExtender({ pageName: "pgMyAwards", singleton: false, pageProps: { data: pagesData.pgMyAwards } })
+                }),
+                 Route.of({
+                    path: "/btb/tab3/myAwards/pgMyAwardDetail",
+                    build: buildExtender({ pageName: "pgMyAwardDetail", singleton: false, pageProps: { data: pagesData.pgMyAwardDetail } })
                 })
             ]
         }),

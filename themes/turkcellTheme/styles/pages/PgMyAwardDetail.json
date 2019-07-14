@@ -1,0 +1,17 @@
+{
+	"#pgMyAwardDetail": {
+		"&-icon": {
+			"flexProps": {
+				"positionType": "ABSOLUTE"
+			},
+			"height": 110,
+			"imageFillType": "ASPECTFIT",
+			"width": 115
+		},
+		"&-flIcon": {
+			"height": 110,
+			"width": 115,
+			"borderRadius": null
+		}
+	}
+}

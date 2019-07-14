@@ -37,7 +37,8 @@
 		},
 		"&-flexLayout": {
 			"marginTop": null,
-			"marginBottom": null
+			"marginBottom": null,
+			"height": null
 		},
 		"&-page": {
 			"paddingTop": 0,

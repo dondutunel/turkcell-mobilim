@@ -1,0 +1,612 @@
+{
+	"components": [
+		{
+			"className": ".page #pgIslemlerim",
+			"id": "2606-f30e-f486-40dd",
+			"initialized": true,
+			"props": {
+				"children": [
+					"e063-7be1-dbe2-f9fb",
+					"4f88-1d73-2573-683c",
+					"cc74-94f9-37e9-5611",
+					"5ec6-e3a3-48a1-a34f",
+					"2d4a-6056-da53-b8c6"
+				],
+				"isRemovable": true,
+				"name": "pgMyAwardDetail",
+				"orientation": "PORTRAIT",
+				"parent": null,
+				"safeAreaEnabled": true
+			},
+			"type": "Page",
+			"userProps": {
+				"orientation": "PORTRAIT",
+				"safeAreaEnabled": true
+			},
+			"version": "6.15.1"
+		},
+		{
+			"className": ".statusBar",
+			"id": "e063-7be1-dbe2-f9fb",
+			"props": {
+				"children": [],
+				"isRemovable": false,
+				"name": "statusBar",
+				"parent": "2606-f30e-f486-40dd"
+			},
+			"type": "StatusBar",
+			"userProps": {
+				"style": "LIGHTCONTENT",
+				"visible": true
+			}
+		},
+		{
+			"className": ".headerBar",
+			"id": "4f88-1d73-2573-683c",
+			"props": {
+				"children": [],
+				"isRemovable": false,
+				"name": "headerBar",
+				"parent": "2606-f30e-f486-40dd",
+				"title": "Anlık Ödül Gönder"
+			},
+			"type": "HeaderBar",
+			"userProps": {
+				"title": "Anlık Ödül Gönder",
+				"visible": true
+			}
+		},
+		{
+			"className": ".sf-flexLayout #pgSendInstantAwardForm-part1",
+			"id": "cc74-94f9-37e9-5611",
+			"props": {
+				"children": [
+					"9638-2467-9f21-9512",
+					"c0d8-a97e-d95e-0827"
+				],
+				"name": "flexLayout1",
+				"parent": "2606-f30e-f486-40dd"
+			},
+			"type": "FlexLayout",
+			"userProps": {}
+		},
+		{
+			"className": ".sf-flexLayout .flAwardDetailItem-icon #pgSendInstantAwardForm-part1-icon #pgMyAwardDetail-flIcon",
+			"id": "9638-2467-9f21-9512",
+			"props": {
+				"children": [
+					"9f5b-0a29-e1f4-ecdc",
+					"67cd-39ca-a8fb-aab3"
+				],
+				"name": "flIcon",
+				"parent": "cc74-94f9-37e9-5611"
+			},
+			"type": "FlexLayout",
+			"userProps": {}
+		},
+		{
+			"className": ".sf-imageView #pgSendInstantAward-header-icon #pgMyAwardDetail-icon",
+			"id": "9f5b-0a29-e1f4-ecdc",
+			"props": {
+				"autoHeight": 112,
+				"autoWidth": 110,
+				"children": [],
+				"name": "imgLogo",
+				"parent": "9638-2467-9f21-9512"
+			},
+			"type": "ImageView",
+			"userProps": {
+				"autoHeight": 112,
+				"autoWidth": 110,
+				"left": 0,
+				"top": 0
+			}
+		},
+		{
+			"className": ".sf-imageView .flAwardDetailItem-header-icon",
+			"id": "67cd-39ca-a8fb-aab3",
+			"props": {
+				"autoHeight": 40,
+				"autoWidth": 40,
+				"children": [],
+				"name": "imgIcon",
+				"parent": "9638-2467-9f21-9512",
+				"usePageVariable": true
+			},
+			"type": "ImageView",
+			"userProps": {
+				"autoHeight": 40,
+				"autoWidth": 40,
+				"image": "starcup_icon.png",
+				"imageFillType": "NORMAL",
+				"usePageVariable": true,
+				"visible": true,
+				"width": 100
+			}
+		},
+		{
+			"className": ".sf-label #pgSendInstantAwardForm-part1-title",
+			"id": "c0d8-a97e-d95e-0827",
+			"props": {
+				"autoHeight": 23.52941176470588,
+				"children": [],
+				"name": "lblTitle",
+				"parent": "cc74-94f9-37e9-5611",
+				"text": "  label1",
+				"usePageVariable": true
+			},
+			"type": "Label",
+			"userProps": {
+				"autoHeight": 23.52941176470588,
+				"text": "  label1",
+				"usePageVariable": true
+			}
+		},
+		{
+			"className": ".sf-flexLayout #pgIslemlerim-fakeLayout",
+			"id": "5ec6-e3a3-48a1-a34f",
+			"props": {
+				"children": [],
+				"name": "flFakeLayout",
+				"parent": "2606-f30e-f486-40dd"
+			},
+			"type": "FlexLayout",
+			"userProps": {}
+		},
+		{
+			"className": ".sf-flexLayout #pgIslemlerim-subMenu #pgSendInstantAwardForm-part2",
+			"id": "2d4a-6056-da53-b8c6",
+			"props": {
+				"children": [
+					"ed3f-2c15-b93e-8de8"
+				],
+				"name": "flSubMenu",
+				"parent": "2606-f30e-f486-40dd",
+				"usePageVariable": true
+			},
+			"type": "FlexLayout",
+			"userProps": {
+				"usePageVariable": true
+			}
+		},
+		{
+			"className": ".sf-scrollView #pgSeyahatTalebi-svMain",
+			"id": "ed3f-2c15-b93e-8de8",
+			"props": {
+				"children": [
+					"6cc5-ffea-e372-e5a0",
+					"8fc7-07e9-e431-3356",
+					"d612-3110-2c9c-f0ee",
+					"7fdf-32d2-c458-3330"
+				],
+				"name": "svMain",
+				"parent": "2d4a-6056-da53-b8c6",
+				"usePageVariable": true
+			},
+			"type": "ScrollView",
+			"userProps": {
+				"layout": {
+					"paddingTop": 15,
+					"paddingLeft": null,
+					"paddingRight": null
+				},
+				"left": 0,
+				"top": 0,
+				"usePageVariable": true
+			}
+		},
+		{
+			"className": ".sf-flexLayout",
+			"id": "6cc5-ffea-e372-e5a0",
+			"props": {
+				"children": [
+					"7e36-9149-a885-8648",
+					"2ed6-ca1d-3c84-d1e9"
+				],
+				"name": "flexLayout1",
+				"parent": "ed3f-2c15-b93e-8de8"
+			},
+			"type": "FlexLayout",
+			"userProps": {
+				"flexProps": {
+					"flexDirection": "ROW"
+				},
+				"height": 42,
+				"marginLeft": 15
+			}
+		},
+		{
+			"className": ".sf-flexLayout",
+			"id": "7e36-9149-a885-8648",
+			"props": {
+				"children": [
+					"af8a-d001-c6e2-7669",
+					"a662-0025-d3b7-167e"
+				],
+				"name": "flPart_1",
+				"parent": "6cc5-ffea-e372-e5a0"
+			},
+			"type": "FlexLayout",
+			"userProps": {
+				"flexProps": {
+					"flexGrow": 1
+				}
+			}
+		},
+		{
+			"className": ".sf-label .color_hint",
+			"id": "af8a-d001-c6e2-7669",
+			"props": {
+				"autoHeight": 17,
+				"children": [],
+				"name": "label1_1",
+				"parent": "7e36-9149-a885-8648",
+				"text": "GÖNDERİLME TARİHİ"
+			},
+			"type": "Label",
+			"userProps": {
+				"autoHeight": 17,
+				"height": 16,
+				"text": "GÖNDERİLME TARİHİ"
+			}
+		},
+		{
+			"className": ".sf-label .color_dark",
+			"id": "a662-0025-d3b7-167e",
+			"props": {
+				"autoHeight": 21,
+				"children": [],
+				"name": "lblDate",
+				"parent": "7e36-9149-a885-8648",
+				"text": "25.12.2018",
+				"usePageVariable": true
+			},
+			"type": "Label",
+			"userProps": {
+				"autoHeight": 21,
+				"font": {
+					"size": 17,
+					"bold": true,
+					"italic": false,
+					"family": "SFProText",
+					"style": "Semibold"
+				},
+				"height": 23,
+				"text": "25.12.2018",
+				"usePageVariable": true
+			}
+		},
+		{
+			"className": ".sf-flexLayout",
+			"id": "2ed6-ca1d-3c84-d1e9",
+			"props": {
+				"children": [
+					"7840-42aa-d324-5652",
+					"c6e6-2d28-a113-64dd"
+				],
+				"name": "flPart",
+				"parent": "6cc5-ffea-e372-e5a0"
+			},
+			"type": "FlexLayout",
+			"userProps": {
+				"flexProps": {
+					"flexGrow": 1
+				}
+			}
+		},
+		{
+			"className": ".sf-label .color_hint",
+			"id": "7840-42aa-d324-5652",
+			"props": {
+				"autoHeight": 17,
+				"children": [],
+				"name": "label1_1",
+				"parent": "2ed6-ca1d-3c84-d1e9",
+				"text": "GÖNDEREN"
+			},
+			"type": "Label",
+			"userProps": {
+				"autoHeight": 17,
+				"height": 16,
+				"text": "GÖNDEREN"
+			}
+		},
+		{
+			"className": ".sf-label .color_dark",
+			"id": "c6e6-2d28-a113-64dd",
+			"props": {
+				"autoHeight": 21,
+				"children": [],
+				"name": "lblName",
+				"parent": "2ed6-ca1d-3c84-d1e9",
+				"text": "Saner Ateş",
+				"usePageVariable": true
+			},
+			"type": "Label",
+			"userProps": {
+				"autoHeight": 21,
+				"font": {
+					"size": 17,
+					"bold": true,
+					"italic": false,
+					"family": "SFProText",
+					"style": "Semibold"
+				},
+				"height": 23,
+				"text": "Saner Ateş",
+				"usePageVariable": true
+			}
+		},
+		{
+			"className": ".sf-flexLayout",
+			"id": "8fc7-07e9-e431-3356",
+			"props": {
+				"children": [
+					"b7f0-9bfc-77bb-cc45",
+					"c825-38d1-f840-cbc0"
+				],
+				"name": "flPart",
+				"parent": "ed3f-2c15-b93e-8de8"
+			},
+			"type": "FlexLayout",
+			"userProps": {
+				"height": 70,
+				"left": 0,
+				"marginLeft": 15,
+				"marginTop": 21,
+				"top": 0
+			}
+		},
+		{
+			"className": ".sf-label .color_hint",
+			"id": "b7f0-9bfc-77bb-cc45",
+			"props": {
+				"autoHeight": 17,
+				"children": [],
+				"name": "label1_1",
+				"parent": "8fc7-07e9-e431-3356",
+				"text": "MESAJI"
+			},
+			"type": "Label",
+			"userProps": {
+				"autoHeight": 17,
+				"height": 16,
+				"text": "MESAJI"
+			}
+		},
+		{
+			"className": ".sf-label .color_dark",
+			"id": "c825-38d1-f840-cbc0",
+			"props": {
+				"autoHeight": 21,
+				"children": [],
+				"name": "lblMessage",
+				"parent": "8fc7-07e9-e431-3356",
+				"text": "2018’deki başarılı çalışmaların için teşekkürler.",
+				"usePageVariable": true
+			},
+			"type": "Label",
+			"userProps": {
+				"autoHeight": 21,
+				"font": {
+					"size": 17,
+					"bold": true,
+					"italic": false,
+					"family": "SFProText",
+					"style": "Semibold"
+				},
+				"height": 55,
+				"maxLines": 2,
+				"text": "2018’deki başarılı çalışmaların için teşekkürler.",
+				"usePageVariable": true
+			}
+		},
+		{
+			"className": ".sf-flexLayout",
+			"id": "d612-3110-2c9c-f0ee",
+			"props": {
+				"children": [
+					"9f55-20d3-34ea-c8fb",
+					"6c33-5247-bb3a-c5ff"
+				],
+				"name": "flPart_1",
+				"parent": "ed3f-2c15-b93e-8de8"
+			},
+			"type": "FlexLayout",
+			"userProps": {
+				"height": 120,
+				"left": 0,
+				"marginLeft": 15,
+				"marginTop": 21,
+				"top": 0
+			}
+		},
+		{
+			"className": ".sf-label .color_hint",
+			"id": "9f55-20d3-34ea-c8fb",
+			"props": {
+				"autoHeight": 17,
+				"children": [],
+				"name": "label1_1",
+				"parent": "d612-3110-2c9c-f0ee",
+				"text": "ÜRÜN ADI"
+			},
+			"type": "Label",
+			"userProps": {
+				"autoHeight": 17,
+				"height": 16,
+				"text": "ÜRÜN ADI"
+			}
+		},
+		{
+			"className": ".sf-label .color_dark",
+			"id": "6c33-5247-bb3a-c5ff",
+			"props": {
+				"autoHeight": 21,
+				"children": [],
+				"name": "lblDetail",
+				"parent": "d612-3110-2c9c-f0ee",
+				"text": "Etiam vel euismod augue. Praesent venenatis efficitur tortor ac blandit. Suspendisse rhoncus ex sit amet nisl gravida, non eleifend leo auctor. Nunc non imperdiet quam. ",
+				"usePageVariable": true
+			},
+			"type": "Label",
+			"userProps": {
+				"autoHeight": 21,
+				"font": {
+					"size": 15,
+					"bold": true,
+					"italic": false,
+					"family": "SFProText",
+					"style": "Semibold"
+				},
+				"height": 105,
+				"maxLines": 0,
+				"text": "Etiam vel euismod augue. Praesent venenatis efficitur tortor ac blandit. Suspendisse rhoncus ex sit amet nisl gravida, non eleifend leo auctor. Nunc non imperdiet quam. ",
+				"usePageVariable": true
+			}
+		},
+		{
+			"className": ".sf-flexLayout",
+			"id": "7fdf-32d2-c458-3330",
+			"props": {
+				"children": [
+					"63e9-9a59-5211-5d4c",
+					"bfc4-abc1-4551-32e3",
+					"99e1-60b1-70eb-a04b"
+				],
+				"name": "flexLayout2",
+				"parent": "ed3f-2c15-b93e-8de8"
+			},
+			"type": "FlexLayout",
+			"userProps": {
+				"flexProps": {
+					"flexGrow": 1
+				},
+				"height": 86
+			}
+		},
+		{
+			"className": ".sf-flexLayout .gradientBackground-awardItem",
+			"id": "63e9-9a59-5211-5d4c",
+			"props": {
+				"children": [
+					"87d8-2879-044a-1117",
+					"a547-b14f-f213-4fe5"
+				],
+				"name": "flexLayout2",
+				"parent": "7fdf-32d2-c458-3330"
+			},
+			"type": "FlexLayout",
+			"userProps": {
+				"bottom": 0,
+				"flexProps": {
+					"positionType": "ABSOLUTE",
+					"justifyContent": "SPACE_BETWEEN"
+				},
+				"height": 90,
+				"left": 0,
+				"right": 0
+			}
+		},
+		{
+			"className": ".sf-label .color_hint",
+			"id": "87d8-2879-044a-1117",
+			"props": {
+				"autoHeight": 21,
+				"children": [],
+				"name": "label1_1_1",
+				"parent": "63e9-9a59-5211-5d4c",
+				"text": "Hediye Kodunuz"
+			},
+			"type": "Label",
+			"userProps": {
+				"autoHeight": 21,
+				"font": {
+					"size": 17,
+					"bold": true,
+					"italic": false,
+					"family": "SFProText",
+					"style": "Semibold"
+				},
+				"height": 40,
+				"left": 0,
+				"text": "Hediye Kodunuz",
+				"textAlignment": "MIDCENTER",
+				"textColor": "rgba( 255, 255, 255, 0.7 )",
+				"top": 0
+			}
+		},
+		{
+			"className": ".sf-label .color_hint",
+			"id": "a547-b14f-f213-4fe5",
+			"props": {
+				"autoHeight": 26,
+				"children": [],
+				"name": "lblAwardCode",
+				"parent": "63e9-9a59-5211-5d4c",
+				"text": "FA030593TURK",
+				"usePageVariable": true
+			},
+			"type": "Label",
+			"userProps": {
+				"autoHeight": 26,
+				"font": {
+					"size": 22,
+					"bold": true,
+					"italic": false,
+					"family": "SFProText",
+					"style": "Semibold"
+				},
+				"height": 50,
+				"left": 0,
+				"text": "FA030593TURK",
+				"textAlignment": "MIDCENTER",
+				"textColor": "rgba( 255, 255, 255, 0.7 )",
+				"top": 0,
+				"usePageVariable": true
+			}
+		},
+		{
+			"className": ".sf-flexLayout",
+			"id": "bfc4-abc1-4551-32e3",
+			"props": {
+				"children": [],
+				"name": "flDecor_1",
+				"parent": "7fdf-32d2-c458-3330"
+			},
+			"type": "FlexLayout",
+			"userProps": {
+				"backgroundColor": "rgba( 255, 255, 255, 1 )",
+				"borderRadius": 41,
+				"bottom": 30,
+				"flexProps": {
+					"positionType": "ABSOLUTE"
+				},
+				"height": 30,
+				"left": -15,
+				"width": 30
+			}
+		},
+		{
+			"className": ".sf-flexLayout",
+			"id": "99e1-60b1-70eb-a04b",
+			"props": {
+				"children": [],
+				"name": "flDecor_1_1",
+				"parent": "7fdf-32d2-c458-3330"
+			},
+			"type": "FlexLayout",
+			"userProps": {
+				"backgroundColor": "rgba( 255, 255, 255, 1 )",
+				"borderRadius": 41,
+				"bottom": 30,
+				"flexProps": {
+					"positionType": "ABSOLUTE"
+				},
+				"height": 30,
+				"right": -15,
+				"width": 30
+			}
+		}
+	]
+}
