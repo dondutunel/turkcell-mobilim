@@ -1,0 +1,75 @@
+{
+	"components": [
+		{
+			"className": ".sf-listViewItem",
+			"id": "ce99-7343-071e-0b11",
+			"initialized": true,
+			"props": {
+				"children": [
+					"5510-00bb-2e6d-bebc",
+					"7894-7144-35ea-f7ec"
+				],
+				"name": "lviAwardCategoryItem",
+				"parent": "57f4-201f-4bfc-5fc6"
+			},
+			"source": {
+				"page": "__library__"
+			},
+			"type": "ListViewItem",
+			"userProps": {
+				"flexProps": {},
+				"height": 74,
+				"left": 17,
+				"top": 782,
+				"width": 375
+			}
+		},
+		{
+			"className": ".sf-flexLayout .flAwardCategoryItem",
+			"hiddenComponent": false,
+			"id": "5510-00bb-2e6d-bebc",
+			"initialized": true,
+			"props": {
+				"children": [],
+				"name": "flAwardCategoryItem",
+				"parent": "ce99-7343-071e-0b11",
+				"usePageVariable": true
+			},
+			"source": {
+				"page": "__library__",
+				"type": "flAwardCategoryItem",
+				"id": "d0b3-4a0b-a3ea-5ca9"
+			},
+			"type": "FlexLayout",
+			"userProps": {
+				"flex": {
+					"positionType": 0
+				},
+				"flexProps": {
+					"positionType": "RELATIVE"
+				},
+				"left": 0,
+				"top": 0,
+				"usePageVariable": true
+			}
+		},
+		{
+			"className": ".sf-flexLayout .flLine.horizontal",
+			"id": "7894-7144-35ea-f7ec",
+			"props": {
+				"children": [],
+				"name": "flLine",
+				"parent": "ce99-7343-071e-0b11",
+				"usePageVariable": true
+			},
+			"source": {
+				"page": "__library__"
+			},
+			"type": "FlexLayout",
+			"userProps": {
+				"marginLeft": 15,
+				"usePageVariable": true
+			}
+		}
+	]
+}

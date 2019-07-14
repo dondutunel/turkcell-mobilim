@@ -18,7 +18,8 @@
 					"image": "award_icon.png",
 					"height": 80,
 					"width": 120
-				}
+				},
+				"imageFillType": "ASPECTFILL"
 			},
 			"flexProps": {
 				"flexDirection": "ROW"
@@ -36,7 +37,8 @@
 				"flexGrow": 1,
 				"justifyContent": "CENTER"
 			},
-			"height": null
+			"height": null,
+			"marginLeft": 5
 		},
 		"&-total": {
 			"height": 25,
@@ -45,6 +47,12 @@
 				"style": "Bold"
 			},
 			"textColor": "rgba( 47, 161, 255, 1 )"
+		},
+		"&-list": {
+			"flexProps": {
+				"flexGrow": 1
+			},
+			"height": null
 		}
 	}
 }
