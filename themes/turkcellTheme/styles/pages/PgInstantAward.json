@@ -1,0 +1,13 @@
+{
+	"#pgInstantAward": {
+		"flexProps": {
+			"alignItems": "FLEX_START",
+			"justifyContent": "FLEX_START"
+		},
+		"&-item": {
+			"marginTop": 15,
+			"marginBottom": 15,
+			"height": 70
+		}
+	}
+}

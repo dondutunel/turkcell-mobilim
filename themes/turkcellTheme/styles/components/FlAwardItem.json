@@ -1,13 +1,13 @@
 {
-	".flUcusItem": {
-		"height": 400,
+	".flAwardItem": {
+		"height": 70,
 		"width": null,
 		"flexProps": {
-			"flexDirection": "COLUMN"
+			"flexDirection": "ROW"
 		},
 		"&-icon": {
-			"width": 70,
-			"height": 70,
+			"width": 50,
+			"height": 50,
 			"borderRadius": 5
 		},
 		"borderRadius": 5,
@@ -25,12 +25,18 @@
 				"flexDirection": "ROW"
 			},
 			"&-icon": {
-				"image": "plane_icon.png",
+				"image": "cup_icon.png",
 				"height": null,
 				"flexProps": {
 					"flexGrow": 1
 				}
 			}
-		}
+		},
+		"&-rightarrow": {
+			"height": 70,
+			"width": 20,
+			"image": "arrowright.png"
+		},
+		"marginBottom": null
 	}
 }

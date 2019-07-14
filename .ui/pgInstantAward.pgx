@@ -1,0 +1,140 @@
+{
+	"components": [
+		{
+			"className": ".page",
+			"id": "97c3-7262-4fcd-8982",
+			"initialized": true,
+			"props": {
+				"children": [
+					"c5bd-e50a-76a8-d20b",
+					"7dc2-301e-4ef8-9457",
+					"e94d-57a7-b965-3200",
+					"ec2d-57e9-4c19-c48d",
+					"bec2-2e06-4ae9-3a80"
+				],
+				"isRemovable": true,
+				"name": "pgInstantAward",
+				"orientation": "PORTRAIT",
+				"parent": null,
+				"safeAreaEnabled": true
+			},
+			"type": "Page",
+			"userProps": {
+				"orientation": "PORTRAIT",
+				"safeAreaEnabled": true
+			},
+			"version": "6.15.1"
+		},
+		{
+			"className": ".statusBar",
+			"id": "c5bd-e50a-76a8-d20b",
+			"props": {
+				"children": [],
+				"isRemovable": false,
+				"name": "statusBar",
+				"parent": "97c3-7262-4fcd-8982"
+			},
+			"type": "StatusBar",
+			"userProps": {
+				"style": "LIGHTCONTENT",
+				"visible": true
+			}
+		},
+		{
+			"className": ".headerBar",
+			"id": "7dc2-301e-4ef8-9457",
+			"props": {
+				"children": [],
+				"isRemovable": false,
+				"name": "headerBar",
+				"parent": "97c3-7262-4fcd-8982",
+				"title": "Anlık Ödül"
+			},
+			"type": "HeaderBar",
+			"userProps": {
+				"title": "Anlık Ödül",
+				"titleColor": "rgba( 255, 255, 255, 1 )",
+				"visible": true
+			}
+		},
+		{
+			"className": ".sf-flexLayout .flAwardItem",
+			"hiddenComponent": false,
+			"id": "e94d-57a7-b965-3200",
+			"initialized": false,
+			"props": {
+				"children": [],
+				"name": "flInstantAward",
+				"parent": "97c3-7262-4fcd-8982",
+				"usePageVariable": true
+			},
+			"source": {
+				"page": "__library__",
+				"type": "flAwardItem",
+				"id": "0e04-1b7d-7806-0598"
+			},
+			"type": "FlexLayout",
+			"userProps": {
+				"usePageVariable": true
+			}
+		},
+		{
+			"className": ".sf-flexLayout .flAwardItem",
+			"hiddenComponent": false,
+			"id": "ec2d-57e9-4c19-c48d",
+			"initialized": false,
+			"props": {
+				"children": [],
+				"name": "flMyInstantAward",
+				"parent": "97c3-7262-4fcd-8982",
+				"usePageVariable": true
+			},
+			"source": {
+				"page": "__library__",
+				"type": "flAwardItem",
+				"id": "0e04-1b7d-7806-0598"
+			},
+			"type": "FlexLayout",
+			"userProps": {
+				"flex": {
+					"positionType": 0
+				},
+				"flexProps": {
+					"positionType": "RELATIVE"
+				},
+				"left": 0,
+				"top": 0,
+				"usePageVariable": true
+			}
+		},
+		{
+			"className": ".sf-flexLayout .flAwardItem",
+			"hiddenComponent": false,
+			"id": "bec2-2e06-4ae9-3a80",
+			"initialized": false,
+			"props": {
+				"children": [],
+				"name": "flSentMyInstantAward",
+				"parent": "97c3-7262-4fcd-8982",
+				"usePageVariable": true
+			},
+			"source": {
+				"page": "__library__",
+				"type": "flAwardItem",
+				"id": "0e04-1b7d-7806-0598"
+			},
+			"type": "FlexLayout",
+			"userProps": {
+				"flex": {
+					"positionType": 0
+				},
+				"flexProps": {
+					"positionType": "RELATIVE"
+				},
+				"left": 0,
+				"top": 0,
+				"usePageVariable": true
+			}
+		}
+	]
+}

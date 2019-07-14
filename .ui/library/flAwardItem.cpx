@@ -1,0 +1,155 @@
+{
+	"components": [
+		{
+			"className": ".sf-flexLayout .flAwardItem",
+			"id": "0e04-1b7d-7806-0598",
+			"initialized": true,
+			"props": {
+				"children": [
+					"15c7-1d13-6c67-53c8",
+					"fcd0-5a86-4014-b776",
+					"d056-fb7d-99d1-2f19"
+				],
+				"name": "flAwardItem",
+				"parent": "57f4-201f-4bfc-5fc6"
+			},
+			"source": {
+				"page": "__library__"
+			},
+			"type": "FlexLayout",
+			"userProps": {
+				"flexProps": {},
+				"left": 20,
+				"top": 179
+			}
+		},
+		{
+			"className": ".sf-flexLayout .flUcusItem-icon .gradientBackground-awardItem",
+			"id": "15c7-1d13-6c67-53c8",
+			"props": {
+				"children": [
+					"5f95-0b6e-f6e5-df8d"
+				],
+				"name": "flexLayout1",
+				"parent": "0e04-1b7d-7806-0598"
+			},
+			"source": {
+				"page": "__library__"
+			},
+			"type": "FlexLayout",
+			"userProps": {}
+		},
+		{
+			"className": ".sf-imageView .flAwardItem-header-icon",
+			"id": "5f95-0b6e-f6e5-df8d",
+			"props": {
+				"autoHeight": 26,
+				"children": [],
+				"name": "imageView1",
+				"parent": "15c7-1d13-6c67-53c8"
+			},
+			"source": {
+				"page": "__library__"
+			},
+			"type": "ImageView",
+			"userProps": {
+				"autoHeight": 26
+			}
+		},
+		{
+			"className": ".sf-flexLayout .flexLayout-grow",
+			"id": "fcd0-5a86-4014-b776",
+			"props": {
+				"children": [
+					"a5d1-9449-c9f3-5465",
+					"72c0-6e3e-d782-ef06"
+				],
+				"name": "flexLayout2",
+				"parent": "0e04-1b7d-7806-0598"
+			},
+			"source": {
+				"page": "__library__"
+			},
+			"type": "FlexLayout",
+			"userProps": {
+				"marginLeft": 10,
+				"paddingBottom": 4,
+				"paddingTop": 4
+			}
+		},
+		{
+			"className": ".sf-label .flexLayout-grow",
+			"id": "a5d1-9449-c9f3-5465",
+			"props": {
+				"autoHeight": 21,
+				"children": [],
+				"name": "lblTitle",
+				"parent": "fcd0-5a86-4014-b776",
+				"text": "Anlik Odul",
+				"usePageVariable": true
+			},
+			"source": {
+				"page": "__library__"
+			},
+			"type": "Label",
+			"userProps": {
+				"autoHeight": 21,
+				"font": {
+					"size": 17,
+					"bold": true,
+					"italic": false,
+					"family": "SFProText",
+					"style": "Semibold"
+				},
+				"height": null,
+				"text": "Anlik Odul",
+				"textColor": "rgba( 45, 60, 73, 1 )",
+				"usePageVariable": true
+			}
+		},
+		{
+			"className": ".sf-label .flexLayout-grow",
+			"id": "72c0-6e3e-d782-ef06",
+			"props": {
+				"autoHeight": 19,
+				"children": [],
+				"name": "lblCount",
+				"parent": "fcd0-5a86-4014-b776",
+				"text": "35",
+				"usePageVariable": true
+			},
+			"source": {
+				"page": "__library__"
+			},
+			"type": "Label",
+			"userProps": {
+				"autoHeight": 19,
+				"font": {
+					"size": 15,
+					"bold": true,
+					"italic": false,
+					"family": "SFProText",
+					"style": "Semibold"
+				},
+				"height": null,
+				"text": "35",
+				"textColor": "rgba( 160, 160, 165, 1 )",
+				"usePageVariable": true
+			}
+		},
+		{
+			"className": ".sf-imageView .flAwardItem-rightarrow",
+			"id": "d056-fb7d-99d1-2f19",
+			"props": {
+				"children": [],
+				"name": "imageView1",
+				"parent": "0e04-1b7d-7806-0598"
+			},
+			"source": {
+				"page": "__library__"
+			},
+			"type": "ImageView",
+			"userProps": {}
+		}
+	]
+}

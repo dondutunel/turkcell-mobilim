@@ -1,3 +1,20 @@
 {
-	
+	".flAwardListitem": {
+		"flexProps": {
+			"flexDirection": "ROW"
+		},
+		"left": 32,
+		"top": 275,
+		"height": 50
+	},
+	".flAwardItem": {
+		"&-header": {
+			"&-icon": {
+				"flexProps": {
+					"flexGrow": 1
+				},
+				"image": "cup_icon.png"
+			}
+		}
+	}
 }

@@ -2,13 +2,12 @@
 	"components": [
 		{
 			"className": ".sf-page",
-			"id": "c212-d545-d119-61a5",
+			"id": "f651-8546-c686-615c",
 			"initialized": true,
 			"props": {
 				"children": [
-					"267b-0225-4601-b262",
-					"6526-e041-ac1a-f7a5",
-					"0069-3ce3-a8e8-32a3"
+					"c789-3396-a02e-0dc7",
+					"2f33-9d85-e170-24ae"
 				],
 				"name": "pgFlightInfo",
 				"orientation": "PORTRAIT",
@@ -20,69 +19,29 @@
 		},
 		{
 			"className": ".sf-statusBar",
-			"id": "267b-0225-4601-b262",
+			"id": "c789-3396-a02e-0dc7",
 			"props": {
 				"children": [],
 				"isRemovable": false,
 				"name": "statusBar",
-				"parent": "c212-d545-d119-61a5"
+				"parent": "f651-8546-c686-615c"
 			},
 			"type": "StatusBar",
 			"userProps": {}
 		},
 		{
 			"className": ".sf-headerBar",
-			"id": "6526-e041-ac1a-f7a5",
+			"id": "2f33-9d85-e170-24ae",
 			"props": {
 				"children": [],
 				"isRemovable": false,
 				"name": "headerBar",
-				"parent": "c212-d545-d119-61a5",
-				"title": "Uçuş Bilgileri"
+				"parent": "f651-8546-c686-615c",
+				"title": "pgFlightInfo"
 			},
 			"type": "HeaderBar",
 			"userProps": {
-				"title": "Uçuş Bilgileri"
-			}
-		},
-		{
-			"className": ".sf-scrollView .flexLayout-grow",
-			"id": "0069-3ce3-a8e8-32a3",
-			"props": {
-				"autoSizeEnabled": true,
-				"children": [
-					"3573-4bb4-5c8a-5395"
-				],
-				"name": "svMain",
-				"parent": "c212-d545-d119-61a5",
-				"usePageVariable": true
-			},
-			"type": "ScrollView",
-			"userProps": {
-				"autoSizeEnabled": true,
-				"marginBottom": null,
-				"marginTop": null,
-				"usePageVariable": true
-			}
-		},
-		{
-			"className": ".sf-button #pgSeyahatTalebi-btn",
-			"id": "3573-4bb4-5c8a-5395",
-			"props": {
-				"autoHeight": 24.390243902439025,
-				"children": [],
-				"name": "btnContinue",
-				"parent": "0069-3ce3-a8e8-32a3",
-				"text": "Devam",
-				"usePageVariable": true
-			},
-			"type": "Button",
-			"userProps": {
-				"autoHeight": 24.390243902439025,
-				"left": 0,
-				"text": "Devam",
-				"top": 0,
-				"usePageVariable": true
+				"title": "pgFlightInfo"
 			}
 		}
 	]

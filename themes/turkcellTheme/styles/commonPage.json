@@ -1,9 +1,16 @@
 {
-    ".gradientBackground": {
-        "backgroundColor": {
-            "startColor": "rgba(56,191,242,1)",
-            "endColor": "rgba(41,152,227,1)",
-            "direction": "VERTICAL"
-        }
-    }
+	".gradientBackground": {
+		"backgroundColor": {
+			"startColor": "rgba(56,191,242,1)",
+			"endColor": "rgba(41,152,227,1)",
+			"direction": "VERTICAL"
+		},
+		"&-awardItem": {
+			"backgroundColor": {
+				"startColor": "rgba(245,211,84,1)",
+				"endColor": "rgba(254,165,29,1)",
+				"direction": "VERTICAL"
+			}
+		}
+	}
 }
