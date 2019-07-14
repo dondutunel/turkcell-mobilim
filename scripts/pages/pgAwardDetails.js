@@ -53,18 +53,20 @@ function onLoad(superOnLoad) {
 function initListView(page, lv) {
 	const originalRowCreate = lv.onRowCreate;
 	lv.refreshEnabled = false;
-	lv.onRowCreate = () => {
+	let counter = 0;
+	lv.onRowCreate = (index) => {
 		const item = originalRowCreate.call(lv);
-		touch.addPressEvent(item.content, () => {});
+		touch.addPressEvent(item.content,  selectedEvent.bind(null, counter++));
 		return item;
 	};
 	lv.onRowBind = (item, index) => {
 		const data = page.itemsData[index];
 		item.setData(data);
 	};
-	lv.onRowSelected = (item, index) => {
+	const selectedEvent = (index) => {
+		console.info("onAawardSelexcted: ", page.itemsData[index]);
 		page.router.push("/btb/tab3/sendAward/pgSendInstantAwardForm", page.itemsData[index]);
-	}
+	};
 	lv.itemCount = page.itemsData.length;
 	lv.refreshData();
 }

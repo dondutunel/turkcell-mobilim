@@ -47,11 +47,13 @@
 				"children": [],
 				"isRemovable": false,
 				"name": "headerBar",
-				"parent": "0114-9193-aa21-1799"
+				"parent": "0114-9193-aa21-1799",
+				"title": "Anlık Ödül Gönder"
 			},
 			"type": "HeaderBar",
 			"userProps": {
-				"visible": false
+				"title": "Anlık Ödül Gönder",
+				"visible": true
 			}
 		},
 		{
