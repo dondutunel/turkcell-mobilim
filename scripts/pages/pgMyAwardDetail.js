@@ -3,7 +3,11 @@
 */
 const extend = require('js-base/core/extend');
 const PgMyAwardDetailDesign = require('ui/ui_pgMyAwardDetail');
-
+const TEMP_DATA = {
+	message: "2018’deki başarılı çalışmaların için\n teşekkürler.",
+	detail: "Etiam vel euismod augue. Praesent venenatis efficitur tortor ac blandit. Suspendisse rhoncus ex sit amet nisl gravida, non eleifend leo auctor. Nunc non imperdiet quam. ",
+	userName: "Saner Ateş"
+}
 const PgMyAwardDetail = extend(PgMyAwardDetailDesign)(
 	// Constructor
 	function(_super, props, match, routeData) {
@@ -25,7 +29,6 @@ const PgMyAwardDetail = extend(PgMyAwardDetailDesign)(
  */
 function onShow(superOnShow) {
 	superOnShow();
-	this.svMain.layout.minHeight = 400;
 }
 
 /**
@@ -35,11 +38,12 @@ function onShow(superOnShow) {
  */
 function onLoad(superOnLoad) {
 	superOnLoad();
+	this.svMain.layout.minHeight = 420;
 	this.lblTitle.text = this.routeData.title;
 	this.lblDate.text = this.routeData.date;
-	this.lblName.text = this.routeData.userName;
-	this.lblMessage.text = this.routeData.message;
-	this.lblDetail.text = this.routeData.detail;
+	this.lblName.text = this.routeData.userName || TEMP_DATA.userName;
+	this.lblMessage.text = this.routeData.message || TEMP_DATA.message;
+	this.lblDetail.text = this.routeData.detail || TEMP_DATA.detail;
 }
 
 module.exports = PgMyAwardDetail;

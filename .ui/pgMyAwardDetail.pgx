@@ -350,7 +350,7 @@
 			},
 			"type": "FlexLayout",
 			"userProps": {
-				"height": 70,
+				"height": 75,
 				"left": 0,
 				"marginLeft": 15,
 				"marginTop": 21,
@@ -375,7 +375,7 @@
 			}
 		},
 		{
-			"className": ".sf-label .color_dark",
+			"className": ".sf-label .color_dark #pgMyAwardDetail-message",
 			"id": "c825-38d1-f840-cbc0",
 			"props": {
 				"autoHeight": 21,
@@ -388,15 +388,6 @@
 			"type": "Label",
 			"userProps": {
 				"autoHeight": 21,
-				"font": {
-					"size": 17,
-					"bold": true,
-					"italic": false,
-					"family": "SFProText",
-					"style": "Semibold"
-				},
-				"height": 55,
-				"maxLines": 2,
 				"text": "2018’deki başarılı çalışmaların için teşekkürler.",
 				"usePageVariable": true
 			}
@@ -439,7 +430,7 @@
 			}
 		},
 		{
-			"className": ".sf-label .color_dark",
+			"className": ".sf-label .color_dark #pgMyAwardDetail-detail",
 			"id": "6c33-5247-bb3a-c5ff",
 			"props": {
 				"autoHeight": 21,
@@ -452,15 +443,6 @@
 			"type": "Label",
 			"userProps": {
 				"autoHeight": 21,
-				"font": {
-					"size": 15,
-					"bold": true,
-					"italic": false,
-					"family": "SFProText",
-					"style": "Semibold"
-				},
-				"height": 105,
-				"maxLines": 0,
 				"text": "Etiam vel euismod augue. Praesent venenatis efficitur tortor ac blandit. Suspendisse rhoncus ex sit amet nisl gravida, non eleifend leo auctor. Nunc non imperdiet quam. ",
 				"usePageVariable": true
 			}
@@ -498,7 +480,7 @@
 			},
 			"type": "FlexLayout",
 			"userProps": {
-				"bottom": 0,
+				"bottom": 15,
 				"flexProps": {
 					"positionType": "ABSOLUTE",
 					"justifyContent": "SPACE_BETWEEN"
@@ -578,7 +560,7 @@
 			"userProps": {
 				"backgroundColor": "rgba( 255, 255, 255, 1 )",
 				"borderRadius": 15,
-				"bottom": 28,
+				"bottom": 43,
 				"flexProps": {
 					"positionType": "ABSOLUTE"
 				},
@@ -599,7 +581,7 @@
 			"userProps": {
 				"backgroundColor": "rgba( 255, 255, 255, 1 )",
 				"borderRadius": 15,
-				"bottom": 28,
+				"bottom": 43,
 				"flexProps": {
 					"positionType": "ABSOLUTE"
 				},

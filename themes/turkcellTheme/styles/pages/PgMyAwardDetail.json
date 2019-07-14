@@ -12,6 +12,29 @@
 			"height": 110,
 			"width": 115,
 			"borderRadius": null
+		},
+		"&-message": {
+			"height": 55,
+			"maxLines": 2,
+			"font": {
+				"size": 17,
+				"bold": true,
+				"italic": false,
+				"family": "SFProText",
+				"style": "Semibold"
+			}
+		},
+		"&-detail": {
+			"height": 105,
+			"maxLines": 0,
+			"ellipsizeMode": "END",
+			"font": {
+				"size": 15,
+				"bold": true,
+				"italic": false,
+				"family": "SFProText",
+				"style": "Semibold"
+			}
 		}
 	}
 }
