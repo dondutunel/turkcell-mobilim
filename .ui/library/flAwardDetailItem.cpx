@@ -2,7 +2,7 @@
 	"components": [
 		{
 			"className": ".sf-flexLayout .flAwardDetailItem",
-			"hiddenComponent": true,
+			"hiddenComponent": false,
 			"id": "c0ad-70c6-f631-d0c7",
 			"initialized": true,
 			"props": {
@@ -20,8 +20,8 @@
 			"type": "FlexLayout",
 			"userProps": {
 				"flexProps": {},
-				"left": 22,
-				"top": 677
+				"left": 20,
+				"top": 566
 			}
 		},
 		{

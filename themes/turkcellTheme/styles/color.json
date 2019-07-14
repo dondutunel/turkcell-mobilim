@@ -1,11 +1,13 @@
 {
-
 	".color": {
 		"&_dark": {
 			"textColor": "rgb(45,60,73)"
 		},
 		"&_hint": {
 			"textColor": "rgb(160,160,165)"
+		},
+		"&_darkSkyBlue": {
+			"textColor": "rgba( 47, 171, 235, 1 )"
 		}
 	}
 }

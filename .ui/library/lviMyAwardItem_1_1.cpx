@@ -1,0 +1,26 @@
+{
+	"components": [
+		{
+			"className": ".sf-listViewItem",
+			"hiddenComponent": true,
+			"id": "c0c7-f350-e9bd-e15d",
+			"initialized": true,
+			"props": {
+				"children": [],
+				"name": "lviMyAwardItem_1_1",
+				"parent": "57f4-201f-4bfc-5fc6"
+			},
+			"source": {
+				"page": "__library__"
+			},
+			"type": "ListViewItem",
+			"userProps": {
+				"flexProps": {},
+				"height": 95,
+				"left": 45,
+				"top": 405,
+				"width": 382
+			}
+		}
+	]
+}

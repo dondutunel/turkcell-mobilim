@@ -123,7 +123,7 @@ module.exports = {
 			{
 				title: "Gönderdiğim Anlık Ödüller",
 				count: "93",
-				routePath: null
+				routePath: "/btb/tab3/myAwards/pgMySentAwards"
 			}
 		]
 	}

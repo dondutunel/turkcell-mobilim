@@ -2,6 +2,7 @@
 	"components": [
 		{
 			"className": ".sf-flexLayout #pgSendInstantAward-header .flMyAwardItem",
+			"hiddenComponent": true,
 			"id": "73ee-968e-c9c8-b2d0",
 			"initialized": true,
 			"props": {

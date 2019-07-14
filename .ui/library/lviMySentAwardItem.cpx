@@ -2,14 +2,14 @@
 	"components": [
 		{
 			"className": ".sf-listViewItem",
-			"hiddenComponent": true,
-			"id": "ec94-169d-71e3-0cbf",
+			"hiddenComponent": false,
+			"id": "d133-1500-7d3a-5464",
 			"initialized": true,
 			"props": {
 				"children": [
-					"d15d-c486-9520-19bd"
+					"4fbf-5635-f6c9-b5c4"
 				],
-				"name": "lviAwardDetailItem",
+				"name": "lviMySentAwardItem",
 				"parent": "57f4-201f-4bfc-5fc6"
 			},
 			"source": {
@@ -18,27 +18,27 @@
 			"type": "ListViewItem",
 			"userProps": {
 				"flexProps": {},
-				"height": 86,
-				"left": 27,
-				"top": 792,
-				"width": 371
+				"height": 163,
+				"left": 11,
+				"top": 366,
+				"width": 382
 			}
 		},
 		{
-			"className": ".sf-flexLayout .flAwardDetailItem",
+			"className": ".sf-flexLayout #pgSendInstantAward-header .flMyAwardItem .flMyAwardItem-sent",
 			"hiddenComponent": false,
-			"id": "d15d-c486-9520-19bd",
+			"id": "4fbf-5635-f6c9-b5c4",
 			"initialized": true,
 			"props": {
 				"children": [],
-				"name": "flAwardDetailItem",
-				"parent": "ec94-169d-71e3-0cbf",
+				"name": "flMySentAwardItem",
+				"parent": "d133-1500-7d3a-5464",
 				"usePageVariable": true
 			},
 			"source": {
 				"page": "__library__",
-				"type": "flAwardDetailItem",
-				"id": "c0ad-70c6-f631-d0c7"
+				"type": "flMySentAwardItem",
+				"id": "1f7e-1d0e-95c6-59e4"
 			},
 			"type": "FlexLayout",
 			"userProps": {

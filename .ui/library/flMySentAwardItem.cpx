@@ -1,0 +1,220 @@
+{
+	"components": [
+		{
+			"className": ".sf-flexLayout #pgSendInstantAward-header .flMyAwardItem .flMyAwardItem-sent",
+			"hiddenComponent": false,
+			"id": "1f7e-1d0e-95c6-59e4",
+			"initialized": true,
+			"props": {
+				"children": [
+					"e502-e37f-5e77-188b",
+					"5a38-ea8d-a3fc-281c"
+				],
+				"name": "flMySentAwardItem",
+				"parent": "57f4-201f-4bfc-5fc6"
+			},
+			"source": {
+				"page": "__library__"
+			},
+			"type": "FlexLayout",
+			"userProps": {
+				"flexProps": {},
+				"left": 17.520000457763672,
+				"top": 164.53192138671875
+			}
+		},
+		{
+			"className": ".sf-flexLayout .flAwardDetailItem-icon .gradientBackground-awardItem",
+			"id": "e502-e37f-5e77-188b",
+			"props": {
+				"children": [
+					"cc65-2679-0381-0ce9"
+				],
+				"name": "flexLayout1_1",
+				"parent": "1f7e-1d0e-95c6-59e4"
+			},
+			"source": {
+				"page": "__library__"
+			},
+			"type": "FlexLayout",
+			"userProps": {}
+		},
+		{
+			"className": ".sf-imageView .flAwardDetailItem-header-icon",
+			"id": "cc65-2679-0381-0ce9",
+			"props": {
+				"autoHeight": 26,
+				"autoWidth": 26,
+				"children": [],
+				"name": "imgIcon",
+				"parent": "e502-e37f-5e77-188b",
+				"usePageVariable": true
+			},
+			"source": {
+				"page": "__library__"
+			},
+			"type": "ImageView",
+			"userProps": {
+				"autoHeight": 26,
+				"autoWidth": 26,
+				"usePageVariable": true
+			}
+		},
+		{
+			"className": ".sf-flexLayout #pgSendInstantAward-content .flMyAwardItem-content",
+			"id": "5a38-ea8d-a3fc-281c",
+			"props": {
+				"children": [
+					"cde7-f626-0f10-7359",
+					"18e5-085c-a700-69c9",
+					"18cc-9490-c0d0-92d9",
+					"2703-e946-b79f-7a15",
+					"5690-ea1d-492b-9e59"
+				],
+				"name": "flexLayout1",
+				"parent": "1f7e-1d0e-95c6-59e4"
+			},
+			"type": "FlexLayout",
+			"userProps": {
+				"flexProps": {
+					"justifyContent": "FLEX_START"
+				},
+				"paddingTop": 10
+			}
+		},
+		{
+			"className": ".sf-label #pgSendInstantAward-total .flMyAwardItem-date .color_hint",
+			"id": "cde7-f626-0f10-7359",
+			"props": {
+				"autoHeight": 17,
+				"children": [],
+				"name": "lblDate",
+				"parent": "5a38-ea8d-a3fc-281c",
+				"text": "25.12.2018",
+				"usePageVariable": true
+			},
+			"type": "Label",
+			"userProps": {
+				"autoHeight": 17,
+				"bottom": 10,
+				"flexProps": {
+					"positionType": "ABSOLUTE"
+				},
+				"font": {
+					"size": 13,
+					"bold": false,
+					"italic": false,
+					"family": "SFProText",
+					"style": "Regular"
+				},
+				"height": 22,
+				"left": 0,
+				"marginTop": 8,
+				"right": 14,
+				"text": "25.12.2018",
+				"textAlignment": "MIDRIGHT",
+				"usePageVariable": true
+			}
+		},
+		{
+			"className": ".sf-label #pgSendInstantAward-title .flMyAwardItem-title .color_dark",
+			"id": "18e5-085c-a700-69c9",
+			"props": {
+				"autoHeight": 21,
+				"children": [],
+				"name": "lblTitle",
+				"parent": "5a38-ea8d-a3fc-281c",
+				"text": "Muhammed Esad Ünal",
+				"usePageVariable": true
+			},
+			"type": "Label",
+			"userProps": {
+				"autoHeight": 21,
+				"height": 22,
+				"text": "Muhammed Esad Ünal",
+				"usePageVariable": true
+			}
+		},
+		{
+			"className": ".sf-label #pgSendInstantAward-total .flMyAwardItem-date .color_hint",
+			"id": "18cc-9490-c0d0-92d9",
+			"props": {
+				"autoHeight": 17,
+				"children": [],
+				"name": "lblAward",
+				"parent": "5a38-ea8d-a3fc-281c",
+				"text": "Mavi 100 TL Digital Hediye Çeki",
+				"usePageVariable": true
+			},
+			"type": "Label",
+			"userProps": {
+				"autoHeight": 17,
+				"font": {
+					"size": 15,
+					"bold": false,
+					"italic": false,
+					"family": "SFProText",
+					"style": "Regular"
+				},
+				"height": 22,
+				"marginTop": null,
+				"text": "Mavi 100 TL Digital Hediye Çeki",
+				"usePageVariable": true
+			}
+		},
+		{
+			"className": ".sf-label #pgSendInstantAward-total .flMyAwardItem-date .color_hint .flMyAwardItem-message",
+			"id": "2703-e946-b79f-7a15",
+			"props": {
+				"autoHeight": 17,
+				"children": [],
+				"name": "lblMessage",
+				"parent": "5a38-ea8d-a3fc-281c",
+				"text": "2018’deki başarılı çalışmaların için teşekkürler.",
+				"usePageVariable": true
+			},
+			"type": "Label",
+			"userProps": {
+				"autoHeight": 17,
+				"font": {
+					"size": 15,
+					"bold": false,
+					"italic": false,
+					"family": "SFProText",
+					"style": "Regular"
+				},
+				"height": 44,
+				"marginTop": 8,
+				"text": "2018’deki başarılı çalışmaların için teşekkürler.",
+				"usePageVariable": true
+			}
+		},
+		{
+			"className": ".sf-label #pgSendInstantAward-total .flMyAwardItem-date .color_darkSkyBlue",
+			"id": "5690-ea1d-492b-9e59",
+			"props": {
+				"autoHeight": 17,
+				"children": [],
+				"name": "lblPrice",
+				"parent": "5a38-ea8d-a3fc-281c",
+				"text": "Hediye Miktarı: 50 TL",
+				"usePageVariable": true
+			},
+			"type": "Label",
+			"userProps": {
+				"autoHeight": 17,
+				"font": {
+					"size": 15,
+					"bold": false,
+					"italic": false,
+					"family": "SFProText",
+					"style": "Regular"
+				},
+				"height": 22,
+				"marginTop": 12,
+				"text": "Hediye Miktarı: 50 TL",
+				"usePageVariable": true
+			}
+		}
+	]
+}
