@@ -1,0 +1,56 @@
+{
+	"components": [
+		{
+			"className": ".sf-listViewItem",
+			"id": "b079-eea3-e88e-e109",
+			"initialized": true,
+			"props": {
+				"children": [
+					"3c79-0165-938f-df8e"
+				],
+				"name": "lviMyAwardItem",
+				"parent": "57f4-201f-4bfc-5fc6"
+			},
+			"source": {
+				"page": "__library__"
+			},
+			"type": "ListViewItem",
+			"userProps": {
+				"flexProps": {},
+				"height": 95,
+				"left": 25,
+				"top": 385,
+				"width": 382
+			}
+		},
+		{
+			"className": ".sf-flexLayout #pgSendInstantAward-header .flMyAwardItem",
+			"hiddenComponent": false,
+			"id": "3c79-0165-938f-df8e",
+			"initialized": true,
+			"props": {
+				"children": [],
+				"name": "flMyAwardItem",
+				"parent": "b079-eea3-e88e-e109",
+				"usePageVariable": true
+			},
+			"source": {
+				"page": "__library__",
+				"type": "flMyAwardItem",
+				"id": "73ee-968e-c9c8-b2d0"
+			},
+			"type": "FlexLayout",
+			"userProps": {
+				"flex": {
+					"positionType": 0
+				},
+				"flexProps": {
+					"positionType": "RELATIVE"
+				},
+				"left": 0,
+				"top": 0,
+				"usePageVariable": true
+			}
+		}
+	]
+}

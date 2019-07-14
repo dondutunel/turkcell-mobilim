@@ -1,0 +1,103 @@
+{
+	"components": [
+		{
+			"className": ".sf-flexLayout #pgSendInstantAward-header .flMyAwardItem",
+			"id": "73ee-968e-c9c8-b2d0",
+			"initialized": true,
+			"props": {
+				"children": [
+					"7228-0d2c-7970-d1af",
+					"9766-ca76-9ff9-7707",
+					"47d6-3d47-e622-567d"
+				],
+				"name": "flMyAwardItem",
+				"parent": "57f4-201f-4bfc-5fc6"
+			},
+			"source": {
+				"page": "__library__"
+			},
+			"type": "FlexLayout",
+			"userProps": {
+				"flexProps": {},
+				"left": 7.5199999707810425,
+				"top": 225.53191489361703
+			}
+		},
+		{
+			"className": ".sf-imageView #pgSendInstantAward-header-icon .flMyAwardItem-groundIcon",
+			"hiddenComponent": true,
+			"id": "7228-0d2c-7970-d1af",
+			"props": {
+				"children": [],
+				"name": "imgLogo",
+				"parent": "73ee-968e-c9c8-b2d0"
+			},
+			"type": "ImageView",
+			"userProps": {}
+		},
+		{
+			"className": ".sf-imageView #pgSendInstantAward-header-icon_sub .flMyAwardItem-Icon",
+			"id": "9766-ca76-9ff9-7707",
+			"props": {
+				"autoWidth": 40,
+				"children": [],
+				"name": "imgIcon",
+				"parent": "73ee-968e-c9c8-b2d0"
+			},
+			"type": "ImageView",
+			"userProps": {
+				"autoWidth": 40
+			}
+		},
+		{
+			"className": ".sf-flexLayout #pgSendInstantAward-content",
+			"id": "47d6-3d47-e622-567d",
+			"props": {
+				"children": [
+					"05bc-adbb-1816-1688",
+					"17da-2d66-f22e-efb0"
+				],
+				"name": "flexLayout1",
+				"parent": "73ee-968e-c9c8-b2d0"
+			},
+			"type": "FlexLayout",
+			"userProps": {}
+		},
+		{
+			"className": ".sf-label #pgSendInstantAward-title .flMyAwardItem-title .color_dark",
+			"id": "05bc-adbb-1816-1688",
+			"props": {
+				"autoHeight": 21,
+				"children": [],
+				"name": "lblTitle",
+				"parent": "47d6-3d47-e622-567d",
+				"text": "turkcell.com.tr 100 TL Hediye Çeki",
+				"usePageVariable": true
+			},
+			"type": "Label",
+			"userProps": {
+				"autoHeight": 21,
+				"text": "turkcell.com.tr 100 TL Hediye Çeki",
+				"usePageVariable": true
+			}
+		},
+		{
+			"className": ".sf-label #pgSendInstantAward-total .flMyAwardItem-date .color_hint",
+			"id": "17da-2d66-f22e-efb0",
+			"props": {
+				"autoHeight": 17,
+				"children": [],
+				"name": "lblDate",
+				"parent": "47d6-3d47-e622-567d",
+				"text": "25.12.2018",
+				"usePageVariable": true
+			},
+			"type": "Label",
+			"userProps": {
+				"autoHeight": 17,
+				"text": "25.12.2018",
+				"usePageVariable": true
+			}
+		}
+	]
+}

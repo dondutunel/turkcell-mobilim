@@ -1,7 +1,7 @@
 const extend = require('js-base/core/extend');
-const LvListItemDesign = require('library/LvListItem');
+const ListViewItem1Design = require('library/ListViewItem1');
 
-const LvListItem = extend(LvListItemDesign)(
+const ListViewItem1 = extend(ListViewItem1Design)(
 	// Constructor
 	function(_super, props = {}, pageName) {
 		// Initalizes super class for this scope
@@ -10,4 +10,4 @@ const LvListItem = extend(LvListItemDesign)(
 	}
 );
 
-module.exports = LvListItem;
+module.exports = ListViewItem1;
