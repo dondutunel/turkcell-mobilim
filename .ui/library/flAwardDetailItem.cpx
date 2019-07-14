@@ -1,0 +1,119 @@
+{
+	"components": [
+		{
+			"className": ".sf-flexLayout .flAwardDetailItem",
+			"id": "c0ad-70c6-f631-d0c7",
+			"initialized": true,
+			"props": {
+				"children": [
+					"4a51-64ff-88eb-80e0",
+					"f18a-b422-ebdc-0d90",
+					"ec42-7d29-8032-90a5"
+				],
+				"name": "flAwardDetailItem",
+				"parent": "57f4-201f-4bfc-5fc6"
+			},
+			"source": {
+				"page": "__library__"
+			},
+			"type": "FlexLayout",
+			"userProps": {
+				"flexProps": {},
+				"left": 22,
+				"top": 677
+			}
+		},
+		{
+			"className": ".sf-flexLayout .flAwardDetailItem-icon .gradientBackground-awardItem",
+			"id": "4a51-64ff-88eb-80e0",
+			"props": {
+				"children": [
+					"f3f1-cba2-4dd1-ca05"
+				],
+				"name": "flexLayout1",
+				"parent": "c0ad-70c6-f631-d0c7"
+			},
+			"source": {
+				"page": "__library__"
+			},
+			"type": "FlexLayout",
+			"userProps": {}
+		},
+		{
+			"className": ".sf-imageView .flAwardDetailItem-header-icon",
+			"id": "f3f1-cba2-4dd1-ca05",
+			"props": {
+				"autoHeight": 26,
+				"autoWidth": 26,
+				"children": [],
+				"name": "imgIcon",
+				"parent": "4a51-64ff-88eb-80e0",
+				"usePageVariable": true
+			},
+			"source": {
+				"page": "__library__"
+			},
+			"type": "ImageView",
+			"userProps": {
+				"autoHeight": 26,
+				"autoWidth": 26,
+				"usePageVariable": true
+			}
+		},
+		{
+			"className": ".sf-flexLayout .flexLayout-grow .flAwardItem-flTexts",
+			"id": "f18a-b422-ebdc-0d90",
+			"props": {
+				"children": [
+					"cfe9-85ef-05a9-ef01"
+				],
+				"name": "flexLayout2",
+				"parent": "c0ad-70c6-f631-d0c7"
+			},
+			"source": {
+				"page": "__library__"
+			},
+			"type": "FlexLayout",
+			"userProps": {
+				"marginLeft": 10,
+				"paddingBottom": 4,
+				"paddingTop": 4
+			}
+		},
+		{
+			"className": ".sf-label .flAwardDetailItem-title",
+			"id": "cfe9-85ef-05a9-ef01",
+			"props": {
+				"autoHeight": 21,
+				"children": [],
+				"name": "lblTitle",
+				"parent": "f18a-b422-ebdc-0d90",
+				"text": "Koton 100 TL Dijital Hediye Ceki",
+				"usePageVariable": true
+			},
+			"source": {
+				"page": "__library__"
+			},
+			"type": "Label",
+			"userProps": {
+				"autoHeight": 21,
+				"text": "Koton 100 TL Dijital Hediye Ceki",
+				"usePageVariable": true
+			}
+		},
+		{
+			"className": ".sf-imageView .flAwardCategoryItem-rightarrow",
+			"id": "ec42-7d29-8032-90a5",
+			"props": {
+				"children": [],
+				"name": "imageView1",
+				"parent": "c0ad-70c6-f631-d0c7"
+			},
+			"source": {
+				"page": "__library__"
+			},
+			"type": "ImageView",
+			"userProps": {}
+		}
+	]
+}

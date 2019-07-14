@@ -74,7 +74,7 @@ module.exports = {
 		mainItems: [{
 				icon: "awardcup_icon.png",
 				text: "ANLIK ODUL",
-				routePath: "/btb/tab3/pgInstantAward"
+				routePath: "/btb/tab3/sendAward/pgInstantAward"
 			},
 			{
 				icon: "flex_icon.png",
@@ -113,7 +113,7 @@ module.exports = {
 		"items": [{
 				title: "Anlık Ödül Gönder",
 				count: "175",
-				routePath: "/btb/tab3/pgSendInstantAward"
+				routePath: "/btb/tab3/sendAward/pgSendInstantAward"
 			},
 			{
 				title: "Anlık Ödüllerim",

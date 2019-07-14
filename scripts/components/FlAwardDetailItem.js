@@ -1,7 +1,7 @@
 const extend = require('js-base/core/extend');
-const FlAwardCategoryItemDesign = require('library/FlAwardCategoryItem');
+const FlAwardDetailItemDesign = require('library/FlAwardDetailItem');
 
-const FlAwardCategoryItem = extend(FlAwardCategoryItemDesign)(
+const FlAwardDetailItem = extend(FlAwardDetailItemDesign)(
 	// Constructor
 	function(_super, props = {}, pageName) {
 		// Initalizes super class for this scope
@@ -22,4 +22,5 @@ const FlAwardCategoryItem = extend(FlAwardCategoryItemDesign)(
 	}
 );
 
-module.exports = FlAwardCategoryItem;
+
+module.exports = FlAwardDetailItem;

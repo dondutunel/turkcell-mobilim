@@ -2,6 +2,7 @@
 	"components": [
 		{
 			"className": ".sf-listViewItem",
+			"hiddenComponent": true,
 			"id": "ce99-7343-071e-0b11",
 			"initialized": true,
 			"props": {

@@ -126,12 +126,16 @@ const bottomTabBarRouter = BottomTabBarRouter.of({
                     build: buildExtender({ pageName: "pgIslemlerim", singleton: true, pageProps: { data: pagesData.pgHr } })
                 }),
                 Route.of({
-                    path: "/btb/tab3/pgInstantAward",
+                    path: "/btb/tab3/sendAward/pgInstantAward",
                     build: buildExtender({ pageName: "pgInstantAward", singleton: false, pageProps: { data: pagesData.pgInstantAward } })
                 }),
                 Route.of({
-                    path: "/btb/tab3/pgSendInstantAward",
+                    path: "/btb/tab3/sendAward/pgSendInstantAward",
                     build: buildExtender({ pageName: "pgSendInstantAward", singleton: false, pageProps: { data: pagesData.pgSendInstantAward } })
+                }),
+                Route.of({
+                    path: "/btb/tab3/sendAward/pgAwardDetails",
+                    build: buildExtender({ pageName: "pgAwardDetails", singleton: false, pageProps: { data: pagesData.pgAwardDetails } })
                 })
             ]
         }),

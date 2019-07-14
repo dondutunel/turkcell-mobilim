@@ -1,0 +1,57 @@
+{
+	"components": [
+		{
+			"className": ".sf-listViewItem",
+			"hiddenComponent": false,
+			"id": "ec94-169d-71e3-0cbf",
+			"initialized": true,
+			"props": {
+				"children": [
+					"d15d-c486-9520-19bd"
+				],
+				"name": "lviAwardDetailItem",
+				"parent": "57f4-201f-4bfc-5fc6"
+			},
+			"source": {
+				"page": "__library__"
+			},
+			"type": "ListViewItem",
+			"userProps": {
+				"flexProps": {},
+				"height": 86,
+				"left": 27,
+				"top": 792,
+				"width": 371
+			}
+		},
+		{
+			"className": ".sf-flexLayout .flAwardDetailItem",
+			"hiddenComponent": false,
+			"id": "d15d-c486-9520-19bd",
+			"initialized": true,
+			"props": {
+				"children": [],
+				"name": "flAwardDetailItem",
+				"parent": "ec94-169d-71e3-0cbf",
+				"usePageVariable": true
+			},
+			"source": {
+				"page": "__library__",
+				"type": "flAwardDetailItem",
+				"id": "c0ad-70c6-f631-d0c7"
+			},
+			"type": "FlexLayout",
+			"userProps": {
+				"flex": {
+					"positionType": 0
+				},
+				"flexProps": {
+					"positionType": "RELATIVE"
+				},
+				"left": 0,
+				"top": 0,
+				"usePageVariable": true
+			}
+		}
+	]
+}

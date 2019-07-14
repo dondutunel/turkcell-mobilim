@@ -2,17 +2,17 @@
 	"components": [
 		{
 			"className": ".page #pgSendInstantAward",
-			"id": "8368-7ffa-7f89-5f1e",
+			"id": "98dd-58d4-ac72-a1c1",
 			"initialized": true,
 			"props": {
 				"children": [
-					"d842-4b69-27e0-9654",
-					"e4be-287c-cdfe-4ac1",
-					"ea3f-a03c-8c7d-2741",
-					"5caa-263c-afc3-c778"
+					"74f0-57b6-0fc8-b747",
+					"66d5-ea90-713f-87e7",
+					"c33c-2969-9383-84a2",
+					"0ac9-54aa-0f4d-556f"
 				],
 				"isRemovable": true,
-				"name": "pgSendInstantAward",
+				"name": "pgAwardDetails",
 				"orientation": "PORTRAIT",
 				"parent": null,
 				"safeAreaEnabled": true
@@ -26,12 +26,12 @@
 		},
 		{
 			"className": ".statusBar",
-			"id": "d842-4b69-27e0-9654",
+			"id": "74f0-57b6-0fc8-b747",
 			"props": {
 				"children": [],
 				"isRemovable": false,
 				"name": "statusBar",
-				"parent": "8368-7ffa-7f89-5f1e"
+				"parent": "98dd-58d4-ac72-a1c1"
 			},
 			"type": "StatusBar",
 			"userProps": {
@@ -41,55 +41,55 @@
 		},
 		{
 			"className": ".headerBar",
-			"id": "e4be-287c-cdfe-4ac1",
+			"id": "66d5-ea90-713f-87e7",
 			"props": {
 				"children": [],
 				"isRemovable": false,
 				"name": "headerBar",
-				"parent": "8368-7ffa-7f89-5f1e",
-				"title": "Anlık Ödül Gönder"
+				"parent": "98dd-58d4-ac72-a1c1",
+				"title": "Giyim"
 			},
 			"type": "HeaderBar",
 			"userProps": {
-				"title": "Anlık Ödül Gönder",
+				"title": "Giyim",
 				"titleColor": "rgba( 255, 255, 255, 1 )",
 				"visible": true
 			}
 		},
 		{
 			"className": ".sf-flexLayout #pgSendInstantAward-header",
-			"id": "ea3f-a03c-8c7d-2741",
+			"id": "c33c-2969-9383-84a2",
 			"props": {
 				"children": [
-					"193d-3d2a-244e-f5ed",
-					"781c-6715-3da4-7a21",
-					"997f-fd3c-f409-ec9f"
+					"b7e4-7ff5-31ef-3a13",
+					"cab1-f2db-993c-4876",
+					"72a6-650b-6f8c-d3db"
 				],
 				"name": "flHeader",
-				"parent": "8368-7ffa-7f89-5f1e"
+				"parent": "98dd-58d4-ac72-a1c1"
 			},
 			"type": "FlexLayout",
 			"userProps": {}
 		},
 		{
 			"className": ".sf-imageView #pgSendInstantAward-header-icon",
-			"id": "193d-3d2a-244e-f5ed",
+			"id": "b7e4-7ff5-31ef-3a13",
 			"props": {
 				"children": [],
 				"name": "imgLogo",
-				"parent": "ea3f-a03c-8c7d-2741"
+				"parent": "c33c-2969-9383-84a2"
 			},
 			"type": "ImageView",
 			"userProps": {}
 		},
 		{
 			"className": ".sf-imageView #pgSendInstantAward-header-icon_sub",
-			"id": "781c-6715-3da4-7a21",
+			"id": "cab1-f2db-993c-4876",
 			"props": {
 				"autoWidth": 40,
 				"children": [],
 				"name": "imgIcon",
-				"parent": "ea3f-a03c-8c7d-2741"
+				"parent": "c33c-2969-9383-84a2"
 			},
 			"type": "ImageView",
 			"userProps": {
@@ -98,26 +98,26 @@
 		},
 		{
 			"className": ".sf-flexLayout #pgSendInstantAward-content",
-			"id": "997f-fd3c-f409-ec9f",
+			"id": "72a6-650b-6f8c-d3db",
 			"props": {
 				"children": [
-					"3f4c-42c7-5590-87b4",
-					"184b-dc74-6532-f2f1"
+					"e964-229e-b897-4da3",
+					"1177-d76d-863e-0dee"
 				],
 				"name": "flexLayout1",
-				"parent": "ea3f-a03c-8c7d-2741"
+				"parent": "c33c-2969-9383-84a2"
 			},
 			"type": "FlexLayout",
 			"userProps": {}
 		},
 		{
 			"className": ".sf-label #pgSendInstantAward-title",
-			"id": "3f4c-42c7-5590-87b4",
+			"id": "e964-229e-b897-4da3",
 			"props": {
 				"autoHeight": 17,
 				"children": [],
 				"name": "lblTitle",
-				"parent": "997f-fd3c-f409-ec9f",
+				"parent": "72a6-650b-6f8c-d3db",
 				"text": "ÖDÜL BÜTÇENİZ",
 				"usePageVariable": true
 			},
@@ -132,12 +132,12 @@
 		},
 		{
 			"className": ".sf-label #pgSendInstantAward-total",
-			"id": "184b-dc74-6532-f2f1",
+			"id": "1177-d76d-863e-0dee",
 			"props": {
 				"autoHeight": 24,
 				"children": [],
 				"name": "lblTotal",
-				"parent": "997f-fd3c-f409-ec9f",
+				"parent": "72a6-650b-6f8c-d3db",
 				"text": "1999 TL",
 				"usePageVariable": true
 			},
@@ -152,38 +152,38 @@
 		},
 		{
 			"className": ".sf-listView #pgSendInstantAward-list",
-			"id": "5caa-263c-afc3-c778",
+			"id": "0ac9-54aa-0f4d-556f",
 			"props": {
 				"children": [
-					"0352-f408-608a-a995"
+					"2287-01b7-dbd2-e46f"
 				],
 				"itemCount": 7,
 				"name": "lvMain",
-				"parent": "8368-7ffa-7f89-5f1e",
-				"rowHeight": 71,
+				"parent": "98dd-58d4-ac72-a1c1",
+				"rowHeight": 85,
 				"usePageVariable": true
 			},
 			"type": "ListView",
 			"userProps": {
 				"itemCount": 7,
-				"rowHeight": 71,
+				"rowHeight": 85,
 				"usePageVariable": true
 			}
 		},
 		{
 			"className": ".sf-listViewItem",
 			"hiddenComponent": false,
-			"id": "0352-f408-608a-a995",
+			"id": "2287-01b7-dbd2-e46f",
 			"initialized": true,
 			"props": {
 				"children": [],
-				"name": "lviAwardCategoryItem",
-				"parent": "5caa-263c-afc3-c778"
+				"name": "lviAwardDetailItem",
+				"parent": "0ac9-54aa-0f4d-556f"
 			},
 			"source": {
 				"page": "__library__",
-				"type": "lviAwardCategoryItem",
-				"id": "ce99-7343-071e-0b11"
+				"type": "lviAwardDetailItem",
+				"id": "ec94-169d-71e3-0cbf"
 			},
 			"type": "ListViewItem",
 			"userProps": {
@@ -193,10 +193,9 @@
 				"flexProps": {
 					"positionType": "RELATIVE"
 				},
-				"height": 74,
+				"height": 85,
 				"left": 0,
-				"top": 0,
-				"width": 375
+				"top": 0
 			}
 		}
 	]

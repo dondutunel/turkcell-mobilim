@@ -2,6 +2,7 @@
 	"components": [
 		{
 			"className": ".sf-flexLayout .flAwardCategoryItem",
+			"hiddenComponent": true,
 			"id": "d0b3-4a0b-a3ea-5ca9",
 			"initialized": true,
 			"props": {

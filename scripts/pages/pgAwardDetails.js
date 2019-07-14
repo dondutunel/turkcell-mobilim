@@ -2,34 +2,22 @@
 		You can modify its contents.
 */
 const extend = require('js-base/core/extend');
-const PgSendInstantAwardDesign = require('ui/ui_pgSendInstantAward');
+const PgAwardDetailsDesign = require('ui/ui_pgAwardDetails');
 const touch = require("sf-extension-utils/lib/touch");
 
 const TEMP_ITEMS = [{
-	title: "Giyim",
-	count: "25",
-	icon: "giyim_icon.png"
+	title: "Altınyıldız Classics 100 TL Dijital Hediye Çeki",
+	icon: "https://primemall.s3-eu-west-1.amazonaws.com/images/brand_logo/NkVFl6Wbe_brand_logo_-main-.jpg?1522327384181"
 }, {
-	title: "Seyahat",
-	count: "35",
-	icon: "bag_icon.png"
+	title: "KOTON 50 TL Digital Hediye Çeki",
+	icon: "https://primemall.s3-eu-west-1.amazonaws.com/images/brand_logo/4kgQNcdGl_brand_logo_-main-.jpg?1447011583157"
 }, {
-	title: "Tekonolji",
-	count: "40",
-	icon: "cam_icon.png"
-}, {
-	title: "Spor",
-	count: "15",
-	icon: "spor_icon.png"
-}, {
-	title: "Gida",
-	count: "60",
-	icon: "burger_icon.png"
-}]
-
-const PgSendInstantAward = extend(PgSendInstantAwardDesign)(
+	title: "Mavi 50 TL Digital Hediye Çeki",
+	icon: "https://sky-static.mavi.com/sys-master/maviTrImages/hec/h5f/8844403081246/mavi-logo.svg"
+}];
+const PgAwardDetails = extend(PgAwardDetailsDesign)(
 	// Constructor
-	function(_super) {
+	function(_super, props, match, routeData) {
 		// Initalizes super class for this page scope
 		_super(this);
 		// Overrides super.onShow method
@@ -37,6 +25,7 @@ const PgSendInstantAward = extend(PgSendInstantAwardDesign)(
 		// Overrides super.onLoad method
 		this.onLoad = onLoad.bind(this, this.onLoad.bind(this));
 		this.itemsData = TEMP_ITEMS;
+		this.routeData = routeData;
 	}
 );
 
@@ -58,25 +47,23 @@ function onShow(superOnShow) {
 function onLoad(superOnLoad) {
 	superOnLoad();
 	initListView(this, this.lvMain);
+	this.headerBar.title = this.routeData.title;
 }
-
 
 function initListView(page, lv) {
 	const originalRowCreate = lv.onRowCreate;
 	lv.refreshEnabled = false;
 	lv.onRowCreate = () => {
 		const item = originalRowCreate.call(lv);
-		touch.addPressEvent(item, () => {});
+		touch.addPressEvent(item.content, () => {});
 		return item;
 	};
 	lv.onRowBind = (item, index) => {
 		const data = page.itemsData[index];
 		item.setData(data);
 	};
-	lv.onRowSelected = (item, index) => {
-		page.router.push("/btb/tab3/sendAward/pgAwardDetails", page.itemsData[index]);
-	};
 	lv.itemCount = page.itemsData.length;
 	lv.refreshData();
 }
-module.exports = PgSendInstantAward;
+
+module.exports = PgAwardDetails;
