@@ -1,13 +1,14 @@
 {
 	"components": [
 		{
-			"className": ".page",
+			"className": ".page #pgSendInstantAward",
 			"id": "8368-7ffa-7f89-5f1e",
 			"initialized": true,
 			"props": {
 				"children": [
 					"d842-4b69-27e0-9654",
-					"e4be-287c-cdfe-4ac1"
+					"e4be-287c-cdfe-4ac1",
+					"ea3f-a03c-8c7d-2741"
 				],
 				"isRemovable": true,
 				"name": "pgSendInstantAward",
@@ -17,12 +18,7 @@
 			},
 			"type": "Page",
 			"userProps": {
-				"flexProps": {
-					"justifyContent": "CENTER",
-					"alignItems": "STRETCH"
-				},
 				"orientation": "PORTRAIT",
-				"paddingBottom": 20,
 				"safeAreaEnabled": true
 			},
 			"version": "6.15.1"
@@ -57,6 +53,97 @@
 				"title": "Şirketim",
 				"titleColor": "rgba( 255, 255, 255, 1 )",
 				"visible": true
+			}
+		},
+		{
+			"className": ".sf-flexLayout #pgSendInstantAward-header",
+			"id": "ea3f-a03c-8c7d-2741",
+			"props": {
+				"children": [
+					"193d-3d2a-244e-f5ed",
+					"781c-6715-3da4-7a21",
+					"997f-fd3c-f409-ec9f"
+				],
+				"name": "flHeader",
+				"parent": "8368-7ffa-7f89-5f1e"
+			},
+			"type": "FlexLayout",
+			"userProps": {}
+		},
+		{
+			"className": ".sf-imageView #pgSendInstantAward-header-icon",
+			"id": "193d-3d2a-244e-f5ed",
+			"props": {
+				"children": [],
+				"name": "imgLogo",
+				"parent": "ea3f-a03c-8c7d-2741"
+			},
+			"type": "ImageView",
+			"userProps": {}
+		},
+		{
+			"className": ".sf-imageView #pgSendInstantAward-header-icon_sub",
+			"id": "781c-6715-3da4-7a21",
+			"props": {
+				"children": [],
+				"name": "imgIcon",
+				"parent": "ea3f-a03c-8c7d-2741"
+			},
+			"type": "ImageView",
+			"userProps": {}
+		},
+		{
+			"className": ".sf-flexLayout #pgSendInstantAward-content",
+			"id": "997f-fd3c-f409-ec9f",
+			"props": {
+				"children": [
+					"3f4c-42c7-5590-87b4",
+					"184b-dc74-6532-f2f1"
+				],
+				"name": "flexLayout1",
+				"parent": "ea3f-a03c-8c7d-2741"
+			},
+			"type": "FlexLayout",
+			"userProps": {}
+		},
+		{
+			"className": ".sf-label #pgSendInstantAward-title",
+			"id": "3f4c-42c7-5590-87b4",
+			"props": {
+				"autoHeight": 17,
+				"children": [],
+				"name": "lblTitle",
+				"parent": "997f-fd3c-f409-ec9f",
+				"text": "ÖDÜL BÜTÇENİZ",
+				"usePageVariable": true
+			},
+			"type": "Label",
+			"userProps": {
+				"autoHeight": 17,
+				"left": 0,
+				"text": "ÖDÜL BÜTÇENİZ",
+				"top": 0,
+				"usePageVariable": true
+			}
+		},
+		{
+			"className": ".sf-label #pgSendInstantAward-total",
+			"id": "184b-dc74-6532-f2f1",
+			"props": {
+				"autoHeight": 24,
+				"children": [],
+				"name": "lblTotal",
+				"parent": "997f-fd3c-f409-ec9f",
+				"text": "1999 TL",
+				"usePageVariable": true
+			},
+			"type": "Label",
+			"userProps": {
+				"autoHeight": 24,
+				"left": 0,
+				"text": "1999 TL",
+				"top": 0,
+				"usePageVariable": true
 			}
 		}
 	]

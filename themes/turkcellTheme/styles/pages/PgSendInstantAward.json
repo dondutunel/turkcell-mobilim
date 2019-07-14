@@ -1,0 +1,50 @@
+{
+	"#pgSendInstantAward": {
+		"flexProps": {
+			"alignItems": "STRETCH"
+		},
+		"&-header": {
+			"height": 80,
+			"backgroundColor": "rgba( 249, 250, 252, 1 )",
+			"&-icon": {
+				"height": 80,
+				"width": 120,
+				"image": "logo.png",
+				"tintColor": "rgba(42,156,228,0.3)",
+				"&_sub": {
+					"flexProps": {
+						"positionType": "ABSOLUTE"
+					},
+					"image": "award_icon.png",
+					"height": 80,
+					"width": 120
+				}
+			},
+			"flexProps": {
+				"flexDirection": "ROW"
+			}
+		},
+		"&-title": {
+			"font": {
+				"size": 13
+			},
+			"textColor": "rgba( 160, 160, 165, 1 )",
+			"height": 15
+		},
+		"&-content": {
+			"flexProps": {
+				"flexGrow": 1,
+				"justifyContent": "CENTER"
+			},
+			"height": null
+		},
+		"&-total": {
+			"height": 25,
+			"font": {
+				"size": 20,
+				"style": "Bold"
+			},
+			"textColor": "rgba( 47, 161, 255, 1 )"
+		}
+	}
+}

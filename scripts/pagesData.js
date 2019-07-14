@@ -72,7 +72,7 @@ module.exports = {
 	"pgHr": {
 		title: "Insan Kaynaklari",
 		mainItems: [{
-				icon: "award_icon.png",
+				icon: "awardcup_icon.png",
 				text: "ANLIK ODUL",
 				routePath: "/btb/tab3/pgInstantAward"
 			},
@@ -113,7 +113,7 @@ module.exports = {
 		"items": [{
 				title: "Anlık Ödül Gönder",
 				count: "175",
-				routePath: null
+				routePath: "/btb/tab3/pgSendInstantAward"
 			},
 			{
 				title: "Anlık Ödüllerim",
