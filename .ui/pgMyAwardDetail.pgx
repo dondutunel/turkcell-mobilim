@@ -291,7 +291,8 @@
 			"userProps": {
 				"flexProps": {
 					"flexGrow": 1
-				}
+				},
+				"marginLeft": 15
 			}
 		},
 		{

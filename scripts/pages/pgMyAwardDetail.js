@@ -6,7 +6,8 @@ const PgMyAwardDetailDesign = require('ui/ui_pgMyAwardDetail');
 const TEMP_DATA = {
 	message: "2018’deki başarılı çalışmaların için\n teşekkürler.",
 	detail: "Etiam vel euismod augue. Praesent venenatis efficitur tortor ac blandit. Suspendisse rhoncus ex sit amet nisl gravida, non eleifend leo auctor. Nunc non imperdiet quam. ",
-	userName: "Saner Ateş"
+	userName: "Saner Ateş",
+	awardCode: "FA030593TURK"
 }
 const PgMyAwardDetail = extend(PgMyAwardDetailDesign)(
 	// Constructor
@@ -44,6 +45,7 @@ function onLoad(superOnLoad) {
 	this.lblName.text = this.routeData.userName || TEMP_DATA.userName;
 	this.lblMessage.text = this.routeData.message || TEMP_DATA.message;
 	this.lblDetail.text = this.routeData.detail || TEMP_DATA.detail;
+	this.lblAwardCode.text = this.routeData.awardCode || TEMP_DATA.awardCode;
 }
 
 module.exports = PgMyAwardDetail;

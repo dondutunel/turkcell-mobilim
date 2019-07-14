@@ -61,7 +61,7 @@ function onLoad(superOnLoad) {
 		};
 	}
 	else {
-		this.layout.removeChild(this.flSwitchButton);
+		this.flSwitchButton.getParent().removeChild(this.flSwitchButton);
 	}
 	createSubMenuItems(this, 2, 3, ITEM_MARGIN * 2, ITEM_RATIO);
 	setSubMenuItemsData(this, this._data.subMenuItems[this.flSwitchButton.currentIndex + ``]);
@@ -93,7 +93,7 @@ function createMainItems(page, itemCount, itemMargin, itemRatio, itemsData) {
 		});
 		item.applyLayout();
 		touch.addPressEvent(item, () => {
-			console.info("MAinITem: ", itemsData[i] );
+			console.info("MAinITem: ", itemsData[i]);
 			itemsData[i].routePath && page.router.push(itemsData[i].routePath);
 		});
 	}
