@@ -1,5 +1,6 @@
 const extend = require('js-base/core/extend');
 const LvPickerListDesign = require('library/LvPickerList');
+const touch = require("sf-extension-utils/lib/touch");
 
 const HIDE_CLASS_NAME = ".lvPickerList-hide";
 const LvPickerList = extend(LvPickerListDesign)(
@@ -11,6 +12,12 @@ const LvPickerList = extend(LvPickerListDesign)(
 		this._data = [];
 		this.refreshEnabled = false;
 		this.itemCount = 0;
+		const originalRowCreate = this.onRowCreate;
+		this.onRowCreate = () => {
+			const item = originalRowCreate.call(this);
+			touch.addPressEvent(item, () => {});
+			return item;
+		};
 		this.onRowBind = (item, index) => {
 			this._data[index] && (item.lblText.text = this._data[index]);
 		};

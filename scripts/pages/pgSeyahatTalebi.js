@@ -3,13 +3,12 @@ const KeyboardType = require("sf-core/ui/keyboardtype");
 const System = require("sf-core/device/system");
 const { getCombinedStyle } = require("sf-extension-utils/lib/getCombinedStyle");
 const propagateTouchEvents = require("lib/propagateTouchEvents");
-const Picker = require("sf-core/ui/picker");
-const DatePicker = require('sf-core/ui/datepicker');
 const extend = require('js-base/core/extend');
 const PgSeyahatTalebiDesign = require('ui/ui_pgSeyahatTalebi');
 const { wait } = require("lib/dialog");
 const { getTripOptions, getAutocompleteCity, getAgentList } = require("../services/seyahatService");
 const debounce = require("../utils/debounce");
+const { showDatePicker, showListview, showPicker } = require("../lib/showHelperUiItems");
 const populateMaterialTextbox = require("../utils/populateMaterialTextbox");
 const HIDE_MT_CLASS_NAME = ".materialTextBox-wrapper.hide";
 const MATERIAL_OPTIONS = [{
@@ -44,6 +43,7 @@ const MATERIAL_OPTIONS = [{
         icon: "date_icon.png"
     }
 ];
+const MAX_LAYOUT_HEIGHT = 757;
 const MAX_DESC_LENGTH = 150;
 const materialColor = getCombinedStyle(".materialTextBox");
 
@@ -87,8 +87,11 @@ function onLoad(superOnLoad) {
     superOnLoad();
     const page = this;
     //this.svMain.layout.minHeight = Screen.height;
+    this.lvPickerList.context = this.svMain.layout;
     initMaterials(this);
     this.btnContinue.onPress = () => {
+        this.routerData.from = this.mtFrom.materialTextBox.text;
+        this.routerData.to = this.mtTo.materialTextBox.text;
         if (this.routerData.isFlightInfo) {
             page.router.push("/btb/tab2/pgFlightInfo", this.routerData);
         }
@@ -110,9 +113,11 @@ function onLoad(superOnLoad) {
         showHideMaterialTextBox(this.mtBirthDate, isChecked);
         showHideMaterialTextBox(this.mtID, isChecked);
         if (System.OS !== "iOS") {
+            isChecked && (this.svMain.layout.height = MAX_LAYOUT_HEIGHT);
             this.svMain.layout.applyLayout();
         }
         this.layout.applyLayout();
+
     };
     const waitDialog = wait();
     Promise.all([getTripOptions(), getAgentList()]).then(res => {
@@ -227,39 +232,7 @@ function showHideMaterialTextBox(mt, show) {
     mt.applyLayout();
 }
 
-function showPicker(mt, itemMapFn, nextMt) {
-    const page = this;
-    const picker = new Picker({
-        items: page.itemsData[mt].map(itemMapFn)
-    });
-    picker.show(({ index }) => {
-        page[mt].materialTextBox.text = itemMapFn(page.itemsData[mt][index]);
-        page[mt].materialTextBox.onEditEnds && page[mt].materialTextBox.onEditEnds();
 
-    }, () => {});
-}
-
-function showDatePicker(mt) {
-    const page = this;
-    const myDatePicker = new DatePicker();
-    myDatePicker.onDateSelected = (date) => {
-        console.info("date: ", date);
-        page[mt].materialTextBox.text = `${date.getDate()}.${date.getMonth()}.${date.getFullYear()}`;
-        page[mt].materialTextBox.onEditEnds && page[mt].materialTextBox.onEditEnds();
-    };
-    myDatePicker.show();
-}
-
-function showListview(page, view, listServiceFn, text, dataMapperFn, cb) {
-    const location = view.getScreenLocation();
-    listServiceFn(text).then(res => {
-        console.warn("show listview: ", text);
-        res.length && page.lvPickerList.setOptions(location,
-            res.map(dataMapperFn),
-            (index) => cb(res[index]));
-        page.svMain.layout.applyLayout();
-    });
-}
 
 function updateContinueButtonState(page) {
     page.btnContinue.enabled = (page.routerData.isAccommodationInfo || page.routerData.isFlightInfo);

@@ -4,6 +4,8 @@ const HeaderBarItem = require("sf-core/ui/headerbaritem");
 const propagateTouchEvents = require("lib/propagateTouchEvents");
 const extend = require('js-base/core/extend');
 const PgKonaklamaDesign = require('ui/ui_pgKonaklama');
+const { getHotels } = require("../services/seyahatService");
+const { wait } = require("lib/dialog");
 
 const PgKonaklama = extend(PgKonaklamaDesign)(
 	// Constructor
@@ -14,6 +16,8 @@ const PgKonaklama = extend(PgKonaklamaDesign)(
 		this.onShow = onShow.bind(this, this.onShow.bind(this));
 		// Overrides super.onLoad method
 		this.onLoad = onLoad.bind(this, this.onLoad.bind(this));
+		this.itemsData = {}
+
 	}
 );
 /**
@@ -36,6 +40,8 @@ function onLoad(superOnLoad) {
 	superOnLoad();
 	let itemIndex = 0;
 	const page = this;
+	const waitDialog = wait();
+	this.lvPickerList.context = this.layout;
 	const addAccomodationButton = new HeaderBarItem({
 		image: Image.createFromFile("images://plus.png"),
 		onPress: () => {
@@ -44,6 +50,8 @@ function onLoad(superOnLoad) {
 			page.svMain.layout.addChild(konaklamaItem, `konaklamaItem${itemIndex++}`);
 			page.svMain.layout.addChild(page.btnContinue);
 			konaklamaItem.init();
+			konaklamaItem.itemsData = page.itemsData;
+			konaklamaItem.lvPickerList = page.lvPickerList;
 			konaklamaItem.onDelete = () => {
 				page.svMain.layout.removeChild(konaklamaItem);
 				konaklamaItem.onChange();
@@ -57,6 +65,10 @@ function onLoad(superOnLoad) {
 	});
 	page.headerBar.setItems([addAccomodationButton]);
 	propagateTouchEvents(page.svMain);
+
+	Promise.all([getHotels()]).then(res => {
+		page.itemsData["mtHotel"] = res;
+	}).finally(() => waitDialog.hide());
 }
 
 module.exports = PgKonaklama;

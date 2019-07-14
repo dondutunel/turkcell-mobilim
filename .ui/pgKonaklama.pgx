@@ -8,7 +8,8 @@
 				"children": [
 					"e758-8a30-af8a-f426",
 					"9571-8530-43d9-17e4",
-					"1551-ab4f-8577-9615"
+					"1551-ab4f-8577-9615",
+					"0819-7e4c-f6a0-58e0"
 				],
 				"name": "pgKonaklama",
 				"orientation": "PORTRAIT",
@@ -81,6 +82,33 @@
 				"autoHeight": 24.390243902439025,
 				"left": 0,
 				"text": "Devam",
+				"top": 0,
+				"usePageVariable": true
+			}
+		},
+		{
+			"className": ".sf-listView .lvPickerList .lvPickerList-hide",
+			"hiddenComponent": false,
+			"id": "0819-7e4c-f6a0-58e0",
+			"initialized": true,
+			"props": {
+				"children": [],
+				"itemCount": 4,
+				"name": "lvPickerList",
+				"parent": "38ef-6b2c-8ddf-479f",
+				"rowHeight": 54,
+				"usePageVariable": true
+			},
+			"source": {
+				"page": "__library__",
+				"type": "lvPickerList",
+				"id": "2997-44bb-e4fa-089d"
+			},
+			"type": "ListView",
+			"userProps": {
+				"itemCount": 4,
+				"left": 0,
+				"rowHeight": 54,
 				"top": 0,
 				"usePageVariable": true
 			}

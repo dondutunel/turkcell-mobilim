@@ -1,6 +1,8 @@
 const extend = require('js-base/core/extend');
 const FlKonaklamaItemDesign = require('library/FlKonaklamaItem');
 const populateMaterialTextbox = require("../utils/populateMaterialTextbox");
+const addActionToMateriaTextboxs = require("../lib/addActionToMateriaTextboxs");
+const { getAutocompleteCity } = require("../services/seyahatService");
 
 const options = {
     "mtRegion": {
@@ -9,16 +11,21 @@ const options = {
     "mtWhenDate": {
         hint: "Tarih",
         touchEnabled: false,
-        enableDropDown: true
+        datePicker: true
     },
     "mtWhenTime": {
         hint: "Saat"
     },
     "mtHotel": {
-        hint: "Otel"
+        hint: "Otel",
+        picker: true,
+        mapperFn: data => data.OtelName
     },
     "mtCity": {
-        hint: "İlçe"
+        hint: "İlçe",
+        searchPicker: true,
+        listServiceFn: getAutocompleteCity,
+        mapperFn: data => data.City
     },
     "mtNeed": {
         hint: "İhtiyaç",
@@ -37,7 +44,8 @@ const MATERIAL_OPTIONS = [{
 
     }, {
         name: "mtWhenDate",
-        icon: "date_icon.png"
+        icon: "date_icon.png",
+        datePicker: true
     },
     {
         name: "mtNeed",
@@ -60,6 +68,7 @@ const FlKonaklamaItem = extend(FlKonaklamaItemDesign)(
             Object.keys(options).forEach(componentName => {
                 this[componentName].options = options[componentName];
             });
+            addActionToMateriaTextboxs(this, options);
             populateMaterialTextbox(this, MATERIAL_OPTIONS);
         };
         // Init delete button

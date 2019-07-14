@@ -4,6 +4,8 @@ const HeaderBarItem = require("sf-core/ui/headerbaritem");
 const propagateTouchEvents = require("lib/propagateTouchEvents");
 const extend = require('js-base/core/extend');
 const PgKonaklamaDesign = require('ui/ui_pgFlightInfo');
+const { getAirportOptions } = require("../services/seyahatService");
+const { wait } = require("lib/dialog");
 
 const PgKonaklama = extend(PgKonaklamaDesign)(
     // Constructor
@@ -14,6 +16,8 @@ const PgKonaklama = extend(PgKonaklamaDesign)(
         this.onShow = onShow.bind(this, this.onShow.bind(this));
         // Overrides super.onLoad method
         this.onLoad = onLoad.bind(this, this.onLoad.bind(this));
+        this.routeData = routeData;
+        this.itemsData = {};
         this.btnContinue.onPress = () => {
             routeData.isAccommodationInfo &&
                 this.router.push("/btb/tab2/pgKonaklamaInfo");
@@ -41,6 +45,8 @@ function onLoad(superOnLoad) {
     superOnLoad();
     let itemIndex = 0;
     const page = this;
+    const { from, to } = page.routeData;
+    const waitDialog = wait();
     const addAccomodationButton = new HeaderBarItem({
         image: Image.createFromFile("images://plus.png"),
         onPress: () => {
@@ -49,6 +55,7 @@ function onLoad(superOnLoad) {
             page.svMain.layout.addChild(ucusItem, `konaklamaItem${itemIndex++}`);
             page.svMain.layout.addChild(page.btnContinue);
             ucusItem.init();
+            ucusItem.itemsData = this.itemsData;
             ucusItem.onDelete = () => {
                 page.svMain.layout.removeChild(ucusItem);
                 ucusItem.onChange();
@@ -62,6 +69,10 @@ function onLoad(superOnLoad) {
     });
     page.headerBar.setItems([addAccomodationButton]);
     propagateTouchEvents(page.svMain);
+    Promise.all([getAirportOptions(from, to)]).then(res => {
+        page.itemsData["mtLocationFrom"] = res[0].from;
+        page.itemsData["mtLocationTo"] = res[0].to;
+    }).finally(() => waitDialog.hide());
 }
 
 module.exports = PgKonaklama;
