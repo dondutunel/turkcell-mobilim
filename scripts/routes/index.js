@@ -123,6 +123,7 @@ const bottomTabBarRouter = BottomTabBarRouter.of({
             routes: [
                 Route.of({
                     path: "/btb/tab3/hr",
+                    headerBarStyle: { visible: false },
                     build: buildExtender({ pageName: "pgIslemlerim", singleton: true, pageProps: { data: pagesData.pgHr } })
                 }),
                 Route.of({
@@ -145,7 +146,7 @@ const bottomTabBarRouter = BottomTabBarRouter.of({
                     path: "/btb/tab3/myAwards/pgMyAwards",
                     build: buildExtender({ pageName: "pgMyAwards", singleton: false, pageProps: { data: pagesData.pgMyAwards } })
                 }),
-                 Route.of({
+                Route.of({
                     path: "/btb/tab3/myAwards/pgMyAwardDetail",
                     build: buildExtender({ pageName: "pgMyAwardDetail", singleton: false, pageProps: { data: pagesData.pgMyAwardDetail } })
                 }),

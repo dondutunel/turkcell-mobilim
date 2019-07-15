@@ -1,5 +1,5 @@
 const ServiceCall = require("sf-extension-utils/lib/service-call");
-
+const { logError } = require("./logService");
 const sampleResponse = require("./sampleResponse");
 const config = require("../config.json");
 const envConfig = config.env[config.env.current];
@@ -25,7 +25,7 @@ module.exports = {
             })
             .catch((e) => {
                 console.log("Request: Err", e, { endpoint, param, options });
-                alert(JSON.stringify(e, null, "\t"));
+                logError(JSON.stringify(e, null, "\t"), "error")
                 reject(e);
             }) :
             setTimeout(() => resolve(sampleResponse[endpoint]), 300);
