@@ -131,5 +131,8 @@ module.exports = {
 			"Code": "SEMINER",
 			"Description": "Seminer - Konferans"
 		}]
-	}
+	},
+	"/mobile/award":[{
+		
+	}]
 }

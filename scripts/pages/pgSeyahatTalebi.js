@@ -86,6 +86,8 @@ function onShow(superOnShow) {
 function onLoad(superOnLoad) {
     superOnLoad();
     const page = this;
+    
+    const waitDialog = wait();
     //this.svMain.layout.minHeight = Screen.height;
     this.lvPickerList.context = this.svMain.layout;
     initMaterials(this);
@@ -119,7 +121,6 @@ function onLoad(superOnLoad) {
         this.layout.applyLayout();
 
     };
-    const waitDialog = wait();
     Promise.all([getTripOptions(), getAgentList()]).then(res => {
         this.itemsData["mtRegion"] = res[0].types;
         this.itemsData["mtPurpose"] = res[0].purposes;

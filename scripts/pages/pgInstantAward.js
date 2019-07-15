@@ -4,6 +4,9 @@
 const extend = require('js-base/core/extend');
 const PgInstantAwardDesign = require('ui/ui_pgInstantAward');
 const touch = require("sf-extension-utils/lib/touch");
+const { getUserId } = require("../globalData");
+const { getAvailableAwards, getMyAwards } = require("../services/awardService");
+const { wait } = require("lib/dialog");
 
 const UI_ITEMS = [
 	"flInstantAward",
@@ -20,6 +23,7 @@ const PgInstantAward = extend(PgInstantAwardDesign)(
 		// Overrides super.onLoad method
 		this.onLoad = onLoad.bind(this, this.onLoad.bind(this));
 		this.itemsData = props.data.items;
+		this.serviceData = {}
 	}
 );
 
@@ -40,7 +44,19 @@ function onShow(superOnShow) {
  */
 function onLoad(superOnLoad) {
 	superOnLoad();
-	initItems(this, this.itemsData);
+	const page = this;
+	const waitDialog = wait();
+	Promise.all([
+		getAvailableAwards(),
+		getMyAwards(getUserId())
+	]).then(res => {
+		console.info("Response: ", res);
+		page.serviceData[UI_ITEMS[0]] = res[0];
+		page.itemsData[0].count = res[0].length;
+		page.serviceData[UI_ITEMS[1]] = res[1];
+		page.itemsData[1].count = res[1].length;
+		initItems(page, page.itemsData);
+	}).finally(() => waitDialog.hide());
 }
 
 function initItems(page, itemsData) {
@@ -48,7 +64,7 @@ function initItems(page, itemsData) {
 		const uiItem = page[UI_ITEMS[index]];
 		uiItem.setData(itemData);
 		touch.addPressEvent(uiItem, () => {
-			itemData.routePath && page.router.push(itemData.routePath);
+			itemData.routePath && page.router.push(itemData.routePath, page.serviceData[index]);
 		});
 	});
 

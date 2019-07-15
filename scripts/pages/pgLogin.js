@@ -3,6 +3,8 @@ const touch = require("sf-extension-utils/lib/touch");
 const extend = require('js-base/core/extend');
 const PgLoginDesign = require('ui/ui_pgLogin');
 const propagateTouchEvents = require("lib/propagateTouchEvents");
+const { login } = require("../services/userService");
+const { wait } = require("lib/dialog");
 
 const LOGIN_ITEMS = {
 	"email": {
@@ -54,9 +56,14 @@ function onLoad(superOnLoad) {
 		type: "pushClassNames",
 		classNames: ["#pgLogin-materialTextBox"]
 	});
-	touch.addPressEvent(this.btnLogin, () => {
-		this.router.push("/btb/tab2/pgIslemlerim");
-	});
+	this.btnLogin.onPress = () => {
+		const waitDialog = wait();
+		const userName = this.mtEmail.materialTextBox.text;
+		const password = this.mtPassword.materialTextBox.text;
+		login(userName, password).then(res => {
+			this.router.push("/btb/tab2/pgIslemlerim");
+		}).finally(() => waitDialog.hide());
+	};
 	propagateTouchEvents(this.svMain);
 }
 
