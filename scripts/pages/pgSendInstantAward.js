@@ -29,7 +29,7 @@ const TEMP_ITEMS = [{
 
 const PgSendInstantAward = extend(PgSendInstantAwardDesign)(
 	// Constructor
-	function(_super) {
+	function(_super, props, match, routeData) {
 		// Initalizes super class for this page scope
 		_super(this);
 		// Overrides super.onShow method
@@ -37,6 +37,8 @@ const PgSendInstantAward = extend(PgSendInstantAwardDesign)(
 		// Overrides super.onLoad method
 		this.onLoad = onLoad.bind(this, this.onLoad.bind(this));
 		this.itemsData = TEMP_ITEMS;
+		this.routeData = routeData;
+		this.lblTotal.text = `${routeData.funds} TL`;
 	}
 );
 

@@ -25,7 +25,7 @@ module.exports = {
             })
             .catch((e) => {
                 console.log("Request: Err", e, { endpoint, param, options });
-                logError(JSON.stringify(e, null, "\t"), "error")
+                logError(JSON.stringify(e, null, "\t"));
                 reject(e);
             }) :
             setTimeout(() => resolve(sampleResponse[endpoint]), 300);

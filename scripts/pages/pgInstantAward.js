@@ -54,8 +54,14 @@ function onLoad(superOnLoad) {
 		page.serviceData[UI_ITEMS[0]] = res[0];
 		page.itemsData[0].count = res[0].length;
 		page.serviceData[UI_ITEMS[1]] = res[1];
+		if (!res[1].funds) {
+			const ui_item = UI_ITEMS.splice(0, 1);
+			page.layout.removeChild(page[ui_item]);
+			page.itemsData.splice(0,1);
+		}
 		page.itemsData[1].count = res[1].length;
 		initItems(page, page.itemsData);
+		page.layout.applyLayout();
 	}).finally(() => waitDialog.hide());
 }
 
