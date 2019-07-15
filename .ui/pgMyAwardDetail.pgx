@@ -48,11 +48,11 @@
 				"isRemovable": false,
 				"name": "headerBar",
 				"parent": "2606-f30e-f486-40dd",
-				"title": "Anlık Ödül Gönder"
+				"title": "Anlık Ödüllerim"
 			},
 			"type": "HeaderBar",
 			"userProps": {
-				"title": "Anlık Ödül Gönder",
+				"title": "Anlık Ödüllerim",
 				"visible": true
 			}
 		},
