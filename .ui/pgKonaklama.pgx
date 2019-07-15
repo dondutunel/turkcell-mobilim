@@ -52,7 +52,7 @@
 			"props": {
 				"autoSizeEnabled": true,
 				"children": [
-					"6d39-4748-8b28-a828"
+					"fdd7-9564-1623-a0a0"
 				],
 				"name": "svMain",
 				"parent": "38ef-6b2c-8ddf-479f",
@@ -67,21 +67,109 @@
 			}
 		},
 		{
+			"className": ".sf-flexLayout",
+			"id": "fdd7-9564-1623-a0a0",
+			"props": {
+				"children": [
+					"25dd-72a5-8542-7e4f",
+					"7b6e-2362-fe2f-72fb",
+					"68b8-2aa9-ac3a-a3b7"
+				],
+				"name": "flFooter",
+				"parent": "1551-ab4f-8577-9615",
+				"usePageVariable": true
+			},
+			"type": "FlexLayout",
+			"userProps": {
+				"height": 220,
+				"left": 0,
+				"paddingLeft": 15,
+				"paddingRight": 15,
+				"top": 0,
+				"usePageVariable": true
+			}
+		},
+		{
+			"className": ".materialTextBox-wrapper",
+			"hiddenComponent": false,
+			"id": "25dd-72a5-8542-7e4f",
+			"initialized": false,
+			"props": {
+				"children": [],
+				"name": "mtNote",
+				"parent": "fdd7-9564-1623-a0a0",
+				"usePageVariable": true
+			},
+			"source": {
+				"page": "__modules__",
+				"moduleName": "Materialtextbox",
+				"modulePath": "materialtextbox",
+				"type": "Materialtextbox",
+				"id": "8fb2-10a8-12e4-9b45"
+			},
+			"type": "FlexLayout",
+			"userProps": {
+				"flex": {
+					"positionType": 0
+				},
+				"flexProps": {
+					"positionType": "RELATIVE"
+				},
+				"left": 0,
+				"marginTop": 15,
+				"top": 0,
+				"usePageVariable": true
+			}
+		},
+		{
+			"className": ".materialTextBox-wrapper",
+			"hiddenComponent": false,
+			"id": "7b6e-2362-fe2f-72fb",
+			"initialized": false,
+			"props": {
+				"children": [],
+				"name": "mtDescription",
+				"parent": "fdd7-9564-1623-a0a0",
+				"usePageVariable": true
+			},
+			"source": {
+				"page": "__modules__",
+				"moduleName": "Materialtextbox",
+				"modulePath": "materialtextbox",
+				"type": "Materialtextbox",
+				"id": "8fb2-10a8-12e4-9b45"
+			},
+			"type": "FlexLayout",
+			"userProps": {
+				"flex": {
+					"positionType": 0
+				},
+				"flexProps": {
+					"positionType": "RELATIVE"
+				},
+				"left": 0,
+				"top": 0,
+				"usePageVariable": true
+			}
+		},
+		{
 			"className": ".sf-button #pgSeyahatTalebi-btn",
-			"id": "6d39-4748-8b28-a828",
+			"id": "68b8-2aa9-ac3a-a3b7",
 			"props": {
 				"autoHeight": 24.390243902439025,
 				"children": [],
 				"name": "btnContinue",
-				"parent": "1551-ab4f-8577-9615",
-				"text": "Devam",
+				"parent": "fdd7-9564-1623-a0a0",
+				"text": "Talebi Gönder",
 				"usePageVariable": true
 			},
 			"type": "Button",
 			"userProps": {
 				"autoHeight": 24.390243902439025,
 				"left": 0,
-				"text": "Devam",
+				"marginBottom": 10,
+				"marginTop": 15,
+				"text": "Talebi Gönder",
 				"top": 0,
 				"usePageVariable": true
 			}

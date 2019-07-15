@@ -130,7 +130,7 @@ function onLoad(superOnLoad) {
 
 function initMaterials(page) {
     page.mtRegion.options = {
-        hint: "Yurt ici - Yurt Disi",
+        hint: "Yurt İçi - Yurt Dışı",
         touchEnabled: false
     };
     page.mtRegion.onDropDownClick = () => page.showPicker("mtRegion", data => data.Description);
@@ -141,7 +141,7 @@ function initMaterials(page) {
     page.mtPurpose.onDropDownClick = () => page.showPicker("mtPurpose", data => data.Description);
     const lblRemainLength = new Label({ text: `${MAX_DESC_LENGTH}`, textColor: materialColor.lineColor.normal });
     page.mtDescription.options = {
-        hint: "Seyahat Aciklamasi",
+        hint: "Seyahat Açıklaması",
         onTextChanged: (e) => {
             const text = page.mtDescription.materialTextBox.text || "";
             const subText = text.substr(0, MAX_DESC_LENGTH);

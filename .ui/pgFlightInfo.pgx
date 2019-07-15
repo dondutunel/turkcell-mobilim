@@ -38,11 +38,11 @@
 				"isRemovable": false,
 				"name": "headerBar",
 				"parent": "f651-8546-c686-615c",
-				"title": "pgFlightInfo"
+				"title": "Uçuş Bilgileri"
 			},
 			"type": "HeaderBar",
 			"userProps": {
-				"title": "pgFlightInfo"
+				"title": "Uçuş Bilgileri"
 			}
 		},
 		{
@@ -51,7 +51,7 @@
 			"props": {
 				"autoSizeEnabled": true,
 				"children": [
-					"b27e-638d-27d0-0fe9"
+					"e5c6-cfd6-4ddb-d572"
 				],
 				"name": "svMain",
 				"parent": "f651-8546-c686-615c",
@@ -68,13 +68,97 @@
 			}
 		},
 		{
+			"className": ".sf-flexLayout",
+			"id": "e5c6-cfd6-4ddb-d572",
+			"props": {
+				"children": [
+					"26b2-85d5-7642-d2a9",
+					"d1e8-fe19-0841-762b",
+					"0443-219e-192a-0c22"
+				],
+				"name": "flFooter",
+				"parent": "fea5-2b21-d280-7993",
+				"usePageVariable": true
+			},
+			"type": "FlexLayout",
+			"userProps": {
+				"height": 220,
+				"paddingLeft": 15,
+				"paddingRight": 15,
+				"usePageVariable": true
+			}
+		},
+		{
+			"className": ".materialTextBox-wrapper",
+			"hiddenComponent": false,
+			"id": "26b2-85d5-7642-d2a9",
+			"initialized": false,
+			"props": {
+				"children": [],
+				"name": "mtNote",
+				"parent": "e5c6-cfd6-4ddb-d572",
+				"usePageVariable": true
+			},
+			"source": {
+				"page": "__modules__",
+				"moduleName": "Materialtextbox",
+				"modulePath": "materialtextbox",
+				"type": "Materialtextbox",
+				"id": "8fb2-10a8-12e4-9b45"
+			},
+			"type": "FlexLayout",
+			"userProps": {
+				"flex": {
+					"positionType": 0
+				},
+				"flexProps": {
+					"positionType": "RELATIVE"
+				},
+				"left": 0,
+				"marginTop": 15,
+				"top": 0,
+				"usePageVariable": true
+			}
+		},
+		{
+			"className": ".materialTextBox-wrapper",
+			"hiddenComponent": false,
+			"id": "d1e8-fe19-0841-762b",
+			"initialized": false,
+			"props": {
+				"children": [],
+				"name": "mtDescription",
+				"parent": "e5c6-cfd6-4ddb-d572",
+				"usePageVariable": true
+			},
+			"source": {
+				"page": "__modules__",
+				"moduleName": "Materialtextbox",
+				"modulePath": "materialtextbox",
+				"type": "Materialtextbox",
+				"id": "8fb2-10a8-12e4-9b45"
+			},
+			"type": "FlexLayout",
+			"userProps": {
+				"flex": {
+					"positionType": 0
+				},
+				"flexProps": {
+					"positionType": "RELATIVE"
+				},
+				"left": 0,
+				"top": 0,
+				"usePageVariable": true
+			}
+		},
+		{
 			"className": ".sf-button #pgSeyahatTalebi-btn",
-			"id": "b27e-638d-27d0-0fe9",
+			"id": "0443-219e-192a-0c22",
 			"props": {
 				"autoHeight": 24.390243902439025,
 				"children": [],
 				"name": "btnContinue",
-				"parent": "fea5-2b21-d280-7993",
+				"parent": "e5c6-cfd6-4ddb-d572",
 				"text": "Devam",
 				"usePageVariable": true
 			},
@@ -82,6 +166,8 @@
 			"userProps": {
 				"autoHeight": 24.390243902439025,
 				"left": 0,
+				"marginBottom": 10,
+				"marginTop": 15,
 				"text": "Devam",
 				"top": 0,
 				"usePageVariable": true
