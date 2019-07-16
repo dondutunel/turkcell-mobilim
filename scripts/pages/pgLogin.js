@@ -11,7 +11,8 @@ const LOGIN_ITEMS = {
 		hint: "E-POSTA VEYA CEP TELEFONU NUMARANIZ"
 	},
 	"password": {
-		hint: "ŞİFRE"
+		hint: "ŞİFRE",
+		isPassword: true
 	}
 };
 

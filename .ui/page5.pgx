@@ -7,14 +7,19 @@
 			"props": {
 				"children": [
 					"15bd-0b9d-7949-bb79",
-					"26bb-7ffb-af1d-ef85"
+					"26bb-7ffb-af1d-ef85",
+					"dfd1-66cd-360b-adf4"
 				],
 				"name": "page5",
 				"orientation": "PORTRAIT",
 				"parent": null
 			},
 			"type": "Page",
-			"userProps": {},
+			"userProps": {
+				"flexProps": {
+					"justifyContent": "CENTER"
+				}
+			},
 			"version": "6.15.1"
 		},
 		{
@@ -42,6 +47,29 @@
 			"type": "HeaderBar",
 			"userProps": {
 				"title": "Dashboard"
+			}
+		},
+		{
+			"className": ".sf-imageView",
+			"id": "dfd1-66cd-360b-adf4",
+			"props": {
+				"children": [],
+				"name": "imgLogo",
+				"parent": "d8d9-34a9-4b1a-0bb7"
+			},
+			"type": "ImageView",
+			"userProps": {
+				"flexProps": {
+					"alignSelf": "CENTER"
+				},
+				"height": 120,
+				"image": "logo.png",
+				"imageFillType": "ASPECTFIT",
+				"left": 0,
+				"marginBottom": 20,
+				"marginTop": null,
+				"top": 0,
+				"width": 130
 			}
 		}
 	]

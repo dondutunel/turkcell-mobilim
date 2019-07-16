@@ -7,14 +7,20 @@
 			"props": {
 				"children": [
 					"70bf-b858-e5d2-ea94",
-					"e02f-7044-2e33-d9ec"
+					"e02f-7044-2e33-d9ec",
+					"6079-a25b-515c-e471"
 				],
 				"name": "page4",
 				"orientation": "PORTRAIT",
 				"parent": null
 			},
 			"type": "Page",
-			"userProps": {},
+			"userProps": {
+				"flexProps": {
+					"alignItems": "CENTER",
+					"justifyContent": "CENTER"
+				}
+			},
 			"version": "6.15.1"
 		},
 		{
@@ -42,6 +48,29 @@
 			"type": "HeaderBar",
 			"userProps": {
 				"title": "Şirketim"
+			}
+		},
+		{
+			"className": ".sf-imageView",
+			"id": "6079-a25b-515c-e471",
+			"props": {
+				"children": [],
+				"name": "imgLogo",
+				"parent": "14cf-a775-d26c-59c1"
+			},
+			"type": "ImageView",
+			"userProps": {
+				"flexProps": {
+					"alignSelf": "CENTER"
+				},
+				"height": 120,
+				"image": "logo.png",
+				"imageFillType": "ASPECTFIT",
+				"left": 0,
+				"marginBottom": 20,
+				"marginTop": null,
+				"top": 0,
+				"width": 130
 			}
 		}
 	]

@@ -7,7 +7,8 @@
 			"props": {
 				"children": [
 					"42b807d1",
-					"b7d28cff"
+					"b7d28cff",
+					"a4bb-df59-13f8-d760"
 				],
 				"isRemovable": true,
 				"name": "page1",
@@ -22,7 +23,6 @@
 					"alignItems": "STRETCH"
 				},
 				"orientation": "PORTRAIT",
-				"paddingBottom": 20,
 				"safeAreaEnabled": true
 			},
 			"version": "6.15.1"
@@ -57,6 +57,29 @@
 				"title": "Ana Sayfa",
 				"titleColor": "rgba( 255, 255, 255, 1 )",
 				"visible": true
+			}
+		},
+		{
+			"className": ".sf-imageView",
+			"id": "a4bb-df59-13f8-d760",
+			"props": {
+				"children": [],
+				"name": "imgLogo",
+				"parent": "e891b86d"
+			},
+			"type": "ImageView",
+			"userProps": {
+				"flexProps": {
+					"alignSelf": "CENTER"
+				},
+				"height": 120,
+				"image": "logo.png",
+				"imageFillType": "ASPECTFIT",
+				"left": 0,
+				"marginBottom": 20,
+				"marginTop": null,
+				"top": 0,
+				"width": 130
 			}
 		}
 	]
