@@ -11,7 +11,9 @@ module.exports = {
         request("/mobile/airportOptions", `/${from}/${to}`, { method: "GET" }).then(resolve, reject);
     }),
     getAutocompleteCity: (searchText) => new Promise((resolve, reject) => {
-        request("/mobile/autocompleteCity", "/" + searchText, { method: "GET" }).then(resolve, reject);
+        if (typeof global.isDomestic === "undefined")
+            global.isDomestic = true;
+        request("/mobile/autocompleteCity", `/${global.isDomestic}/${searchText}`, { method: "GET" }).then(resolve, reject);
     }),
     getTripConditions: () => new Promise((resolve, reject) => {
         request("/mobile/tripConditions", "", { method: "GET" }).then(resolve, reject);
