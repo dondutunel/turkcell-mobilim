@@ -8,7 +8,7 @@ const { wait } = require("lib/dialog");
 
 const LOGIN_ITEMS = {
 	"email": {
-		hint: "E-POSTA VEYA CEP TELEFONU NUMARANIZ"
+		hint: "E-POSTA"
 	},
 	"password": {
 		hint: "ŞİFRE",

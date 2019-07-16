@@ -86,7 +86,7 @@ function onShow(superOnShow) {
 function onLoad(superOnLoad) {
     superOnLoad();
     const page = this;
-    
+
     const waitDialog = wait();
     //this.svMain.layout.minHeight = Screen.height;
     this.lvPickerList.context = this.svMain.layout;
@@ -138,7 +138,11 @@ function initMaterials(page) {
         hint: "Temsil",
         touchEnabled: false
     };
-    page.mtPurpose.onDropDownClick = () => page.showPicker("mtPurpose", data => data.Description);
+    page.mtPurpose.onDropDownClick = () => page.showPicker("mtPurpose", data => {
+        page.mtDepartureDate.materialTextBox.hint = `${data.Description} Başlangıç`;
+        page.mtReturnDate.materialTextBox.hint = `${data.Description} Bitiş`;
+        return data.Description;
+    });
     const lblRemainLength = new Label({ text: `${MAX_DESC_LENGTH}`, textColor: materialColor.lineColor.normal });
     page.mtDescription.options = {
         hint: "Seyahat Açıklaması",
@@ -191,12 +195,12 @@ function initMaterials(page) {
         }
     };
     page.mtDepartureDate.options = {
-        hint: "Departure Date",
+        hint: "Başlangıç",
         touchEnabled: false
     };
     page.mtDepartureDate.onDropDownClick = () => page.showDatePicker("mtDepartureDate");
     page.mtReturnDate.options = {
-        hint: "Return Date",
+        hint: "Bitiş",
         touchEnabled: false
     };
     page.mtReturnDate.onDropDownClick = () => page.showDatePicker("mtReturnDate");
