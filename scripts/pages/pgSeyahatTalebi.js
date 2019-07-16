@@ -198,12 +198,17 @@ function initMaterials(page) {
         hint: "Başlangıç",
         touchEnabled: false
     };
-    page.mtDepartureDate.onDropDownClick = () => page.showDatePicker("mtDepartureDate");
+    page.mtDepartureDate.onDropDownClick = () => page.showDatePicker("mtDepartureDate", new Date());
     page.mtReturnDate.options = {
         hint: "Bitiş",
         touchEnabled: false
     };
-    page.mtReturnDate.onDropDownClick = () => page.showDatePicker("mtReturnDate");
+    page.mtReturnDate.onDropDownClick = () => {
+        const minDate = page.mtDepartureDate.materialTextBox.rawValue;
+        if (minDate) {
+            page.showDatePicker("mtReturnDate", minDate);
+        }
+    };
     page.mtAcente.options = {
         hint: "Acente",
         touchEnabled: false
@@ -213,7 +218,7 @@ function initMaterials(page) {
         hint: "Dogum Tarihi",
         touchEnabled: false
     };
-    page.mtBirthDate.onDropDownClick = () => page.showDatePicker("mtBirthDate");
+    page.mtBirthDate.onDropDownClick = () => page.showDatePicker("mtBirthDate", null, new Date());
     page.mtID.options = {
         hint: "TC Kimlik No ",
         keyboardType: KeyboardType.NUMBER

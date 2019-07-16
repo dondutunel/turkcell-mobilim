@@ -13,12 +13,16 @@ function showPicker(mt, itemMapFn, nextMt) {
 	}, () => {});
 }
 
-function showDatePicker(mt) {
+function showDatePicker(mt, minDate, maxDate) {
 	const cntx = this;
 	const myDatePicker = new DatePicker();
+	minDate && myDatePicker.setMinDate(minDate);
+	maxDate && myDatePicker.setMaxDate(maxDate);
+
 	myDatePicker.onDateSelected = (date) => {
 		console.info("date: ", date);
 		cntx[mt].materialTextBox.text = `${date.getDate()}.${date.getMonth()}.${date.getFullYear()}`;
+		cntx[mt].materialTextBox.rawValue = date;
 		cntx[mt].materialTextBox.onEditEnds && cntx[mt].materialTextBox.onEditEnds();
 	};
 	myDatePicker.show();
