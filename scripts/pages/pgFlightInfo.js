@@ -43,7 +43,7 @@ const PgKonaklama = extend(PgKonaklamaDesign)(
                 const waitDialog = wait();
                 setTimeout(() => {
                     waitDialog.hide();
-                    alert("Seyahat Talebiniz Başarıyla Oluşturulmuştur");
+                    alert("Seyahat talebi başarıyla oluşturulmuştur!");
                     this.router.goBacktoHome();
                 }, 1000);
             }

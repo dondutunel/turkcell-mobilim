@@ -17,7 +17,8 @@ const serviceCall = new ServiceCall({
 
 module.exports = {
     request: (endpoint, param, options) => new Promise((resolve, reject) => {
-        isActiveService ?
+        var shouldUseRealService = endpoint.indexOf("award") > -1 || isActiveService;
+        shouldUseRealService ?
             serviceCall.request(endpoint + param, options)
             .then(res => {
                 resolve(res);
