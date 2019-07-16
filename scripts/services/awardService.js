@@ -1,9 +1,11 @@
 const { request } = require("./http");
 const config = require("config.json");
 const isActiveService = config.isActiveService;
+const { getUserId } = require("globalData");
 
 module.exports = {
-	getMyAwards: userID => {
+	getMyAwards: () => {
+		let userID = getUserId();
 		if (isActiveService)
 			return request("/mobile/award", `/${userID}`, { method: "GET" });
 		return new Promise((resolve) => {
@@ -15,7 +17,8 @@ module.exports = {
 			}), 1000);
 		});
 	},
-	sendAward: (userIDFrom, userIDTo, awardID) => {
+	sendAward: (userIDTo, awardID) => {
+		let userIDFrom = getUserId();
 		if (isActiveService)
 			return request("/mobile/award/sendAward", "", {
 				method: "POST",

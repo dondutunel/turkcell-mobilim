@@ -22,7 +22,7 @@ const PgInstantAward = extend(PgInstantAwardDesign)(
 		this.onShow = onShow.bind(this, this.onShow.bind(this));
 		// Overrides super.onLoad method
 		this.onLoad = onLoad.bind(this, this.onLoad.bind(this));
-		this.itemsData = props.data.items;
+		this.itemsData = props.data.items.slice();
 		this.serviceData = {}
 	}
 );
@@ -48,8 +48,9 @@ function onLoad(superOnLoad) {
 	const waitDialog = wait();
 	Promise.all([
 		getAvailableAwards(),
-		getMyAwards(getUserId())
+		getMyAwards()
 	]).then(res => {
+		page.userData = res[1];
 		console.info("Response: ", res);
 		page.serviceData[UI_ITEMS[0]] = res[0];
 		page.itemsData[0].count = res[0].length;
@@ -70,10 +71,9 @@ function initItems(page, itemsData) {
 		const uiItem = page[UI_ITEMS[index]];
 		uiItem.setData(itemData);
 		touch.addPressEvent(uiItem, () => {
-			itemData.routePath && page.router.push(itemData.routePath, page.serviceData[index]);
+			itemData.routePath && page.router.push(itemData.routePath, page.userData);
 		});
 	});
-
 }
 
 module.exports = PgInstantAward;

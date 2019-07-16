@@ -1,21 +1,8 @@
-/* 
-		You can modify its contents.
-*/
 const extend = require('js-base/core/extend');
 const PgMyAwardsDesign = require('ui/ui_pgMyAwards');
 const touch = require("sf-extension-utils/lib/touch");
-
-const TEMP_ITEMS = [{
-	title: "Altınyıldız Classics 100 TL Dijital Hediye Çeki",
-	date: "25.12.2018"
-}, {
-	title: "KOTON 50 TL Digital Hediye Çeki",
-	date: "25.12.2018"
-
-}, {
-	title: "Mavi 50 TL Digital Hediye Çeki",
-	date: "25.12.2018"
-}];
+const { getAvailableAwards, getMyAwards } = require("../services/awardService");
+const { wait } = require("lib/dialog");
 
 const PgMyAwards = extend(PgMyAwardsDesign)(
 	// Constructor
@@ -26,29 +13,31 @@ const PgMyAwards = extend(PgMyAwardsDesign)(
 		this.onShow = onShow.bind(this, this.onShow.bind(this));
 		// Overrides super.onLoad method
 		this.onLoad = onLoad.bind(this, this.onLoad.bind(this));
-		this.itemsData = TEMP_ITEMS;
+		this.itemsData = [];
 		this.routeData = routeData;
 	}
 );
 
-/**
- * @event onShow
- * This event is called when a page appears on the screen (everytime).
- * @param {function} superOnShow super onShow function
- * @param {Object} parameters passed from Router.go function
- */
 function onShow(superOnShow) {
 	superOnShow();
 }
 
-/**
- * @event onLoad
- * This event is called once when page is created.
- * @param {function} superOnLoad super onLoad function
- */
 function onLoad(superOnLoad) {
 	superOnLoad();
 	initListView(this, this.lvMain);
+
+	const waitDialog = wait();
+	Promise.all([getAvailableAwards(), getMyAwards()])
+		.then(e => {
+			let availableAwards = e[0];
+			let receivedAwards = e[1].receivedAwards;
+			let awards = receivedAwards.map(awardID => availableAwards.find(a => a.Kod === awardID));
+			this.itemsData = awards;
+			this.lvMain.itemCount = this.itemsData.length;
+			this.lvMain.refreshData();
+		})
+		.catch(e => { throw e })
+		.finally(() => waitDialog.hide());
 }
 
 function initListView(page, lv) {
