@@ -137,7 +137,10 @@ function initMaterials(page) {
         hint: "Yurt İçi - Yurt Dışı",
         touchEnabled: false
     };
-    page.mtRegion.onDropDownClick = () => page.showPicker("mtRegion", data => data.Description);
+    page.mtRegion.onDropDownClick = () => page.showPicker("mtRegion", data => {
+        global.isDomestic = data.Code === "YURTICI";
+        return data.Description;
+    });
     page.mtPurpose.options = {
         hint: "Temsil",
         touchEnabled: false

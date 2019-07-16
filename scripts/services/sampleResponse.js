@@ -126,13 +126,13 @@ module.exports = {
 		"types": [{
 			"Code": "YURTICI",
 			"Description": "Yurt İçi"
+		}, {
+			"Code": "YURTDISI",
+			"Description": "Yurt Dışı"
 		}],
 		"purposes": [{
 			"Code": "SEMINER",
 			"Description": "Seminer - Konferans"
 		}]
-	},
-	"/mobile/award":[{
-		
-	}]
-}
+	}
+};
