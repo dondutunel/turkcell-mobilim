@@ -48,7 +48,7 @@
 		},
 		"&-button": {
 			"&-white": {
-				"backgroundColor": "rgba(255,255,255,1)",
+				"backgroundColor": { "normal": "rgba(255,255,255,1)" },
 				"textColor": "rgba( 41, 177, 235, 1 )"
 			},
 			"font": {

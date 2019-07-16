@@ -15,6 +15,16 @@ const LOGIN_ITEMS = {
 	}
 };
 
+const MATERIAL_TEXTBOXS = [{
+		name: "mtEmail",
+		errorMessage: "Kullanıcı adı boş olamaz"
+	},
+	{
+		name: "mtPassword",
+		errorMessage: "Şifre boş olamaz"
+	}
+];
+
 const PgLogin = extend(PgLoginDesign)(
 	// Constructor
 	function(_super) {
@@ -44,19 +54,24 @@ function onShow(superOnShow) {
  */
 function onLoad(superOnLoad) {
 	superOnLoad();
+	this.btnLogin.enabled = false;
 	this.lblTitle.text = "Mobil uygulamamıza hoş geldiniz,\nlütfen giriş yapınız.";
 	this.svMain.layout.minHeight = Screen.height - 30;
 	this.mtEmail.options = LOGIN_ITEMS.email;
+	this.mtEmail.materialTextBox.onTextChanged = () => validateFormState(this, "mtEmail");
 	this.mtEmail.materialTextBox.dispatch({
 		type: "pushClassNames",
-		classNames: ["#pgLogin-materialTextBox"]
+		classNames: ["#pgLogin-materialTextBox"],
 	});
 	this.mtPassword.options = LOGIN_ITEMS.password;
+	this.mtPassword.materialTextBox.onTextChanged = () => validateFormState(this, "mtPassword");
 	this.mtPassword.materialTextBox.dispatch({
 		type: "pushClassNames",
 		classNames: ["#pgLogin-materialTextBox"]
 	});
 	this.btnLogin.onPress = () => {
+		if (!validateFormState(this))
+			return;
 		const waitDialog = wait();
 		const userName = this.mtEmail.materialTextBox.text;
 		const password = this.mtPassword.materialTextBox.text;
@@ -68,6 +83,20 @@ function onLoad(superOnLoad) {
 			.finally(() => waitDialog.hide());
 	};
 	propagateTouchEvents(this.svMain);
+}
+
+
+function validateFormState(page, mtName) {
+	let isValid = true;
+	MATERIAL_TEXTBOXS.forEach(item => {
+		const mt = page[item.name];
+		if (((mtName && mtName === item.name) || !mtName) && !mt.materialTextBox.text.trim()) {
+			isValid = false;
+			mt.materialTextBox.errorMessage = item.errorMessage;
+		}
+	});
+	page.btnLogin.enabled = isValid;
+	return isValid;
 }
 
 module.exports = PgLogin;
