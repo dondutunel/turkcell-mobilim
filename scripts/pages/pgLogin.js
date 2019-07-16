@@ -60,9 +60,12 @@ function onLoad(superOnLoad) {
 		const waitDialog = wait();
 		const userName = this.mtEmail.materialTextBox.text;
 		const password = this.mtPassword.materialTextBox.text;
-		login(userName, password).then(res => {
-			this.router.push("/btb/tab2/pgIslemlerim");
-		}).finally(() => waitDialog.hide());
+		login(userName, password)
+			.then(res => {
+				this.router.push("/btb/tab2/pgIslemlerim");
+			})
+			.catch(e => alert(e))
+			.finally(() => waitDialog.hide());
 	};
 	propagateTouchEvents(this.svMain);
 }

@@ -1,17 +1,29 @@
 const { request } = require("./http");
 const { setUserId } = require("../globalData");
+const config = require("config.json");
+const isActiveService = config.isActiveService;
 
 module.exports = {
-	login: (userName, password) =>
-		/*request("/mobile/login", "", {
-		method: "POST",
-		body: {
-			userName,
-			password
+	login: (userID, password) => {
+		if (isActiveService) {
+			return new Promise((resolve, reject) => {
+				request("/mobile/login", "", {
+						method: "POST",
+						body: {
+							userID,
+							password
+						}
+					})
+					.then(() => {
+						resolve();
+						setUserId(userID);
+					})
+					.catch(reject);
+			});
 		}
-	})*/
-		new Promise((resolve, reject) => setTimeout(() => {
-			setUserId(userName || "TCUERDEM");
-			resolve(userName);
-		}, 300))
+		else {
+			setUserId(userID);
+			return Promise.resolve();
+		}
+	}
 };
