@@ -43,9 +43,9 @@ function onLoad(superOnLoad) {
 	this.lblTitle.text = this.routeData.title;
 	this.lblDate.text = this.routeData.date;
 	this.lblName.text = this.routeData.userName || TEMP_DATA.userName;
-	this.lblMessage.text = this.routeData.message || TEMP_DATA.message;
-	this.lblDetail.text = this.routeData.detail || TEMP_DATA.detail;
-	this.lblAwardCode.text = this.routeData.awardCode || TEMP_DATA.awardCode;
+	this.lblMessage.text = this.routeData.Aciklama || TEMP_DATA.message;
+	this.lblDetail.text = this.routeData.Aciklama || TEMP_DATA.detail;
+	this.lblAwardCode.text = this.routeData.code || TEMP_DATA.awardCode;
 }
 
 module.exports = PgMyAwardDetail;

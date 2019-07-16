@@ -62,7 +62,7 @@ function setData(data) {
 				userStyle: { image: data.icon, visible: true }
 			});
 	}
-	data.title && (this.lblTitle.text = data.title);
+	data.Aciklama && (this.lblTitle.text = data.Aciklama);
 }
 
 module.exports = PgSendInstantAwardForm;

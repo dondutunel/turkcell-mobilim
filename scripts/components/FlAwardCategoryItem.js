@@ -17,7 +17,9 @@ const FlAwardCategoryItem = extend(FlAwardCategoryItemDesign)(
 					});
 			}
 			data.title && (this.lblTitle.text = data.title);
+			data.Aciklama && (this.lblTitle.text = data.Aciklama);
 			data.count && (this.lblCount.text = data.count);
+			data.adet && (this.lblCount.text = data.adet);
 		};
 	}
 );

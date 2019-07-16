@@ -15,6 +15,7 @@ const PgAwardDetails = extend(PgAwardDetailsDesign)(
 		this.onLoad = onLoad.bind(this, this.onLoad.bind(this));
 		this.itemsData = [];
 		this.routeData = routeData;
+		this.lblTotal.text = `${routeData.funds} TL`;
 	}
 );
 
