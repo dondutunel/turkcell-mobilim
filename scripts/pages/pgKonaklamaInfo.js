@@ -14,34 +14,35 @@ const MAX_NOTE_LENGTH = 80;
 const materialColor = getCombinedStyle(".materialTextBox");
 
 const MATERIAL_OPTIONS = [{
-	name: "mtNote",
-	hint: "Notunuz",
-	maxLen: MAX_NOTE_LENGTH
+    name: "mtNote",
+    hint: "Notunuz",
+    maxLen: MAX_NOTE_LENGTH
 }, {
-	name: "mtDescription",
-	hint: "Açıklama",
-	maxLen: MAX_DESC_LENGTH
+    name: "mtDescription",
+    hint: "Açıklama",
+    maxLen: MAX_DESC_LENGTH
 }];
 
 const PgKonaklama = extend(PgKonaklamaDesign)(
-	// Constructor
-	function(_super) {
-		// Initalizes super class for this page scope
-		_super(this);
-		// Overrides super.onShow method
-		this.onShow = onShow.bind(this, this.onShow.bind(this));
-		// Overrides super.onLoad method
-		this.onLoad = onLoad.bind(this, this.onLoad.bind(this));
-		this.itemsData = {};
-		this.btnContinue.onPress = () => {
-			const waitDialog = wait();
-			setTimeout(() => {
-				waitDialog.hide();
-				alert("Seyahat Talebiniz Başarıyla Oluşturulmuştur");
-				this.router.goBacktoHome();
-			}, 1000);
-		};
-	}
+    // Constructor
+    function(_super, props, match, routeData) {
+        // Initalizes super class for this page scope
+        _super(this);
+        // Overrides super.onShow method
+        this.onShow = onShow.bind(this, this.onShow.bind(this));
+        // Overrides super.onLoad method
+        this.onLoad = onLoad.bind(this, this.onLoad.bind(this));
+        this.itemsData = {};
+        this.routeData = routeData;
+        this.btnContinue.onPress = () => {
+            const waitDialog = wait();
+            setTimeout(() => {
+                waitDialog.hide();
+                alert("Seyahat Talebiniz Başarıyla Oluşturulmuştur");
+                this.router.goBacktoHome();
+            }, 1000);
+        };
+    }
 );
 /**
  * @event onShow
@@ -50,8 +51,8 @@ const PgKonaklama = extend(PgKonaklamaDesign)(
  * @param {Object} parameters passed from Router.go function
  */
 function onShow(superOnShow) {
-	superOnShow();
-	const page = this;
+    superOnShow();
+    const page = this;
 }
 
 /**
@@ -60,56 +61,56 @@ function onShow(superOnShow) {
  * @param {function} superOnLoad super onLoad function
  */
 function onLoad(superOnLoad) {
-	superOnLoad();
-	let itemIndex = 0;
-	const page = this;
-	const waitDialog = wait();
-	this.lvPickerList.context = this.layout;
-	const addAccomodationButton = new HeaderBarItem({
-		image: Image.createFromFile("images://plus.png"),
-		onPress: () => {
-			let konaklamaItem = new FlKonaklamaItem();
-			page.svMain.layout.removeChild(page.flFooter);
-			page.svMain.layout.addChild(konaklamaItem, `konaklamaItem${itemIndex++}`);
-			page.svMain.layout.addChild(page.flFooter);
-			konaklamaItem.init();
-			konaklamaItem.itemsData = page.itemsData;
-			konaklamaItem.lvPickerList = page.lvPickerList;
-			konaklamaItem.onDelete = () => {
-				page.svMain.layout.removeChild(konaklamaItem);
-				konaklamaItem.onChange();
-			};
-			konaklamaItem.onChange = () => {
-				page.svMain.layout.applyLayout();
-				page.layout.applyLayout();
-			};
-			konaklamaItem.onChange();
-		}
-	});
-	page.headerBar.setItems([addAccomodationButton]);
-	propagateTouchEvents(page.svMain);
-	MATERIAL_OPTIONS.forEach(option => {
-		initMaterials(this[option.name], option, option.maxLen);
-	});
-	Promise.all([getHotels()]).then(res => {
-		page.itemsData["mtHotel"] = res[0];
-	}).finally(() => waitDialog.hide());
+    superOnLoad();
+    let itemIndex = 0;
+    const page = this;
+    const waitDialog = wait();
+    this.lvPickerList.context = this.layout;
+    const addAccomodationButton = new HeaderBarItem({
+        image: Image.createFromFile("images://plus.png"),
+        onPress: () => {
+            let konaklamaItem = new FlKonaklamaItem();
+            page.svMain.layout.removeChild(page.flFooter);
+            page.svMain.layout.addChild(konaklamaItem, `konaklamaItem${itemIndex++}`);
+            page.svMain.layout.addChild(page.flFooter);
+            konaklamaItem.init(this.routeData.date);
+            konaklamaItem.itemsData = page.itemsData;
+            konaklamaItem.lvPickerList = page.lvPickerList;
+            konaklamaItem.onDelete = () => {
+                page.svMain.layout.removeChild(konaklamaItem);
+                konaklamaItem.onChange();
+            };
+            konaklamaItem.onChange = () => {
+                page.svMain.layout.applyLayout();
+                page.layout.applyLayout();
+            };
+            konaklamaItem.onChange();
+        }
+    });
+    page.headerBar.setItems([addAccomodationButton]);
+    propagateTouchEvents(page.svMain);
+    MATERIAL_OPTIONS.forEach(option => {
+        initMaterials(this[option.name], option, option.maxLen);
+    });
+    Promise.all([getHotels()]).then(res => {
+        page.itemsData["mtHotel"] = res[0];
+    }).finally(() => waitDialog.hide());
 }
 
 function initMaterials(mt, options, max_len) {
-	const lblRemainLength = new Label({ text: `${max_len}`, textColor: materialColor.lineColor.normal });
-	mt.options = Object.assign({}, options, {
-		onTextChanged: (e) => {
-			const text = mt.materialTextBox.text || "";
-			const subText = text.substr(0, max_len);
-			if (subText !== text) {
-				mt.materialTextBox.text = subText;
-			}
-			lblRemainLength.text = "" + (max_len - subText.length);
-			lblRemainLength.textColor = materialColor.lineColor[text ? "selected" : "normal"];
-		}
-	});
-	mt.materialTextBox.rightLayout = { view: lblRemainLength, width: 30 };
+    const lblRemainLength = new Label({ text: `${max_len}`, textColor: materialColor.lineColor.normal });
+    mt.options = Object.assign({}, options, {
+        onTextChanged: (e) => {
+            const text = mt.materialTextBox.text || "";
+            const subText = text.substr(0, max_len);
+            if (subText !== text) {
+                mt.materialTextBox.text = subText;
+            }
+            lblRemainLength.text = "" + (max_len - subText.length);
+            lblRemainLength.textColor = materialColor.lineColor[text ? "selected" : "normal"];
+        }
+    });
+    mt.materialTextBox.rightLayout = { view: lblRemainLength, width: 30 };
 }
 
 

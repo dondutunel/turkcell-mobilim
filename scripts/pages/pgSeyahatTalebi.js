@@ -94,6 +94,10 @@ function onLoad(superOnLoad) {
     this.btnContinue.onPress = () => {
         this.routerData.from = this.mtFrom.materialTextBox.text;
         this.routerData.to = this.mtTo.materialTextBox.text;
+        this.routerData.date = {
+            min: page.mtDepartureDate.materialTextBox.rawValue,
+            max: page.mtReturnDate.materialTextBox.rawValue,
+        };
         if (this.routerData.isFlightInfo) {
             page.router.push("/btb/tab2/pgFlightInfo", this.routerData);
         }
@@ -241,8 +245,6 @@ function showHideMaterialTextBox(mt, show) {
     }
     mt.applyLayout();
 }
-
-
 
 function updateContinueButtonState(page) {
     page.btnContinue.enabled = (page.routerData.isAccommodationInfo || page.routerData.isFlightInfo);

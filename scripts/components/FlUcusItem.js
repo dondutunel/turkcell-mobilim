@@ -3,19 +3,20 @@ const FlKonaklamaItemDesign = require('library/FlUcusItem');
 const { getCombinedStyle } = require("sf-extension-utils/lib/getCombinedStyle");
 const populateMaterialTextbox = require("../utils/populateMaterialTextbox");
 const addActionToMateriaTextboxs = require("../lib/addActionToMateriaTextboxs");
+const { showDatePicker, showListview, showPicker } = require("../lib/showHelperUiItems");
 
 const options = {
  "mtLocationFrom": {
   hint: "Nereden",
   touchEnabled: false,
   picker: true,
-  mapperFn: data => data.City
+  mapperFn: data => data.AirPortName_Turkish
  },
  "mtLocationTo": {
   hint: "Nereye",
   touchEnabled: false,
   picker: true,
-  mapperFn: data => data.City
+  mapperFn: data => data.AirPortName_Turkish
 
  },
  "mtDateFrom": {
@@ -54,12 +55,18 @@ const FlKonaklamaItem = extend(FlKonaklamaItemDesign)(
   const HEADER_HEIGHT = getCombinedStyle(".flKonaklamaItem-header").height;
   const HEIGHT_WITHOUT_RETURN_DATE = FULL_HEIGHT - HEADER_HEIGHT;
 
-  this.init = () => {
+  this.init = (date) => {
    Object.keys(options).forEach(componentName => {
     this[componentName].options = options[componentName];
    });
    addActionToMateriaTextboxs(this, options);
    populateMaterialTextbox(this, MATERIAL_OPTIONS);
+   console.log(date);
+   this.mtDateFrom.onDropDownClick = () => showDatePicker.call(this, "mtDateFrom", date.min, date.max);
+   this.mtDonusDate.onDropDownClick = () => {
+    const minDate = this.mtDateFrom.materialTextBox.rawValue;
+    minDate && showDatePicker.call(this, "mtDonusDate", minDate, date.max);
+   };
 
    // Init checkbox
    this.flCheckbox.setData({ text: "Dönüş Tarihi" });

@@ -37,7 +37,7 @@ const PgKonaklama = extend(PgKonaklamaDesign)(
         !routeData.isAccommodationInfo && (this.btnContinue.text = "Talebi Gönder");
         this.btnContinue.onPress = () => {
             if (routeData.isAccommodationInfo) {
-                this.router.push("/btb/tab2/pgKonaklamaInfo");
+                this.router.push("/btb/tab2/pgKonaklamaInfo", this.routeData);
             }
             else {
                 const waitDialog = wait();
@@ -80,7 +80,7 @@ function onLoad(superOnLoad) {
             page.svMain.layout.removeChild(page.flFooter);
             page.svMain.layout.addChild(ucusItem, `konaklamaItem${itemIndex++}`);
             page.svMain.layout.addChild(page.flFooter);
-            ucusItem.init();
+            ucusItem.init(this.routeData.date);
             ucusItem.itemsData = this.itemsData;
             ucusItem.onDelete = () => {
                 page.svMain.layout.removeChild(ucusItem);

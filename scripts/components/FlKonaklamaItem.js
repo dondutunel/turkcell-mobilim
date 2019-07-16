@@ -3,6 +3,7 @@ const FlKonaklamaItemDesign = require('library/FlKonaklamaItem');
 const populateMaterialTextbox = require("../utils/populateMaterialTextbox");
 const addActionToMateriaTextboxs = require("../lib/addActionToMateriaTextboxs");
 const { getAutocompleteCity } = require("../services/seyahatService");
+const { showDatePicker, showListview, showPicker } = require("../lib/showHelperUiItems");
 
 const options = {
     "mtRegion": {
@@ -64,12 +65,13 @@ const FlKonaklamaItem = extend(FlKonaklamaItemDesign)(
         _super(this, props);
         this.pageName = pageName;
 
-        this.init = () => {
+        this.init = (date) => {
             Object.keys(options).forEach(componentName => {
                 this[componentName].options = options[componentName];
             });
             addActionToMateriaTextboxs(this, options);
             populateMaterialTextbox(this, MATERIAL_OPTIONS);
+            this.mtWhenDate.onDropDownClick = () => showDatePicker.call(this,"mtWhenDate", date.min, date.max);
         };
         // Init delete button
         this.btnRemove.onPress = () => {
