@@ -54,7 +54,7 @@
 		},
 		"&-btn": {
 			"marginTop": 30,
-			"backgroundColor": "rgba( 254, 198, 44, 1 )",
+			"backgroundColor": { "normal": "rgba( 254, 198, 44, 1 )" },
 			"marginBottom": 23
 		}
 	}
