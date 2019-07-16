@@ -19,3 +19,12 @@ require("sf-extension-utils");
 require("./theme");
 const router = require("./routes");
 router.push("/login");
+
+const Network = require("sf-core/device/network");
+var notifier = new Network.createNotifier();
+notifier.subscribe(function(connectionType) {
+	if (connectionType === Network.ConnectionType.NONE) {
+		alert("Aktif bir internet bağlantısı bulunamadı!");
+	}
+	console.log("ConnectionType is " + connectionType);
+});

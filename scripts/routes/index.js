@@ -3,6 +3,7 @@ const createPageContext = require("@smartface/contx/lib/smartface/pageContext");
 const Image = require("sf-core/ui/image");
 const Color = require("sf-core/ui/color");
 const Application = require("sf-core/application");
+const routeBlocker = require("./routeBlocker");
 const OS = require('sf-core/device/system').OS;
 const {
     NativeRouter: Router,
@@ -198,5 +199,7 @@ const router = Router.of({
         bottomTabBarRouter
     ]
 });
+
+routeBlocker.init(router);
 
 module.exports = router;
