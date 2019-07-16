@@ -18,9 +18,11 @@ const FlMySentAwardItem = extend(FlMySentAwardItemDesign)(
 			}
 			data.award && (this.lblAward.text = data.award);
 			data.title && (this.lblTitle.text = data.title);
+			data.Aciklama && (this.lblTitle.text = data.Aciklama);
 			data.date && (this.lblDate.text = data.date);
 			data.message && (this.lblMessage.text = data.message);
 			data.price && (this.lblPrice.text = `Hediye Miktarı: ${data.price}`);
+			data.Fiyat && (this.lblPrice.text = `Hediye Miktarı: ${data.Fiyat}`);
 		};
 	}
 );

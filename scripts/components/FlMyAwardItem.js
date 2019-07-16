@@ -19,6 +19,7 @@ const FlMyAwardItem = extend(FlMyAwardItemDesign)(
 			}
 			*/
 			data.title && (this.lblTitle.text = data.title);
+			data.Aciklama && (this.lblTitle.text = data.Aciklama);
 			data.date && (this.lblDate.text = data.date);
 		};
 	}

@@ -40,12 +40,12 @@ function onShow(superOnShow) {
 function onLoad(superOnLoad) {
 	superOnLoad();
 	this.svMain.layout.minHeight = 420;
-	this.lblTitle.text = this.routeData.title;
+	this.lblTitle.text = this.routeData.Aciklama;
 	this.lblDate.text = this.routeData.date;
 	this.lblName.text = this.routeData.userName || TEMP_DATA.userName;
 	this.lblMessage.text = this.routeData.Aciklama || TEMP_DATA.message;
 	this.lblDetail.text = this.routeData.Aciklama || TEMP_DATA.detail;
-	this.lblAwardCode.text = this.routeData.code || TEMP_DATA.awardCode;
+	this.lblAwardCode.text = this.routeData.Kod || TEMP_DATA.awardCode;
 }
 
 module.exports = PgMyAwardDetail;
