@@ -4,8 +4,8 @@ module.exports = {
     getAccomodationOptions: () => new Promise((resolve, reject) => {
         request("/mobile/accomodationOptions", "", { method: "GET" }).then(resolve, reject);
     }),
-    getAgentList: (userID) => new Promise((resolve, reject) => {
-        request("/mobile/agentList", `/${userID ||"TCUERDEM" }`, { method: "GET" }).then(resolve, reject);
+    getAgentList: () => new Promise((resolve, reject) => {
+        request("/mobile/agentList", `/TCUERDEM`, { method: "GET" }).then(resolve, reject);
     }),
     getAirportOptions: (from, to) => new Promise((resolve, reject) => {
         request("/mobile/airportOptions", `/${from}/${to}`, { method: "GET" }).then(resolve, reject);

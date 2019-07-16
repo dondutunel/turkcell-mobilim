@@ -1,7 +1,7 @@
 {
 	"env": {
 		"development": {
-			"baseUrl": "http://10.218.166.161",
+			"baseUrl": "http://10.218.166.161:80",
 			"logEnabled": true
 		},
 		"current": "development"
