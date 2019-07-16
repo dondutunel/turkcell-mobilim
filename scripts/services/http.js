@@ -1,5 +1,4 @@
 const ServiceCall = require("sf-extension-utils/lib/service-call");
-const { logError } = require("./logService");
 const sampleResponse = require("./sampleResponse");
 const config = require("../config.json");
 const envConfig = config.env[config.env.current];
@@ -12,7 +11,8 @@ const sharedHeaders = {
 const serviceCall = new ServiceCall({
     baseUrl: envConfig.baseUrl,
     headers: Object.assign({}, sharedHeaders, {}),
-    logEnabled: envConfig.logEnabled
+    logEnabled: envConfig.logEnabled,
+    timeout: 60000
 });
 
 module.exports = {
@@ -23,11 +23,11 @@ module.exports = {
             .then(res => {
                 resolve(res);
                 console.log("Request: res", res, { endpoint, param, options });
-            })
-            .catch((e) => {
+            }, e => {
                 console.log("Request: Err", e, { endpoint, param, options });
-                logError(JSON.stringify(e, null, "\t"));
-                reject(e);
+                const logError = require("./logService").logError;
+                endpoint !== "/mobile/log" && setTimeout(() => logError(JSON.stringify(e, null, "\t")), 1);
+                return reject(e);
             }) :
             setTimeout(() => resolve(sampleResponse[endpoint]), 300);
     })

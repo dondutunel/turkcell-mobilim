@@ -24,8 +24,13 @@ const log = (message, type) =>
 		}
 	});
 
+
+
 module.exports = {
 	log,
-	logError: (message) => log(message, "error"),
 	logInfo: (message) => log(message, "info"),
 };
+
+module.exports.logError = function(message) {
+	log(message, "error");
+}

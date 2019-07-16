@@ -1,4 +1,5 @@
 const Screen = require("sf-core/device/screen");
+const ActionKeyType = require('sf-core/ui/actionkeytype');
 const touch = require("sf-extension-utils/lib/touch");
 const extend = require('js-base/core/extend');
 const PgLoginDesign = require('ui/ui_pgLogin');
@@ -18,11 +19,13 @@ const LOGIN_ITEMS = {
 
 const MATERIAL_TEXTBOXS = [{
 		name: "mtEmail",
-		errorMessage: "Kullanıcı adı boş olamaz"
+		errorMessage: "Kullanıcı adı boş olamaz",
+		actionKeyType: ActionKeyType.NEXT
 	},
 	{
 		name: "mtPassword",
-		errorMessage: "Şifre boş olamaz"
+		errorMessage: "Şifre boş olamaz",
+		actionKeyType: ActionKeyType.GO
 	}
 ];
 
@@ -81,8 +84,11 @@ function onLoad(superOnLoad) {
 				this.router.push("/btb/tab2/pgIslemlerim");
 			})
 			.catch(e => alert(e))
-			.finally(() => waitDialog.hide());
+			.finally(() => {
+				waitDialog.hide();
+			});
 	};
+	this.mtPassword.materialTextBox.onActionButtonPress = this.btnLogin.onPress;
 	propagateTouchEvents(this.svMain);
 }
 

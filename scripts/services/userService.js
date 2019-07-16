@@ -6,20 +6,16 @@ const isActiveService = config.isActiveService;
 module.exports = {
 	login: (userID, password) => {
 		if (isActiveService) {
-			return new Promise((resolve, reject) => {
-				request("/mobile/login", "", {
-						method: "POST",
-						body: {
-							userID,
-							password
-						}
-					})
-					.then(() => {
-						resolve();
-						setUserId(userID);
-					})
-					.catch(reject);
-			});
+			return request("/mobile/login", "", {
+					method: "POST",
+					body: {
+						userID,
+						password
+					}
+				})
+				.then(() => {
+					return setUserId(userID);
+				}, e => {});
 		}
 		else {
 			setUserId(userID);
