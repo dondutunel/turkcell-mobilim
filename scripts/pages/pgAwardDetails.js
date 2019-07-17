@@ -3,6 +3,7 @@ const PgAwardDetailsDesign = require('ui/ui_pgAwardDetails');
 const touch = require("sf-extension-utils/lib/touch");
 const { wait } = require("lib/dialog");
 const { getAvailableAwards } = require("../services/awardService");
+const genericErrorHandler = require("lib/genericErrorHandler");
 
 const PgAwardDetails = extend(PgAwardDetailsDesign)(
 	// Constructor
@@ -35,7 +36,7 @@ function onLoad(superOnLoad) {
 			this.lvMain.itemCount = this.itemsData.length;
 			this.lvMain.refreshData();
 		})
-		.catch(e => { throw e })
+		.catch(genericErrorHandler)
 		.finally(() => waitDialog.hide());
 }
 

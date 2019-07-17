@@ -10,6 +10,7 @@ const PgKonaklamaDesign = require('ui/ui_pgFlightInfo');
 const { getAirportOptions } = require("../services/seyahatService");
 const { wait } = require("lib/dialog");
 const { getCombinedStyle } = require("sf-extension-utils/lib/getCombinedStyle");
+const genericErrorHandler = require("lib/genericErrorHandler");
 
 const MAX_DESC_LENGTH = 150;
 const MAX_NOTE_LENGTH = 80;
@@ -101,10 +102,12 @@ function onLoad(superOnLoad) {
     MATERIAL_OPTIONS.forEach(option => {
         initMaterials(this[option.name], option, option.maxLen);
     });
-    Promise.all([getAirportOptions(from, to)]).then(res => {
-        page.itemsData["mtLocationFrom"] = res[0].from;
-        page.itemsData["mtLocationTo"] = res[0].to;
-    }).finally(() => waitDialog.hide());
+    Promise.all([getAirportOptions(from, to)])
+        .then(res => {
+            page.itemsData["mtLocationFrom"] = res[0].from;
+            page.itemsData["mtLocationTo"] = res[0].to;
+        }).catch(genericErrorHandler)
+        .finally(() => waitDialog.hide());
 }
 
 function initMaterials(mt, options, max_len) {

@@ -4,6 +4,8 @@
 const extend = require('js-base/core/extend');
 const PgSendInstantAwardFormDesign = require('ui/ui_pgSendInstantAwardForm');
 const { getCombinedStyle } = require("sf-extension-utils/lib/getCombinedStyle");
+const { sendAward } = require("../services/awardService");
+const { wait } = require("lib/dialog");
 
 const MAX_DESC_LENGTH = 150;
 const materialColor = getCombinedStyle(".materialTextBox");
@@ -50,6 +52,14 @@ function onLoad(superOnLoad) {
 		this.lblRemainLength.textColor = materialColor.lineColor[text ? "selected" : "normal"];
 	};
 	setData.call(this, this.routeData);
+	this.btnContinue.onPress = () => {
+		const waitDialog = wait();
+		sendAward(this.tbName.text, this.routeData.Kod)
+			.then(res => {
+				alert("Ödülünüz başarıyla gönderilmiştir.");
+				this.router.goBacktoHome();
+			}).finally(() => waitDialog.hide());
+	};
 }
 
 

@@ -6,6 +6,7 @@ const PgLoginDesign = require('ui/ui_pgLogin');
 const propagateTouchEvents = require("lib/propagateTouchEvents");
 const { login } = require("../services/userService");
 const { wait } = require("lib/dialog");
+const genericErrorHandler = require("lib/genericErrorHandler");
 
 const LOGIN_ITEMS = {
 	"email": {
@@ -59,7 +60,7 @@ function onShow(superOnShow) {
 function onLoad(superOnLoad) {
 	superOnLoad();
 	this.btnLogin.enabled = false;
-	this.imgLogo.onTouchEnded = ()=>{
+	this.imgLogo.onTouchEnded = () => {
 		this.mtEmail.materialTextBox.text = "TCUERDEM";
 		this.mtPassword.materialTextBox.text = "asd12345";
 		validateFormState(this);
@@ -89,7 +90,7 @@ function onLoad(superOnLoad) {
 			.then(res => {
 				this.router.push("/btb/tab2/pgIslemlerim");
 			})
-			.catch(e => alert(e))
+			.catch(genericErrorHandler)
 			.finally(() => {
 				waitDialog.hide();
 			});

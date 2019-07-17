@@ -10,6 +10,7 @@ const PgKonaklamaDesign = require('ui/ui_pgKonaklama');
 const { getHotels } = require("../services/seyahatService");
 const { wait } = require("lib/dialog");
 const { getCombinedStyle } = require("sf-extension-utils/lib/getCombinedStyle");
+const genericErrorHandler = require("lib/genericErrorHandler");
 
 const MAX_DESC_LENGTH = 150;
 const MAX_NOTE_LENGTH = 80;
@@ -97,7 +98,7 @@ function onLoad(superOnLoad) {
     });
     Promise.all([getHotels()]).then(res => {
         page.itemsData["mtHotel"] = res[0];
-    }).finally(() => waitDialog.hide());
+    }).catch(genericErrorHandler).finally(() => waitDialog.hide());
 }
 
 function initMaterials(mt, options, max_len) {

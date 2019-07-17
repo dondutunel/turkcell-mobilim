@@ -25,8 +25,6 @@ module.exports = {
                 console.log("Request: res", res, { endpoint, param, options });
             }, e => {
                 console.log("Request: Err", e, { endpoint, param, options });
-                const logError = require("./logService").logError;
-                endpoint !== "/mobile/log" && setTimeout(() => logError(JSON.stringify(e, null, "\t")), 1);
                 return reject(e);
             }) :
             setTimeout(() => resolve(sampleResponse[endpoint]), 300);

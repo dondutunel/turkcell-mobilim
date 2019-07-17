@@ -7,6 +7,7 @@ const touch = require("sf-extension-utils/lib/touch");
 const { getUserId } = require("../globalData");
 const { getAvailableAwards, getMyAwards } = require("../services/awardService");
 const { wait } = require("lib/dialog");
+const genericErrorHandler = require("lib/genericErrorHandler");
 
 
 const PgInstantAward = extend(PgInstantAwardDesign)(
@@ -65,7 +66,7 @@ function onLoad(superOnLoad) {
         page.itemsData[1].count = res[1].length;
         initItems(page, page.itemsData, UI_ITEMS);
         page.layout.applyLayout();
-    }).finally(() => waitDialog.hide());
+    }).catch(genericErrorHandler).finally(() => waitDialog.hide());
 }
 
 function initItems(page, itemsData, uiItems) {

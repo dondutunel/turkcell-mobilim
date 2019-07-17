@@ -9,6 +9,8 @@ const { wait } = require("lib/dialog");
 const { getTripOptions, getAutocompleteCity, getAgentList } = require("../services/seyahatService");
 const debounce = require("../utils/debounce");
 const { showDatePicker, showListview, showPicker } = require("../lib/showHelperUiItems");
+const genericErrorHandler = require("lib/genericErrorHandler");
+
 const populateMaterialTextbox = require("../utils/populateMaterialTextbox");
 const HIDE_MT_CLASS_NAME = ".materialTextBox-wrapper.hide";
 const MATERIAL_OPTIONS = [{
@@ -126,10 +128,11 @@ function onLoad(superOnLoad) {
 
     };
     Promise.all([getTripOptions(), getAgentList()]).then(res => {
-        this.itemsData["mtRegion"] = res[0].types;
-        this.itemsData["mtPurpose"] = res[0].purposes;
-        this.itemsData["mtAcente"] = res[1];
-    }).finally(() => waitDialog.hide());
+            this.itemsData["mtRegion"] = res[0].types;
+            this.itemsData["mtPurpose"] = res[0].purposes;
+            this.itemsData["mtAcente"] = res[1];
+        }).catch(genericErrorHandler)
+        .finally(() => waitDialog.hide());
 }
 
 function initMaterials(page) {
