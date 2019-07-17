@@ -1,2 +1,34 @@
 {
+	".color": {
+		"&_dark": {
+			"textColor": "rgb(45,60,73)"
+		},
+		"&_hint": {
+			"textColor": "rgb(160,160,165)"
+		},
+		"&_darkSkyBlue": {
+			"textColor": "rgba( 47, 171, 235, 1 )"
+		}
+	},
+	".tv": {
+		"height": null,
+		"right": 0,
+		"bottom": 0,
+		"marginTop": null,
+		"marginBottom": null,
+		"left": 40,
+		"top": 0,
+		"flexProps": {
+			"positionType": "ABSOLUTE"
+		}
+	},
+	"#pgKonaklamaInfo": {
+		"&-tv": {
+			"+Device:Device.os === \"iOS\"": {
+				"top": 15
+			},
+			"top": 0,
+			"left": 40
+		}
+	}
 }

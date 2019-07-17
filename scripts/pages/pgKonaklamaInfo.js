@@ -69,6 +69,11 @@ function onLoad(superOnLoad) {
     const page = this;
     const waitDialog = wait();
     this.lvPickerList.context = this.layout;
+    this.flCheckItem.touchEnabled = false;
+    this.flCheckItem.setData({text: ""});
+    this.flKosullar.onTouchEnded = ()=>{
+        this.flCheckItem.onTouchEnded();
+    }
     if (System.OS === "Android")
         this.svMain.layout.minHeight = Screen.height - (150 + 235);
     this.svMain.layout.applyLayout();

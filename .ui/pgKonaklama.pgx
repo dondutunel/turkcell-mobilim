@@ -99,6 +99,7 @@
 				"children": [
 					"e311-ff35-37bd-ae22",
 					"0429-2e3a-fe2b-d2ed",
+					"6e05-6115-7a81-ad5b",
 					"377f-4367-5d38-86bb"
 				],
 				"name": "flFooter",
@@ -107,7 +108,7 @@
 			},
 			"type": "FlexLayout",
 			"userProps": {
-				"height": 235,
+				"height": 285,
 				"left": 0,
 				"paddingLeft": 15,
 				"paddingRight": 15,
@@ -179,10 +180,76 @@
 			}
 		},
 		{
+			"className": ".sf-flexLayout",
+			"id": "6e05-6115-7a81-ad5b",
+			"props": {
+				"children": [
+					"307f-8497-6d14-3e17",
+					"ff18-c0ef-bb4f-89b4"
+				],
+				"name": "flKosullar",
+				"parent": "e5d6-c7aa-4aea-f24e",
+				"usePageVariable": true
+			},
+			"type": "FlexLayout",
+			"userProps": {
+				"height": 50,
+				"usePageVariable": true
+			}
+		},
+		{
+			"className": ".sf-flexLayout .flCheckItem",
+			"hiddenComponent": false,
+			"id": "307f-8497-6d14-3e17",
+			"initialized": false,
+			"props": {
+				"children": [],
+				"name": "flCheckItem",
+				"parent": "6e05-6115-7a81-ad5b",
+				"usePageVariable": true
+			},
+			"source": {
+				"page": "__library__",
+				"type": "flCheckItem",
+				"id": "b35d-e347-8f7b-1d0c"
+			},
+			"type": "FlexLayout",
+			"userProps": {
+				"bottom": 0,
+				"flex": {
+					"positionType": 0
+				},
+				"flexProps": {
+					"positionType": "ABSOLUTE"
+				},
+				"height": null,
+				"left": 0,
+				"right": 0,
+				"top": 0,
+				"usePageVariable": true
+			}
+		},
+		{
+			"className": ".sf-textView .tv #pgKonaklamaInfo-tv",
+			"id": "ff18-c0ef-bb4f-89b4",
+			"props": {
+				"children": [],
+				"html": "<font face=\"SFProText-Regular\"><span style=\"white-space: pre-wrap; background-color: rgb(255, 255, 255);\"><u style=\"color: rgb(51, 172, 235); background-color: rgb(255, 255, 255);\">Seyahat Koşullarını</u> kabul ediyorum.</span></font><br>",
+				"name": "textView1",
+				"parent": "6e05-6115-7a81-ad5b",
+				"text": "Seyahat Koşullarını kabul ediyorum.\n"
+			},
+			"type": "TextView",
+			"userProps": {
+				"html": "<font face=\"SFProText-Regular\"><span style=\"white-space: pre-wrap; background-color: rgb(255, 255, 255);\"><u style=\"color: rgb(51, 172, 235); background-color: rgb(255, 255, 255);\">Seyahat Koşullarını</u> kabul ediyorum.</span></font><br>",
+				"text": "Seyahat Koşullarını kabul ediyorum.\n"
+			}
+		},
+		{
 			"className": ".sf-button #pgSeyahatTalebi-btn",
 			"id": "377f-4367-5d38-86bb",
 			"props": {
-				"autoHeight": 24.390243902439025,
+				"autoHeight": 21.153846153846153,
 				"children": [],
 				"name": "btnContinue",
 				"parent": "e5d6-c7aa-4aea-f24e",
@@ -191,7 +258,7 @@
 			},
 			"type": "Button",
 			"userProps": {
-				"autoHeight": 24.390243902439025,
+				"autoHeight": 21.153846153846153,
 				"left": 0,
 				"marginBottom": 10,
 				"marginTop": 15,
