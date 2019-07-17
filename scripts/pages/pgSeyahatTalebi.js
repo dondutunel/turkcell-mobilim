@@ -238,6 +238,9 @@ function initMaterials(page) {
         hint: "TC Kimlik No ",
         keyboardType: KeyboardType.NUMBER
     };
+    page.mtID.materialTextBox.onTextChanged = e => {
+        page.mtID.materialTextBox.text = page.mtID.materialTextBox.text.substr(0, 11);
+    };
     populateMaterialTextbox(page, MATERIAL_OPTIONS);
 }
 

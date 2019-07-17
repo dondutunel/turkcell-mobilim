@@ -6,6 +6,7 @@ const { getCombinedStyle } = require("sf-extension-utils/lib/getCombinedStyle");
 const populateMaterialTextbox = require("../utils/populateMaterialTextbox");
 const addActionToMateriaTextboxs = require("../lib/addActionToMateriaTextboxs");
 const { showDatePicker, showListview, showPicker, showConfirmAlert } = require("../lib/showHelperUiItems");
+const oTextChangedForTime = require("../lib/oTextChangedForTime");
 
 const options = {
     "mtLocationFrom": {
@@ -27,7 +28,7 @@ const options = {
     },
     "mtTimeFrom": {
         hint: "Saat",
-        keyboardType: KeyboardType.DECIMAL
+        keyboardType: KeyboardType.NUMBER
     },
     "mtDonusDate": {
         hint: "Tarih",
@@ -35,7 +36,7 @@ const options = {
     },
     "mtDonusTime": {
         hint: "Saat",
-        keyboardType: KeyboardType.DECIMAL
+        keyboardType: KeyboardType.NUMBER
     },
 };
 
@@ -99,8 +100,22 @@ const FlKonaklamaItem = extend(FlKonaklamaItemDesign)(
                     this.onDelete && this.onDelete(); // Exposed
                 });
             };
+            this.mtTimeFrom.materialTextBox.onTextChanged = e => oTextChangedForTime(this.mtTimeFrom.materialTextBox, e);
+            this.mtDonusTime.materialTextBox.onTextChanged = e => oTextChangedForTime(this.mtDonusTime.materialTextBox, e);
         };
     }
 );
+
+function timeMask(value) {
+    const chars = value.split('');
+    const hours = [
+        /[0-2]/,
+        chars[0] == '2' ? /[0-3]/ : /[0-9]/
+    ];
+
+    const minutes = [/[0-5]/, /[0-9]/];
+
+    return hours.concat(':').concat(minutes);
+}
 
 module.exports = FlKonaklamaItem;

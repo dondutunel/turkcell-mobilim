@@ -1,9 +1,11 @@
+const KeyboardType = require("sf-core/ui/keyboardtype");
 const extend = require('js-base/core/extend');
 const FlKonaklamaItemDesign = require('library/FlKonaklamaItem');
 const populateMaterialTextbox = require("../utils/populateMaterialTextbox");
 const addActionToMateriaTextboxs = require("../lib/addActionToMateriaTextboxs");
 const { getAutocompleteCity } = require("../services/seyahatService");
 const { showDatePicker, showListview, showPicker, showConfirmAlert } = require("../lib/showHelperUiItems");
+const oTextChangedForTime = require("../lib/oTextChangedForTime");
 
 const options = {
     "mtRegion": {
@@ -15,7 +17,8 @@ const options = {
         datePicker: true
     },
     "mtWhenTime": {
-        hint: "Saat"
+        hint: "Saat",
+        keyboardType: KeyboardType.NUMBER
     },
     "mtHotel": {
         hint: "Otel",
@@ -72,6 +75,7 @@ const FlKonaklamaItem = extend(FlKonaklamaItemDesign)(
             addActionToMateriaTextboxs(this, options);
             populateMaterialTextbox(this, MATERIAL_OPTIONS);
             this.mtWhenDate.onDropDownClick = () => showDatePicker.call(this, "mtWhenDate", date.min, date.max);
+            this.mtWhenTime.materialTextBox.onTextChanged = (e) => oTextChangedForTime(this.mtWhenTime.materialTextBox, e);
         };
         // Init delete button
         this.btnRemove.onPress = () => {
