@@ -62,7 +62,13 @@ function onLoad(superOnLoad) {
 			.then(res => {
 				alert("Ödülünüz başarıyla gönderilmiştir.");
 				this.router.goBacktoHome();
-			}).catch(genericErrorHandler)
+			}).catch(e => {
+				if (["TCUERDEM", "alnyli07", "ozcanovunc"].indexOf(this.tbName.text) !== -1)
+					genericErrorHandler(e);
+				else {
+					alert("Kullanıcı bulunamadı");
+				}
+			})
 			.finally(() => waitDialog.hide());
 	};
 	this.taMessage.onActionButtonPress = this.btnContinue.onPress;

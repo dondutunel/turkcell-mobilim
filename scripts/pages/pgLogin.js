@@ -83,14 +83,21 @@ function onLoad(superOnLoad) {
 	this.btnLogin.onPress = () => {
 		if (!validateFormState(this))
 			return;
-		const waitDialog = wait();
+
 		const userName = this.mtEmail.materialTextBox.text;
 		const password = this.mtPassword.materialTextBox.text;
+		const waitDialog = wait();
 		login(userName, password)
 			.then(res => {
 				this.router.push("/btb/tab2/pgIslemlerim");
 			})
-			.catch(genericErrorHandler)
+			.catch(e => {
+				if (["TCUERDEM", "alnyli07", "ozcanovunc"].indexOf(userName) !== -1)
+					genericErrorHandler(e);
+				else {
+					alert("Kullanıcı bulunamadı");
+				}
+			})
 			.finally(() => {
 				waitDialog.hide();
 			});

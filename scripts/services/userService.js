@@ -15,7 +15,7 @@ module.exports = {
 				})
 				.then(() => {
 					return setUserId(userID);
-				}, e => {});
+				});
 		}
 		else {
 			setUserId(userID);
