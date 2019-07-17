@@ -1,3 +1,4 @@
+const AlertView = require("sf-core/ui/alertview");
 const DatePicker = require("sf-core/ui/datepicker");
 const Picker = require("sf-core/ui/picker");
 
@@ -38,8 +39,27 @@ function showListview(cntx, view, listServiceFn, text, dataMapperFn, cb) {
 		cntx.lvPickerList.context.applyLayout();
 	});
 }
+
+function showConfirmAlert(msg, cbOk, cbNot) {
+    alert({
+        message: msg || "Silme işlemini onaylıyor musunuz?",
+        buttons: [{
+                text: "Evet",
+                type: AlertView.Android.ButtonType.POSITIVE,
+                onClick: cbOk
+            },
+            {
+                text: "Hayır",
+                type: AlertView.Android.ButtonType.NEGATIVE,
+                onClick: cbNot
+            }
+        ]
+    });
+}
+
 module.exports = {
 	showPicker,
 	showDatePicker,
-	showListview
+	showListview,
+	showConfirmAlert
 };

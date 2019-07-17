@@ -3,7 +3,7 @@ const FlKonaklamaItemDesign = require('library/FlKonaklamaItem');
 const populateMaterialTextbox = require("../utils/populateMaterialTextbox");
 const addActionToMateriaTextboxs = require("../lib/addActionToMateriaTextboxs");
 const { getAutocompleteCity } = require("../services/seyahatService");
-const { showDatePicker, showListview, showPicker } = require("../lib/showHelperUiItems");
+const { showDatePicker, showListview, showPicker, showConfirmAlert } = require("../lib/showHelperUiItems");
 
 const options = {
     "mtRegion": {
@@ -71,11 +71,13 @@ const FlKonaklamaItem = extend(FlKonaklamaItemDesign)(
             });
             addActionToMateriaTextboxs(this, options);
             populateMaterialTextbox(this, MATERIAL_OPTIONS);
-            this.mtWhenDate.onDropDownClick = () => showDatePicker.call(this,"mtWhenDate", date.min, date.max);
+            this.mtWhenDate.onDropDownClick = () => showDatePicker.call(this, "mtWhenDate", date.min, date.max);
         };
         // Init delete button
         this.btnRemove.onPress = () => {
-            this.onDelete && this.onDelete(); // Exposed
+            showConfirmAlert("Silme işlemini onaylıyor musunuz?", () => {
+                this.onDelete && this.onDelete(); // Exposed
+            });
         };
     }
 );

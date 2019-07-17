@@ -1,3 +1,4 @@
+const ActionKeyType = require("sf-core/ui/actionkeytype");
 /* 
 		You can modify its contents.
 */
@@ -6,6 +7,7 @@ const PgSendInstantAwardFormDesign = require('ui/ui_pgSendInstantAwardForm');
 const { getCombinedStyle } = require("sf-extension-utils/lib/getCombinedStyle");
 const { sendAward } = require("../services/awardService");
 const { wait } = require("lib/dialog");
+const genericErrorHandler = require("lib/genericErrorHandler");
 
 const MAX_DESC_LENGTH = 150;
 const materialColor = getCombinedStyle(".materialTextBox");
@@ -41,7 +43,9 @@ function onShow(superOnShow) {
 function onLoad(superOnLoad) {
 	superOnLoad();
 	this.tbName.hint = "Hediye Gönderilecek Kişi";
+	this.tbName.actionKeyType = ActionKeyType.NEXT;
 	this.taMessage.text = "";
+	this.taMessage.actionKeyType = ActionKeyType.GO;
 	this.taMessage.onTextChanged = (e) => {
 		const text = this.taMessage.text || "";
 		const subText = text.substr(0, MAX_DESC_LENGTH);
@@ -58,8 +62,10 @@ function onLoad(superOnLoad) {
 			.then(res => {
 				alert("Ödülünüz başarıyla gönderilmiştir.");
 				this.router.goBacktoHome();
-			}).finally(() => waitDialog.hide());
+			}).catch(genericErrorHandler)
+			.finally(() => waitDialog.hide());
 	};
+	this.taMessage.onActionButtonPress = this.btnContinue.onPress;
 }
 
 
