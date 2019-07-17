@@ -18,7 +18,8 @@ Application.onUnhandledError = function(e) {
 require("sf-extension-utils");
 require("./theme");
 const router = require("./routes");
-router.push("/login");
+//router.push("/login");
+router.push("/btb/tab2/pgKonaklamaInfo");
 
 const Network = require("sf-core/device/network");
 var notifier = new Network.createNotifier();

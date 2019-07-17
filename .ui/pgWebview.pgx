@@ -1,0 +1,68 @@
+{
+	"components": [
+		{
+			"className": ".sf-page",
+			"id": "752a-6af3-2a97-8aa3",
+			"initialized": true,
+			"props": {
+				"children": [
+					"ced8-5cfa-c65b-c897",
+					"7ef6-7162-684d-998e",
+					"33f3-b813-ecbb-d278"
+				],
+				"name": "pgWebview",
+				"orientation": "PORTRAIT",
+				"parent": null
+			},
+			"type": "Page",
+			"userProps": {},
+			"version": "6.15.1"
+		},
+		{
+			"className": ".sf-statusBar",
+			"id": "ced8-5cfa-c65b-c897",
+			"props": {
+				"children": [],
+				"isRemovable": false,
+				"name": "statusBar",
+				"parent": "752a-6af3-2a97-8aa3"
+			},
+			"type": "StatusBar",
+			"userProps": {}
+		},
+		{
+			"className": ".sf-headerBar",
+			"id": "7ef6-7162-684d-998e",
+			"props": {
+				"children": [],
+				"isRemovable": false,
+				"name": "headerBar",
+				"parent": "752a-6af3-2a97-8aa3",
+				"title": "Seyahat Koşullarını"
+			},
+			"type": "HeaderBar",
+			"userProps": {
+				"title": "Seyahat Koşullarını"
+			}
+		},
+		{
+			"className": ".sf-webView",
+			"id": "33f3-b813-ecbb-d278",
+			"props": {
+				"children": [],
+				"name": "wb",
+				"parent": "752a-6af3-2a97-8aa3",
+				"usePageVariable": true
+			},
+			"type": "WebView",
+			"userProps": {
+				"flexProps": {
+					"flexGrow": 1
+				},
+				"marginBottom": null,
+				"marginTop": null,
+				"usePageVariable": true
+			}
+		}
+	]
+}

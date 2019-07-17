@@ -120,7 +120,7 @@ module.exports = {
 	},
 	"/mobile/tripConditions": {
 		"Code": 17,
-		"Description": "<div/>"
+		"Description": "<div><p>Seyahat Koşulları</p></div>"
 	},
 	"/mobile/tripOptions": {
 		"types": [{

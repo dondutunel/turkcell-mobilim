@@ -235,14 +235,16 @@
 			"props": {
 				"children": [],
 				"html": "<font face=\"SFProText-Regular\"><span style=\"white-space: pre-wrap; background-color: rgb(255, 255, 255);\"><u style=\"color: rgb(51, 172, 235); background-color: rgb(255, 255, 255);\">Seyahat Koşullarını</u> kabul ediyorum.</span></font><br>",
-				"name": "textView1",
+				"name": "tvKosullar",
 				"parent": "6e05-6115-7a81-ad5b",
-				"text": "Seyahat Koşullarını kabul ediyorum.\n"
+				"text": "Seyahat Koşullarını kabul ediyorum.\n",
+				"usePageVariable": true
 			},
 			"type": "TextView",
 			"userProps": {
 				"html": "<font face=\"SFProText-Regular\"><span style=\"white-space: pre-wrap; background-color: rgb(255, 255, 255);\"><u style=\"color: rgb(51, 172, 235); background-color: rgb(255, 255, 255);\">Seyahat Koşullarını</u> kabul ediyorum.</span></font><br>",
-				"text": "Seyahat Koşullarını kabul ediyorum.\n"
+				"text": "Seyahat Koşullarını kabul ediyorum.\n",
+				"usePageVariable": true
 			}
 		},
 		{

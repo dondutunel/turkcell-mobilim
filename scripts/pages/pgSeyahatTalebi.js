@@ -10,8 +10,8 @@ const { getTripOptions, getAutocompleteCity, getAgentList } = require("../servic
 const debounce = require("../utils/debounce");
 const { showDatePicker, showListview, showPicker } = require("../lib/showHelperUiItems");
 const genericErrorHandler = require("lib/genericErrorHandler");
-
 const populateMaterialTextbox = require("../utils/populateMaterialTextbox");
+
 const HIDE_MT_CLASS_NAME = ".materialTextBox-wrapper.hide";
 const MATERIAL_OPTIONS = [{
         name: "mtRegion",
