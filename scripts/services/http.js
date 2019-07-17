@@ -19,7 +19,7 @@ module.exports = {
     request: (endpoint, param, options) => new Promise((resolve, reject) => {
         var shouldUseRealService = endpoint.indexOf("award") > -1 || isActiveService;
         shouldUseRealService ?
-            serviceCall.request(endpoint + param, options)
+            serviceCall.request(encodeURI(endpoint + param), options)
             .then(res => {
                 resolve(res);
                 console.log("Request: res", res, { endpoint, param, options });
