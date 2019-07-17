@@ -45,6 +45,8 @@ const MATERIAL_OPTIONS = [{
         icon: "date_icon.png"
     }
 ];
+const MATERIALS_COMMON = ["mtRegion", "mtPurpose", "mtDescription", "mtFrom", "mtTo", "mtDepartureDate", "mtReturnDate"]
+const MATERIALS_FLIGHT = ["mtAcente", "mtBirthDate", "mtID"];
 const MAX_LAYOUT_HEIGHT = 757;
 const MAX_DESC_LENGTH = 150;
 const materialColor = getCombinedStyle(".materialTextBox");
@@ -66,7 +68,7 @@ const PgSeyahatTalebi = extend(PgSeyahatTalebiDesign)(
             isFlightInfo: false,
             isAccommodationInfo: false
         };
-        this.btnContinue.enabled = false;
+        this.btnContinue.enabled = true;
     }
 );
 
@@ -94,6 +96,9 @@ function onLoad(superOnLoad) {
     this.lvPickerList.context = this.svMain.layout;
     initMaterials(this);
     this.btnContinue.onPress = () => {
+
+        if (!validateForm(this))
+            return
         this.routerData.from = this.mtFrom.materialTextBox.text;
         this.routerData.to = this.mtTo.materialTextBox.text;
         this.routerData.date = {
@@ -254,6 +259,18 @@ function showHideMaterialTextBox(mt, show) {
 
 function updateContinueButtonState(page) {
     page.btnContinue.enabled = (page.routerData.isAccommodationInfo || page.routerData.isFlightInfo);
+}
+
+function validateForm(page) {
+    let isInvalid = MATERIALS_COMMON.some(item => !page[item].materialTextBox.text);
+    if (page.routerData.isFlightInfo) {
+        isInvalid = MATERIALS_FLIGHT.some(item => !page[item].materialTextBox.text);
+    }
+
+    if (isInvalid) {
+        alert("Bütün alanların dolu olması gerekmektedir");
+    }
+    return !isInvalid;
 }
 
 module.exports = PgSeyahatTalebi;
