@@ -9,7 +9,8 @@
 					"e758-8a30-af8a-f426",
 					"9571-8530-43d9-17e4",
 					"1551-ab4f-8577-9615",
-					"0819-7e4c-f6a0-58e0"
+					"0819-7e4c-f6a0-58e0",
+					"e5d6-c7aa-4aea-f24e"
 				],
 				"name": "pgKonaklama",
 				"orientation": "PORTRAIT",
@@ -51,9 +52,7 @@
 			"id": "1551-ab4f-8577-9615",
 			"props": {
 				"autoSizeEnabled": true,
-				"children": [
-					"fdd7-9564-1623-a0a0"
-				],
+				"children": [],
 				"name": "svMain",
 				"parent": "38ef-6b2c-8ddf-479f",
 				"usePageVariable": true
@@ -63,114 +62,6 @@
 				"autoSizeEnabled": true,
 				"marginBottom": null,
 				"marginTop": null,
-				"usePageVariable": true
-			}
-		},
-		{
-			"className": ".sf-flexLayout",
-			"id": "fdd7-9564-1623-a0a0",
-			"props": {
-				"children": [
-					"25dd-72a5-8542-7e4f",
-					"7b6e-2362-fe2f-72fb",
-					"68b8-2aa9-ac3a-a3b7"
-				],
-				"name": "flFooter",
-				"parent": "1551-ab4f-8577-9615",
-				"usePageVariable": true
-			},
-			"type": "FlexLayout",
-			"userProps": {
-				"height": 235,
-				"left": 0,
-				"paddingLeft": 15,
-				"paddingRight": 15,
-				"top": 0,
-				"usePageVariable": true
-			}
-		},
-		{
-			"className": ".materialTextBox-wrapper",
-			"hiddenComponent": false,
-			"id": "25dd-72a5-8542-7e4f",
-			"initialized": false,
-			"props": {
-				"children": [],
-				"name": "mtNote",
-				"parent": "fdd7-9564-1623-a0a0",
-				"usePageVariable": true
-			},
-			"source": {
-				"page": "__modules__",
-				"moduleName": "Materialtextbox",
-				"modulePath": "materialtextbox",
-				"type": "Materialtextbox",
-				"id": "8fb2-10a8-12e4-9b45"
-			},
-			"type": "FlexLayout",
-			"userProps": {
-				"flex": {
-					"positionType": 0
-				},
-				"flexProps": {
-					"positionType": "RELATIVE"
-				},
-				"left": 0,
-				"marginTop": 15,
-				"top": 0,
-				"usePageVariable": true
-			}
-		},
-		{
-			"className": ".materialTextBox-wrapper",
-			"hiddenComponent": false,
-			"id": "7b6e-2362-fe2f-72fb",
-			"initialized": false,
-			"props": {
-				"children": [],
-				"name": "mtDescription",
-				"parent": "fdd7-9564-1623-a0a0",
-				"usePageVariable": true
-			},
-			"source": {
-				"page": "__modules__",
-				"moduleName": "Materialtextbox",
-				"modulePath": "materialtextbox",
-				"type": "Materialtextbox",
-				"id": "8fb2-10a8-12e4-9b45"
-			},
-			"type": "FlexLayout",
-			"userProps": {
-				"flex": {
-					"positionType": 0
-				},
-				"flexProps": {
-					"positionType": "RELATIVE"
-				},
-				"left": 0,
-				"top": 0,
-				"usePageVariable": true
-			}
-		},
-		{
-			"className": ".sf-button #pgSeyahatTalebi-btn",
-			"id": "68b8-2aa9-ac3a-a3b7",
-			"props": {
-				"autoHeight": 24.390243902439025,
-				"children": [],
-				"name": "btnContinue",
-				"parent": "fdd7-9564-1623-a0a0",
-				"text": "Talebi Gönder",
-				"usePageVariable": true
-			},
-			"type": "Button",
-			"userProps": {
-				"autoHeight": 24.390243902439025,
-				"left": 0,
-				"marginBottom": 10,
-				"marginTop": 15,
-				"text": "Talebi Gönder",
-				"top": 0,
 				"usePageVariable": true
 			}
 		},
@@ -197,6 +88,114 @@
 				"itemCount": 4,
 				"left": 0,
 				"rowHeight": 54,
+				"top": 0,
+				"usePageVariable": true
+			}
+		},
+		{
+			"className": ".sf-flexLayout",
+			"id": "e5d6-c7aa-4aea-f24e",
+			"props": {
+				"children": [
+					"e311-ff35-37bd-ae22",
+					"0429-2e3a-fe2b-d2ed",
+					"377f-4367-5d38-86bb"
+				],
+				"name": "flFooter",
+				"parent": "38ef-6b2c-8ddf-479f",
+				"usePageVariable": true
+			},
+			"type": "FlexLayout",
+			"userProps": {
+				"height": 235,
+				"left": 0,
+				"paddingLeft": 15,
+				"paddingRight": 15,
+				"top": 0,
+				"usePageVariable": true
+			}
+		},
+		{
+			"className": ".materialTextBox-wrapper",
+			"hiddenComponent": false,
+			"id": "e311-ff35-37bd-ae22",
+			"initialized": false,
+			"props": {
+				"children": [],
+				"name": "mtNote",
+				"parent": "e5d6-c7aa-4aea-f24e",
+				"usePageVariable": true
+			},
+			"source": {
+				"page": "__modules__",
+				"moduleName": "Materialtextbox",
+				"modulePath": "materialtextbox",
+				"type": "Materialtextbox",
+				"id": "8fb2-10a8-12e4-9b45"
+			},
+			"type": "FlexLayout",
+			"userProps": {
+				"flex": {
+					"positionType": 0
+				},
+				"flexProps": {
+					"positionType": "RELATIVE"
+				},
+				"left": 0,
+				"marginTop": 15,
+				"top": 0,
+				"usePageVariable": true
+			}
+		},
+		{
+			"className": ".materialTextBox-wrapper",
+			"hiddenComponent": false,
+			"id": "0429-2e3a-fe2b-d2ed",
+			"initialized": false,
+			"props": {
+				"children": [],
+				"name": "mtDescription",
+				"parent": "e5d6-c7aa-4aea-f24e",
+				"usePageVariable": true
+			},
+			"source": {
+				"page": "__modules__",
+				"moduleName": "Materialtextbox",
+				"modulePath": "materialtextbox",
+				"type": "Materialtextbox",
+				"id": "8fb2-10a8-12e4-9b45"
+			},
+			"type": "FlexLayout",
+			"userProps": {
+				"flex": {
+					"positionType": 0
+				},
+				"flexProps": {
+					"positionType": "RELATIVE"
+				},
+				"left": 0,
+				"top": 0,
+				"usePageVariable": true
+			}
+		},
+		{
+			"className": ".sf-button #pgSeyahatTalebi-btn",
+			"id": "377f-4367-5d38-86bb",
+			"props": {
+				"autoHeight": 24.390243902439025,
+				"children": [],
+				"name": "btnContinue",
+				"parent": "e5d6-c7aa-4aea-f24e",
+				"text": "Talebi Gönder",
+				"usePageVariable": true
+			},
+			"type": "Button",
+			"userProps": {
+				"autoHeight": 24.390243902439025,
+				"left": 0,
+				"marginBottom": 10,
+				"marginTop": 15,
+				"text": "Talebi Gönder",
 				"top": 0,
 				"usePageVariable": true
 			}
