@@ -222,7 +222,7 @@ function initMaterials(page) {
     };
     page.mtAcente.onDropDownClick = () => page.showPicker("mtAcente", data => data.AgentName);
     page.mtBirthDate.options = {
-        hint: "Dogum Tarihi",
+        hint: "Doğum Tarihi",
         touchEnabled: false
     };
     page.mtBirthDate.onDropDownClick = () => page.showDatePicker("mtBirthDate", null, new Date());

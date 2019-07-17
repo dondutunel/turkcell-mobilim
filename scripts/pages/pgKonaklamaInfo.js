@@ -1,3 +1,5 @@
+const System = require("sf-core/device/system");
+const Screen = require("sf-core/device/screen");
 const Label = require("sf-core/ui/label");
 const FlKonaklamaItem = require("components/FlKonaklamaItem");
 const Image = require("sf-core/ui/image");
@@ -66,13 +68,14 @@ function onLoad(superOnLoad) {
     const page = this;
     const waitDialog = wait();
     this.lvPickerList.context = this.layout;
+    if (System.OS === "Android")
+        this.svMain.layout.minHeight = Screen.height - (150 + 235);
+    this.svMain.layout.applyLayout();
     const addAccomodationButton = new HeaderBarItem({
         image: Image.createFromFile("images://plus.png"),
         onPress: () => {
             let konaklamaItem = new FlKonaklamaItem();
-            page.svMain.layout.removeChild(page.flFooter);
             page.svMain.layout.addChild(konaklamaItem, `konaklamaItem${itemIndex++}`);
-            page.svMain.layout.addChild(page.flFooter);
             konaklamaItem.init(this.routeData.date);
             konaklamaItem.itemsData = page.itemsData;
             konaklamaItem.lvPickerList = page.lvPickerList;

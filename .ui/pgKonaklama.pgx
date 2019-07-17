@@ -81,7 +81,7 @@
 			},
 			"type": "FlexLayout",
 			"userProps": {
-				"height": 220,
+				"height": 235,
 				"left": 0,
 				"paddingLeft": 15,
 				"paddingRight": 15,

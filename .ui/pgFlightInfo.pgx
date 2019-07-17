@@ -8,7 +8,8 @@
 				"children": [
 					"c789-3396-a02e-0dc7",
 					"2f33-9d85-e170-24ae",
-					"fea5-2b21-d280-7993"
+					"fea5-2b21-d280-7993",
+					"23d6-46b7-72f2-253b"
 				],
 				"name": "pgFlightInfo",
 				"orientation": "PORTRAIT",
@@ -50,9 +51,7 @@
 			"id": "fea5-2b21-d280-7993",
 			"props": {
 				"autoSizeEnabled": true,
-				"children": [
-					"e5c6-cfd6-4ddb-d572"
-				],
+				"children": [],
 				"name": "svMain",
 				"parent": "f651-8546-c686-615c",
 				"usePageVariable": true
@@ -69,34 +68,36 @@
 		},
 		{
 			"className": ".sf-flexLayout",
-			"id": "e5c6-cfd6-4ddb-d572",
+			"id": "23d6-46b7-72f2-253b",
 			"props": {
 				"children": [
-					"26b2-85d5-7642-d2a9",
-					"d1e8-fe19-0841-762b",
-					"0443-219e-192a-0c22"
+					"19f1-8a10-6b1b-674d",
+					"30ec-5bde-60de-dcba",
+					"730e-7e0e-a80c-1a19"
 				],
 				"name": "flFooter",
-				"parent": "fea5-2b21-d280-7993",
+				"parent": "f651-8546-c686-615c",
 				"usePageVariable": true
 			},
 			"type": "FlexLayout",
 			"userProps": {
-				"height": 220,
+				"height": 235,
+				"left": 0,
 				"paddingLeft": 15,
 				"paddingRight": 15,
+				"top": 0,
 				"usePageVariable": true
 			}
 		},
 		{
 			"className": ".materialTextBox-wrapper",
 			"hiddenComponent": false,
-			"id": "26b2-85d5-7642-d2a9",
+			"id": "19f1-8a10-6b1b-674d",
 			"initialized": false,
 			"props": {
 				"children": [],
 				"name": "mtNote",
-				"parent": "e5c6-cfd6-4ddb-d572",
+				"parent": "23d6-46b7-72f2-253b",
 				"usePageVariable": true
 			},
 			"source": {
@@ -123,12 +124,12 @@
 		{
 			"className": ".materialTextBox-wrapper",
 			"hiddenComponent": false,
-			"id": "d1e8-fe19-0841-762b",
+			"id": "30ec-5bde-60de-dcba",
 			"initialized": false,
 			"props": {
 				"children": [],
 				"name": "mtDescription",
-				"parent": "e5c6-cfd6-4ddb-d572",
+				"parent": "23d6-46b7-72f2-253b",
 				"usePageVariable": true
 			},
 			"source": {
@@ -153,12 +154,12 @@
 		},
 		{
 			"className": ".sf-button #pgSeyahatTalebi-btn",
-			"id": "0443-219e-192a-0c22",
+			"id": "730e-7e0e-a80c-1a19",
 			"props": {
 				"autoHeight": 24.390243902439025,
 				"children": [],
 				"name": "btnContinue",
-				"parent": "e5c6-cfd6-4ddb-d572",
+				"parent": "23d6-46b7-72f2-253b",
 				"text": "Devam",
 				"usePageVariable": true
 			},

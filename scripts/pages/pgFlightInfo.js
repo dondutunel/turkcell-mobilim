@@ -1,3 +1,5 @@
+const System = require("sf-core/device/system");
+const Screen = require("sf-core/device/screen");
 const Label = require("sf-core/ui/label");
 const FlUcusItem = require("components/FlUcusItem");
 const Image = require("sf-core/ui/image");
@@ -72,14 +74,15 @@ function onLoad(superOnLoad) {
     let itemIndex = 0;
     const page = this;
     const { from, to } = page.routeData;
+    if (System.OS === "Android")
+        this.svMain.layout.minHeight = Screen.height - (150 + 235);
+    this.svMain.layout.applyLayout();
     const waitDialog = wait();
     const addAccomodationButton = new HeaderBarItem({
         image: Image.createFromFile("images://plus.png"),
         onPress: () => {
             let ucusItem = new FlUcusItem();
-            page.svMain.layout.removeChild(page.flFooter);
             page.svMain.layout.addChild(ucusItem, `konaklamaItem${itemIndex++}`);
-            page.svMain.layout.addChild(page.flFooter);
             ucusItem.init(this.routeData.date);
             ucusItem.itemsData = this.itemsData;
             ucusItem.onDelete = () => {

@@ -74,16 +74,19 @@
 			"props": {
 				"children": [],
 				"name": "imgLogo",
-				"parent": "6748-f5e7-57f2-69d4"
+				"parent": "6748-f5e7-57f2-69d4",
+				"usePageVariable": true
 			},
 			"type": "ImageView",
-			"userProps": {}
+			"userProps": {
+				"usePageVariable": true
+			}
 		},
 		{
 			"className": ".sf-label #pgLogin-title",
 			"id": "bbae-4d21-98e5-4a21",
 			"props": {
-				"autoHeight": 39.53488372093023,
+				"autoHeight": 18,
 				"children": [],
 				"name": "lblTitle",
 				"parent": "6748-f5e7-57f2-69d4",
@@ -92,7 +95,7 @@
 			},
 			"type": "Label",
 			"userProps": {
-				"autoHeight": 39.53488372093023,
+				"autoHeight": 18,
 				"text": "Mobil uygulamamıza hoş geldiniz, \tlütfen giriş yapınız.",
 				"usePageVariable": true
 			}

@@ -59,8 +59,14 @@ function onShow(superOnShow) {
 function onLoad(superOnLoad) {
 	superOnLoad();
 	this.btnLogin.enabled = false;
+	this.imgLogo.onTouchEnded = ()=>{
+		this.mtEmail.materialTextBox.text = "TCUERDEM";
+		this.mtPassword.materialTextBox.text = "asd12345";
+		validateFormState(this);
+	};
 	this.lblTitle.text = "Mobil uygulamamıza hoş geldiniz,\nlütfen giriş yapınız.";
 	this.svMain.layout.minHeight = Screen.height - 30;
+	this.svMain.layout.applyLayout();
 	this.mtEmail.options = LOGIN_ITEMS.email;
 	this.mtEmail.materialTextBox.onTextChanged = () => validateFormState(this, "mtEmail");
 	this.mtEmail.materialTextBox.dispatch({
