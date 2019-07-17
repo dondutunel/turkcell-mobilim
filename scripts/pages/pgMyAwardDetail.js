@@ -7,7 +7,8 @@ const TEMP_DATA = {
 	message: "2018’deki başarılı çalışmaların için\n teşekkürler.",
 	detail: "Etiam vel euismod augue. Praesent venenatis efficitur tortor ac blandit. Suspendisse rhoncus ex sit amet nisl gravida, non eleifend leo auctor. Nunc non imperdiet quam. ",
 	userName: "Saner Ateş",
-	awardCode: "FA030593TURK"
+	awardCode: "FA030593TURK",
+	date: "22.05.2019"
 }
 const PgMyAwardDetail = extend(PgMyAwardDetailDesign)(
 	// Constructor
@@ -40,8 +41,8 @@ function onShow(superOnShow) {
 function onLoad(superOnLoad) {
 	superOnLoad();
 	this.svMain.layout.minHeight = 420;
-	this.lblTitle.text = this.routeData.Aciklama;
-	this.lblDate.text = this.routeData.date;
+	this.lblTitle.text = this.routeData.Aciklama || TEMP_DATA.title;
+	this.lblDate.text = this.routeData.Tarih || TEMP_DATA.date;
 	this.lblName.text = this.routeData.userName || TEMP_DATA.userName;
 	this.lblMessage.text = this.routeData.Aciklama || TEMP_DATA.message;
 	this.lblDetail.text = this.routeData.Aciklama || TEMP_DATA.detail;
